@@ -12,6 +12,7 @@ function Main() {
           <Col className='px-0'>
             <h2>Your life expectancy is {lifespan} years.</h2>
             <p>You have lived {percentage}% of your life.</p>
+            <p>prova</p>
           </Col>
         </Row>
       </Container>
