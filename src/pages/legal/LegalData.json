@@ -1,0 +1,80 @@
+{
+    "privacy": {
+      "titol": "Política de Privacitat",
+      "seccions": [
+        {
+          "id": "recopilacio",
+          "capcalera": "Recopilació de Dades",
+          "text": "En Vitora, la vostra privacitat és una prioritat. Recopilem dades específiques per millorar l'experiència de l'usuari i proporcionar prediccions precises. Aquestes dades poden incloure informació personal com l'edat, sexe, hàbits de vida, preferències d'ús i interaccions amb la plataforma. Vetllem per la confidencialitat i protecció de les vostres dades. No compartim aquesta informació amb tercers sense el vostre consentiment explícit."
+        },
+        {
+          "id": "dades",
+          "capcalera": "Ús de les Dades",
+          "text": "Les dades recopilades són utilitzades per generar estimacions d'esperança de vida i predir esdeveniments futurs. Això ens permet oferir una visió personalitzada als nostres usuaris i millorar la nostra plataforma. També les utilitzem per a anàlisi intern, millora del producte i optimització del servei."
+        },
+        {
+          "id": "confidencialitat",
+          "capcalera": "Confidencialitat i Seguretat",
+          "text": "Mantenim la confidencialitat de les vostres dades i estem compromesos a protegir-les. Disposem de mesures de seguretat per prevenir accesos no autoritzats i garantir la vostra protecció. Utilitzem tecnologies de xifrat i altres pràctiques de seguretat per salvaguardar la informació de manera adequada."
+        },
+        {
+          "id": "privacitat",
+          "capcalera": "Gestió de Privacitat",
+          "text": "Donem opcions per gestionar les vostres preferències de privacitat. Això inclou revisar, editar o eliminar les dades emmagatzemades. Estem disponibles per respondre preguntes o preocupacions sobre la vostra privacitat i oferir assistència en la gestió de les vostres dades personals."
+        },
+        {
+          "id": "consentiment",
+          "capcalera": "Consentiment i Control",
+          "text": "Al fer servir el nostre lloc web, doneu el vostre consentiment per a la recopilació i ús de les vostres dades. Teniu el control sobre les vostres dades i podeu gestionar les vostres preferències de privacitat a través de les opcions proporcionades a la plataforma."
+        }
+      ]
+    },
+
+    "cookies": {
+      "titol": "Política de Cookies",
+      "seccions": [
+        {
+          "id": "usu",
+          "capcalera": "Ús de Cookies",
+          "text": "Les cookies són petits arxius de text que es guarden al vostre dispositiu quan visiteu el nostre lloc web. S'utilitzen principalment perquè el lloc web funcioni correctament i per oferir una millor experiència de navegació. Això pot incloure l'emmagatzematge de les vostres preferències i la recopilació d'informació sobre com feu servir el lloc per optimitzar-ne el rendiment."
+        },
+        {
+          "id": "tipus",
+          "capcalera": "Tipus de Cookies",
+          "text": "Les cookies poden ser de diferents tipus: cookies pròpies que s'estableixen pel lloc web que esteu visitant, i cookies de tercers que provenen de serveis externs integrats al lloc. Poden ser cookies de sessió, que s'esborren quan tanqueu el navegador, o cookies persistents que es mantenen al vostre dispositiu durant un temps determinat."
+        },
+        {
+          "id": "control",
+          "capcalera": "Control de Cookies",
+          "text": "Teniu el control sobre les cookies i podeu gestionar-les a través de la configuració del vostre navegador. Normalment, podeu acceptar, rebutjar o eliminar les cookies des del vostre navegador. Tingueu en compte que la desactivació de les cookies pot afectar la funcionalitat del lloc web i limitar algunes característiques."
+        },
+        {
+          "id": "consentiment",
+          "capcalera": "Consentiment de Cookies",
+          "text": "En fer servir el nostre lloc web, doneu el vostre consentiment per a l'ús de cookies segons la nostra política. Podeu canviar les vostres preferències de cookies en qualsevol moment a través de la configuració del navegador."
+        }
+      ]
+    },
+    "help": {
+        "titol": "Ajuda",
+        "seccions": [
+          {
+            "id": "contacte",
+            "capcalera": "Contacte",
+            "text": "Per obtenir ajuda, podeu contactar amb nosaltres a través del correu electrònic help@vitora.com o trucant al número 123-456-789."
+          },
+          {
+            "id": "faq",
+            "capcalera": "Preguntes Freqüents",
+            "text": "Si teniu preguntes freqüents, podeu consultar la nostra secció de Preguntes Freqüents (FAQ) a la nostra pàgina web per trobar respostes a les qüestions més comunes."
+          },
+          {
+            "id": "assistencia",
+            "capcalera": "Assistència Personalitzada",
+            "text": "Oferim assistència personalitzada per als nostres usuaris. Si necessiteu ajuda específica o teniu problemes amb la plataforma, podeu sol·licitar assistència personalitzada al nostre equip d'assistència."
+          }
+        ]
+      }
+      
+  }
+  

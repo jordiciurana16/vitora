@@ -1,0 +1,28 @@
+
+.footerContainer {
+    background-color: #c4c4c4;
+}
+
+.footerLinks h6 a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.footerLinks h6 a:hover {
+    text-decoration: underline;
+}
+
+.copyrightRow {
+    height: 70px;
+    background-color: #9b9b9b;
+}
+
+.socialIcons a {
+    color: var(--dark-color);
+    margin-right: 20px; /* Espai entre les icones */
+    transition: all .2s ease-in-out
+}
+
+.socialIcons a:hover {
+    color: var(--secondary-color);
+}

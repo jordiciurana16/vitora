@@ -1,0 +1,120 @@
+/* VISUAL IDENTITY */
+
+:root {
+  font-family: system-ui;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Colors */
+  --primary-color: #a3a5ef; /* Main primary color */
+  --secondary-color: #7579e7; /* Secondary color */
+
+
+  --light-color: #F7F7F7; /* Light color */
+  --dark-color: #212529; /* Dark color */
+}
+
+/* TYPOGRAPHY */
+
+/* Set base font size for the entire document */
+body {
+  font-size: 1rem;
+}
+
+/* Define different heading styles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--dark-color) !important;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dark-color) !important;
+
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--dark-color) !important;
+
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--dark-color) !important;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--dark-color) !important;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--dark-color) !important;
+
+}
+
+/* Define paragraph styles */
+p {
+  font-size: 1rem;
+  color: var(--dark-color) !important;
+}
+
+/* Define styles for lists */
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+button[type="submit"]{
+  background-color: var(--primary-color)!important;
+  border: 2px solid var(--primary-color)!important;
+}
+
+button[type="submit"]:active {
+  box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
+}
+
+button[type="submit"]:hover{
+  background-color: var(--secondary-color)!important;
+  border: 2px solid var(--secondary-color)!important;
+}
+/* FORM */
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="text"],
+input[type="date"],
+.form-select {
+  border: 2px solid var(--primary-color) !important;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus,
+.form-select:focus {
+  box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
+  border: 2px solid var(--primary-color) ;
+}
+
+.dropdown-toggle:hover::after{
+  transition: transform 0.3s ease-in-out !important;
+  transform: translateY(4px) !important; /* Pots mantenir la mateixa animació quan el ratolí estigui sobre el div */
+}
+
