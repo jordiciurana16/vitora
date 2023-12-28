@@ -117,4 +117,3 @@ input[type="date"]:focus,
   transition: transform 0.3s ease-in-out !important;
   transform: translateY(4px) !important; /* Pots mantenir la mateixa animació quan el ratolí estigui sobre el div */
 }
-

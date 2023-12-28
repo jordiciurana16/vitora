@@ -41,6 +41,11 @@ function Footer() {
               </Col>
               <Col md={2}>
                 <h6>
+                <Link to="/contact">TERMS</Link>
+                </h6>
+              </Col>
+              <Col md={2}>
+                <h6>
                 <Link to="/vitora/cookies">COOKIES</Link>
                 </h6>
               </Col>

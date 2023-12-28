@@ -6,15 +6,16 @@ import styles from './BirthdateModal.module.css'; // Importa el fitxer CSS
 
 function BirthdateModal({ show, onHide }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { setAge } = useGlobalContext();
+  const { setAge, setBirthdate } = useGlobalContext();
 
   const onSubmit = (data) => {
-    const userBirthdate = new Date(data.birthdate);
+    const birthdate = new Date(data.birthdate);
     const currentDate = new Date();
-    const ageInMillis = currentDate - userBirthdate;
+    const ageInMillis = currentDate - birthdate;
     const ageInYears = ageInMillis / (1000 * 60 * 60 * 24 * 365);
 
     setAge(ageInYears);
+    setBirthdate(birthdate); // Verifica que aquesta línia actualitzi correctament la data introduïda al contexte global
 
     onHide();
   };
@@ -31,8 +32,8 @@ function BirthdateModal({ show, onHide }) {
             <BootstrapForm.Label>Date of Birth:</BootstrapForm.Label>
             <BootstrapForm.Control
               type="date"
-              {...register('birthdate', { required: 'Please enter a birthdate.' })}
-              className={`${errors.birthdate ? 'is-invalid' : ''}`}
+              {...register('birthdate')}
+              
             />
             {errors.birthdate && <div>{errors.birthdate.message}</div>}
           </BootstrapForm.Group>

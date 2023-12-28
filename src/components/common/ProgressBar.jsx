@@ -8,7 +8,7 @@ const ProgressBar = () => {
 
   const tooltip = (
     <Tooltip id="tooltip-basic">
-      You have lived a {percentage.toFixed(3)}% of your life.
+      You have lived a {percentage.toFixed(2)}% of your life.
     </Tooltip>
   );
 
