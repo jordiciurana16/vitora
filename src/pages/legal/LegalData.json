@@ -56,7 +56,7 @@
       ]
     },
     "help": {
-        "titol": "Ajuda",
+        "titol": "Help",
         "seccions": [
           {
             "id": "contacte",
@@ -74,7 +74,46 @@
             "text": "Oferim assistència personalitzada per als nostres usuaris. Si necessiteu ajuda específica o teniu problemes amb la plataforma, podeu sol·licitar assistència personalitzada al nostre equip d'assistència."
           }
         ]
+      },
+      "terms": {
+        "titol": "Terms",
+        "seccions": [
+          {
+            "id": "servei",
+            "capcalera": "Ús del Servei",
+            "text": "Vitora ofereix una plataforma interactiva que permet als usuaris accedir a prediccions i consells sobre l'esperança de vida basats en dades personals. En utilitzar aquest servei, l'usuari accepta complir amb els termes i condicions establerts per Vitora."
+          },
+          {
+            "id": "responsabilitats",
+            "capcalera": "Responsabilitats de l'Usuari",
+            "text": "L'usuari assumeix la responsabilitat de la informació que proporciona a la plataforma de Vitora. Això inclou garantir la veracitat, exactitud i legalitat de les dades proporcionades. A més, l'usuari és conscient que les prediccions i consells proporcionats per Vitora són orientatius i no reemplacen la consulta professional amb especialistes de la salut."
+          },
+          {
+            "id": "propietat",
+            "capcalera": "Propietat Intel·lectual",
+            "text": "Tots els drets de propietat intel·lectual associats amb Vitora, incloent-hi el contingut, el disseny i la tecnologia, estan protegits per les lleis de propietat intel·lectual. L'usuari accepta no copiar, reproduir o distribuir cap part del contingut de Vitora sense autorització prèvia."
+          },
+          {
+            "id": "limitació",
+            "capcalera": "Limitació de Responsabilitats",
+            "text": "Vitora es compromet a proporcionar un servei fiable i precís, però no es fa responsable de les decisions preses pels usuaris basades exclusivament en les prediccions o consells proporcionats per la plataforma. A més, no es garanteix la exactitud absoluta de les prediccions, ja que estan basades en models estadístics i dades disponibles."
+          },
+          {
+            "id": "resolució",
+            "capcalera": "Resolució de Disputes",
+            "text": "En cas de conflictes o disputes entre l'usuari i Vitora, s'intenta resoldre de manera amistosa. Si no es pot arribar a un acord, les parts accepten sotmetre la disputa a la jurisdicció competent d'acord amb la legislació aplicable."
+          },
+          {
+            "id": "canvis",
+            "capcalera": "Canvis als Termes i Condicions",
+            "text": "En cas de conflictes o disputes entre l'usuari i Vitora, s'intenta resoldre de manera amistosa. Si no es pot arribar a un acord, les parts accepten sotmetre la disputa a la jurisdicció competent d'acord amb la legislació aplicable."
+          },
+          {
+            "id": "acceptació",
+            "capcalera": "Acceptació dels Termes",
+            "text": "L'ús de la plataforma Vitora implica l'acceptació incondicional dels Termes i Condicions establerts. En cas de no estar d'acord amb aquests termes, es recomana no utilitzar la plataforma."
+          }
+        ]
       }
-      
   }
   

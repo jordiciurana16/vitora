@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/*" element={<MainPage />} />
           <Route path="/vitora/privacy" element={<LegalPage />} />
+          <Route path="/vitora/terms" element={<LegalPage />} />
           <Route path="/vitora/cookies" element={<LegalPage />} />
           <Route path="/vitora/help" element={<LegalPage />} />
 

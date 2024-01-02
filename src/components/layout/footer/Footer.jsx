@@ -41,7 +41,7 @@ function Footer() {
               </Col>
               <Col md={2}>
                 <h6>
-                <Link to="/contact">TERMS</Link>
+                <Link to="/vitora/terms">TERMS</Link>
                 </h6>
               </Col>
               <Col md={2}>
@@ -56,7 +56,7 @@ function Footer() {
               </Col>
               <Col md={2}>
                 <h6>
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/vitora/contact">CONTACT</Link>
                 </h6>
               </Col>
             </Row>

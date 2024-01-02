@@ -11,13 +11,15 @@ const LegalPage = () => {
   useEffect(() => {
     // Obté la ruta actual
     const currentPath = window.location.pathname;
-  
+
     // Carrega el contingut corresponent segons la ruta
     if (currentPath === '/vitora/privacy' && legalData.privacy) {
       setLegalContent(legalData.privacy);
     } else if (currentPath === '/vitora/cookies' && legalData.cookies) {
       setLegalContent(legalData.cookies);
-     } else if (currentPath === '/vitora/help' && legalData.help) {
+     } else if (currentPath === '/vitora/terms' && legalData.terms) {
+      setLegalContent(legalData.terms);
+    } else if (currentPath === '/vitora/help' && legalData.help) {
       setLegalContent(legalData.help);
     }
   }, []);
@@ -75,7 +77,7 @@ const LegalPage = () => {
           placeholder="Search"
           aria-label="Search"
         />
-      </InputGroup>            
+      </InputGroup>
         <aside>
               <h4 className="mb-3">Índex</h4>
               <ListGroup>
