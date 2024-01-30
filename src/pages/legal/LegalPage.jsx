@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, ListGroup, Form, InputGroup } from 'react-bootstrap';
+import { Container, Row, Col, ListGroup, Form, InputGroup, Accordion, Card } from 'react-bootstrap';
 import styles from './LegalPages.module.css';
 import { Link } from 'react-router-dom';
 import { BsArrowLeft, BsSearch } from 'react-icons/bs';
-import legalData from './LegalData.json'; // Importa l'arxiu JSON amb les dades
+import legalData from './LegalData.json';
 
 const LegalPage = () => {
   const [legalContent, setLegalContent] = useState(null);
 
   useEffect(() => {
-    // Obté la ruta actual
     const currentPath = window.location.pathname;
 
-    // Carrega el contingut corresponent segons la ruta
     if (currentPath === '/vitora/privacy' && legalData.privacy) {
       setLegalContent(legalData.privacy);
     } else if (currentPath === '/vitora/cookies' && legalData.cookies) {
       setLegalContent(legalData.cookies);
-     } else if (currentPath === '/vitora/terms' && legalData.terms) {
+    } else if (currentPath === '/vitora/terms' && legalData.terms) {
       setLegalContent(legalData.terms);
     } else if (currentPath === '/vitora/help' && legalData.help) {
       setLegalContent(legalData.help);
+    } else if (currentPath === '/vitora/contact' && legalData.contact) {
+      setLegalContent(legalData.contact);
     }
   }, []);
 
@@ -54,7 +54,7 @@ const LegalPage = () => {
               <BsArrowLeft className={`me-2 ${styles.backIcon}`} />
             </Link>
             <div className={`d-flex align-items-center justify-content-center flex-column ${styles.titleContainer}`}>
-            <h1 className={`mb-2 `}>{legalContent && legalContent.titol}</h1>
+              <h1 className={`mb-2 `}>{legalContent && legalContent.titol}</h1>
             </div>
             <hr/>
           </header>
@@ -67,18 +67,28 @@ const LegalPage = () => {
               <section id={seccio.id} key={seccio.id}>
                 <h3>{seccio.capcalera}</h3>
                 <p>{seccio.text}</p>
+                {seccio.id === 'faq' && (
+                  <Accordion defaultActiveKey="0" className='mb-4'>
+                    {seccio.acordio.map((item, index) => (
+                      <Accordion.Item eventKey={index.toString()} key={index}>
+                        <Accordion.Header >{item.pregunta}</Accordion.Header>
+                        <Accordion.Body>{item.resposta}</Accordion.Body>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion>
+                )}
               </section>
             ))}
           </Col>
           <Col xs={3}>
-          <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1"><BsSearch /></InputGroup.Text>
-        <Form.Control
-          placeholder="Search"
-          aria-label="Search"
-        />
-      </InputGroup>
-        <aside>
+            <InputGroup className="mb-3">
+              <InputGroup.Text id="basic-addon1"><BsSearch /></InputGroup.Text>
+              <Form.Control
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </InputGroup>
+            <aside>
               <h4 className="mb-3">Índex</h4>
               <ListGroup>
                 {legalContent.seccions.map((seccio) => (

@@ -14,8 +14,7 @@ function App() {
           <Route path="/vitora/terms" element={<LegalPage />} />
           <Route path="/vitora/cookies" element={<LegalPage />} />
           <Route path="/vitora/help" element={<LegalPage />} />
-
-
+          <Route path="/vitora/contact" element={<LegalPage />} />
         </Routes>
       </GlobalProvider>
     </Router>

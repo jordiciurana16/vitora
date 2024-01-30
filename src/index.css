@@ -112,8 +112,3 @@ input[type="date"]:focus,
   box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
   border: 2px solid var(--primary-color) ;
 }
-
-.dropdown-toggle:hover::after{
-  transition: transform 0.3s ease-in-out !important;
-  transform: translateY(4px) !important; /* Pots mantenir la mateixa animació quan el ratolí estigui sobre el div */
-}

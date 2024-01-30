@@ -12,9 +12,6 @@
   border: none !important;
 }
 
-.dropdownButton:hover {
-  color: var(--dark-color) !important;
-  background: none !important;
-  box-shadow: none !important;
-  border: none !important;
+.dropdownButton::after {
+  display: none !important;
 }

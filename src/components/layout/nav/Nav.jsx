@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './Nav.module.css';
 import { Container, Row, Col, Nav as BootstrapNav, NavItem } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../../common/Logo';
 
 function Nav() {
   const location = useLocation();
@@ -19,7 +18,6 @@ function Nav() {
             <BootstrapNav className='flex-column'>
             <div className={`d-flex justify-content-center align-items-center mt-3 ${styles.lifespanItem}`}>
             <Link to="/vitora/" className="d-flex align-items-center">
-              <Logo size="40px" /> {/* Passa la mida aquí */}
               <span className="ml-2">VITORA</span>
             </Link>
           </div>

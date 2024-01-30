@@ -64,14 +64,72 @@
             "text": "Per obtenir ajuda, podeu contactar amb nosaltres a través del correu electrònic help@vitora.com o trucant al número 123-456-789."
           },
           {
-            "id": "faq",
-            "capcalera": "Preguntes Freqüents",
-            "text": "Si teniu preguntes freqüents, podeu consultar la nostra secció de Preguntes Freqüents (FAQ) a la nostra pàgina web per trobar respostes a les qüestions més comunes."
-          },
-          {
             "id": "assistencia",
             "capcalera": "Assistència Personalitzada",
             "text": "Oferim assistència personalitzada per als nostres usuaris. Si necessiteu ajuda específica o teniu problemes amb la plataforma, podeu sol·licitar assistència personalitzada al nostre equip d'assistència."
+          },
+          {
+            "id": "faq",
+            "capcalera": "Preguntes Freqüents",
+            "text": "Si teniu preguntes freqüents, podeu consultar la nostra secció de Preguntes Freqüents (FAQ) a la nostra pàgina web per trobar respostes a les qüestions més comunes.",
+            "acordio": [
+              {
+                "pregunta": "Com puc canviar la meva contrasenya?",
+                "resposta": "Per canviar la contrasenya, inicieu sessió al vostre compte i aneu a la secció de configuració de l'usuari. Allà trobareu l'opció per canviar la contrasenya."
+              },
+              {
+                "pregunta": "Quina és la política de privacitat?",
+                "resposta": "La nostra política de privacitat està dissenyada per protegir la vostra informació personal i garantir la vostra privacitat. Podeu llegir-ne tots els detalls a la nostra pàgina de política de privacitat."
+              },
+              {
+                "pregunta": "Com puc contactar amb l'equip d'assistència?",
+                "resposta": "Podeu contactar amb el nostre equip d'assistència a través del correu electrònic help@vitora.com o trucant al número 123-456-789."
+              },
+              {
+                "pregunta": "Quins són els meus drets en relació amb les meves dades personals emmagatzemades?",
+                "resposta": "Com a usuari de Vitora, tens diversos drets en relació amb les teves dades personals, incloent-hi el dret a accedir, rectificar, eliminar i oposar-te al processament de les teves dades. Pots exercir aquests drets en qualsevol moment posant-te en contacte amb el nostre equip de suport."
+              },
+              {
+                "pregunta": "Com puc reportar un problema de seguretat o una vulnerabilitat?",
+                "resposta": "Si trobes alguna vulnerabilitat de seguretat en la plataforma de Vitora o sospites d'un problema de seguretat, t'animem a contactar immediatament amb el nostre equip de seguretat informàtica a security@vitora.com. Estem compromesos a resoldre ràpidament qualsevol problema de seguretat per mantenir la teva informació segura."
+              },
+              {
+                "pregunta": "Què és Vitora i com funciona?",
+                "resposta": "Vitora és una plataforma que calcula l'esperança de vida de l'usuari basant-se en diversos factors com l'estil de vida, la salut i les dades demogràfiques. Utilitza algorismes avançats per proporcionar prediccions personalitzades."
+              },
+              {
+                "pregunta": "Què passa amb les meves dades personals?",
+                "resposta": "Les teves dades personals s'utilitzen únicament per calcular l'esperança de vida i millorar els nostres serveis. Garantim la confidencialitat i la seguretat de les teves dades en tot moment."
+              },
+              {
+                "pregunta": "Puc eliminar les meves dades personals?",
+                "resposta": "Sí, pots sol·licitar la eliminació de les teves dades personals en qualsevol moment. Ens assegurarem de gestionar la teva sol·licitud de manera adequada i respectuosa amb la teva privacitat."
+              },
+              {
+                "pregunta": "Quins són els avantatges d'utilitzar l'aplicació?",
+                "resposta": "Vitora et proporciona una estimació de la teva esperança de vida i consells personalitzats per millorar el teu benestar. Això et permet prendre decisions informades sobre el teu estil de vida i la teva salut."
+              },
+              {
+                "pregunta": "Vitora pot predir malalties o accidents?",
+                "resposta": "Vitora utilitza dades estadístiques per predir l'esperança de vida, però no pot predir específicament malalties o accidents individuals."
+              },
+              {
+                "pregunta": "Quin tipus de dades recopila Vitora?",
+                "resposta": "Vitora recopila dades com l'edat, sexe, hàbits de vida, historial mèdic (si es proporciona) i altres factors relacionats amb la salut i el benestar."
+              },
+              {
+                "pregunta": "Què passa si canvio els meus hàbits de vida després d'utilitzar Vitora?",
+                "resposta": "Si canviïs els teus hàbits de vida, Vitora pot recalcular la teva estimació d'esperança de vida per reflectir aquests canvis."
+              },
+              {
+                "pregunta": "Puc confiar en les prediccions de Vitora?",
+                "resposta": "Les prediccions de Vitora es basen en dades estadístiques i algorismes avançats, però és important recordar que són estimacions i no garanties absolutes."
+              },
+              {
+                "pregunta": "Com puc accedir a les meves dades personals a Vitora?",
+                "resposta": "Pots accedir a les teves dades personals a través de la configuració del teu compte a Vitora."
+              }
+            ]
           }
         ]
       },
@@ -114,6 +172,46 @@
             "text": "L'ús de la plataforma Vitora implica l'acceptació incondicional dels Termes i Condicions establerts. En cas de no estar d'acord amb aquests termes, es recomana no utilitzar la plataforma."
           }
         ]
-      }
+      },
+      "contact": {
+        "titol": "Contacte",
+        "seccions": [
+            {
+                "id": "nosaltres",
+                "capcalera": "Qui som?",
+                "text": "Som un equip professional especialitzat en el desenvolupament de programació i disseny web."
+            },
+            {
+                "id": "direccio",
+                "capcalera": "Adreça",
+                "text": "Pots trobar-nos a Carrer de l'Exemple, 123, Barcelona, Catalunya."
+            },
+            {
+                "id": "telefon",
+                "capcalera": "Telèfon",
+                "text": "Per a consultes, truca al +34 123 456 789."
+            },
+            {
+                "id": "correu",
+                "capcalera": "Correu electrònic",
+                "text": "Envia'ns un correu electrònic a info@vitora.com per a més informació."
+            },
+            {
+                "id": "horari",
+                "capcalera": "Horari d'atenció",
+                "text": "Estem disponibles de dilluns a divendres, de 9:00 a 18:00."
+            },
+            {
+              "id": "oportunitats_professionals",
+              "capcalera": "Oportunitats Professionals",
+              "text": "Descobreix les oportunitats de carrera disponibles amb Vitora. Consulta les nostres ofertes de feina i envia'ns el teu currículum per consideració."
+          },
+          {
+              "id": "contacte_advocat",
+              "capcalera": "Contacte amb un advocat",
+              "text": "En cas que tinguis alguna pregunta legal o hagis tingut problemes amb els nostres serveis, no dubtis a posar-te en contacte amb un dels advocats de l'empresa. Envia'ns un correu electrònic a legal@vitora.com i un dels nostres advocats et respondrà amb la màxima prioritat."
+          }
+        ]
+    }    
   }
   
