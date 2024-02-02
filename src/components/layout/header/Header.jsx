@@ -1,7 +1,10 @@
+// Header.jsx
+
 import React, { useState } from 'react';
 import { Container, Row, Col, Dropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { BsPersonFillGear, BsPersonCircle, BsGearWideConnected, BsTranslate, BsQuestionLg, BsSend, BsFillInboxFill, BsSearch, BsNewspaper, BsBoxArrowInLeft} from 'react-icons/bs';
 import ProgressBar from '../../common/ProgressBar';
+import Events from '../../feature/Events'
 import styles from './Header.module.css';
 import { useGlobalContext } from '../../../hooks/GlobalContext';
 
@@ -20,7 +23,8 @@ function Header() {
       <Container fluid>
         <Row className={`position-relative`}>
           <Col className="p-0 position-relative">
-            <ProgressBar />
+            <ProgressBar /> 
+            <Events />
             <div className={`${styles.headerLifespan} position-absolute top-50 start-50 translate-middle`}>
               <OverlayTrigger placement="bottom" overlay={tooltipLifespan}>
                 <span>{lifespan}</span>
@@ -29,18 +33,17 @@ function Header() {
             <div className="position-absolute top-0 end-0 mt-2 me-3 d-flex">
               <BsSearch size={30} className="me-3" />
               <BsNewspaper size={30} className="me-3" />
-              <div style={{ position: 'relative' }}>
+              <div style={{ position: 'relative' }}
+                onMouseLeave={() => setDropdownOpen(false)}>
                 <BsPersonFillGear
                   size={30}
                   onMouseEnter={() => setDropdownOpen(true)}
-                  style={{ cursor: 'pointer' }}
                 />
                 {dropdownOpen && (
                   <Dropdown.Menu
                     show={dropdownOpen}
                     onToggle={setDropdownOpen}
                     style={{ position: 'absolute', right: '0', top: '100%' }}
-                    onMouseLeave={() => setDropdownOpen(false)} // Afegit aquí
                   >
                     <Dropdown.Item href="#/action-1">
                       <div className="d-flex align-items-center">

@@ -8,6 +8,7 @@
   /* Colors */
   --primary-color: #a3a5ef; /* Main primary color */
   --secondary-color: #7579e7; /* Secondary color */
+  --tertiary-color: #FFD25D; /* Secondary color */
 
 
   --light-color: #F7F7F7; /* Light color */
@@ -112,3 +113,5 @@ input[type="date"]:focus,
   box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
   border: 2px solid var(--primary-color) ;
 }
+
+

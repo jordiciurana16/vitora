@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import styles from './Routing.module.css'
+import styles from './MainRouting.module.css'
 import Main from '../../../containers/Main';
 import Exercise from '../../../containers/Exercise';
 
