@@ -2,18 +2,30 @@
 
 .eventMarker {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: orange;
-    transition: transform 0.3s, box-shadow 0.3s;
+    top: 50%; /* Posiciona l'indicador a la meitat vertical de la barra de progrés */
+    left: 50%; /* Posiciona l'indicador al mig horitzontalment */
+    transform: translate(-50%, -50%); /* Centra l'indicador verticalment i horitzontalment */
+    width: 10px; /* Amplada de l'indicador */
+    height: 10px; /* Alçada de l'indicador */
+    margin: -5px; /* Ajusta la mida dels punts a la meitat de la seva alçada i amplada */
+    border-radius: 50%; /* Per fer un cercle */
+    background-color: orange; /* Color de l'indicador */
+    animation: pulse 0.5s infinite alternate; /* Aplicar l'animació 'pulse' durant 0.5 segons, alternant en cada iteració */
+    transition: transform 0.3s; /* Transició per al transform en hover */
   }
-  
+
   .eventMarker:hover {
-    transform: translate(-50%, -50%) scale(1.5); /* Manté el centre i després amplia */
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    cursor: pointer;
   }
-  
+
+  /* Definim l'animació 'pulse' */
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Escala normal */
+    }
+
+    100% {
+      transform: scale(1.1); /* Escala augmentada */
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Aplica l'ombra */
+    }
+  }

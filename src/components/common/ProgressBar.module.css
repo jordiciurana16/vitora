@@ -6,7 +6,7 @@
 .progress {
   height: 13vmin;
   background-color: var(--secondary-color);
-  transition: width 3s ease-in-out;
+  transition: width 4s ease-in-out;
 }
 
 .progress:hover {

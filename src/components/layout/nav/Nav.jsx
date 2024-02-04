@@ -45,7 +45,7 @@ function Nav() {
                   <Link to="/vitora/exercise" className={isActive('/vitora/exercise')}>Exercise</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/genetics">Genetics</Link>
+                  <Link to="/vitora/genetic" className={isActive('/vitora/genetic')}>Genetic</Link>
                 </NavItem>
                 <NavItem>
                   <Link to="/geography">Geography</Link>

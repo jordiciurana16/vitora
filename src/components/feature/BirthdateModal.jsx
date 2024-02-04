@@ -4,9 +4,10 @@ import { useForm } from 'react-hook-form';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import styles from './BirthdateModal.module.css'; // Importa el fitxer CSS
 
+
 function BirthdateModal({ show, onHide }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { setAge, setBirthdate } = useGlobalContext();
+const { setAge, setBirthdate, setLifespan } = useGlobalContext();
 
   const onSubmit = (data) => {
     const birthdate = new Date(data.birthdate);
@@ -16,8 +17,11 @@ function BirthdateModal({ show, onHide }) {
 
     setAge(ageInYears);
     setBirthdate(birthdate); // Verifica que aquesta línia actualitzi correctament la data introduïda al contexte global
+    setLifespan(72.4); // Modifica la variable lifespan a 72.4
+
 
     onHide();
+    
   };
 
   return (

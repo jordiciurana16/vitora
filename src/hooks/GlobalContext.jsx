@@ -5,7 +5,7 @@ const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [age, setAge] = useState('');
-  const [lifespan, setLifespan] = useState(72.4);
+  const [lifespan, setLifespan] = useState(0);
   const [percentage, setPercentage] = useState(0);
   const [birthdate, setBirthdate] = useState(null);
   const [deathdate, setDeathdate] = useState(null);
