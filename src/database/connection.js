@@ -1,8 +1,10 @@
-// Importa els mòduls necessaris
-import mysql from 'mysql2/promise';
+// Import necessary modules
+import mysql from 'mysql2/promise'; // Import the MySQL module
 import express from 'express';
+import cors from 'cors';
 
-// Configura les opcions de connexió a la base de dades
+
+// Configure the database connection options
 const connection = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -10,44 +12,44 @@ const connection = await mysql.createConnection({
   database: 'vitora'
 });
 
-// Connecta a la base de dades
+// Connect to the database
 try {
   await connection.connect();
-  console.log('Connexió a la base de dades MySQL satisfactòria');
+  console.log('Connected to the MySQL database successfully'); // Connection to the MySQL database successful
 } catch (err) {
-  console.error('Error connectant a la base de dades:', err);
+  console.error('Error connecting to database:', err); // Error connecting to the database
 }
 
-// Crea una nova instància de l'aplicació Express
+// Create a new instance of the Express application
 const app = express();
+app.use(cors());
 
-// Ruta per obtenir la taula de la base de dades
-// Ruta per obtenir la taula de la base de dades
-app.get('/taula', async (req, res) => {
+
+// Route to get the table from the database
+app.get('/data', async (req, res) => {
   try {
-    // Executa una consulta a la base de dades per obtenir la taula desitjada
+    // Execute a query to the database to get the desired table
     const [rows] = await connection.query({ sql: 'SELECT * FROM geneticquestions', rows: true });
-    // Envia les dades de la taula com a resposta
-    console.log('Dades de la taula:', rows);
+    // Send the table data as response
+    console.log('Table data:', rows); // Table data
     res.json(rows);
   } catch (err) {
-    console.error('Error en executar la consulta:', err);
-    res.status(500).send('Error en obtenir la taula');
+    console.error('Error executing the query:', err); // Error executing the query
+    res.status(500).send('Error getting the table'); // Error getting the table
   }
 });
 
-
-// Gestionar els errors del servidor Express
+// Handle Express server errors
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Error del servidor');
+  res.status(500).send('Server error'); // Server error
 });
 
-// Escolta el port 3000 (o qualsevol altre port que desitgis)
+// Listen on port 3000 (or any other port you desire)
 const port = 3000;
 app.listen(port, () => {
-  console.log(`Servidor escoltant al port ${port}`);
+  console.log(`Server listening on port ${port}`); // Server listening on port
 });
 
-// Exporta la connexió per poder utilitzar-la en altres fitxers
+// Export the connection to be used in other files
 export default connection;
