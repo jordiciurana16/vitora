@@ -1,10 +1,10 @@
-// Import necessary modules
-import mysql from 'mysql2/promise'; // Import the MySQL module
+// Importa els mòduls necessaris
+import mysql from 'mysql2/promise'; // Importa el mòdul MySQL
 import express from 'express';
 import cors from 'cors';
 
 
-// Configure the database connection options
+// Configura les opcions de connexió a la base de dades
 const connection = await mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -12,44 +12,59 @@ const connection = await mysql.createConnection({
   database: 'vitora'
 });
 
-// Connect to the database
+// Connecta amb la base de dades
 try {
   await connection.connect();
-  console.log('Connected to the MySQL database successfully'); // Connection to the MySQL database successful
+  console.log('Connected to the MySQL database successfully');
 } catch (err) {
-  console.error('Error connecting to database:', err); // Error connecting to the database
+  console.error('Error connecting to database:', err);
 }
 
-// Create a new instance of the Express application
+// Crea una nova instància de l'aplicació Express
 const app = express();
 app.use(cors());
 
 
-// Route to get the table from the database
-app.get('/data', async (req, res) => {
+// Ruta per obtenir les dades de la taula específica de la base de dades
+app.get('/table/:tableName', async (req, res) => {
+  const { tableName } = req.params;
+  // Validar el nom de la taula
+  if (!isValidTableName(tableName)) {
+    return res.status(400).send('Invalid table name');
+  }
+
   try {
-    // Execute a query to the database to get the desired table
-    const [rows] = await connection.query({ sql: 'SELECT * FROM geneticquestions', rows: true });
-    // Send the table data as response
-    console.log('Table data:', rows); // Table data
+    // Executa una consulta a la base de dades per obtenir les dades de la taula específica
+    const [rows] = await connection.query({ sql: `SELECT * FROM ${tableName}`, rows: true });
     res.json(rows);
   } catch (err) {
-    console.error('Error executing the query:', err); // Error executing the query
-    res.status(500).send('Error getting the table'); // Error getting the table
+    console.error('Error executing the query:', err);
+    res.status(500).send(`Error getting table data for ${tableName}`);
   }
 });
 
-// Handle Express server errors
+
+// Funció per validar el nom de la taula
+function isValidTableName(tableName) {
+  // Defineix una llista de noms de taules vàlids
+  const validTableNames = ['geneticquestions', 'geneticanswers','exercisequestions', 'exerciseanswers'];
+
+  // Comprova si el nom de la taula es troba a la llista de noms de taules vàlids
+  return validTableNames.includes(tableName);
+}
+
+
+// Maneja els errors del servidor Express
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send('Server error'); // Server error
+  res.status(500).send('Server error');
 });
 
-// Listen on port 3000 (or any other port you desire)
+// Escolta al port 3000
 const port = 3000;
 app.listen(port, () => {
-  console.log(`Server listening on port ${port}`); // Server listening on port
+  console.log(`Server listening on port ${port}`);
 });
 
-// Export the connection to be used in other files
+// Exporta la connexió per a ser utilitzada en altres fitxers
 export default connection;

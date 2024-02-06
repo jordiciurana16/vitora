@@ -1,23 +1,27 @@
-import React, {useState, useEffect} from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Form } from 'react-bootstrap'; // Afegit Form des de react-bootstrap
 import { useGlobalContext } from '../hooks/GlobalContext';
 
 function Main() {
   const { lifespan, percentage, birthdate, deathdate } = useGlobalContext();
-  const [tableData, setTableData] = useState([]);
+  const [questionData, setQuestionData] = useState([]);
+  const [answerData, setAnswerData] = useState([]);
 
-
-
-  const stringBirthdate = birthdate ? new Date(birthdate).toLocaleDateString() : ''; // Utilitza la data introduïda des del contexte global
-  const stringDeathdate = deathdate ? new Date(deathdate).toLocaleDateString() : ''; // Utilitza la data introduïda des del contexte global
-
+  const stringBirthdate = birthdate ? new Date(birthdate).toLocaleDateString() : '';
+  const stringDeathdate = deathdate ? new Date(deathdate).toLocaleDateString() : '';
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/data');
-        const jsonData = await response.json();
-        setTableData(jsonData);
+        // Obté les dades de la taula geneticquestions
+        const questionResponse = await fetch('http://localhost:3000/table/geneticquestions');
+        const questionJsonData = await questionResponse.json();
+        setQuestionData(questionJsonData);
+
+        // Obté les dades de la taula geneticanswers
+        const answerResponse = await fetch('http://localhost:3000/table/geneticanswers');
+        const answerJsonData = await answerResponse.json();
+        setAnswerData(answerJsonData);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -25,7 +29,7 @@ function Main() {
 
     fetchData();
   }, []);
-  
+
   return (
     <main>
       <Container fluid>
@@ -35,23 +39,35 @@ function Main() {
             <p>You have lived {percentage}% of your life.</p>
             <p>Your life expectancy is {lifespan} years.</p>
             <p>You will die in {stringDeathdate}.</p>
-
-            {/* Mostra les dades de la taula geneticquestions */}
-            <div>
-      <h2>Table Data</h2>
-      <ul>
-        {tableData.map((row, index) => (
-          <li key={index}>
-            <strong>Question ID:</strong> {row.question_id}, <strong>Question Text:</strong> {row.question_text}
-          </li>
-        ))}
-      </ul>
-    </div>
+            <Form onSubmit={handleSubmit}>
+              {questionData.map((question, index) => (
+                <div key={index}>
+                  <h2>Question {question.question_id}</h2>
+                  <p>{question.question_text}</p>
+                  {answerData.filter(answer => answer.question_id === question.question_id).map((answer, answerIndex) => (
+                    <Form.Check
+                      key={answerIndex}
+                      type={question.input_type}
+                      label={answer.answer_text}
+                      name={`question_${question.question_id}`} // Afegit un name únic per a cada grup de radio buttons
+                      id={`answer_${answer.answer_id}`} // Afegit un id únic per a cada radio button
+                    />
+                  ))}
+                </div>
+              ))}
+              <button type="submit">Submit</button>
+            </Form>
           </Col>
         </Row>
       </Container>
     </main>
   );
+
+  // Funció per gestionar l'enviament del formulari
+  function handleSubmit(event) {
+    event.preventDefault();
+    // Aquí pots gestionar l'enviament del formulari, accedint als valors dels inputs mitjançant l'event.target
+  }
 }
 
 export default Main;
