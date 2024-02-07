@@ -1,4 +1,3 @@
-// En el component Questionnaire
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
@@ -32,9 +31,10 @@ function Questionnaire({ title, category }) {
   }, [category]);
 
   const handleChange = (event, index, effectOnLifespan) => {
-    const { value } = event.target;
+    const { value, checked } = event.target;
 
-    updateLifeAndPercentage(effectOnLifespan); // Actualitza els valors d'esperança de vida i percentatge de vida viscuda
+    // Actualitza els valors d'esperança de vida i percentatge de vida viscuda
+    updateLifeAndPercentage(checked ? effectOnLifespan : -effectOnLifespan);
 
     // Actualitza les opcions seleccionades
     const newSelectedOptions = { ...selectedOptions, [index]: value };
