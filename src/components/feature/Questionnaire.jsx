@@ -1,28 +1,27 @@
+// En el component Questionnaire
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
+import { useGlobalContext } from '../../hooks/GlobalContext';
 
 function Questionnaire({ title, category }) {
   const [questions, setQuestions] = useState([]);
+  const { lifespan, updateLifeAndPercentage } = useGlobalContext();
+  const [selectedOptions, setSelectedOptions] = useState({}); // Afegit estat per a les opcions seleccionades
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Obté les dades de la taula de preguntes corresponent segons la categoria
         const questionResponse = await fetch(`http://localhost:3000/table/${category.toLowerCase()}questions`);
         const questionJsonData = await questionResponse.json();
 
-        // Obté les dades de les respostes corresponents
         const answerResponse = await fetch(`http://localhost:3000/table/${category.toLowerCase()}answers`);
         const answerJsonData = await answerResponse.json();
 
-        // Combina les dades de les preguntes i les respostes
         const mergedQuestions = questionJsonData.map(question => {
-          // Filtra les respostes corresponents a la pregunta actual
           const options = answerJsonData.filter(answer => answer.question_id === question.question_id);
           return { ...question, options };
         });
 
-        // Actualitza l'estat amb les preguntes i les seves opcions
         setQuestions(mergedQuestions);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -30,22 +29,16 @@ function Questionnaire({ title, category }) {
     };
 
     fetchData();
-  }, [category]); // Assegura que la consulta es faci només quan la categoria canviï
+  }, [category]);
 
-  const handleChange = (event, index) => {
+  const handleChange = (event, index, effectOnLifespan) => {
     const { value } = event.target;
 
-    // Actualitza el camp boolean en l'objecte question
-    const newQuestions = questions.map((question, i) => {
-      if (i === index) {
-        const isFemale = value === 'Female'; // Aquí pots modificar la lògica segons el teu cas
-        return { ...question, boolean: isFemale };
-      }
-      return question;
-    });
+    updateLifeAndPercentage(effectOnLifespan); // Actualitza els valors d'esperança de vida i percentatge de vida viscuda
 
-    // Actualitza l'estat amb les noves preguntes actualitzades
-    setQuestions(newQuestions);
+    // Actualitza les opcions seleccionades
+    const newSelectedOptions = { ...selectedOptions, [index]: value };
+    setSelectedOptions(newSelectedOptions);
   };
 
   return (
@@ -60,9 +53,17 @@ function Questionnaire({ title, category }) {
                 <Row className='mb-3'>
                   <Col xs={10}><h6>{question.question_text}</h6></Col>
                   <Col xs={1}>
-                    <Badge bg={question.boolean ? 'success' : 'danger'}>
-                      {question.boolean ? '+ 0.28%' : '- 0.28%'}
-                    </Badge>
+                    {/* Renderitza el badge basat en les opcions seleccionades */}
+                    {selectedOptions[index] !== undefined && (
+                      <Badge bg={
+                        selectedOptions[index] === '0' ? 'secondary' :
+                        (selectedOptions[index] > 0 ? 'success' : 'danger')
+                      }>
+                        {selectedOptions[index] === '0' ? '= 0.00%' :
+                          (selectedOptions[index] > 0 ? '+ ' + selectedOptions[index] + '%' : selectedOptions[index] + '%')
+                        }
+                      </Badge>
+                    )}
                   </Col>
                 </Row>
                 <Row className='mb-4'>
@@ -73,8 +74,8 @@ function Questionnaire({ title, category }) {
                           type={question.input_type}
                           name={`question-${index}`}
                           label={option.answer_text}
-                          value={option.answer_text}
-                          onChange={(event) => handleChange(event, index)}
+                          value={option.effect_on_lifespan.toString()}
+                          onChange={(event) => handleChange(event, index, option.effect_on_lifespan)}
                         />
                       </div>
                     ))}

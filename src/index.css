@@ -114,4 +114,9 @@ input[type="date"]:focus,
   border: 2px solid var(--primary-color) ;
 }
 
+.badge{
+  width: 64px;
+}
+
+
 
