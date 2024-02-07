@@ -30,16 +30,35 @@ function Questionnaire({ title, category }) {
     fetchData();
   }, [category]);
 
+
   const handleChange = (event, index, effectOnLifespan) => {
-    const { value, checked } = event.target;
-
-    // Actualitza els valors d'esperança de vida i percentatge de vida viscuda
-    updateLifeAndPercentage(checked ? effectOnLifespan : -effectOnLifespan);
-
-    // Actualitza les opcions seleccionades
-    const newSelectedOptions = { ...selectedOptions, [index]: value };
-    setSelectedOptions(newSelectedOptions);
+    const { checked, value } = event.target;
+    
+    // Verifica si la pregunta és de tipus checkbox
+    if (questions[index].input_type === 'checkbox') {
+      // Obté l'efecte de la resposta seleccionada
+      const selectedEffect = checked ? effectOnLifespan : -effectOnLifespan;
+  
+      // Obté el valor actual del badge per a aquesta pregunta
+      const currentBadgeValue = selectedOptions[index] || 0;
+  
+      // Suma l'efecte de la resposta seleccionada al valor actual del badge
+      const newBadgeValue = parseFloat(currentBadgeValue) + selectedEffect;
+  
+      // Actualitza l'esperança de vida i el badge amb el nou valor
+      updateLifeAndPercentage(selectedEffect);
+      const newSelectedOptions = { ...selectedOptions, [index]: newBadgeValue.toString() };
+      setSelectedOptions(newSelectedOptions);
+    } else {
+      // Si no és de tipus checkbox, actualitza l'esperança de vida segons la resposta seleccionada
+      updateLifeAndPercentage(checked ? effectOnLifespan : -effectOnLifespan);
+  
+      // Actualitza les opcions seleccionades
+      const newSelectedOptions = { ...selectedOptions, [index]: value };
+      setSelectedOptions(newSelectedOptions);
+    }
   };
+  
 
   return (
     <Container>
@@ -60,7 +79,7 @@ function Questionnaire({ title, category }) {
                         (selectedOptions[index] > 0 ? 'success' : 'danger')
                       }>
                         {selectedOptions[index] === '0' ? '= 0.00%' :
-                          (selectedOptions[index] > 0 ? '+ ' + selectedOptions[index] + '%' : selectedOptions[index] + '%')
+                          (selectedOptions[index] > 0 ? '+' + selectedOptions[index] + '%' : selectedOptions[index] + '%')
                         }
                       </Badge>
                     )}

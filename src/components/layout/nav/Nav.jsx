@@ -21,7 +21,7 @@ function Nav() {
               <span className="ml-2">VITORA</span>
             </Link>
           </div>
-              <hr className={`${styles.separator} mx-4`} />
+              <hr className={`${styles.separator} mx-3`} />
               <div className={styles.navLinks}>
                 <NavItem>
                   <Link to="/accidents">Accidents</Link>

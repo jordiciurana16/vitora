@@ -26,6 +26,6 @@
 
     100% {
       transform: scale(1.1); /* Escala augmentada */
-      box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Aplica l'ombra */
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.5); /* Aplica l'ombra */
     }
   }

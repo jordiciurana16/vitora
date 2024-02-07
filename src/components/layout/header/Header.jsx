@@ -1,9 +1,9 @@
 // En el teu component Header
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Dropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { BsPersonFillGear, BsPersonCircle, BsGearWideConnected, BsTranslate, BsQuestionLg, BsSend, BsFillInboxFill, BsSearch, BsNewspaper, BsBoxArrowInLeft} from 'react-icons/bs';
+import { BsPersonFillGear, BsGearWideConnected, BsPersonCircle, BsTranslate, BsQuestionLg, BsSend, BsFillInboxFill, BsSearch, BsNewspaper, BsBoxArrowInLeft} from 'react-icons/bs';
 import ProgressBar from '../../common/ProgressBar';
-import Events from '../../feature/Events'
+import Events from '../../feature/Events';
 import styles from './Header.module.css';
 import { useGlobalContext } from '../../../hooks/GlobalContext';
 
@@ -11,7 +11,6 @@ function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const { lifespan, birthdate } = useGlobalContext();
   const stringBirthdate = birthdate ? new Date(birthdate).toLocaleDateString() : '';
-  const duration = 4; // Durada total de l'animació en segons
   const tooltipLifespan = (
     <Tooltip id="tooltip-lifespan">
       Your lifespan is {lifespan} years
@@ -97,7 +96,7 @@ function Header() {
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item href="#/action-3">
-                    <span className="me-2">
+                      <span className="me-2">
                         <BsBoxArrowInLeft />
                       </span>
                       Log out
