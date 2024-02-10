@@ -17,6 +17,10 @@
     padding: 3px 8px; /* Reduce padding for the clickable area */
 }
 
+.mainLink span {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
 
   /* Hover effect style for anchor tags */
   .navLinks a:hover {

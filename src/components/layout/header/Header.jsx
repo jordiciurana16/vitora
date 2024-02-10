@@ -30,7 +30,7 @@ function Header() {
       <Container fluid>
         <Row className={`position-relative`}>
           <Col className="p-0 position-relative">
-            <ProgressBar lastLifespan={lastLifespan} /> {/* Passa l'últim valor d'esperança de vida a la barra de progressió */}
+            <ProgressBar lastLifespan={lastLifespan} />
             <Events />
             <div className={`${styles.headerLifespan} position-absolute top-50 start-50 translate-middle`}>
             <OverlayTrigger placement="bottom" overlay={tooltipLifespan}>

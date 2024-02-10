@@ -23,7 +23,7 @@ function MainPage() {
             <Nav />
           </Col>
           <Col xs={{ span: 10, offset: 2 }} className='px-0'>
-            <MainRouting className="bg-primary" />
+            <MainRouting />
             <Footer />
           </Col>
         </Row>

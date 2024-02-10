@@ -1,3 +1,4 @@
+// Questionnaire.js
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
@@ -5,7 +6,20 @@ import { useGlobalContext } from '../../hooks/GlobalContext';
 function Questionnaire({ title, category }) {
   const [questions, setQuestions] = useState([]);
   const { lifespan, updateLifeAndPercentage } = useGlobalContext();
-  const [selectedOptions, setSelectedOptions] = useState({}); // Afegit estat per a les opcions seleccionades
+  const [selectedOptions, setSelectedOptions] = useState({});
+  const [previousSelectedOptions, setPreviousSelectedOptions] = useState({});
+
+  const handleQuestionSelection = (index) => {
+    const questionElement = document.getElementById(`question-${index}`);
+    if (questionElement) {
+      const progressBarHeight = 15; // Height of the progress bar in vmin
+      const progressBarOffset = progressBarHeight * window.innerHeight / 100; // Offset to account for the fixed header
+      window.scrollTo({
+        top: questionElement.offsetTop - progressBarOffset,
+        behavior: 'smooth',
+      });
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,35 +44,28 @@ function Questionnaire({ title, category }) {
     fetchData();
   }, [category]);
 
-
-  const handleChange = (event, index, effectOnLifespan) => {
+  const handleChange = (event, index) => {
     const { checked, value } = event.target;
-    
-    // Verifica si la pregunta és de tipus checkbox
+    const previousValue = previousSelectedOptions[index] || 0;
+
+    let selectedEffect;
     if (questions[index].input_type === 'checkbox') {
-      // Obté l'efecte de la resposta seleccionada
-      const selectedEffect = checked ? effectOnLifespan : -effectOnLifespan;
-  
-      // Obté el valor actual del badge per a aquesta pregunta
-      const currentBadgeValue = selectedOptions[index] || 0;
-  
-      // Suma l'efecte de la resposta seleccionada al valor actual del badge
-      const newBadgeValue = parseFloat(currentBadgeValue) + selectedEffect;
-  
-      // Actualitza l'esperança de vida i el badge amb el nou valor
-      updateLifeAndPercentage(selectedEffect);
-      const newSelectedOptions = { ...selectedOptions, [index]: newBadgeValue.toString() };
+      const previousSelectedEffect = selectedOptions[index] || 0;
+      selectedEffect = checked ? parseFloat(value) : -parseFloat(value);
+
+      const newSelectedOptions = { ...selectedOptions, [index]: checked ? previousSelectedEffect + parseFloat(value) : previousSelectedEffect - parseFloat(value) };
       setSelectedOptions(newSelectedOptions);
     } else {
-      // Si no és de tipus checkbox, actualitza l'esperança de vida segons la resposta seleccionada
-      updateLifeAndPercentage(checked ? effectOnLifespan : -effectOnLifespan);
-  
-      // Actualitza les opcions seleccionades
-      const newSelectedOptions = { ...selectedOptions, [index]: value };
+      selectedEffect = parseFloat(value) - parseFloat(previousValue);
+      const newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
       setSelectedOptions(newSelectedOptions);
     }
+
+    updateLifeAndPercentage(selectedEffect);
+    setPreviousSelectedOptions({ ...previousSelectedOptions, [index]: value });
+
+    handleQuestionSelection(index); // Scroll to the next question after selection
   };
-  
 
   return (
     <Container>
@@ -66,19 +73,18 @@ function Questionnaire({ title, category }) {
         <h2 className='pb-4'>{title}</h2>
         <Form>
           {questions.map((question, index) => (
-            <Row key={index}>
+            <Row key={index} id={`question-${index}`}>
               <Col xs={1}><h6>{index + 1}.</h6></Col>
               <Col xs={11}>
                 <Row className='mb-3'>
                   <Col xs={10}><h6>{question.question_text}</h6></Col>
-                  <Col xs={1}>
-                    {/* Renderitza el badge basat en les opcions seleccionades */}
+                  <Col xs={2}>
                     {selectedOptions[index] !== undefined && (
                       <Badge bg={
-                        selectedOptions[index] === '0' ? 'secondary' :
+                        selectedOptions[index] === 0 ? 'secondary' :
                         (selectedOptions[index] > 0 ? 'success' : 'danger')
                       }>
-                        {selectedOptions[index] === '0' ? '= 0.00%' :
+                        {selectedOptions[index] === 0 ? '= 0%' :
                           (selectedOptions[index] > 0 ? '+' + selectedOptions[index] + '%' : selectedOptions[index] + '%')
                         }
                       </Badge>
@@ -86,15 +92,16 @@ function Questionnaire({ title, category }) {
                   </Col>
                 </Row>
                 <Row className='mb-4'>
-                  <Col xs={5}>
+                  <Col xs={7}>
                     {question.options.map((option, optionIndex) => (
                       <div key={optionIndex}>
                         <Form.Check
                           type={question.input_type}
+                          id={`question-${index}-option-${optionIndex}`}
                           name={`question-${index}`}
                           label={option.answer_text}
                           value={option.effect_on_lifespan.toString()}
-                          onChange={(event) => handleChange(event, index, option.effect_on_lifespan)}
+                          onChange={(event) => handleChange(event, index)}
                         />
                       </div>
                     ))}

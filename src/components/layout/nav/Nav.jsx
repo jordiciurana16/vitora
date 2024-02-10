@@ -1,9 +1,8 @@
-// Nav.jsx
 import React from 'react';
 import styles from './Nav.module.css';
 import { Container, Row, Col, Nav as BootstrapNav, NavItem } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-
+import { BsXLg } from "react-icons/bs";
 function Nav() {
   const location = useLocation();
   const isActive = (link) => {
@@ -16,12 +15,12 @@ function Nav() {
         <Col className='p-0'>
           <nav className={`${styles.navContainer} position-sticky `}>
             <BootstrapNav className='flex-column'>
-            <div className={`d-flex justify-content-center align-items-center mt-3 ${styles.lifespanItem}`}>
-            <Link to="/vitora/" className="d-flex align-items-center">
-              <span className="ml-2">VITORA</span>
-            </Link>
+              <div className={`d-flex justify-content-center align-items-center mt-3 ${styles.lifespanItem}`}>
+                <Link to="/vitora/" className={`${styles.mainLink} d-flex mb-2 align-items-center `}>
+                  <BsXLg size={23} className="me-2 mt-1" /> {/* Afegir l'icona a l'esquerra del link */}
+                  <span>Vitora</span>
+                </Link>
           </div>
-              <hr className={`${styles.separator} mx-3`} />
               <div className={styles.navLinks}>
                 <NavItem>
                   <Link to="/accidents">Accidents</Link>
