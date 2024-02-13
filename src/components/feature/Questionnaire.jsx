@@ -12,7 +12,7 @@ function Questionnaire({ title, category }) {
   const handleQuestionSelection = (index) => {
     const questionElement = document.getElementById(`question-${index}`);
     if (questionElement) {
-      const progressBarHeight = 15; // Height of the progress bar in vmin
+      const progressBarHeight = 17; // Height of the progress bar in vmin
       const progressBarOffset = progressBarHeight * window.innerHeight / 100; // Offset to account for the fixed header
       window.scrollTo({
         top: questionElement.offsetTop - progressBarOffset,

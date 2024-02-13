@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Dropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { BsPersonFillGear, BsGearWideConnected, BsPersonCircle, BsTranslate, BsQuestionLg, BsSend, BsFillInboxFill, BsSearch, BsNewspaper, BsBoxArrowInLeft} from 'react-icons/bs';
-import ProgressBar from '../../common/ProgressBar';
+import ProgressBar from '../../feature/ProgressBar';
 import Events from '../../feature/Events';
 import styles from './Header.module.css';
 import { useGlobalContext } from '../../../hooks/GlobalContext';

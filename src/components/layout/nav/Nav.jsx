@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './Nav.module.css';
 import { Container, Row, Col, Nav as BootstrapNav, NavItem } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import { BsXLg } from "react-icons/bs";
+import Logo from '../../common/Logo'; // Importa el component del logotip aquí
+
 function Nav() {
   const location = useLocation();
   const isActive = (link) => {
@@ -15,12 +16,14 @@ function Nav() {
         <Col className='p-0'>
           <nav className={`${styles.navContainer} position-sticky `}>
             <BootstrapNav className='flex-column'>
-              <div className={`d-flex justify-content-center align-items-center mt-3 ${styles.lifespanItem}`}>
-                <Link to="/vitora/" className={`${styles.mainLink} d-flex mb-2 align-items-center `}>
-                  <BsXLg size={23} className="me-2 mt-1" /> {/* Afegir l'icona a l'esquerra del link */}
+            <div className={`d-flex justify-content-center align-items-center mt-3 ${styles.lifespanItem}`}>
+                {/* Utilitza el component del logotip aquí */}
+                <Logo />
+                {/* Fi del component del logotip */}
+                <Link to="/vitora/" className={`${styles.mainLink} d-flex ms-1 align-items-center `}>
                   <span>Vitora</span>
                 </Link>
-          </div>
+              </div>
               <div className={styles.navLinks}>
                 <NavItem>
                   <Link to="/accidents">Accidents</Link>
