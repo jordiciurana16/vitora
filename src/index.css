@@ -119,5 +119,7 @@ input[type="date"]:focus,
   width: 64px;
 }
 
-
+.logo {
+  fill: var(--secondary-color);
+}
 
