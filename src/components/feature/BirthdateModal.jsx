@@ -1,47 +1,48 @@
+// components/BirthdateModal.js
+
 import React from 'react';
 import { Modal, Form as BootstrapForm, Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useGlobalContext } from '../../hooks/GlobalContext';
-import styles from './BirthdateModal.module.css'; // Importa el fitxer CSS
+import { userAge } from '../../utils/calculations/UserAge'; // Importem la funció UserAge
+import Logo from '../../components/common/Logo'; // Importa el component del logotip aquí
 
 
 function BirthdateModal({ show, onHide }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
-const { setAge, setBirthdate, setLifespan } = useGlobalContext();
+  const { setAge, setBirthdate, setLifespan } = useGlobalContext();
 
   const onSubmit = (data) => {
     const birthdate = new Date(data.birthdate);
-    const currentDate = new Date();
-    const ageInMillis = currentDate - birthdate;
-    const ageInYears = ageInMillis / (1000 * 60 * 60 * 24 * 365);
+    const ageInYears = userAge(birthdate); // Utilitzem la funció UserAge
 
     setAge(ageInYears);
-    setBirthdate(birthdate); // Verifica que aquesta línia actualitzi correctament la data introduïda al contexte global
-    setLifespan(72.4); // Modifica la variable lifespan a 72.4
-
-
+    setBirthdate(birthdate);
+    setLifespan(72.4);
     onHide();
-    
   };
 
   return (
-    <Modal show={show} onHide={onHide} className={styles.birthdateModal}> {/* Aplica la classe al modal */}
+    <Modal show={show} onHide={onHide}>
       <Modal.Header>
-        <Modal.Title>Welcome to Vitora!</Modal.Title>
+        <Modal.Title className='px-5'>
+          <div>
+            <Logo /><span className='ms-3'>Welcome to Vitora!</span>
+          </div>
+        </Modal.Title>
       </Modal.Header>
       <Modal.Body className="mx-auto mb-3">
         <p>Start your journey towards a healthier life with Vitora.</p>
-        <BootstrapForm onSubmit={handleSubmit(onSubmit)}> {/* Aplica la classe al formulari */}
+        <BootstrapForm onSubmit={handleSubmit(onSubmit)}>
           <BootstrapForm.Group controlId="birthdate" className='pb-4'>
             <BootstrapForm.Label>Date of Birth:</BootstrapForm.Label>
             <BootstrapForm.Control
               type="date"
               {...register('birthdate')}
-              
             />
             {errors.birthdate && <div>{errors.birthdate.message}</div>}
           </BootstrapForm.Group>
-          <div style={{ textAlign: 'center' }}>
+          <div className='text-center'>
             <Button type="submit">Next</Button>
           </div>
         </BootstrapForm>

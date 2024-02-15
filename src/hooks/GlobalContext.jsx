@@ -1,6 +1,5 @@
-// Al teu fitxer GlobalContext.js
 import React, { createContext, useContext, useState } from 'react';
-import { usePercentageEffect, useEstimatedDeathDateEffect } from '../utils/calculations/GlobalCalculations';
+import { percentageLived } from '../utils/calculations/PercentageLived';
 
 const GlobalContext = createContext();
 
@@ -9,7 +8,6 @@ export const GlobalProvider = ({ children }) => {
   const [lifespan, setLifespan] = useState(0);
   const [percentage, setPercentage] = useState(0);
   const [birthdate, setBirthdate] = useState(null);
-  const [deathdate, setDeathdate] = useState(null);
 
   const updateLifeAndPercentage = (effectOnLifespan) => {
     setLifespan(prevLifespan => prevLifespan + effectOnLifespan);
@@ -18,11 +16,10 @@ export const GlobalProvider = ({ children }) => {
     setPercentage(Number(newPercentage));
   };
 
-  usePercentageEffect({ age, lifespan, setPercentage });
-  useEstimatedDeathDateEffect({ birthdate, lifespan, setDeathdate });
+  percentageLived({ age, lifespan, setPercentage });
 
   return (
-    <GlobalContext.Provider value={{ age, setAge, lifespan, setLifespan, percentage, setPercentage, birthdate, setBirthdate, deathdate, updateLifeAndPercentage }}>
+    <GlobalContext.Provider value={{ age, setAge, lifespan, setLifespan, percentage, setPercentage, birthdate, setBirthdate, updateLifeAndPercentage }}>
       {children}
     </GlobalContext.Provider>
   );
