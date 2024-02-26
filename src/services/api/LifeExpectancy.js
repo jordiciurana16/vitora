@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 // Construir la URL de la sol·licitud només per a països
 const indicator = 'SP.DYN.LE00.IN';
-const url = `https://api.worldbank.org/v2/country?&format=json`;
+const url = `https://api.worldbank.org/v2/country?&format=json&per_page=300`;
 
 // Fer una sol·licitud a l'API de World Bank
 fetch(url)
@@ -12,10 +12,10 @@ fetch(url)
     if (!data || !Array.isArray(data[1])) {
       throw new Error('No s\'han rebut dades o les dades no estan en el format esperat');
     }
-    
+
     // Obtenir les dades dels països
     const countries = data[1].filter(country => country.region.value !== 'Aggregates' && country.region.value !== 'Income levels');
-    
+
     // Construir una llista d'ID de països
     const countryIDs = countries.map(country => country.id);
 

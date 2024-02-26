@@ -3,6 +3,8 @@ import styles from './MainRouting.module.css'
 import Main from '../../../containers/Main';
 import Exercise from '../../../containers/Exercise';
 import Genetic from '../../../containers/Genetic';
+import Geography from '../../../containers/Geography';
+
 
 function MainRouting() {
   return (
@@ -10,6 +12,7 @@ function MainRouting() {
       <Routes>
         <Route path="/vitora/exercise" element={<Exercise />} />
         <Route path="/vitora/genetic" element={<Genetic />} />
+        <Route path="/vitora/geography" element={<Geography />} />
         <Route path="/*" element={<Main />} />
       </Routes>
     </div>
