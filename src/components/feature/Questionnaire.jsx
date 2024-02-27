@@ -1,4 +1,3 @@
-// Questionnaire.js
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
@@ -45,17 +44,17 @@ function Questionnaire({ title, category }) {
   }, [category]);
 
   const handleChange = (event, index) => {
-    const { checked, value } = event.target;
+    const { checked, value, name, type } = event.target;
     const previousValue = previousSelectedOptions[index] || 0;
 
     let selectedEffect;
-    if (questions[index].input_type === 'checkbox') {
+    if (type === 'checkbox') {
       const previousSelectedEffect = selectedOptions[index] || 0;
       selectedEffect = checked ? parseFloat(value) : -parseFloat(value);
 
       const newSelectedOptions = { ...selectedOptions, [index]: checked ? previousSelectedEffect + parseFloat(value) : previousSelectedEffect - parseFloat(value) };
       setSelectedOptions(newSelectedOptions);
-    } else {
+    } else if (type === 'radio' || type === 'select') {
       selectedEffect = parseFloat(value) - parseFloat(previousValue);
       const newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
       setSelectedOptions(newSelectedOptions);
@@ -93,18 +92,32 @@ function Questionnaire({ title, category }) {
                 </Row>
                 <Row className='mb-4'>
                   <Col xs={7}>
-                    {question.options.map((option, optionIndex) => (
-                      <div key={optionIndex}>
-                        <Form.Check
-                          type={question.input_type}
-                          id={`question-${index}-option-${optionIndex}`}
-                          name={`question-${index}`}
-                          label={option.answer_text}
-                          value={option.effect_on_lifespan.toString()}
-                          onChange={(event) => handleChange(event, index)}
-                        />
-                      </div>
-                    ))}
+                    {question.input_type === 'select' ? (
+                      <Form.Select
+                        name={`question-${index}`}
+                        value={previousSelectedOptions[index] || ''}
+                        onChange={(event) => handleChange(event, index)}
+                      >
+                        {question.options.map((option, optionIndex) => (
+                          <option key={optionIndex} value={option.effect_on_lifespan.toString()}>
+                            {option.answer_text}
+                          </option>
+                        ))}
+                      </Form.Select>
+                    ) : (
+                      question.options.map((option, optionIndex) => (
+                        <div key={optionIndex}>
+                          <Form.Check
+                            type={question.input_type}
+                            id={`question-${index}-option-${optionIndex}`}
+                            name={`question-${index}`}
+                            label={option.answer_text}
+                            value={option.effect_on_lifespan.toString()}
+                            onChange={(event) => handleChange(event, index)}
+                          />
+                        </div>
+                      ))
+                    )}
                   </Col>
                 </Row>
               </Col>

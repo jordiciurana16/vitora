@@ -47,7 +47,7 @@ app.get('/table/:tableName', async (req, res) => {
 // Funció per validar el nom de la taula
 function isValidTableName(tableName) {
   // Defineix una llista de noms de taules vàlids
-  const validTableNames = ['geneticquestions', 'geneticanswers','exercisequestions', 'exerciseanswers'];
+  const validTableNames = ['geneticquestions', 'geneticanswers','exercisequestions', 'exerciseanswers','geographyquestions','geographyanswers'];
 
   // Comprova si el nom de la taula es troba a la llista de noms de taules vàlids
   return validTableNames.includes(tableName);

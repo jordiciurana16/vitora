@@ -4,7 +4,7 @@ import Questionnaire from '../components/feature/Questionnaire';
 
 function Geography() {
   const category = 'Geography'; // Assignem la categoria 'Geography'
-  
+
   return (
     <Container fluid>
       <Row>
