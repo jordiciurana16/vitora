@@ -8,7 +8,8 @@ function Main() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await fetchCountriesData('SP.POP.TOTL'); // Crida la funció fetchCountriesData
+        const data = await fetchCountriesData('SP.DYN.LE00.IN'); // Crida la funció fetchCountriesData
+        console.log(data); // Imprimeix les dades a la consola
         setCountriesDataFormatted(data); // Actualitza l'estat local amb les dades obtingudes
       } catch (error) {
         console.error(error);
