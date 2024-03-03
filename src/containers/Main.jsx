@@ -73,13 +73,13 @@ function Main() {
           <Form>
               <Form.Group controlId="exampleUrl">
                 <Form.Label>Share your profile among your circles so they can see your results.</Form.Label>
-                <div className="input-group mb-3">
+                <div className="input-group mb-2">
                   <button className="btn btn-outline-secondary" type="button"><BsLink45Deg /></button> {/* Ícone de link */}
                   <Form.Control type="text" placeholder="Enter URL" value={exampleUrl} readOnly className="form-control-lg" />
                   <button className="btn btn-outline-secondary" type="button"><BsFillShareFill /></button> {/* Ícone de compartir */}
                 </div>
                 <Form.Text className="text-muted">
-                  You need a user session to save, share, and modify your results.
+                  You need a user session to save, share, and modify your results over time.
                 </Form.Text>
               </Form.Group>
             </Form>
