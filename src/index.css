@@ -90,6 +90,11 @@ button[type="submit"]:hover{
   border: 2px solid var(--secondary-color)!important;
   
 }
+
+.card {
+  background-color: var(--primary-color)!important;
+
+}
 /* FORM */
 
 input[type="checkbox"],
@@ -122,3 +127,4 @@ input[type="date"]:focus,
 .logo {
   fill: var(--secondary-color);
 }
+

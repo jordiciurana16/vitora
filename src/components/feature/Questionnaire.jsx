@@ -1,12 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
+import { fetchCountriesData } from '../../services/api/countriesData';
 
 function Questionnaire({ title, category }) {
   const [questions, setQuestions] = useState([]);
   const { lifespan, updateLifeAndPercentage } = useGlobalContext();
   const [selectedOptions, setSelectedOptions] = useState({});
   const [previousSelectedOptions, setPreviousSelectedOptions] = useState({});
+  const [countriesDataFormatted, setCountriesDataFormatted] = useState([]); 
+  const [userCountry, setUserCountry] = useState(''); 
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await fetchCountriesData('SP.DYN.LE00.IN'); 
+        setCountriesDataFormatted(data); 
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    fetchData(); 
+  }, []);
+
+  const handleCountrySelectChange = (event) => {
+    setUserCountry(event.target.value);
+  };
+
 
   const handleQuestionSelection = (index) => {
     const questionElement = document.getElementById(`question-${index}`);
@@ -43,28 +64,44 @@ function Questionnaire({ title, category }) {
     fetchData();
   }, [category]);
 
-  const handleChange = (event, index) => {
-    const { checked, value, name, type } = event.target;
-    const previousValue = previousSelectedOptions[index] || 0;
+  const handleChange = async (event, index) => {
+  const { checked, value, name, type } = event.target;
+  const previousValue = previousSelectedOptions[index] || 0;
 
-    let selectedEffect;
-    if (type === 'checkbox') {
+  let selectedEffect;
+  let newSelectedOptions = { ...selectedOptions }; // Move this declaration outside the switch
+
+  switch (type) {
+    case 'checkbox':
       const previousSelectedEffect = selectedOptions[index] || 0;
       selectedEffect = checked ? parseFloat(value) : -parseFloat(value);
 
-      const newSelectedOptions = { ...selectedOptions, [index]: checked ? previousSelectedEffect + parseFloat(value) : previousSelectedEffect - parseFloat(value) };
+      newSelectedOptions = { ...selectedOptions, [index]: checked ? previousSelectedEffect + parseFloat(value) : previousSelectedEffect - parseFloat(value) };
       setSelectedOptions(newSelectedOptions);
-    } else if (type === 'radio' || type === 'select') {
+      break;
+    case 'radio':
       selectedEffect = parseFloat(value) - parseFloat(previousValue);
-      const newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
+      newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
       setSelectedOptions(newSelectedOptions);
-    }
+      break;
+    case 'select':
+      newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
+      setSelectedOptions(newSelectedOptions);
 
-    updateLifeAndPercentage(selectedEffect);
-    setPreviousSelectedOptions({ ...previousSelectedOptions, [index]: value });
+      break;
+    default:
+      // handle default case (if any)
+      break;
+  }
 
-    handleQuestionSelection(index); // Scroll to the next question after selection
-  };
+  updateLifeAndPercentage(selectedEffect);
+  setPreviousSelectedOptions({ ...previousSelectedOptions, [index]: value });
+
+  handleQuestionSelection(index); // Scroll to the next question after selection
+};
+
+
+
 
   return (
     <Container>
@@ -98,10 +135,8 @@ function Questionnaire({ title, category }) {
                         value={previousSelectedOptions[index] || ''}
                         onChange={(event) => handleChange(event, index)}
                       >
-                        {question.options.map((option, optionIndex) => (
-                          <option key={optionIndex} value={option.effect_on_lifespan.toString()}>
-                            {option.answer_text}
-                          </option>
+                        {countriesDataFormatted.map((country, index) => (
+                          <option key={index} value={country.name}>{country.name}</option>
                         ))}
                       </Form.Select>
                     ) : (
