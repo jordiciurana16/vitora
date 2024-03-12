@@ -3,7 +3,7 @@ import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { fetchCountriesData } from '../../services/api/countriesData';
 
-function Questionnaire({ title, category }) {
+function Questionnaire({ category, title, countriesData, setLifespan }) {
   const [questions, setQuestions] = useState([]);
   const { lifespan, updateLifeAndPercentage } = useGlobalContext();
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -131,14 +131,18 @@ function Questionnaire({ title, category }) {
                   <Col xs={7}>
                     {question.input_type === 'select' ? (
                       <Form.Select
-                        name={`question-${index}`}
-                        value={previousSelectedOptions[index] || ''}
-                        onChange={(event) => handleChange(event, index)}
-                      >
-                        {countriesDataFormatted.map((country, index) => (
-                          <option key={index} value={country.name}>{country.name}</option>
-                        ))}
-                      </Form.Select>
+                      name={`question-${index}`}
+                      value={previousSelectedOptions[index] || ''}
+                      onChange={(event) => {
+                        setLifespan(event);
+                        handleCountrySelectChange(event);
+                      }}
+                    >
+                    
+                    {countriesData.map((country, index) => (
+            <option key={index} value={country.name}>{country.name}</option>
+          ))}
+        </Form.Select>
                     ) : (
                       question.options.map((option, optionIndex) => (
                         <div key={optionIndex}>

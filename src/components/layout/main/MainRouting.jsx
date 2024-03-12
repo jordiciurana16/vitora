@@ -8,7 +8,7 @@ import Geography from '../../../containers/Geography';
 
 function MainRouting() {
   return (
-    <div className={`${styles.routesContainer}`}>
+    <div className={` ${styles.routesContainer}`}>
       <Routes>
         <Route path="/vitora/exercise" element={<Exercise />} />
         <Route path="/vitora/genetic" element={<Genetic />} />

@@ -57,8 +57,8 @@ function ResultsReview() {
       
 
     return (
-        <Row className="mt-4">
-            <Col xs={4}>
+        <Row className="mx-3 mt-4">
+            <Col className='px-0'  xs={4}>
                 <Card className='h-100 shadow-sm'>
                     <Card.Header className='mb-5'>
                         Profile
@@ -79,7 +79,7 @@ function ResultsReview() {
                     </Carousel>
                 </Card>
             </Col>
-            <Col className='p-0' xs={8}>
+            <Col className='pe-0' xs={8}>
                 <Card className=" shadow-sm">
                     <Card.Header>Probability</Card.Header>
                     <Row className='ps-5 pe-5 pb-4 pt-4'>

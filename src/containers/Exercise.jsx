@@ -8,7 +8,7 @@ function Exercise() {
   return (
     <Container fluid>
       <Row>
-        <Col className='px-0'>
+        <Col  className='ps-3 pe-0 pt-3'>
           <Questionnaire category={category} title={'Exercise'} />
         </Col>
       </Row>

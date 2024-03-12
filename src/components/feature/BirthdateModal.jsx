@@ -10,15 +10,15 @@ import Logo from '../../components/common/Logo'; // Importa el component del log
 
 function BirthdateModal({ show, onHide }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { setAge, setBirthdate, setLifespan } = useGlobalContext();
+  const { setAge, setBirthdate, setLifespan, lifespan } = useGlobalContext();
 
   const onSubmit = (data) => {
     const birthdate = new Date(data.birthdate);
-    const ageInYears = userAge(birthdate); // Utilitzem la funció UserAge
+    const age = userAge(birthdate); // Utilitzem la funció UserAge
 
-    setAge(ageInYears);
+    setAge(age);
     setBirthdate(birthdate);
-    setLifespan(72.4);
+    setLifespan(lifespan);
     onHide();
   };
 

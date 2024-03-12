@@ -7,9 +7,10 @@ function ShareSection() {
     const exampleUrl = "https://vitora.com/jordiciurana16";
 
     return(
-    <Row className='pt-4'>
-        <h2>Share your results</h2>
-          <Col xs={12}>
+    <Row className='mx-3 py-4'>
+          <Col className='p-0' xs={12}>
+          <h2>Share your results</h2>
+
             <Form>
               <Form.Group controlId="exampleUrl">
                 <Form.Label>Share your profile among your circles so they can see your results.</Form.Label>
