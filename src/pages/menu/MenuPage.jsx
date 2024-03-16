@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, ListGroup, Form, InputGroup, Accordion, Card } from 'react-bootstrap';
-import styles from './LegalPages.module.css';
+import styles from './MenuPages.module.css';
 import { Link } from 'react-router-dom';
 import { BsArrowLeft, BsSearch } from 'react-icons/bs';
-import legalData from './LegalData.json';
+import menuData from './MenuData.json';
 
-const LegalPage = () => {
-  const [legalContent, setLegalContent] = useState(null);
+const MenuPage = () => {
+  const [menuContent, setMenuContent] = useState(null);
 
   useEffect(() => {
     const currentPath = window.location.pathname;
 
-    if (currentPath === '/vitora/privacy' && legalData.privacy) {
-      setLegalContent(legalData.privacy);
-    } else if (currentPath === '/vitora/cookies' && legalData.cookies) {
-      setLegalContent(legalData.cookies);
-    } else if (currentPath === '/vitora/terms' && legalData.terms) {
-      setLegalContent(legalData.terms);
-    } else if (currentPath === '/vitora/help' && legalData.help) {
-      setLegalContent(legalData.help);
-    } else if (currentPath === '/vitora/contact' && legalData.contact) {
-      setLegalContent(legalData.contact);
+    if (currentPath === '/vitora/privacy' && menuData.privacy) {
+      setMenuContent(menuData.privacy);
+    } else if (currentPath === '/vitora/cookies' && menuData.cookies) {
+      setMenuContent(menuData.cookies);
+    } else if (currentPath === '/vitora/terms' && menuData.terms) {
+      setMenuContent(menuData.terms);
+    } else if (currentPath === '/vitora/help' && menuData.help) {
+      setMenuContent(menuData.help);
+    } else if (currentPath === '/vitora/contact' && menuData.contact) {
+      setMenuContent(menuData.contact);
     }
   }, []);
 
@@ -46,7 +46,7 @@ const LegalPage = () => {
   }, []);
 
   return (
-    <Container fluid className={`px-5 py-4 ${styles.legalPages}`}>
+    <Container fluid className={`px-5 py-4 ${styles.menuPages}`}>
       <Row className={`px-5 `}>
         <Col>
           <header>
@@ -54,16 +54,16 @@ const LegalPage = () => {
               <BsArrowLeft className={`me-2 ${styles.backIcon}`} />
             </Link>
             <div className={`d-flex align-items-center justify-content-center flex-column ${styles.titleContainer}`}>
-              <h1 className={`mb-2 `}>{legalContent && legalContent.titol}</h1>
+              <h1 className={`mb-2 `}>{menuContent && menuContent.titol}</h1>
             </div>
             <hr/>
           </header>
         </Col>
       </Row>
-      {legalContent && (
+      {menuContent && (
         <Row className='px-5 pt-3'>
           <Col xs={9} className='pe-5'>
-            {legalContent.seccions.map((seccio) => (
+            {menuContent.seccions.map((seccio) => (
               <section id={seccio.id} key={seccio.id}>
                 <h3>{seccio.capcalera}</h3>
                 <p>{seccio.text}</p>
@@ -91,7 +91,7 @@ const LegalPage = () => {
             <aside>
               <h4 className="mb-3">Índex</h4>
               <ListGroup>
-                {legalContent.seccions.map((seccio) => (
+                {menuContent.seccions.map((seccio) => (
                   <ListGroup.Item key={seccio.id} action href={`#${seccio.id}`}>
                     {seccio.capcalera}
                   </ListGroup.Item>
@@ -105,4 +105,4 @@ const LegalPage = () => {
   );
 };
 
-export default LegalPage;
+export default MenuPage;

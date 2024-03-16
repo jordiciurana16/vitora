@@ -6,9 +6,10 @@
   font-weight: 400;
 
   /* Colors */
-  --primary-color: #a3a5ef; /* Main primary color */
-  --secondary-color: #7579e7; /* Secondary color */
-  --tertiary-color: #FFD25D; /* Secondary color */
+  --opacity-color: #a3a5ef; /* Main opacity color */
+  --primary-color: #7579e7; /* Secondary color */
+  --secondary-color: #f9b200; /* Secondary color */
+
 
 
   --light-color: #F7F7F7; /* Light color */
@@ -77,26 +78,27 @@ ol {
 }
 
 button[type="submit"]{
+  background-color: var(--opacity-color)!important;
+  border: 2px solid var(--opacity-color)!important;
+}
+
+button[type="submit"]:active {
+  box-shadow: 0 0 5px var(--primary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
+}
+
+button[type="submit"]:hover{
   background-color: var(--primary-color)!important;
   border: 2px solid var(--primary-color)!important;
 }
 
-button[type="submit"]:active {
-  box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
-}
-
-button[type="submit"]:hover{
-  background-color: var(--secondary-color)!important;
-  border: 2px solid var(--secondary-color)!important;
-}
 
 .input-group {
-  border: 2px solid var(--secondary-color)!important;
+  border: 2px solid var(--primary-color)!important;
   border-radius: 8px;
 }
 
 .input-group:hover {
-  box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
+  box-shadow: 0 0 5px var(--primary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
 }
 
 
@@ -111,7 +113,7 @@ button[type="submit"]:hover{
 }
 
 .carousel-indicators button {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 /* FORM */
 
@@ -120,13 +122,13 @@ input[type="radio"],
 input[type="text"],
 input[type="date"],
 .form-select {
-  border: 2px solid var(--primary-color) !important;
+  border: 2px solid var(--opacity-color) !important;
 }
 
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
-  background-color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: var(--opacity-color);
+  border: 2px solid var(--opacity-color);
 }
 
 input[type="checkbox"]:focus,
@@ -134,8 +136,8 @@ input[type="radio"]:focus,
 input[type="text"]:focus,
 input[type="date"]:focus,
 .form-select:focus {
-  box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
-  border: 2px solid var(--primary-color) ;
+  box-shadow: 0 0 5px var(--primary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
+  border: 2px solid var(--opacity-color) ;
 }
 
 .badge{
@@ -143,15 +145,15 @@ input[type="date"]:focus,
 }
 
 .logo {
-  fill: var(--secondary-color);
+  fill: var(--primary-color);
 }
 
 .progress {
-  background-color: var(--primary-color) !important;
+  background-color: var(--opacity-color) !important;
 }
 
 .progress-bar {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
 .dataSection {
@@ -163,6 +165,6 @@ input[type="date"]:focus,
 }
 
 .bg-data{
-    background-color: var(--primary-color); /* Aplica el mateix color de fons que el contenidor principal */
+    background-color: var(--opacity-color); /* Aplica el mateix color de fons que el contenidor principal */
 
 }

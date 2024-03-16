@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './Footer.module.css'
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom'; // Importa Link i useLocation des de react-router-dom
-import legalData from '../../../pages/legal/LegalData.json'; // Importa l'arxiu JSON amb les dades
+import menuData from '../../../pages/menu/MenuData.json'; // Importa l'arxiu JSON amb les dades
 
 function Footer() {
   const location = useLocation(); // Afegit: obté la ubicació actual
@@ -13,13 +13,13 @@ function Footer() {
 
   useEffect(() => {
     // La teva lògica aquí per carregar les dades segons la ubicació
-    if (location.pathname === '/vitora/legal') {
-      if (legalData && legalData.privacitat) {
-        setContent(legalData.privacitat);
+    if (location.pathname === '/vitora/menu') {
+      if (menuData && menuData.privacitat) {
+        setContent(menuData.privacitat);
       }
     } else if (location.pathname === '/vitora/cookies') {
-      if (legalData && legalData.cookies) {
-        setContent(legalData.cookies);
+      if (menuData && menuData.cookies) {
+        setContent(menuData.cookies);
       }
     } else {
       setContent(null); // Defineix un valor per defecte si la ruta no coincideix

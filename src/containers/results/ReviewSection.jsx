@@ -57,7 +57,7 @@ function ResultsReview() {
       
 
     return (
-        <Row className="mx-3 mt-4">
+        <Row className="mx-3 my-4">
             <Col className='px-0'  xs={4}>
                 <Card className='h-100 shadow-sm'>
                     <Card.Header className='mb-5'>

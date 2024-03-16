@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import styles from './MainRouting.module.css'
 import Results from '../../../containers/results/ResultsContainer';
-import Exercise from '../../../containers/Exercise';
-import Genetic from '../../../containers/Genetic';
-import Geography from '../../../containers/Geography';
+import Exercise from '../../../containers/categories/Exercise';
+import Genetic from '../../../containers/categories/Genetic';
+import Geography from '../../../containers/categories/Geography';
 
 
 function MainRouting() {

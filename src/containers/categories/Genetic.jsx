@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Questionnaire from '../components/feature/Questionnaire';
+import Questionnaire from '../../components/common/Questionnaire';
 
 function Genetic() {
   const category = 'Genetic'; // Assignem la categoria 'Genetic'

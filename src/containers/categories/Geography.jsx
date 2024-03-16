@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-import { fetchCountriesData } from '../services/api/countriesData'; 
-import { useGlobalContext } from '../hooks/GlobalContext';
-import Questionnaire from '../components/feature/Questionnaire'
+import { fetchCountriesData } from '../../services/api/countriesData'; 
+import { useGlobalContext } from '../../hooks/GlobalContext';
+import Questionnaire from '../../components/common/Questionnaire'
 function Geography() {
   const category = 'Geography'; 
   const [countriesDataFormatted, setCountriesDataFormatted] = useState([]); 
