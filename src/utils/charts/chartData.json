@@ -1,0 +1,96 @@
+[
+    {
+        "id": 6,
+        "title": "Mitjana d'esperança de vida per països",
+        "type": "bar",
+        "labels": ["Spain", "United States", "Japan", "Germany", "France", "United Kingdom"],
+        "data": [84.3, 73.2, 82.9, 85.3, 82.1, 79.3],
+        "backgroundColor": "rgba(255, 99, 132, 0.2)", 
+        "borderColor": "rgba(255, 99, 132, 1)",
+        "options": {
+            "scales": {
+                "y": {
+                    "beginAtZero": false,
+                    "min": 70,
+                    "max": 90,
+                    "ticks": {
+                        "stepSize": 1
+                    }
+                }
+            },
+            "plugins": {
+                "legend": {
+                    "display": false
+                }
+            }
+        }
+    },
+    {
+        "id": 3,
+        "title": "Increment de població anual",
+        "type": "line",
+        "labels": ["2020", "2021", "2022", "2023", "2024"],
+        "data": [100000, 110000, 115000, 120000, 125000],
+        "backgroundColor": "rgba(255, 206, 86, 0.2)",
+        "borderColor": "rgba(255, 206, 86, 1)",
+        "options": {
+            "plugins": {
+                "legend": {
+                    "display": false
+                }
+            }
+        }
+    },    
+    {
+        "id": 1,
+        "title": "Mitjana d'esperança de vida mundial",
+        "type": "bar",
+        "labels": ["Woman", "Man"],
+        "data": [ 75, 70],
+        "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+        "borderColor": ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+        "options": {
+            "plugins": {
+                "legend": {
+                    "display": false
+                }
+            }
+        }
+    },
+    {
+        "id": 2,
+        "title": "Gràfic de bombolles",
+        "type": "bubble",
+        "data": [
+            {"x": 10, "y": 20, "r": 10},
+            {"x": 15, "y": 25, "r": 15},
+            {"x": 20, "y": 30, "r": 20},
+            {"x": 25, "y": 35, "r": 25}
+        ],
+        "backgroundColor": "rgba(75, 192, 192, 0.2)",
+        "borderColor": "rgba(75, 192, 192, 1)",
+        "options": {
+            "plugins": {
+                "legend": {
+                    "display": false
+                }
+            }
+        }
+    },
+    {
+        "id": 4,
+        "title": "Increment de població addicional",
+        "type": "line",
+        "labels": ["2020", "2021", "2022", "2023", "2024"],
+        "data": [125000, 130000, 135000, 140000, 145000],
+        "backgroundColor": "rgba(75, 192, 192, 0.2)",
+        "borderColor": "rgba(75, 192, 192, 1)",
+        "options": {
+            "plugins": {
+                "legend": {
+                    "display": false
+                }
+            }
+        }
+    }
+]

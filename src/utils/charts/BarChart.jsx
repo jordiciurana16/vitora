@@ -1,38 +1,42 @@
 // BarChart.js
-
-import React from 'react';
-import { Bar } from 'react-chartjs-2';
-import chartOptions from './ChartOptions'; // Importa les opcions d'estil
+import React, { useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto';
 
 function BarChart({ chartData }) {
-    const centeredOptions = {
-        ...chartOptions,
-        plugins: {
-            ...chartOptions.plugins,
-            legend: {
-                ...chartOptions.plugins.legend,
-                align: 'start', // Posiciona la llegenda a l'esquerra
+    const chartRef = useRef(null);
 
-            },
-        },
-        layout: {
-            padding: {
-                left: 25, // Augmenta el padding a l'esquerra per a la llegenda
-                right: 25,
-                top: 0,
-                bottom: 0,
-            },
-        },
-    };
+    useEffect(() => {
+        if (chartRef.current) {
+            const ctx = chartRef.current.getContext('2d');
+            let chartInstance = new Chart(ctx, {
+                type: chartData.type, // Utilitza el tipus de gràfic definit a les dades
+                data: {
+                    labels: chartData.labels,
+                    datasets: [{
+                        label: chartData.title,
+                        data: chartData.data,
+                        backgroundColor: chartData.backgroundColor,
+                        borderColor: chartData.borderColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: chartData.options || {
+                    indexAxis: chartData.indexAxis || 'x', // Afegeix la opció de l'eix d'index si està definit
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
 
-    return (
-        <div className="text-center"> {/* Div per centrar el gràfic */}
-            <Bar
-                data={chartData}
-                options={centeredOptions} // Utilitza les opcions modificades
-            />
-        </div>
-    );
+            return () => {
+                chartInstance.destroy();
+            };
+        }
+    }, [chartData]);
+
+    return <canvas ref={chartRef} id={`chart-${chartData.id}`} width="400" height="200"></canvas>;
 }
 
 export default BarChart;

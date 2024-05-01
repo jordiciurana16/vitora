@@ -24,7 +24,7 @@
 
   /* Hover effect style for anchor tags */
   .navLinks a:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     width: fit-content;
     margin: 2px 0 2px 30px; /* Spacing around the anchor tags */
     padding: 3px 8px; /* Reduce padding for the clickable area */
@@ -32,7 +32,7 @@
 
   /* Style for the active link */
 .activeLink {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     width: fit-content;
     padding: 3px 8px; /* Reduce padding for the clickable area */
     margin: 2px 0 2px 30px; /* Spacing around the anchor tags */

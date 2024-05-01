@@ -166,6 +166,5 @@ input[type="date"]:focus,
 }
 
 .bg-data{
-    background-color: var(--opacity-color); /* Aplica el mateix color de fons que el contenidor principal */
-
+    background-color: #7579e73e; /* Aplica el mateix color de fons que el contenidor principal */
 }
