@@ -4,7 +4,7 @@ import { fetchCountriesData } from '../../services/api/countriesData';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import Questionnaire from '../../components/common/Questionnaire'
 function Geography() {
-  const category = 'Geography'; 
+  const factor = 'Geography'; 
   const [countriesDataFormatted, setCountriesDataFormatted] = useState([]); 
   const { setLifespan } = useGlobalContext();
 
@@ -38,7 +38,7 @@ function Geography() {
       <Row>
         <Col  className='ps-3 pe-0 pt-3'>
           <Questionnaire
-            category={category}
+            factor={factor}
             title={'Geography'}
             countriesData={countriesDataFormatted}
             setLifespan={handleCountrySelectChange} // Pass setLifespan as a prop

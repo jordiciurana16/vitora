@@ -3,7 +3,7 @@ import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { fetchCountriesData } from '../../services/api/countriesData';
 
-function Questionnaire({ category, title, countriesData, setLifespan }) {
+function Questionnaire({ factor, title, countriesData, setLifespan }) {
   const [questions, setQuestions] = useState([]);
   const { lifespan, updateLifeAndPercentage } = useGlobalContext();
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -44,10 +44,10 @@ function Questionnaire({ category, title, countriesData, setLifespan }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const questionResponse = await fetch(`http://localhost:3000/table/${category.toLowerCase()}questions`);
+        const questionResponse = await fetch(`http://localhost:3000/table/${factor.toLowerCase()}questions`);
         const questionJsonData = await questionResponse.json();
 
-        const answerResponse = await fetch(`http://localhost:3000/table/${category.toLowerCase()}answers`);
+        const answerResponse = await fetch(`http://localhost:3000/table/${factor.toLowerCase()}answers`);
         const answerJsonData = await answerResponse.json();
 
         const mergedQuestions = questionJsonData.map(question => {
@@ -62,7 +62,7 @@ function Questionnaire({ category, title, countriesData, setLifespan }) {
     };
 
     fetchData();
-  }, [category]);
+  }, [factor]);
 
   const handleChange = async (event, index) => {
   const { checked, value, name, type } = event.target;
