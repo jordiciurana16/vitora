@@ -7,52 +7,58 @@ function ResultsReview() {
     const carouselData = [
         {
             id: 1,
-            title: "Lorem",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt ornare enim, ac ullamcorper ex dapibus a."
+            title: "Athlete",
+            text: "You are the epitome of fitness, with a burning passion for pushing your body to its limits and achieving new heights of strength and endurance."
         },
         {
             id: 2,
-            title: "Lorem",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt ornare enim, ac ullamcorper ex dapibus a. "
+            title: "Rested",
+            text: "You stand out as someone who understands the power of slowing down and embracing stillness knowing that true rest isn't a luxury, it's a need."
         },
         {
             id: 3,
-            title: "Lorem",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt ornare enim, ac ullamcorper ex dapibus a."
-        }
+            title: "Unhealthy",
+            text: "You find yourself trapped in unhealthy eating habits, consuming limited variety of foods and high-calorie meals without consideration for your overall health."
+        }        
     ];
     const progressBarData = [
         {
-          name: "Lorem",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt ornare enim, ac ullamcorper ex dapibus a. Nullam feugiat orci in sapien iaculis convallis. Proin pulvinar venenatis justo, eu aliquet ante commodo sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ornare ligula tortor, id venenatis elit imperdiet non.",
-          percentage: 15 // Exemple de percentatge
+            id: 1,
+            title: "Death",
+            start: "Premature",
+            end: "Natural",
+            percentage: 76
         },
         {
-          name: "Lorem",
-          content: "Curabitur cursus eleifend ligula vel lobortis. Nulla lacinia, est in tempus facilisis, lorem sapien sagittis elit, laoreet luctus augue magna at sapien. Mauris faucibus, leo eget blandit tempor, lacus quam pulvinar dui, eu pharetra est tellus pellentesque ante. Curabitur feugiat luctus tempor. Sed gravida gravida velit sed viverra. ",
-          percentage: 25 // Exemple de percentatge
+            id: 2,
+            title: "Status",
+            start: "Single",
+            end: "Married",
+            percentage: 45
         },
         {
-          name: "Lorem",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt ornare enim, ac ullamcorper ex dapibus a. Nullam feugiat orci in sapien iaculis convallis. Proin pulvinar venenatis justo, eu aliquet ante commodo sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ornare ligula tortor, id venenatis elit imperdiet non.",
-          percentage: 50 // Exemple de percentatge
+            id: 3,
+            title: "Housing",
+            start: "Rent",
+            end: "Property",
+            percentage: 50
         },
         {
-          name: "Lorem",
-          content: "Curabitur cursus eleifend ligula vel lobortis. Nulla lacinia, est in tempus facilisis, lorem sapien sagittis elit, laoreet luctus augue magna at sapien. Mauris faucibus, leo eget blandit tempor, lacus quam pulvinar dui, eu pharetra est tellus pellentesque ante. Curabitur feugiat luctus tempor. Sed gravida gravida velit sed viverra. ",
-          percentage: 10 // Exemple de percentatge
+            id: 4,
+            title: "Estat Civil",
+            start: "Solter",
+            end: "Casat",
+            percentage: 50
         },
         {
-            name: "Lorem",
-            content: "Curabitur cursus eleifend ligula vel lobortis. Nulla lacinia, est in tempus facilisis, lorem sapien sagittis elit, laoreet luctus augue magna at sapien. Mauris faucibus, leo eget blandit tempor, lacus quam pulvinar dui, eu pharetra est tellus pellentesque ante. Curabitur feugiat luctus tempor. Sed gravida gravida velit sed viverra. ",
-            percentage: 50 // Exemple de percentatge
-          },
-          {
-            name: "Lorem",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt ornare enim, ac ullamcorper ex dapibus a. Nullam feugiat orci in sapien iaculis convallis. Proin pulvinar venenatis justo, eu aliquet ante commodo sed. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ornare ligula tortor, id venenatis elit imperdiet non.",
-            percentage: 10 // Exemple de percentatge
-          }
-      ];
+            id: 5,
+            title: "Estat Civil",
+            start: "Solter",
+            end: "Casat",
+            percentage: 50
+        }
+    ];
+    
     const [dynamicContent, setDynamicContent] = useState(progressBarData[0].content); // Estableix el contingut dinàmic com el contingut de la primera progress bar
       
 
@@ -81,23 +87,37 @@ function ResultsReview() {
             </Col>
             <Col className='pe-0' xs={8}>
                 <Card className=" shadow-sm">
-                    <Card.Header>Probability</Card.Header>
+                    <Card.Header>Events</Card.Header>
                     <Row className='ps-5 pe-5 pb-4 pt-4'>
-                        <Col xs={7} className="d-flex flex-column ps-0 pe-0">
+                    <Col xs={7} className="d-flex flex-column ps-0 pe-0">
                             {progressBarData.map((bar, index) => (
                                 <div
                                     key={index}
-                                    className={`d-flex align-items-center p-3 ${hoveredItem === index + 1 ? 'leftCardHover' : ''}`}
+                                    className={`p-2 ${hoveredItem === index + 1 ? 'leftCardHover' : ''}`}
                                     onMouseEnter={() => {
                                         setHoveredItem(index + 1);
-                                        setDynamicContent(bar.content); // Actualitza el contingut dinàmic amb el contingut del JSON
+                                        setDynamicContent(`Curabitur cursus eleifend ligula vel lobortis. Nulla lacinia, est in tempus facilisis, lorem sapien sagittis elit, laoreet luctus augue magna at sapien. Mauris faucibus, leo eget blandit tempor, lacus quam pulvinar dui, eu pharetra est tellus pellentesque ante. Curabitur feugiat luctus tempor. Sed gravida gravida velit sed viverra.`); // Actualitza el contingut dinàmic amb les dades start i end
                                     }}
                                     onMouseLeave={() => {
                                         // No cal fer res aquí
                                     }}
                                 >
-                                    <span>{bar.name}</span>
-                                    <ProgressBar now={bar.percentage} label={`${bar.percentage}%`} className="flex-grow-1 ms-3" />
+                                    <Row className="align-items-center"><h6 className='d-flex justify-content-center'>{bar.title}</h6></Row>
+                                    <Row className="align-items-center">
+                                    <Col xs={2} className="d-flex justify-content-end">
+                                            <div>
+                                                <span>{bar.start}</span>
+                                            </div>
+                                        </Col>
+                                        <Col xs={8} className='p-0' >
+                                            <ProgressBar now={bar.percentage} label={`${bar.percentage}%`} />
+                                        </Col>
+                                        <Col xs={2} className="d-flex justify-content-end">
+                                            <div>
+                                                <span>{bar.end}</span>
+                                            </div>
+                                        </Col>
+                                    </Row>
                                 </div>
                             ))}
                         </Col>
