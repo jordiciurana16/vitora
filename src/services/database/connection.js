@@ -6,9 +6,10 @@ import cors from 'cors';
 
 // Configura les opcions de connexió a la base de dades
 const connection = await mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Firenze30',
+  host: 'sql11.freemysqlhosting.net',
+  user: 'sql11704807',
+  password: 'hiyDJ1bs4J',
+  port: 3306,
   database: 'vitora'
 });
 
