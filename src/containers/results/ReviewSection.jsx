@@ -8,54 +8,42 @@ function ResultsReview() {
         {
             id: 1,
             title: "Athlete",
-            text: "You are the epitome of fitness, with a burning passion for pushing your body to its limits and achieving new heights of strength and endurance."
+            text: "You are the epitome of fitness, with a burning passion for pushing your body to its limits and achieving new heights of strength and endurance.",
+            imageUrl: "https://i.ibb.co/5c7HdCb/Artboard-3-copy-100.jpg" // Nou camp per al URL de la imatge
         },
         {
             id: 2,
             title: "Rested",
-            text: "You stand out as someone who understands the power of slowing down and embracing stillness knowing that true rest isn't a luxury, it's a need."
+            text: "You stand out as someone who understands the power of slowing down and embracing stillness knowing that true rest isn't a luxury, it's a need.",
+            imageUrl: "https://i.ibb.co/vY6QWRs/Artboard-3-100.jpg" // Nou camp per al URL de la imatge
         },
         {
             id: 3,
             title: "Unhealthy",
-            text: "You find yourself trapped in unhealthy eating habits, consuming limited variety of foods and high-calorie meals without consideration for your overall health."
-        }        
+            text: "You find yourself trapped in unhealthy eating habits, consuming limited variety of foods and high-calorie meals without consideration for your overall health.",
+            imageUrl: "https://i.ibb.co/5R4nR9f/Artboard-3-copy-2-100.jpg" // Nou camp per al URL de la imatge
+        }
     ];
     const progressBarData = [
         {
             id: 1,
-            title: "Death",
-            start: "Premature",
-            end: "Natural",
-            percentage: 76
+            title: "Marriage",
         },
         {
             id: 2,
-            title: "Status",
-            start: "Single",
-            end: "Married",
-            percentage: 45
+            title: "Offspring",
         },
         {
             id: 3,
             title: "Housing",
-            start: "Rent",
-            end: "Property",
-            percentage: 50
         },
         {
             id: 4,
-            title: "Estat Civil",
-            start: "Solter",
-            end: "Casat",
-            percentage: 50
+            title: "Retirement",
         },
         {
-            id: 5,
-            title: "Estat Civil",
-            start: "Solter",
-            end: "Casat",
-            percentage: 50
+            id: 4,
+            title: "Death",
         }
     ];
     
@@ -66,18 +54,18 @@ function ResultsReview() {
         <Row className="mx-3 my-4">
             <Col className='px-0'  xs={4}>
                 <Card className='h-100 shadow-sm'>
-                    <Card.Header className='mb-5'>
+                    <Card.Header className='mb-3'>
                         Profile
                     </Card.Header>
                     <Carousel className='h-100' controls={false} indicators={true}>
                         {carouselData.map(item => (
                             <Carousel.Item key={item.id} className='px-2'>
                                 <div className="d-flex flex-column justify-content-center align-items-center">
-                                    <BsArrowsFullscreen size={40} />
+                                    <img src={item.imageUrl} alt="Profile" style={{ width: '100px' }} /> {/* Nou: Imatge en lloc d'ícona */}
                                 </div>
                                 <Card.Body>
                                     <h5 className='pb-2'>{item.title}</h5>
-                                    <Card.Text className='pb-4'>{item.text}</Card.Text>
+                                    <Card.Text className='pb-2'>{item.text}</Card.Text>
                                     <Button type='submit'>Learn more</Button>
                                 </Card.Body>
                             </Carousel.Item>
@@ -102,22 +90,7 @@ function ResultsReview() {
                                         // No cal fer res aquí
                                     }}
                                 >
-                                    <Row className="align-items-center"><h6 className='d-flex justify-content-center'>{bar.title}</h6></Row>
-                                    <Row className="align-items-center">
-                                    <Col xs={2} className="d-flex justify-content-end">
-                                            <div>
-                                                <span>{bar.start}</span>
-                                            </div>
-                                        </Col>
-                                        <Col xs={8} className='p-0' >
-                                            <ProgressBar now={bar.percentage} label={`${bar.percentage}%`} />
-                                        </Col>
-                                        <Col xs={2} className="d-flex justify-content-end">
-                                            <div>
-                                                <span>{bar.end}</span>
-                                            </div>
-                                        </Col>
-                                    </Row>
+                                    <Row><h6>{bar.title}</h6></Row>
                                 </div>
                             ))}
                         </Col>
