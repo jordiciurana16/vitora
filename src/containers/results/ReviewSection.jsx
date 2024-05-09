@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col, Card, Carousel, Button } from 'react-bootstrap';
+import { BsBoxArrowInUpRight } from 'react-icons/bs';
+
 
 function ResultsReview() {
     const [hoveredItem, setHoveredItem] = useState(1);
@@ -31,7 +33,7 @@ function ResultsReview() {
             id: 1,
             title: "Job",
             date: "2025-06-15",
-            imageUrl: "https://i.ibb.co/nCdDSsz/Artboard-work-100.jpg",
+            imageUrl: "https://i.ibb.co/5hT7wqx/jobwork.webp",
             description: "A new job opportunity arises! It's time to impress with your skills and expertise.",
             link: "#"
         },
@@ -39,7 +41,7 @@ function ResultsReview() {
             id: 2,
             title: "Marriage",
             date: "2026-09-20",
-            imageUrl: "https://i.ibb.co/Ct0QCVB/Artboard-1-100.jpg",
+            imageUrl: "https://i.ibb.co/XtLqMBC/marriage.webp",
             description: "Love is in the air! Prepare for a beautiful journey together with your partner.",
             link: "#"
         },
@@ -47,7 +49,7 @@ function ResultsReview() {
             id: 3,
             title: "Offspring",
             date: "2027-12-25",
-            imageUrl: "https://i.ibb.co/CzwznrL/father-work-100.jpg",
+            imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
             description: "Congratulations! You're expecting a new member in the family. Get ready for sleepless nights and joyful moments.",
             link: "#"
         },
@@ -55,7 +57,7 @@ function ResultsReview() {
             id: 4,
             title: "Housing",
             date: "2028-03-10",
-            imageUrl: "https://i.ibb.co/5c7HdCb/Artboard-3-copy-100.jpg",
+            imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
             description: "It's time to find your dream home. Get ready for house hunting and making important decisions.",
             link: "#"
         },
@@ -63,7 +65,7 @@ function ResultsReview() {
             id: 5,
             title: "Retirement",
             date: "2045-01-01",
-            imageUrl: "https://i.ibb.co/5c7HdCb/Artboard-3-copy-100.jpg",
+            imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
             description: "Congratulations on your retirement! It's time to relax, travel, and enjoy the fruits of your labor.",
             link: "#"
         },
@@ -71,7 +73,7 @@ function ResultsReview() {
             id: 6,
             title: "Illness",
             date: "2030-08-03",
-            imageUrl: "https://i.ibb.co/5c7HdCb/Artboard-3-copy-100.jpg",
+            imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
             description: "Unfortunately, you've fallen ill. Take care of yourself and focus on recovery.",
             link: "#"
         },
@@ -79,7 +81,7 @@ function ResultsReview() {
             id: 7,
             title: "Death",
             date: "2040-05-15",
-            imageUrl: "https://i.ibb.co/5c7HdCb/Artboard-3-copy-100.jpg",
+            imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
             description: "A sad event occurs. Remember to cherish the memories and celebrate the life of your loved one.",
             link: "#"
         }
@@ -148,8 +150,9 @@ function ResultsReview() {
                             )}
                             <p>{dynamicContent.description}</p>
                             {dynamicContent.link && (
-                                <Button href={dynamicContent.link} target="_blank" rel="noopener noreferrer">Learn more</Button>
-                            )}
+                                <a href={dynamicContent.link} target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+                                    Learn more <BsBoxArrowInUpRight />
+                                </a>                            )}
                         </Col>
                     </Row>
                 </Card>
