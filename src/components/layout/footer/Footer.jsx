@@ -66,15 +66,13 @@ function Footer() {
         <Row className="mb-4 px-5">
           <Col className="text-center px-5">
             <p className="px-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum repellat
-              quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum harum
-              corrupti dicta, aliquam sequi voluptate quas omniu nostrea placitus.
+              This application is a prototype under development and is copyrighted.
             </p>
           </Col>
         </Row>
         <Row className={`${styles.copyrightRow} align-items-center px-5 `}>
           <Col xs={6} className="d-flex justify-content-start">
-            <div>© 2022 Copyright: All rights reserved.</div>
+            <div>© 2024 Copyright: All rights reserved.</div>
           </Col>
           <Col xs={6} className="d-flex justify-content-end">
             <div className={`${styles.socialIcons}`}>

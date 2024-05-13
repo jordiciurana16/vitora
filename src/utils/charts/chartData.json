@@ -1,12 +1,12 @@
 [
     {
         "id": 6,
-        "title": "Mitjana d'esperança de vida per països",
+        "title": "Average life expectancy by country",
         "type": "bar",
         "labels": ["Spain", "United States", "Japan", "Germany", "France", "United Kingdom"],
         "data": [84.3, 73.2, 82.9, 85.3, 82.1, 79.3],
-        "backgroundColor": "rgba(255, 99, 132, 0.2)", 
-        "borderColor": "rgba(255, 99, 132, 1)",
+        "backgroundColor": "rgba(117, 121, 231, 0.5)",
+        "borderColor": "rgb(117, 121, 231)",
         "options": {
             "scales": {
                 "y": {
@@ -25,14 +25,36 @@
             }
         }
     },
+    
+        {
+            "id": 3,
+            "title": "Increment anual de la població per països",
+            "type": "line",
+            "labels": ["2016","2017","2018","2019","2020", "2021", "2022", "2023", "2024"],
+            "data": [
+                { "country": "Country A", "data": [112000, 114000, 115000, 116000, 115000, 117000, 118000, 120000, 121000] },
+                { "country": "Country B", "data": [105000, 108000, 113000, 117000, 115000, 116000, 117000, 118000, 119000] }
+            ],
+            "backgroundColor": ["rgba(117, 121, 231, 0.5)"],
+            "borderColor": ["rgb(117, 121, 231)"],
+            "options": {
+                "plugins": {
+                    "legend": {
+                        "display": false
+                    }
+                }
+            }
+        },
+    
+    
     {
-        "id": 3,
-        "title": "Increment de població anual",
-        "type": "line",
-        "labels": ["2020", "2021", "2022", "2023", "2024"],
-        "data": [100000, 110000, 115000, 120000, 125000],
-        "backgroundColor": "rgba(255, 206, 86, 0.2)",
-        "borderColor": "rgba(255, 206, 86, 1)",
+        "id": 1,
+        "title": "Mitjana d'esperança de vida mundial",
+        "type": "bar",
+        "labels": ["Woman", "You", "Man"],
+        "data": [76, 82, 72],
+        "backgroundColor": ["rgba(255, 0, 105, 0.5)", "rgba(255, 165, 0, 0.5)", "rgba(54, 162, 235, 0.5)"],
+        "borderColor": ["rgb(255, 0, 105)", "rgba(255, 165, 0)", "rgb(54, 162, 235)"],
         "options": {
             "plugins": {
                 "legend": {
@@ -41,22 +63,6 @@
             }
         }
     },    
-    {
-        "id": 1,
-        "title": "Mitjana d'esperança de vida mundial",
-        "type": "bar",
-        "labels": ["Woman", "Man"],
-        "data": [ 75, 70],
-        "backgroundColor": ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
-        "borderColor": ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
-        "options": {
-            "plugins": {
-                "legend": {
-                    "display": false
-                }
-            }
-        }
-    },
     {
         "id": 2,
         "title": "Gràfic de bombolles",
@@ -67,24 +73,8 @@
             {"x": 20, "y": 30, "r": 20},
             {"x": 25, "y": 35, "r": 25}
         ],
-        "backgroundColor": "rgba(75, 192, 192, 0.2)",
-        "borderColor": "rgba(75, 192, 192, 1)",
-        "options": {
-            "plugins": {
-                "legend": {
-                    "display": false
-                }
-            }
-        }
-    },
-    {
-        "id": 4,
-        "title": "Increment de població addicional",
-        "type": "line",
-        "labels": ["2020", "2021", "2022", "2023", "2024"],
-        "data": [125000, 130000, 135000, 140000, 145000],
-        "backgroundColor": "rgba(75, 192, 192, 0.2)",
-        "borderColor": "rgba(75, 192, 192, 1)",
+        "backgroundColor": "rgba(117, 121, 231, 0.5)",
+        "borderColor": "rgba(117, 121, 231, 1)",
         "options": {
             "plugins": {
                 "legend": {

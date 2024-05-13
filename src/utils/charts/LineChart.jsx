@@ -12,21 +12,13 @@ function LineChart({ chartData }) {
                 type: 'line',
                 data: {
                     labels: chartData.labels,
-                    datasets: [{
-                        label: chartData.title,
-                        data: chartData.data,
-                        backgroundColor: chartData.backgroundColor,
-                        borderColor: chartData.borderColor,
+                    datasets: chartData.data.map(dataset => ({ // Utilitzem map per crear un dataset per cada país
+                        label: dataset.country, // Etiqueta del dataset serà el nom del país
+                        data: dataset.data,
+                        backgroundColor: chartData.backgroundColor[0], // Utilitzem el mateix color per a totes les línies
+                        borderColor: chartData.borderColor[0],
                         borderWidth: 1
-                    },
-                    // Afegim el nou conjunt de dades
-                    {
-                        label: 'New Population Increment',
-                        data: [125000, 130000, 135000, 140000, 145000], // Dades inventades per a l'increment de població
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
-                    }]
+                    }))
                 },
                 options: chartData.options || {
                     scales: {

@@ -9,7 +9,7 @@
     height: 10px; /* Alçada de l'indicador */
     margin: -5px; /* Ajusta la mida dels punts a la meitat de la seva alçada i amplada */
     border-radius: 50%; /* Per fer un cercle */
-    background-color: orange; /* Color de l'indicador */
+    background-color: #FF0069; /* Color de l'indicador */
     animation: pulse 0.5s infinite alternate; /* Aplicar l'animació 'pulse' durant 0.5 segons, alternant en cada iteració */
     transition: transform 0.3s; /* Transició per al transform en hover */
   }
@@ -26,6 +26,6 @@
 
     100% {
       transform: scale(1.1); /* Escala augmentada */
-      box-shadow: 0 0 15px rgba(255, 165, 0, 0.5); /* Aplica l'ombra */
+      box-shadow: 0 0 15px rgba(255, 0, 106, 0.558); /* Aplica l'ombra */
     }
   }
