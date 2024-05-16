@@ -8,6 +8,8 @@ export const GlobalProvider = ({ children }) => {
   const [lifespan, setLifespan] = useState(72.4);
   const [percentage, setPercentage] = useState(0);
   const [birthdate, setBirthdate] = useState(null);
+  const [hoveredItem, setHoveredItem] = useState(1);
+
 
   const updateLifeAndPercentage = (effectOnLifespan) => {
     setLifespan(prevLifespan => prevLifespan + effectOnLifespan);
@@ -19,7 +21,7 @@ export const GlobalProvider = ({ children }) => {
   percentageLived({ age, lifespan, setPercentage });
 
   return (
-    <GlobalContext.Provider value={{ age, setAge, lifespan, setLifespan, percentage, setPercentage, birthdate, setBirthdate, updateLifeAndPercentage }}>
+    <GlobalContext.Provider value={{ age, setAge, lifespan, setLifespan, percentage, setPercentage, birthdate, setBirthdate, updateLifeAndPercentage, hoveredItem, setHoveredItem }}>
       {children}
     </GlobalContext.Provider>
   );

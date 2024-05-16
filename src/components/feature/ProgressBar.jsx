@@ -2,8 +2,9 @@ import React from 'react';
 import { Container, Row, Col, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import styles from './ProgressBar.module.css';
+import Events from './Events'
 
-const ProgressBar = () => {
+const ProgressBar = ({ hoveredItem }) => {
   const { percentage } = useGlobalContext();
 
   const tooltip = (
@@ -23,6 +24,7 @@ const ProgressBar = () => {
                 style={{ width: `${percentage}%` }}
               ></div>
             </OverlayTrigger>
+            <Events hoveredItem={hoveredItem} />
           </div>
         </Col>
       </Row>
