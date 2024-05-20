@@ -192,3 +192,38 @@ input[type="date"]:focus,
 .profile-header {
   border-top: 7px solid var(--primary-color);
 }
+
+.clickedCard {
+  background-color: #e9e9e9 !important; /* Color vermell */
+  border-radius: 6px 0px 0px 6px;
+}
+
+.leftCardHover {
+  background-color: #f6f6f6;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.rightCardHover {
+  background-color: #f6f6f6;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.rightCardClicked {
+  background-color: #e9e9e9 !important; /* Color vermell */
+  border-radius: 0px 6px 6px 0px;
+}
+
+.clickedContent {
+  background-color: #e9e9e9 !important; /* Color vermell */
+  border-radius: 0px 6px 6px 0px;
+}
+
+.rightCardHover {
+  background-color: #f6f6f6;
+  border-radius: 0px 6px 6px 0px;
+}
+
+.cursorClicked:hover {
+  cursor: pointer;
+
+}
