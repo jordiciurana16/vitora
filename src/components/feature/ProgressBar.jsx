@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import styles from './ProgressBar.module.css';
-import Events from './Events';
+import Events from '../common/Events';
 
 const ProgressBar = () => {
   const { percentage, hoveredItem } = useGlobalContext();

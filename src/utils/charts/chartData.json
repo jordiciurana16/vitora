@@ -1,86 +1,203 @@
 [
     {
-        "id": 6,
-        "title": "Average life expectancy by country",
+        "id": 1,
+        "title": "Sales Data",
         "type": "bar",
-        "labels": ["Spain", "United States", "Japan", "Germany", "France", "United Kingdom"],
-        "data": [84.3, 73.2, 82.9, 85.3, 82.1, 79.3],
-        "backgroundColor": "rgba(117, 121, 231, 0.5)",
-        "borderColor": "rgb(117, 121, 231)",
+        "labels": ["January", "February", "March", "April", "May"],
+        "data": [65, 59, 80, 81, 56],
+        "backgroundColor": "rgba(255, 99, 132, 0.2)",
+        "borderColor": "rgba(255, 99, 132, 1)",
+        "indexAxis": "x",
         "options": {
-            "scales": {
-                "y": {
-                    "beginAtZero": false,
-                    "min": 70,
-                    "max": 90,
-                    "ticks": {
-                        "stepSize": 1
-                    }
-                }
-            },
+            "responsive": true,
+            "maintainAspectRatio": false,
             "plugins": {
                 "legend": {
                     "display": false
+                },
+                "title": {
+                    "display": true,
+                    "text": "Monthly Sales Data",
+                    "font": {
+                        "size": 18
+                    }
                 }
             }
         }
     },
-    
-        {
-            "id": 3,
-            "title": "Increment anual de la població per països",
-            "type": "line",
-            "labels": ["2016","2017","2018","2019","2020", "2021", "2022", "2023", "2024"],
-            "data": [
-                { "country": "Country A", "data": [112000, 114000, 115000, 116000, 115000, 117000, 118000, 120000, 121000] },
-                { "country": "Country B", "data": [105000, 108000, 113000, 117000, 115000, 116000, 117000, 118000, 119000] }
-            ],
-            "backgroundColor": ["rgba(117, 121, 231, 0.5)"],
-            "borderColor": ["rgb(117, 121, 231)"],
-            "options": {
-                "plugins": {
-                    "legend": {
-                        "display": false
+    {
+        "id": 2,
+        "title": "User Growth",
+        "type": "line",
+        "labels": ["January", "February", "March", "April", "May", "June"],
+        "data": [100, 200, 300, 400, 500, 600],
+        "backgroundColor": "rgba(75, 192, 192, 0.2)",
+        "borderColor": "rgba(75, 192, 192, 1)",
+        "options": {
+            "responsive": true,
+            "maintainAspectRatio": false,
+            "plugins": {
+                "legend": {
+                    "display": false
+                },
+                "title": {
+                    "display": true,
+                    "text": "Monthly User Growth",
+                    "font": {
+                        "size": 18
                     }
                 }
             }
-        },
-    
-    
+        }
+    },
     {
-        "id": 1,
-        "title": "Mitjana d'esperança de vida mundial",
+        "id": 3,
+        "title": "Website Traffic",
         "type": "bar",
-        "labels": ["Woman", "You", "Man"],
-        "data": [76, 82, 72],
-        "backgroundColor": ["rgba(255, 0, 105, 0.5)", "rgba(255, 165, 0, 0.5)", "rgba(54, 162, 235, 0.5)"],
-        "borderColor": ["rgb(255, 0, 105)", "rgba(255, 165, 0)", "rgb(54, 162, 235)"],
+        "labels": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "data": [120, 190, 300, 500, 200, 300, 400],
+        "backgroundColor": "rgba(54, 162, 235, 0.2)",
+        "borderColor": "rgba(54, 162, 235, 1)",
+        "indexAxis": "y",
         "options": {
+            "responsive": true,
+            "maintainAspectRatio": false,
             "plugins": {
                 "legend": {
                     "display": false
+                },
+                "title": {
+                    "display": true,
+                    "text": "Weekly Website Traffic",
+                    "font": {
+                        "size": 18
+                    }
+                }
+            },
+            "scales": {
+                "x": {
+                    "beginAtZero": true
                 }
             }
         }
-    },    
+    },
     {
-        "id": 2,
-        "title": "Gràfic de bombolles",
-        "type": "bubble",
-        "data": [
-            {"x": 10, "y": 20, "r": 10},
-            {"x": 15, "y": 25, "r": 15},
-            {"x": 20, "y": 30, "r": 20},
-            {"x": 25, "y": 35, "r": 25}
-        ],
-        "backgroundColor": "rgba(117, 121, 231, 0.5)",
-        "borderColor": "rgba(117, 121, 231, 1)",
+        "id": 4,
+        "title": "Revenue Growth",
+        "type": "line",
+        "labels": ["Q1", "Q2", "Q3", "Q4"],
+        "data": [15000, 20000, 18000, 22000],
+        "backgroundColor": "rgba(255, 206, 86, 0.2)",
+        "borderColor": "rgba(255, 206, 86, 1)",
         "options": {
+            "responsive": true,
+            "maintainAspectRatio": false,
             "plugins": {
                 "legend": {
                     "display": false
+                },
+                "title": {
+                    "display": true,
+                    "text": "Quarterly Revenue Growth",
+                    "font": {
+                        "size": 18
+                    }
                 }
             }
         }
+    },
+    {
+        "id": 5,
+        "title": "Product Ratings",
+        "type": "bar",
+        "labels": ["Product A", "Product B", "Product C", "Product D", "Product E"],
+        "data": [4.5, 3.8, 4.0, 4.2, 3.5],
+        "backgroundColor": "rgba(75, 192, 192, 0.2)",
+        "borderColor": "rgba(75, 192, 192, 1)",
+        "indexAxis": "x",
+        "options": {
+            "responsive": true,
+            "maintainAspectRatio": false,
+            "plugins": {
+                "legend": {
+                    "display": false
+                },
+                "title": {
+                    "display": true,
+                    "text": "Product Ratings",
+                    "font": {
+                        "size": 18
+                    }
+                }
+            },
+            "scales": {
+                "y": {
+                    "beginAtZero": true,
+                    "max": 5
+                }
+            }
+        }
+    },
+    {
+        "id": 6,
+        "title": "Active Users",
+        "type": "line",
+        "labels": ["January", "February", "March", "April", "May", "June", "July"],
+        "data": [500, 700, 800, 600, 900, 1000, 1100],
+        "backgroundColor": "rgba(153, 102, 255, 0.2)",
+        "borderColor": "rgba(153, 102, 255, 1)",
+        "options": {
+            "responsive": true,
+            "maintainAspectRatio": false,
+            "plugins": {
+                "legend": {
+                    "display": false
+                },
+                "title": {
+                    "display": true,
+                    "text": "Monthly Active Users",
+                    "font": {
+                        "size": 18
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": 7,
+        "title": "Scatter Data",
+        "type": "scatter",
+        "data": [
+            {"x": 10, "y": 20},
+            {"x": 15, "y": 10},
+            {"x": 20, "y": 25},
+            {"x": 25, "y": 30},
+            {"x": 30, "y": 15}
+        ],
+        "backgroundColor": "rgba(75, 192, 192, 0.2)",
+        "borderColor": "rgba(75, 192, 192, 1)"
+    },
+    {
+        "id": 8,
+        "title": "Market Share by Product",
+        "type": "polarArea",
+        "labels": ["Product A", "Product B", "Product C", "Product D", "Product E"],
+        "data": [30, 20, 15, 25, 10],
+        "backgroundColor": [
+            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)"
+        ],
+        "borderColor": [
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)"
+        ]
     }
+    
+    
 ]
