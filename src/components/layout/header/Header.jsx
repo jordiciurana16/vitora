@@ -1,4 +1,3 @@
-// src/components/layout/header/Header.jsx
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Dropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { BsPersonFillGear, BsGearWideConnected, BsPersonCircle, BsTranslate, BsQuestionLg, BsSend, BsFillInboxFill, BsSearch, BsNewspaper, BsBoxArrowInLeft } from 'react-icons/bs';
@@ -22,10 +21,13 @@ function Header() {
     setLastLifespan(lifespan);
   }, [lifespan]);
 
+  const handleMouseEnter = () => setDropdownOpen(true);
+  const handleMouseLeave = () => setDropdownOpen(false);
+
   return (
     <header className="sticky-top">
       <Container fluid>
-        <Row className={`position-relative`}>
+        <Row className="position-relative">
           <Col className="p-0 position-relative">
             <ProgressBar lastLifespan={lastLifespan} hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} />
             <div className={`${styles.headerLifespan} position-absolute top-50 start-50 translate-middle`}>
@@ -33,16 +35,16 @@ function Header() {
                 <span>{parseFloat(lifespan).toFixed(1)}</span>
               </OverlayTrigger>
             </div>
-            <div className="position-absolute top-0 end-0 mt-2 me-3 d-flex">
-              <BsSearch size={30} className={`me-3 ${styles.headerIcon}`} />
-              <BsNewspaper size={30} className={`me-3 ${styles.headerIcon}`} />
-              <div style={{ position: 'relative' }} onMouseLeave={() => setDropdownOpen(false)}>
-                <BsPersonFillGear size={30} className={`${styles.headerIcon}`} onMouseEnter={() => setDropdownOpen(true)} />
+            <div className="position-absolute top-0 end-0 mt-2 me-3 d-flex align-items-center" onMouseLeave={handleMouseLeave}>
+              <BsSearch size={25} className={`me-3 ${styles.headerIcon}`} />
+              <BsNewspaper size={25} className={`me-3 ${styles.headerIcon}`} />
+              <div style={{ position: 'relative' }} onMouseEnter={handleMouseEnter}>
+                <BsPersonFillGear size={25} className={`${styles.headerIcon}`} />
                 {dropdownOpen && (
                   <Dropdown.Menu show={dropdownOpen} onToggle={setDropdownOpen} style={{ position: 'absolute', right: '0', top: '100%' }}>
                     <Dropdown.Item href="#/action-1">
                       <div className="d-flex align-items-center">
-                        <BsPersonCircle size={40} className="me-2" />
+                        <BsPersonCircle size={35} className="me-2" />
                         <div>
                           <span className="d-block">Jordi Ciurana</span>
                           <span className="d-block">{stringBirthdate}</span>
@@ -59,6 +61,7 @@ function Header() {
                     <Dropdown.Item href="#/action-3">
                       <span className="me-2"><BsFillInboxFill /></span> Updates
                     </Dropdown.Item>
+
                     <Dropdown.Item href="#"><span className="me-2"><BsQuestionLg /></span> Help</Dropdown.Item>
                     <Dropdown.Item href="#/action-3">
                       <span className="me-2"><BsGearWideConnected /></span> Settings

@@ -71,7 +71,7 @@ const MenuPage = () => {
                   <Accordion defaultActiveKey="0" className='mb-4'>
                     {seccio.acordio.map((item, index) => (
                       <Accordion.Item eventKey={index.toString()} key={index}>
-                        <Accordion.Header >{item.pregunta}</Accordion.Header>
+                        <Accordion.Header>{item.pregunta}</Accordion.Header>
                         <Accordion.Body>{item.resposta}</Accordion.Body>
                       </Accordion.Item>
                     ))}
@@ -98,6 +98,11 @@ const MenuPage = () => {
                 ))}
               </ListGroup>
             </aside>
+            {menuContent.ilustracio && (
+              <Row className="pt-3">
+                <img src={menuContent.ilustracio} alt="Il·lustració" className="img-fluid"/>
+              </Row>
+            )}
           </Col>
         </Row>
       )}

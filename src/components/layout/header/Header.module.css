@@ -1,14 +1,10 @@
-
-
 .headerLifespan {
   font-size: 2.5rem;
   font-weight: bold;
- 
 }
 
 .headerLifespan:hover {
   cursor: pointer;
-
 }
 
 .headerIcon {
@@ -20,7 +16,6 @@
   color: rgb(35, 37, 41); /* Canviem lleugerament el color quan es passa el cursor per sobre */
 }
 
-
 .dropdownButton {
   color: var(--dark-color) !important;
   background: none !important;
@@ -31,4 +26,3 @@
 .dropdownButton::after {
   display: none !important;
 }
-

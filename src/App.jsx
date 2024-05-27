@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalProvider } from './hooks/GlobalContext';
-import MainPage from './pages/MainPage';
+import LandingPage from './pages/LandingPage';
+import ProfilePage from './pages/ProfilePage';
 import MenuPage from './pages/menu/MenuPage';
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <Router>
       <GlobalProvider>
         <Routes>
-          <Route path="/*" element={<MainPage />} />
+          <Route path="/*" element={<LandingPage />} />
+          <Route path="/vitora/profile" element={<ProfilePage />} />
           <Route path="/vitora/privacy" element={<MenuPage />} />
           <Route path="/vitora/terms" element={<MenuPage />} />
           <Route path="/vitora/cookies" element={<MenuPage />} />

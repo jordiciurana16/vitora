@@ -1,6 +1,7 @@
 {
     "privacy": {
       "titol": "Política de Privacitat",
+      "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
       "seccions": [
         {
           "id": "recopilacio",
@@ -32,6 +33,7 @@
 
     "cookies": {
       "titol": "Política de Cookies",
+      "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
       "seccions": [
         {
           "id": "usu",
@@ -57,6 +59,7 @@
     },
     "help": {
         "titol": "Help",
+        "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
         "seccions": [
           {
             "id": "contacte",
@@ -135,6 +138,7 @@
       },
       "terms": {
         "titol": "Terms",
+        "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
         "seccions": [
           {
             "id": "servei",
@@ -175,6 +179,7 @@
       },
       "contact": {
         "titol": "Contacte",
+        "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
         "seccions": [
             {
                 "id": "nosaltres",

@@ -4,7 +4,8 @@ import BubbleChart from '../../utils/charts/BubbleChart';
 import BarChart from '../../utils/charts/BarChart';
 import LineChart from '../../utils/charts/LineChart';
 import ScatterChart from '../../utils/charts/ScatterChart';
-import PolarAreaChart from '../../utils/charts/PolarAreaChart'; // Importa el nou component
+import PolarAreaChart from '../../utils/charts/PolarAreaChart';
+import ComboChart from '../../utils/charts/ComboChart'; // Importa el nou component
 import chartData from '../../utils/charts/chartData.json';
 
 const DataSection = () => (
@@ -22,7 +23,8 @@ const DataSection = () => (
               {chart.type === 'bubble' && <BubbleChart chartData={chart} />}
               {chart.type === 'line' && <LineChart chartData={chart} />}
               {chart.type === 'scatter' && <ScatterChart chartData={chart} />}
-              {chart.type === 'polarArea' && <PolarAreaChart chartData={chart} />} {/* Afegim el nou component */}
+              {chart.type === 'polarArea' && <PolarAreaChart chartData={chart} />}
+              {chart.type === 'comboBarLine' && <ComboChart chartData={chart} />} {/* Afegim el nou component */}
             </Card.Body>
           </Card>
         </Col>

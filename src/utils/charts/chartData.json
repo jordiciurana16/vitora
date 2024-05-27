@@ -197,7 +197,40 @@
             "rgba(75, 192, 192, 1)",
             "rgba(153, 102, 255, 1)"
         ]
+    },
+    {
+        "id": 9,
+        "title": "Climatic Data of Spain",
+        "type": "comboBarLine",
+        "labels": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        "barLabel": "Temperature (°C)",
+        "barData": [6, 7, 10, 13, 17, 21, 24, 24, 20, 15, 10, 7],
+        "barBackgroundColor": "rgba(54, 162, 235, 0.2)",
+        "barBorderColor": "rgba(54, 162, 235, 1)",
+        "lineLabel": "Precipitation (mm)",
+        "lineData": [40, 30, 35, 45, 50, 10, 5, 8, 30, 60, 55, 50],
+        "lineBackgroundColor": "rgba(255, 99, 132, 0.2)",
+        "lineBorderColor": "rgba(255, 99, 132, 1)"
+    },
+    {
+        "id": 10,
+        "title": "Bubble Chart Example",
+        "type": "bubble",
+        "xAxisLabel": "X Axis",
+        "yAxisLabel": "Y Axis",
+        "data": [
+            { "x": 10, "y": 20, "r": 15 },
+            { "x": 15, "y": 10, "r": 10 },
+            { "x": 20, "y": 30, "r": 20 },
+            { "x": 25, "y": 25, "r": 25 },
+            { "x": 30, "y": 20, "r": 30 }
+        ],
+        "backgroundColor": "rgba(75, 192, 192, 0.2)",
+        "borderColor": "rgba(75, 192, 192, 1)"
     }
+    
+    
+    
     
     
 ]

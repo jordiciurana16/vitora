@@ -8,7 +8,7 @@ import Footer from '../components/layout/footer/Footer';
 import BirthdateModal from '../components/feature/BirthdateModal';
 import { GlobalProvider } from '../hooks/GlobalContext';
 
-function MainPage() {
+function ProfilePage() {
   const [showModal, setShowModal] = useState(true);
 
   const handleCloseModal = () => {
@@ -34,4 +34,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default ProfilePage;
