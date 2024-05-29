@@ -1,9 +1,8 @@
 import React from 'react';
-import { Container, Row, Col, Navbar, Nav, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { BsPersonCircle, BsSearch, BsGlobeAmericas } from 'react-icons/bs';
 import Footer from '../components/layout/footer/Footer';
-import Logo from '../components/common/Logo';
+import NavigationBar from '../components/layout/nav/Nav';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -12,35 +11,17 @@ function LandingPage() {
     navigate('/vitora/profile');
   };
 
+  const imageUrlTop = "https://i.ibb.co/r2jZhJV/Artboard-1.png";
+  const imageUrlBottom ="https://i.ibb.co/p14YzRw/Artboard-1-copy.png";
+
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="#"><Logo /> Vitora</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link href="/vitora/about">About</Nav.Link>
-              <Nav.Link href="/vitora/data">Data</Nav.Link>
-              <Nav.Link href="/vitora/articles">Articles</Nav.Link>
-              <Nav.Link href="/vitora/events">Events</Nav.Link>
-              <Nav.Link href="/vitora/donations">Donations</Nav.Link>
-              <Nav.Link href="/vitora/contact">Contact</Nav.Link>
-            </Nav>
-            <Nav className="ml-auto">
-              <Nav.Link href="#search"><BsSearch /></Nav.Link>
-              <Nav.Link href="#globe"><BsGlobeAmericas /></Nav.Link>
-              <Nav.Link href="#profile"><BsPersonCircle /></Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      <div className="hero-section text-center py-5 bg-primary text-white">
+      <NavigationBar isProfilePage={false} />
+      <div className="hero-section pt-5 text-white">
         <Container>
           <Row>
             <Col>
-              <h1>Discover your lifespan with Vitora</h1>
+              <h1>Discover your life timeline</h1>
               <p className="lead">
                 Understand how your daily habits impact your quality and length of life.
               </p>
@@ -48,9 +29,17 @@ function LandingPage() {
             </Col>
           </Row>
         </Container>
+        <Container fluid className='p-0 m-0'>
+          <div className="image-container adalt">
+            <img src={imageUrlTop} alt="Graphic" className="img-fluid w-100" />
+          </div>
+          <div className="image-container">
+            <img src={imageUrlBottom} alt="Graphic" className="img-fluid w-100" />
+          </div>
+        </Container>
       </div>
 
-      <div className="info-section py-5">
+      <div className="info-section">´
         <Container>
           <Row>
             <Col md={4}>

@@ -4,7 +4,7 @@
 }
 
 .progress {
-  height: 13vmin;
+  height: 10vmin;
   background-color: var(--primary-color);
   transition: width 4s ease-in-out;
 }

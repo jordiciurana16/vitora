@@ -1,12 +1,12 @@
-// src/pages/MainPage.jsx
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Header from '../components/layout/header/Header';
-import Nav from '../components/layout/nav/Nav';
+import Sidebar from '../components/layout/sidebar/Sidebar';
 import MainRouting from '../components/layout/main/MainRouting';
 import Footer from '../components/layout/footer/Footer';
 import BirthdateModal from '../components/feature/BirthdateModal';
 import { GlobalProvider } from '../hooks/GlobalContext';
+import NavigationBar from '../components/layout/nav/Nav';
 
 function ProfilePage() {
   const [showModal, setShowModal] = useState(true);
@@ -17,11 +17,12 @@ function ProfilePage() {
 
   return (
     <GlobalProvider>
+      <NavigationBar isProfilePage={true} />
       <Header />
       <Container fluid>
         <Row className='px-0'>
           <Col xs={2} className='px-0 position-fixed'>
-            <Nav />
+            <Sidebar />
           </Col>
           <Col xs={{ span: 10, offset: 2 }} className='px-0'>
             <MainRouting />

@@ -227,3 +227,25 @@ input[type="date"]:focus,
   cursor: pointer;
 
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.image-container img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.bg-pri {
+  background-color: #7579e7;
+  z-index: -2;
+  margin: 0; /* Assegura't que no hi hagi marge */
+  padding: 0; /* Assegura't que no hi hagi padding */
+}

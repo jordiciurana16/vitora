@@ -1,58 +1,14 @@
-/* Styles for the navigation container */
-.navContainer {
-    background-color: var(--dark-color);
-    height: 87vmin;
-    overflow-y: auto;
+.smallNavbar {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  height: 50px;
 }
 
-  /* Styles for anchor tags within the navigation */
-.navLinks a {
-    color: var(--light-color);
-    display: block;
-    width: fit-content;
-    text-decoration: none;
-    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition */
-    border-radius: 5px; /* Adds some rounding to simulate buttons */
-    margin: 2px 0 2px 30px; /* Spacing around the anchor tags */
-    padding: 3px 8px; /* Reduce padding for the clickable area */
+.smallNavItems .nav-link {
+  font-size: 0.875rem; /* Més petit */
+  padding: 0.5rem; /* Més petit */
 }
 
-.mainLink span {
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-
-  /* Hover effect style for anchor tags */
-  .navLinks a:hover {
-    background-color: var(--primary-color);
-    width: fit-content;
-    margin: 2px 0 2px 30px; /* Spacing around the anchor tags */
-    padding: 3px 8px; /* Reduce padding for the clickable area */
-}
-
-  /* Style for the active link */
-.activeLink {
-    background-color: var(--primary-color);
-    width: fit-content;
-    padding: 3px 8px; /* Reduce padding for the clickable area */
-    margin: 2px 0 2px 30px; /* Spacing around the anchor tags */
-}
-
-  /* Style for the "LIFESPAN" item */
-.lifespanItem a {
-    text-decoration: none;
-    color: var(--light-color);
-}
-
-  /* Separator style */
-.separator {
-    border: none;
-    height: 1px;
-    background-color: var(--light-color); /* Separator color */
-}
-
-  /* Hover effect style for "LIFESPAN" item */
-.lifespanItem:hover a {
-    /* Adds a text shadow effect for a hover effect */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Brilliance on the letters */
+.smallNavItems .nav-link svg {
+  font-size: 1.25rem; /* Més petit */
 }
