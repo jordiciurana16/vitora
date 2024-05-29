@@ -241,11 +241,16 @@ input[type="date"]:focus,
 
 .hero-section {
   position: relative;
+  margin-bottom: -20px;
 }
 
-.bg-pri {
-  background-color: #7579e7;
-  z-index: -2;
-  margin: 0; /* Assegura't que no hi hagi marge */
-  padding: 0; /* Assegura't que no hi hagi padding */
+.first {
+  position: relative;
+  z-index: 2; /* Assegura't que aquesta imatge està davant */
+  margin-bottom: -80px;
+}
+
+.adalt {
+  position: relative;
+  z-index: 1; /* Assegura't que aquesta imatge està darrere */
 }

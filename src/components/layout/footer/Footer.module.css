@@ -1,10 +1,9 @@
-
 .footerContainer {
-    background-color: #c4c4c4;
+    background-color: var(--dark-color);
 }
 
 .footerLinks h6 a {
-    color: var(--dark-color);
+    color: var(--light-color);
     text-decoration: none;
 }
 
@@ -12,17 +11,29 @@
     text-decoration: underline;
 }
 
+.customHr {
+    border-top: 2px solid var(--light-color);
+}
+
 .copyrightRow {
     height: 70px;
-    background-color: #9b9b9b;
+    background-color: var(--dark-color);
 }
 
 .socialIcons a {
-    color: var(--dark-color);
+    color: var(--light-color);
     margin-right: 20px; /* Espai entre les icones */
     transition: all .2s ease-in-out
 }
 
 .socialIcons a:hover {
     color: var(--secondary-color);
+}
+
+span  {
+    color: var(--light-color);
+}
+
+p {
+    color: var(--light-color);
 }

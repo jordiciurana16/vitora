@@ -1,0 +1,13 @@
+.progressContainer {
+  position: fixed;
+  top: 72px;
+  width: 100%;
+  height: 4px;
+  z-index: 1050; /* Assegura que estigui per sobre d'altres elements */
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.25s ease;
+}

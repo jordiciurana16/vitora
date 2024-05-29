@@ -1,5 +1,4 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
-
 import React, { useEffect, useState } from 'react';
 import styles from './Footer.module.css'
 import { Container, Row, Col } from 'react-bootstrap';
@@ -25,8 +24,6 @@ function Footer() {
       setContent(null); // Defineix un valor per defecte si la ruta no coincideix
     }
   }, [location]);
-
-
 
   return (
     <footer>
@@ -62,17 +59,17 @@ function Footer() {
             </Row>
           </Col>
         </Row>
-        <hr className="my-5 mx-5" />
+        <hr className={`${styles.customHr} my-5 mx-5`} />
         <Row className="mb-4 px-5">
           <Col className="text-center px-5">
-            <p className="px-5">
+            <span className="px-5">
               This application is a prototype under development and is copyrighted.
-            </p>
+            </span>
           </Col>
         </Row>
         <Row className={`${styles.copyrightRow} align-items-center px-5 `}>
           <Col xs={6} className="d-flex justify-content-start">
-            <div>© 2024 Copyright: All rights reserved.</div>
+            <span>© 2024 Copyright: All rights reserved.</span>
           </Col>
           <Col xs={6} className="d-flex justify-content-end">
             <div className={`${styles.socialIcons}`}>

@@ -1,7 +1,7 @@
 .smallNavbar {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
-  height: 50px;
+  height: 70px;
 }
 
 .smallNavItems .nav-link {
@@ -11,4 +11,13 @@
 
 .smallNavItems .nav-link svg {
   font-size: 1.25rem; /* Més petit */
+}
+
+nav {
+  box-shadow: 0 0 10px #00000033 !important;
+}
+
+.navIcon svg {
+  font-size: 1.5rem; /* Augmentar la mida dels icones */
+  color: #343a40; /* Color dark */
 }
