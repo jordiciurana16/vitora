@@ -11,5 +11,33 @@
 
 .progress:hover {
   box-shadow: 0 0 10px var(--primary-color) !important;
- }
+}
 
+.headerLifespan {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.headerLifespan:hover {
+  cursor: pointer;
+}
+
+.headerIcon {
+  transition: color 0.3s ease; /* Afegim una transició suau per a la propietat color */
+}
+
+.headerIcon:hover {
+  cursor: pointer;
+  color: rgb(35, 37, 41); /* Canviem lleugerament el color quan es passa el cursor per sobre */
+}
+
+.dropdownButton {
+  color: var(--dark-color) !important;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.dropdownButton::after {
+  display: none !important;
+}

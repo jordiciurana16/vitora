@@ -1,23 +1,32 @@
-.smallNavbar {
-  padding-top: 0.5rem !important;
-  padding-bottom: 0.5rem !important;
-  height: 70px;
-}
-
-.smallNavItems .nav-link {
-  font-size: 0.875rem; /* Més petit */
-  padding: 0.5rem; /* Més petit */
-}
-
-.smallNavItems .nav-link svg {
-  font-size: 1.25rem; /* Més petit */
-}
-
+/* styles.css */
 nav {
   box-shadow: 0 0 10px #00000033 !important;
 }
 
 .navIcon svg {
   font-size: 1.5rem; /* Augmentar la mida dels icones */
-  color: #343a40; /* Color dark */
+  color: var(--dark-color); /* Color dark */
+}
+
+.menuIcon svg {
+  color: var(--dark-color); /* Color dark */
+}
+
+span {
+  color: var(--dark-color); /* Color dark */
+}
+
+.navLink {
+  color: var(--dark-color) !important; /* Color dark */
+}
+
+.dropdownToggle::after {
+  display: none !important;
+}
+
+.dropdownMenu {
+  max-width: 100vw; /* Ensure it stays within the viewport width */
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }

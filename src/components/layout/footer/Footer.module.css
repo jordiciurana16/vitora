@@ -35,5 +35,5 @@ span  {
 }
 
 p {
-    color: var(--light-color);
+    color: var(--light-color) !important;
 }

@@ -254,3 +254,15 @@ input[type="date"]:focus,
   position: relative;
   z-index: 1; /* Assegura't que aquesta imatge està darrere */
 }
+
+.info-section {
+  background-color: #7579e7;
+}
+
+.info-section p {
+  color: var(--light-color) !important;
+}
+
+.info-section h3 {
+  color: var(--light-color) !important;
+}
