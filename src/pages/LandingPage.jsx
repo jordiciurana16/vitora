@@ -17,9 +17,9 @@ import BrowseData from './landing/BrowseData';
 function LandingPage() {
   const navigate = useNavigate();
   const [stats, setStats] = useState({
-    testsToday: 1509,
-    testsInSpain: 32582,
-    totalTests: 297303,
+    testsToday: 509,
+    webVisits: 297303,
+    totalTests: 102582,
     accuracy: 91.2
   });
   const animationContainerRef = useRef(null);
@@ -65,7 +65,7 @@ function LandingPage() {
     <>
       <NavigationBar isProfilePage={false} />
       <ScrollProgress />
-      <div style={{ marginTop: '4px' }}>
+      <div >
         <div className="hero-section pt-5 text-white">
           <Container className='first'>
             <Row>

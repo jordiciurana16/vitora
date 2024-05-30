@@ -16,14 +16,6 @@ function Sidebar() {
         <Col className='p-0'>
           <nav className={`${styles.navContainer} position-sticky `}>
             <BootstrapNav className='flex-column'>
-            <div className={`d-flex justify-content-center align-items-center mt-3 ${styles.lifespanItem}`}>
-                {/* Utilitza el component del logotip aquí */}
-                <Logo />
-                {/* Fi del component del logotip */}
-                <Link to="/vitora/" className={`${styles.mainLink} d-flex ms-1 align-items-center `}>
-                  <span>Vitora</span>
-                </Link>
-              </div>
               <div className={styles.navLinks}>
                 <NavItem>
                   <Link to="/accidents">Accidents</Link>

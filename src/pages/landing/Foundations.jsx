@@ -6,7 +6,7 @@ const Foundations = () => {
     <div className="info-section py-5">
           <Container className='py-3'>
             <Row>
-              <Col md={4}>
+              <Col clas md={4}>
                 <h3>Accurate</h3>
                 <p>
                   Our algorithm provides accurate results based on scientific research and statistical data.

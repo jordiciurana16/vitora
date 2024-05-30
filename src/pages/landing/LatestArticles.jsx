@@ -13,7 +13,7 @@ const LatestArticles = () => {
             <Button style={{ fontSize: '1rem' }} type='submit'>Read More</Button>
           </Col>
           <Col md={6} className="text-center">
-            <img src={articlesSvg} alt="Article Thumbnail" style={{ width: '300px' }} className="mx-auto d-block" />
+            <img src={articlesSvg} alt="Article Thumbnail" style={{ width: '290px' }} className="mx-auto d-block" />
           </Col>
         </Row>
       </Container>

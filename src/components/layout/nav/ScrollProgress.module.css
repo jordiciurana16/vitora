@@ -1,6 +1,5 @@
 .progressContainer {
-  position: fixed;
-  top: 72px;
+  position: fixed; /* Canviat de sticky a fixed */
   width: 100%;
   height: 4px;
   z-index: 1050; /* Assegura que estigui per sobre d'altres elements */
@@ -8,6 +7,6 @@
 
 .progressBar {
   height: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   transition: width 0.25s ease;
 }

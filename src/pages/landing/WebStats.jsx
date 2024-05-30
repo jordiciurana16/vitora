@@ -34,25 +34,25 @@ const WebStats = ({ stats }) => {
         <Row ref={statsRef}>
           <Col md={3} className="text-center">
             {startCount && (
-              <h3><CountUp style={{ color: 'black' }} end={stats.testsToday} duration={4} separator="," />+</h3>
+              <h1><CountUp style={{ color: 'black' }} end={stats.testsToday} duration={4} separator="," />+</h1>
             )}
             <p>Tests taken today</p>
           </Col>
           <Col md={3} className="text-center">
             {startCount && (
-              <h3><CountUp style={{ color: 'black' }} end={stats.testsInSpain} duration={4} separator="," />+</h3>
-            )}
-            <p>Tests taken in Spain</p>
-          </Col>
-          <Col md={3} className="text-center">
-            {startCount && (
-              <h3><CountUp style={{ color: 'black' }} end={stats.totalTests} duration={4} separator="," />+</h3>
+              <h1><CountUp style={{ color: 'black' }} end={stats.totalTests} duration={4} separator="," />+</h1>
             )}
             <p>Total tests taken</p>
           </Col>
           <Col md={3} className="text-center">
             {startCount && (
-              <h3><CountUp style={{ color: 'black' }} end={stats.accuracy} duration={4} decimals={1} />%</h3>
+              <h1><CountUp style={{ color: 'black' }} end={stats.webVisits} duration={4} separator="," />+</h1>
+            )}
+            <p>Total web visits</p>
+          </Col>
+          <Col md={3} className="text-center">
+            {startCount && (
+              <h1><CountUp style={{ color: 'black' }} end={stats.accuracy} duration={4} decimals={1} />%</h1>
             )}
             <p>Results rated as accurate</p>
           </Col>

@@ -8,7 +8,7 @@ const BrowseData = () => {
       <Container>
         <Row>
           <Col md={6} className="text-center">
-            <img src={dataSvg} alt="Article Thumbnail" style={{ width: '350px' }} className="img-fluid mx-auto d-block" />
+            <img src={dataSvg} alt="Article Thumbnail" style={{ width: '370px' }} className="img-fluid mx-auto d-block" />
           </Col>
           <Col md={6}>
             <h3 style={{ fontSize: '2.5rem' }}>Browse Data</h3>

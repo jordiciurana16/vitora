@@ -280,3 +280,25 @@ input[type="date"]:focus,
 .info-section h3 {
   color: var(--light-color) !important;
 }
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Adjust this as necessary */
+}
+
+.sticky-container > * {
+  position: relative;
+}
+
+.sticky-container > *:first-child {
+  top: 0;
+}
+
+.sticky-container > *:nth-child(2) {
+  top: 50px; /* Adjust based on the height of the NavigationBar */
+}
+.collapse-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}

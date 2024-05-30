@@ -29,4 +29,5 @@ span {
   overflow-x: auto; /* Allow horizontal scrolling if necessary */
   will-change: transform;
   transform: translate3d(0, 0, 0);
+  z-index: 3 !important; /* Ensure it is above the progress bar */
 }

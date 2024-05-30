@@ -12,7 +12,7 @@ const NavigationBar = ({ stringBirthdate }) => {
   return (
     <Navbar bg="light" expand="lg" className="sticky-top">
       <Container>
-        <Navbar.Brand href="#"><Logo /> Vitora</Navbar.Brand>
+        <Navbar.Brand href="/vitora/"><Logo /> Vitora</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">

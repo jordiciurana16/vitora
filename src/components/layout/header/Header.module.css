@@ -21,6 +21,8 @@
   background: none !important;
   box-shadow: none !important;
   border: none !important;
+  z-index: 3 !important; /* Ensure it is above the progress bar */
+
 }
 
 .dropdownButton::after {

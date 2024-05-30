@@ -1,13 +1,13 @@
 /* Styles for the navigation container */
 .navContainer {
-    background-color: var(--dark-color);
+    background-color: var(--light-color);
     height: 87vmin;
     overflow-y: auto;
 }
 
   /* Styles for anchor tags within the navigation */
 .navLinks a {
-    color: var(--light-color);
+    color: var(--dark-color);
     display: block;
     width: fit-content;
     text-decoration: none;
