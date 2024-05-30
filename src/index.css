@@ -92,6 +92,20 @@ button[type="submit"]:hover{
   border: 2px solid var(--primary-color)!important;
 }
 
+button.secondary[type="submit"]{
+  background-color: var(--opacity-color)!important;
+  border: 2px solid var(--opacity-color)!important;
+}
+
+button.secondary[type="submit"]:active {
+  box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
+}
+
+button.secondary[type="submit"]:hover{
+  background-color: var(--secondary-color)!important;
+  border: 2px solid var(--secondary-color)!important;
+}
+
 
 .input-group {
   border: 2px solid var(--primary-color)!important;

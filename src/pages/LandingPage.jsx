@@ -10,10 +10,9 @@ import lottie from 'lottie-web';
 import LatestArticles from './landing/LatestArticles';
 import WebStats from './landing/WebStats';
 import Foundations from './landing/Foundations';
-import graphicSvg from '../assets/chart.svg';
+import landingSvg from '../assets/landing.svg';
 import groundSvg from '../assets/ground.svg';
 import BrowseData from './landing/BrowseData';
-
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -71,14 +70,14 @@ function LandingPage() {
           <Container className='first'>
             <Row>
               <Col>
-                <h1>Discover your life timeline</h1>
-                <p className="lead">
+                <h1 style={{ fontSize: '2.7rem' }}>Discover your life timeline</h1>
+                <p className="lead" style={{ fontSize: '1.5rem', fontWeight:'400' }}>
                   Understand how your daily habits impact your quality and length of life.
                 </p>
-                <Button type='submit' size="lg" onClick={handleButtonClick}>Get Started</Button>
+                <Button type='submit' size="lg" onClick={handleButtonClick} style={{ fontSize: '1.1rem' }}>Get Started</Button>
               </Col>
               <Col md={6} className="text-center" style={{ position: 'relative' }}>
-                <img src={graphicSvg} alt="Article Thumbnail" style={{ width: '375px', position: 'relative' }} className="img-fluid mx-auto d-block" />
+                <img src={landingSvg} alt="Article Thumbnail" style={{ width: '375px', position: 'relative' }} className="img-fluid mx-auto d-block" />
               </Col>
             </Row>
           </Container>
@@ -87,16 +86,11 @@ function LandingPage() {
               <img src={groundSvg} alt="Graphic" className="img-fluid w-100" />
             </div>
             <Foundations />
-
           </Container>
         </div>
-
         <LatestArticles />
-
         <BrowseData />
-        <WebStats stats={stats} />  {/* Pass the stats prop here */}
-
-
+        <WebStats stats={stats} />
         <Footer />
       </div>
     </>

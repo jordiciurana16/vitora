@@ -4,6 +4,8 @@ import styles from './MenuPages.module.css';
 import { Link } from 'react-router-dom';
 import { BsArrowLeft, BsSearch } from 'react-icons/bs';
 import menuData from './MenuData.json';
+import Nav from '../../components/layout/nav/Nav'
+import ScrollProgress from '../../components/layout/nav/ScrollProgress';
 
 const MenuPage = () => {
   const [menuContent, setMenuContent] = useState(null);
@@ -46,6 +48,11 @@ const MenuPage = () => {
   }, []);
 
   return (
+    <div>
+            <Nav />
+            <ScrollProgress />
+
+    
     <Container fluid className={`px-5 py-4 ${styles.menuPages}`}>
       <Row className={`px-5 `}>
         <Col>
@@ -107,6 +114,7 @@ const MenuPage = () => {
         </Row>
       )}
     </Container>
+    </div>
   );
 };
 

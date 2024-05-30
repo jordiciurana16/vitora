@@ -30,8 +30,8 @@
     color: var(--secondary-color);
 }
 
-span  {
-    color: var(--light-color);
+footer span  {
+    color: var(--light-color) !important;
 }
 
 p {
