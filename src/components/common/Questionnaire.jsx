@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Badge, Form } from 'react-bootstrap';
+import { Container, Row, Col, Badge, Form, Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { fetchCountriesData } from '../../services/api/countriesData';
+import { useNavigate } from 'react-router-dom';
+import { AiOutlineClose } from 'react-icons/ai';
+import { ChevronDoubleLeft } from 'react-bootstrap-icons';
 
 function Questionnaire({ factor, title, countriesData, setLifespan }) {
   const [questions, setQuestions] = useState([]);
@@ -10,6 +13,8 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
   const [previousSelectedOptions, setPreviousSelectedOptions] = useState({});
   const [countriesDataFormatted, setCountriesDataFormatted] = useState([]); 
   const [userCountry, setUserCountry] = useState(''); 
+  const [isCollapsed, setIsCollapsed] = useState(false); // State for collapsing the component
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
@@ -28,12 +33,11 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
     setUserCountry(event.target.value);
   };
 
-
   const handleQuestionSelection = (index) => {
     const questionElement = document.getElementById(`question-${index}`);
     if (questionElement) {
-      const progressBarHeight = 17; // Height of the progress bar in vmin
-      const progressBarOffset = progressBarHeight * window.innerHeight / 100; // Offset to account for the fixed header
+      const progressBarHeight = 25; 
+      const progressBarOffset = progressBarHeight * window.innerHeight / 100;
       window.scrollTo({
         top: questionElement.offsetTop - progressBarOffset,
         behavior: 'smooth',
@@ -65,104 +69,131 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
   }, [factor]);
 
   const handleChange = async (event, index) => {
-  const { checked, value, name, type } = event.target;
-  const previousValue = previousSelectedOptions[index] || 0;
+    const { checked, value, name, type } = event.target;
+    const previousValue = previousSelectedOptions[index] || 0;
 
-  let selectedEffect;
-  let newSelectedOptions = { ...selectedOptions }; // Move this declaration outside the switch
+    let selectedEffect;
+    let newSelectedOptions = { ...selectedOptions };
 
-  switch (type) {
-    case 'checkbox':
-      const previousSelectedEffect = selectedOptions[index] || 0;
-      selectedEffect = checked ? parseFloat(value) : -parseFloat(value);
+    switch (type) {
+      case 'checkbox':
+        const previousSelectedEffect = selectedOptions[index] || 0;
+        selectedEffect = checked ? parseFloat(value) : -parseFloat(value);
 
-      newSelectedOptions = { ...selectedOptions, [index]: checked ? previousSelectedEffect + parseFloat(value) : previousSelectedEffect - parseFloat(value) };
-      setSelectedOptions(newSelectedOptions);
-      break;
-    case 'radio':
-      selectedEffect = parseFloat(value) - parseFloat(previousValue);
-      newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
-      setSelectedOptions(newSelectedOptions);
-      break;
-    case 'select':
-      newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
-      setSelectedOptions(newSelectedOptions);
+        newSelectedOptions = { ...selectedOptions, [index]: checked ? previousSelectedEffect + parseFloat(value) : previousSelectedEffect - parseFloat(value) };
+        setSelectedOptions(newSelectedOptions);
+        break;
+      case 'radio':
+        selectedEffect = parseFloat(value) - parseFloat(previousValue);
+        newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
+        setSelectedOptions(newSelectedOptions);
+        break;
+      case 'select':
+        newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
+        setSelectedOptions(newSelectedOptions);
+        break;
+      default:
+        break;
+    }
 
-      break;
-    default:
-      // handle default case (if any)
-      break;
-  }
+    updateLifeAndPercentage(selectedEffect);
+    setPreviousSelectedOptions({ ...previousSelectedOptions, [index]: value });
 
-  updateLifeAndPercentage(selectedEffect);
-  setPreviousSelectedOptions({ ...previousSelectedOptions, [index]: value });
+    handleQuestionSelection(index); 
+  };
 
-  handleQuestionSelection(index); // Scroll to the next question after selection
-};
+  const handleClose = () => {
+    navigate('/vitora/profile/');
+  };
 
-
-
+  const handleChevronClick = () => {
+    setIsCollapsed(true);
+    setTimeout(() => navigate('/vitora/profile'), 500); // Adjust the timeout to match the animation duration
+  };
 
   return (
-    <Container>
+    <Container >
       <Row>
-        <h2 className='pb-4'>{title}</h2>
-        <Form>
-          {questions.map((question, index) => (
-            <Row key={index} id={`question-${index}`}>
-              <Col xs={1}><h6>{index + 1}.</h6></Col>
-              <Col xs={11}>
-                <Row className='mb-3'>
-                  <Col xs={10}><h6>{question.question_text}</h6></Col>
-                  <Col xs={2}>
-                    {selectedOptions[index] !== undefined && (
-                      <Badge bg={
-                        selectedOptions[index] === 0 ? 'secondary' :
-                        (selectedOptions[index] > 0 ? 'success' : 'danger')
-                      }>
-                        {selectedOptions[index] === 0 ? '= 0%' :
-                          (selectedOptions[index] > 0 ? '+' + selectedOptions[index] + '%' : selectedOptions[index] + '%')
-                        }
-                      </Badge>
-                    )}
-                  </Col>
-                </Row>
-                <Row className='mb-4'>
-                  <Col xs={7}>
-                    {question.input_type === 'select' ? (
-                      <Form.Select
-                      name={`question-${index}`}
-                      value={previousSelectedOptions[index] || ''}
-                      onChange={(event) => {
-                        setLifespan(event);
-                        handleCountrySelectChange(event);
-                      }}
-                    >
-                    
-                    {countriesData.map((country, index) => (
-            <option key={index} value={country.name}>{country.name}</option>
-          ))}
-        </Form.Select>
-                    ) : (
-                      question.options.map((option, optionIndex) => (
-                        <div key={optionIndex}>
-                          <Form.Check
-                            type={question.input_type}
-                            id={`question-${index}-option-${optionIndex}`}
-                            name={`question-${index}`}
-                            label={option.answer_text}
-                            value={option.effect_on_lifespan.toString()}
-                            onChange={(event) => handleChange(event, index)}
-                          />
-                        </div>
-                      ))
-                    )}
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
-          ))}
-        </Form>
+        <Col className='pt-4 ps-4' xs={10} style={{ backgroundColor: 'white', boxShadow: '3px 0 5px -2px rgba(0, 0, 0, 0.3)' }}>
+          <h2>{title}</h2>
+          <Form>
+            {questions.map((question, index) => (
+              <Row key={index} id={`question-${index}`}>
+                <Col xs={1}><h6>{index + 1}.</h6></Col>
+                <Col xs={11}>
+                  <Row className='mb-3'>
+                    <Col xs={9}><h6>{question.question_text}</h6></Col>
+                    <Col xs={3}>
+                      {selectedOptions[index] !== undefined && (
+                        <Badge bg={
+                          selectedOptions[index] === 0 ? 'secondary' :
+                          (selectedOptions[index] > 0 ? 'success' : 'danger')
+                        }>
+                          {selectedOptions[index] === 0 ? '= 0%' :
+                            (selectedOptions[index] > 0 ? '+' + selectedOptions[index] + '%' : selectedOptions[index] + '%')
+                          }
+                        </Badge>
+                      )}
+                    </Col>
+                  </Row>
+                  <Row className='mb-4'>
+                    <Col xs={7}>
+                      {question.input_type === 'select' ? (
+                        <Form.Select
+                          name={`question-${index}`}
+                          value={previousSelectedOptions[index] || ''}
+                          onChange={(event) => {
+                            setLifespan(event);
+                            handleCountrySelectChange(event);
+                          }}
+                        >
+                          {countriesData.map((country, index) => (
+                            <option key={index} value={country.name}>{country.name}</option>
+                          ))}
+                        </Form.Select>
+                      ) : (
+                        question.options.map((option, optionIndex) => (
+                          <div key={optionIndex}>
+                            <Form.Check
+                              type={question.input_type}
+                              id={`question-${index}-option-${optionIndex}`}
+                              name={`question-${index}`}
+                              label={option.answer_text}
+                              value={option.effect_on_lifespan.toString()}
+                              onChange={(event) => handleChange(event, index)}
+                            />
+                          </div>
+                        ))
+                      )}
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            ))}
+          </Form>
+        </Col>
+        <Col xs={1} className="text-center position-relative">
+          <OverlayTrigger
+            placement="bottom"
+            overlay={<Tooltip>View results</Tooltip>}
+          >
+            <div 
+              onClick={handleChevronClick} 
+              style={{
+                position: 'fixed',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                cursor: 'pointer',
+                transition: 'transform 0.3s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-50%) translateX(-20px)'}
+              onMouseLeave={e => e.currentTarget.style.transform = 'translateY(-50%) translateX(0)'}
+            >
+              <ChevronDoubleLeft size={24} />
+              <span style={{ marginLeft: '8px', fontSize: '14px' }}>View results</span>
+            </div>
+          </OverlayTrigger>
+        </Col>
       </Row>
     </Container>
   );

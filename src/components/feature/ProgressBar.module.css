@@ -9,7 +9,7 @@
   background-color: var(--opacity-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  height: 10vmin;
+  height: 8vmin;
 }
 
 .progress {
@@ -24,7 +24,7 @@
 }
 
 .lifespan {
-  font-size: 2.5rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 

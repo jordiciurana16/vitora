@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Importem les icones
 import Header from '../components/layout/header/Header';
 import Sidebar from '../components/layout/sidebar/Sidebar';
 import MainRouting from '../components/layout/main/MainRouting';
@@ -18,9 +17,6 @@ function ProfilePage() {
     setShowModal(false);
   };
 
-  const toggleSidebar = () => {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
-  };
 
   return (
     <GlobalProvider>
@@ -38,19 +34,6 @@ function ProfilePage() {
             <Sidebar />
           </Col>
           <Col xs={{ span: 10, offset: isSidebarCollapsed ? 0 : 2 }} className='px-0'>
-            <div className="m-2">
-              {isSidebarCollapsed ? (
-                <FaArrowRight
-                  onClick={toggleSidebar}
-                  style={{ fontSize: '1.5rem', cursor: 'pointer' }}
-                />
-              ) : (
-                <FaArrowLeft
-                  onClick={toggleSidebar}
-                  style={{ fontSize: '1.5rem', cursor: 'pointer' }}
-                />
-              )}
-            </div>
             <MainRouting />
             <Footer />
           </Col>

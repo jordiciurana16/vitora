@@ -13,6 +13,7 @@ import Foundations from './landing/Foundations';
 import landingSvg from '../assets/landing.svg';
 import groundSvg from '../assets/ground.svg';
 import BrowseData from './landing/BrowseData';
+import ShareSection from '../containers/results/ShareSection';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -35,28 +36,10 @@ function LandingPage() {
     //   });
   }, []);
 
-  useEffect(() => {
-    if (animationContainerRef.current) {
-      const animation = lottie.loadAnimation({
-        container: animationContainerRef.current,
-        renderer: 'svg',
-        loop: false,
-        autoplay: false,
-        path: 'src/assets/cat.json', // Ensure this path is correct
-      });
-
-      animationContainerRef.current.addEventListener('mouseenter', () => {
-        animation.goToAndPlay(0, true);
-      });
-
-      return () => {
-        animation.destroy();
-      };
-    }
-  }, []);
+  
 
   const handleButtonClick = () => {
-    navigate('/vitora/profile');
+    navigate('/vitora/profile/');
   };
 
   const imageUrlBottom = "https://i.ibb.co/QnL2qyY/test2.png";
@@ -91,6 +74,9 @@ function LandingPage() {
         <LatestArticles />
         <BrowseData />
         <WebStats stats={stats} />
+        <Container>
+         <ShareSection/>        
+        </Container>
         <Footer />
       </div>
     </>

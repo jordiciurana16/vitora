@@ -78,34 +78,6 @@ ol {
   padding-left: 2rem;
 }
 
-button[type="submit"]{
-  background-color: var(--opacity-color)!important;
-  border: 2px solid var(--opacity-color)!important;
-}
-
-button[type="submit"]:active {
-  box-shadow: 0 0 5px var(--primary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
-}
-
-button[type="submit"]:hover{
-  background-color: var(--primary-color)!important;
-  border: 2px solid var(--primary-color)!important;
-}
-
-button.secondary[type="submit"]{
-  background-color: var(--opacity-color)!important;
-  border: 2px solid var(--opacity-color)!important;
-}
-
-button.secondary[type="submit"]:active {
-  box-shadow: 0 0 5px var(--secondary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
-}
-
-button.secondary[type="submit"]:hover{
-  background-color: var(--secondary-color)!important;
-  border: 2px solid var(--secondary-color)!important;
-}
-
 
 .input-group {
   border: 2px solid var(--primary-color)!important;
@@ -301,4 +273,137 @@ input[type="date"]:focus,
 .collapse-icon {
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+.articles {
+  background-color: #7579e7;
+  padding: 20px;
+}
+
+.articles h1 {
+  color: var(--light-color) !important;
+
+}
+.articles h5 {
+  color: var(--light-color) !important;
+
+}
+
+.articles p {
+  color: var(--light-color) !important;
+
+}
+
+/*Primary Buttons*/
+
+button{
+  background-color: var(--opacity-color)!important;
+  border: 2px solid var(--opacity-color)!important;
+}
+
+button.outline{
+  background-color: var(--light-color)!important;
+  border: 2px solid var(--opacity-color)!important;
+  color: var(--primary-color)!important;
+}
+
+button:active {
+  box-shadow: 0 0 5px var(--primary-color) !important; /* Aquesta línia canvia el color de l'ombra al voltant del checkbox quan està seleccionat */
+  color: var(--light-color) !important;
+}
+
+button.outline:active{
+  background-color: var(--opacity-color)!important;
+  border: 2px solid var(--opacity-color)!important;
+}
+
+button:hover{
+  background-color: var(--primary-color)!important;
+  border: 2px solid var(--primary-color)!important;
+}
+
+button:hover {
+  color: var(--light-color) !important;
+}
+
+.custom-button {
+  background-color: var(--light-color) !important;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--light-color) !important;
+}
+
+.custom-button:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--light-color) !important;
+  border: 2px solid var(--light-color) !important;
+}
+
+.custom-button:active {
+  box-shadow: 0 0 5px var(--primary-color) !important;
+  border: 2px solid var(--light-color) !important;
+}
+
+.custom-dropdown .dropdown-toggle {
+  background-color: white !important;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--light-color) !important;
+}
+
+.custom-dropdown .dropdown-toggle:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--light-color) !important;
+  border: 2px solid var(--light-color) !important;
+}
+
+.custom-dropdown .dropdown-toggle:active {
+  box-shadow: 0 0 5px var(--primary-color) !important;
+  color: var(--light-color) !important;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-pagination .page-item .page-link {
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.pagination-info {
+  font-size: 16px;
+  color: var(--dark-color);
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.filter-container div {
+  font-size: 16px;
+  color: var(--primary-color);
+}
+
+.sort-toggle  {
+  color: var(--primary-color) !important;
+}
+
+.questionnaire-container {
+  transition: all 0.5s ease;
+}
+
+.questionnaire-container.collapsed {
+  transform: translateX(-100%);
+  opacity: 0;
 }

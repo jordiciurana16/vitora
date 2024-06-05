@@ -14,7 +14,7 @@ function Sidebar() {
     <Container fluid>
       <Row>
         <Col className='p-0'>
-          <nav className={`${styles.navContainer} position-sticky `}>
+          <nav className={`${styles.navContainer} position-sticky pt-3`}>
             <BootstrapNav className='flex-column'>
               <div className={styles.navLinks}>
                 <NavItem>
@@ -35,14 +35,14 @@ function Sidebar() {
                 <NavItem>
                   <Link to="/environment">Environment</Link>
                 </NavItem>
-                <NavItem >
-                  <Link to="/vitora/exercise" className={isActive('/vitora/exercise')}>Exercise</Link>
+                <NavItem>
+                  <Link to="exercise" className={isActive('/vitora/profile/exercise')}>Exercise</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/vitora/genetic" className={isActive('/vitora/genetic')}>Genetic</Link>
+                  <Link to="genetic" className={isActive('/vitora/profile/genetic')}>Genetic</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/vitora/geography">Geography</Link>
+                  <Link to="geography">Geography</Link>
                 </NavItem>
                 <NavItem>
                   <Link to="/lawsandpolicies">Laws and Policies</Link>
