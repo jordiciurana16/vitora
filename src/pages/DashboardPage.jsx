@@ -9,7 +9,7 @@ import { GlobalProvider } from '../hooks/GlobalContext';
 import NavigationBar from '../components/layout/nav/Nav';
 import ScrollProgress from '../components/layout/nav/ScrollProgress';
 
-function ProfilePage() {
+function DashboardPage() {
   const [showModal, setShowModal] = useState(true);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
@@ -44,4 +44,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default DashboardPage;

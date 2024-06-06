@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalProvider } from './hooks/GlobalContext';
 import LandingPage from './pages/LandingPage';
-import ProfilePage from './pages/ProfilePage';
+import DashboardPage from './pages/DashboardPage';
 import MenuPage from './pages/menu/MenuPage';
 import ArticlesPage from './pages/ArticlesPage';
-import DataPage from './pages/DataPage';
+import ResourcesPage from './pages/ResourcesPage';
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       <GlobalProvider>
         <Routes>
           <Route path="/vitora" element={<LandingPage />} />
-          <Route path="/vitora/profile/*" element={<ProfilePage />} />
+          <Route path="/vitora/dashboard/*" element={<DashboardPage />} />
           <Route path="/vitora/articles" element={<ArticlesPage />} />
-          <Route path="/vitora/data" element={<DataPage />} />
+          <Route path="/vitora/resources" element={<ResourcesPage />} />
           <Route path="/vitora/privacy" element={<MenuPage />} />
           <Route path="/vitora/terms" element={<MenuPage />} />
           <Route path="/vitora/cookies" element={<MenuPage />} />

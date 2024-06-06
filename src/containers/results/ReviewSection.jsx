@@ -287,7 +287,7 @@ const ResultsReview = () => {
   return (
     <>
       <Row className="mx-3 my-4">
-        <Col className='ps-2 pe-0' xs={4}>
+        <Col className='ps-3 pe-0' xs={4}>
           <ProfileCard 
             carouselData={carouselData}
             infoHoverProfile={infoHoverProfile}

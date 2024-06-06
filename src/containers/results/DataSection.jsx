@@ -9,7 +9,7 @@ import ComboChart from '../../utils/charts/ComboChart'; // Importa el nou compon
 import chartData from '../../utils/charts/chartData.json';
 
 const DataSection = () => (
-  <div className='bg-data p-0'>
+  <div className='bg-data mx-3 my-4'>
     <div className='ps-3'>
       <h2>Statistics</h2>
       <h6>Explore custom world stats</h6>

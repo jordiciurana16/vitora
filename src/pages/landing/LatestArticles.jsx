@@ -8,7 +8,7 @@ const LatestArticles = () => {
       <Container>
         <Row>
           <Col md={6}>
-            <h3 style={{ fontSize: '2.5rem' }}>Latest Articles</h3>
+            <h3 style={{ fontSize: '2.5rem' }}>Browse Articles</h3>
             <p style={{ fontSize: '1.25rem' }}>Read the latest articles and news about factors affecting your lifespan. Stay informed and make better decisions for a healthier life.</p>
             <Button style={{ fontSize: '1rem' }} type='submit'>Read More</Button>
           </Col>

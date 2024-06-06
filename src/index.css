@@ -407,3 +407,8 @@ button:hover {
   transform: translateX(-100%);
   opacity: 0;
 }
+
+.img-art{
+    position: relative;
+    margin-bottom: -120px;
+}

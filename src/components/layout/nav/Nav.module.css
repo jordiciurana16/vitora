@@ -31,3 +31,9 @@ span {
   transform: translate3d(0, 0, 0);
   z-index: 3 !important; /* Ensure it is above the progress bar */
 }
+
+/* Ensure the dropdown is shown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* Override any margin settings */
+}

@@ -6,22 +6,22 @@ const Foundations = () => {
     <div className="info-section py-5">
           <Container className='py-3'>
             <Row>
-              <Col clas md={4}>
+            <Col md={4}>
+                <h3>Comprehensive</h3>
+                <p className="text-justify">
+                  Get a comprehensive analysis of your habits and how they affect your life.
+                </p>
+              </Col>
+              <Col md={4}>
                 <h3>Accurate</h3>
-                <p>
+                <p className="text-justify">
                   Our algorithm provides accurate results based on scientific research and statistical data.
                 </p>
               </Col>
               <Col md={4}>
                 <h3>Open Access</h3>
-                <p>
+                <p className="text-justify">
                   Leverage open access data to understand and improve your life.
-                </p>
-              </Col>
-              <Col md={4}>
-                <h3>Comprehensive</h3>
-                <p>
-                  Get a comprehensive analysis of your habits and how they affect your life.
                 </p>
               </Col>
             </Row>

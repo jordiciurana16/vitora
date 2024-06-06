@@ -4,6 +4,8 @@ import { BsFilterLeft, BsX, BsEye, BsBookmark } from 'react-icons/bs'; // Import
 import Footer from '../components/layout/footer/Footer';
 import NavigationBar from '../components/layout/nav/Nav';
 import ScrollProgress from '../components/layout/nav/ScrollProgress';
+import SkySvg from '../assets/sky.svg';
+import ArticleSvg from '../assets/art.svg'
 
 function ArticlesPage() {
   const articles = [
@@ -87,37 +89,40 @@ function ArticlesPage() {
       <NavigationBar isProfilePage={false} />
       <ScrollProgress />
       <div className='articles pt-5'>
-        <Container>
-          <Row className="mb-4">
-            <Col md={8}>
-              <h1>Articles</h1>
-              <h5 className="mb-4">Discover Scientific Research and Insights on Factors Influencing Longevity</h5>
-              <p>Understand how different elements affect longevity and what can be done to improve it. Dive into our articles to gain a deeper understanding of the scientific and social determinants of life expectancy.</p>
-              <div className="d-flex flex-column justify-content-end" >
-                <div className="d-flex mb-4">
-                  <DropdownButton id="dropdown-basic-button" title="Language" className="me-2 custom-dropdown" >
-                    <Dropdown.Item href="#/action-1">English</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Spanish</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">French</Dropdown.Item>
-                  </DropdownButton>
-                  <DropdownButton id="dropdown-basic-button" title="Factor" className="me-2 custom-dropdown" style={{ color: 'var(--primary-color)', }}>
-                    <Dropdown.Item href="#/action-1">Article</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Video</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Podcast</Dropdown.Item>
-                  </DropdownButton>
-                  <Button className="me-2 custom-button" style={{ backgroundColor: 'var(--light-color)', color: 'var(--primary-color)', border: '2px solid var(--light-color)' }}>
-                    <BsFilterLeft /> Advanced Search
-                  </Button>
-                </div>
-              </div>
-            </Col>
-            <Col md={4}>
-              <img src="https://i.ibb.co/dBTFsq0/undraw-online-articles-re-yrkj.png" alt="Sample" style={{ width: '250px' }} className="img-fluid mx-auto d-block" />
-            </Col>
-          </Row>
-        </Container>
+      <Container className='img-art'>
+  <Row className="mb-4 ">
+    <Col md={6} style={{ position: 'relative' }}>
+      <h1 style={{ fontSize: '2.7rem' }}>Articles</h1>
+      <h5 style={{ fontSize: '1.5rem', fontWeight:'400' }} className="pb-5">Discover scientific research and insights on factors influencing the life timeline.</h5>
+        <div className="d-flex">
+          <DropdownButton id="dropdown-basic-button" title="Language" className="me-2 custom-dropdown">
+            <Dropdown.Item href="#/action-1">English</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Spanish</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">French</Dropdown.Item>
+          </DropdownButton>
+          <DropdownButton id="dropdown-basic-button" title="Factor" className="me-2 custom-dropdown" style={{ color: 'var(--primary-color)' }}>
+            <Dropdown.Item href="#/action-1">Article</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Video</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Podcast</Dropdown.Item>
+          </DropdownButton>
+          <Button className="me-2 custom-button" style={{ backgroundColor: 'var(--light-color)', color: 'var(--primary-color)', border: '2px solid var(--light-color)' }}>
+            <BsFilterLeft /> Advanced Search
+          </Button>
+        </div>
+    </Col>
+    <Col md={6} className="text-center" style={{ position: 'relative' }}>
+                <img src={ArticleSvg} alt="Article Thumbnail" style={{ width: '475px', position: 'relative', right: '75px' }} className="img-fluid mx-auto d-block" />
+    </Col>
+  </Row>
+</Container>
+
+
+
+
       </div>
+
       <Container>
+        
         <div className="d-flex justify-content-between align-items-center pt-4 pb-4">
           <div style={{ fontSize: '25px', color: 'var(--dark-color)' }}>Total results: 150</div>
           <DropdownButton id="dropdown-sort-button" title="Sort by" className="sort-toggle">

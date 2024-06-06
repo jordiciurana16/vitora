@@ -1,3 +1,5 @@
+// src/hooks/GlobalContext.js
+
 import React, { createContext, useContext, useState } from 'react';
 import { percentageLived } from '../utils/calculations/PercentageLived';
 
@@ -9,7 +11,6 @@ export const GlobalProvider = ({ children }) => {
   const [percentage, setPercentage] = useState(0);
   const [birthdate, setBirthdate] = useState(null);
   const [hoveredItem, setHoveredItem] = useState(1);
-
 
   const updateLifeAndPercentage = (effectOnLifespan) => {
     setLifespan(prevLifespan => prevLifespan + effectOnLifespan);

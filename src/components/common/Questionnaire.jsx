@@ -103,18 +103,18 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
   };
 
   const handleClose = () => {
-    navigate('/vitora/profile/');
+    navigate('/vitora/dashboard/');
   };
 
   const handleChevronClick = () => {
     setIsCollapsed(true);
-    setTimeout(() => navigate('/vitora/profile'), 500); // Adjust the timeout to match the animation duration
+    setTimeout(() => navigate('/vitora/dashboard'), 500); // Adjust the timeout to match the animation duration
   };
 
   return (
     <Container >
       <Row>
-        <Col className='pt-4 ps-4' xs={10} style={{ backgroundColor: 'white', boxShadow: '3px 0 5px -2px rgba(0, 0, 0, 0.3)' }}>
+        <Col className='pt-4 ps-4' xs={12} style={{ backgroundColor: 'white', boxShadow: '3px 0 5px -2px rgba(0, 0, 0, 0.3)' }}>
           <h2>{title}</h2>
           <Form>
             {questions.map((question, index) => (
@@ -171,8 +171,6 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
               </Row>
             ))}
           </Form>
-        </Col>
-        <Col xs={1} className="text-center position-relative">
           <OverlayTrigger
             placement="bottom"
             overlay={<Tooltip>View results</Tooltip>}
@@ -181,7 +179,8 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
               onClick={handleChevronClick} 
               style={{
                 position: 'fixed',
-                top: '50%',
+                top: '150px',
+                right: '30px',
                 transform: 'translateY(-50%)',
                 cursor: 'pointer',
                 transition: 'transform 0.3s',
@@ -193,6 +192,7 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
               <span style={{ marginLeft: '8px', fontSize: '14px' }}>View results</span>
             </div>
           </OverlayTrigger>
+          
         </Col>
       </Row>
     </Container>

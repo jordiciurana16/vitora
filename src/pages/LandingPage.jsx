@@ -6,14 +6,12 @@ import CountUp from 'react-countup';
 import Footer from '../components/layout/footer/Footer';
 import NavigationBar from '../components/layout/nav/Nav';
 import ScrollProgress from '../components/layout/nav/ScrollProgress';
-import lottie from 'lottie-web';
 import LatestArticles from './landing/LatestArticles';
 import WebStats from './landing/WebStats';
 import Foundations from './landing/Foundations';
 import landingSvg from '../assets/landing.svg';
 import groundSvg from '../assets/ground.svg';
 import BrowseData from './landing/BrowseData';
-import ShareSection from '../containers/results/ShareSection';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -39,7 +37,7 @@ function LandingPage() {
   
 
   const handleButtonClick = () => {
-    navigate('/vitora/profile/');
+    navigate('/vitora/dashboard/birthdate');
   };
 
   const imageUrlBottom = "https://i.ibb.co/QnL2qyY/test2.png";
@@ -74,9 +72,6 @@ function LandingPage() {
         <LatestArticles />
         <BrowseData />
         <WebStats stats={stats} />
-        <Container>
-         <ShareSection/>        
-        </Container>
         <Footer />
       </div>
     </>

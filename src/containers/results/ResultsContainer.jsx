@@ -8,11 +8,9 @@ function ResultsContainer() {
 
   return (
     <main>
-      <Container>
-        <Col className='ps-4 pe-0 pt-4'>
-          <h1 className='mb-3'>Your Life Expectancy</h1>
-          <h6 className='mb-4'>Review your stats results and learn more about your life</h6>
-        </Col>
+      <Container className='ps-4 pe-0 pt-5'>
+          <h1 className='ps-4 pe-0 mb-3'>Your Life Expectancy</h1>
+          <h6 className='ps-4 pe-0 mb-4'>Review your stats results and learn more about your life</h6>
         <ReviewSection />
         <DataSection />
         <ShareSection />
