@@ -23,25 +23,25 @@ function Birthdate() {
   };
 
   return (
-    <Container>
-      <Row className="justify-content-md-center">
-        <Col md="6">
-          <div className="text-center">
+  <Container  className='ps-5 pe-0 pt-5'>
+      <Row >
+        <Col xs={12}>
+          <div >
             <Logo />
-            <h2>Welcome to Vitora!</h2>
-            <p>Start your journey towards a healthier life with Vitora.</p>
+            <h2>Let's Get Started!</h2>
+            <p>Enter your date of birth to begin your journey with Vitora.</p>
           </div>
           <BootstrapForm onSubmit={handleSubmit(onSubmit)}>
-            <BootstrapForm.Group controlId="birthdate" className='pb-4'>
-              <BootstrapForm.Label>Date of Birth:</BootstrapForm.Label>
+            <BootstrapForm.Group controlId="birthdate" className="pb-4">
+              <BootstrapForm.Label>Your Date of Birth:</BootstrapForm.Label>
               <BootstrapForm.Control
                 type="date"
-                {...register('birthdate', { required: 'Birthdate is required' })}
+                {...register('birthdate', { required: 'Please enter your birthdate' })}
               />
-              {errors.birthdate && <div>{errors.birthdate.message}</div>}
+              {errors.birthdate && <div className="text-danger">{errors.birthdate.message}</div>}
             </BootstrapForm.Group>
-            <div className='text-center'>
-              <Button type="submit">Next</Button>
+            <div className="text-center">
+              <Button type="submit">Calculate My Lifespan</Button>
             </div>
           </BootstrapForm>
         </Col>

@@ -11,7 +11,7 @@ import Birthdate from '../../feature/Birthdate';
 
 function MainRouting() {
   return (
-    <div className={styles.routesContainer}>
+    <div className={`${styles.routesContainer}`}>
       <Routes>
         <Route path="exercise" element={<Exercise />} />
         <Route path="genetic" element={<Genetic />} />
