@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Navbar, Nav, Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { BsPersonCircle, BsSearch, BsGlobeAmericas, BsSend, BsFillInboxFill, BsQuestionLg, BsGearWideConnected, BsBoxArrowInLeft } from 'react-icons/bs';
 import Logo from '../../common/Logo';
 import styles from './Nav.module.css';
@@ -13,18 +14,18 @@ const NavigationBar = ({ stringBirthdate }) => {
   return (
     <Navbar bg="light" expand="lg" className="sticky-top">
       <Container>
-        <Navbar.Brand href="/vitora/"><Logo /> Vitora</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/"><Logo /> Vitora</Navbar.Brand>
         <Nav className="mx-auto">
-          <Nav.Link href="/vitora/dashboard/birthdate" className={styles.navLink}>Timeline</Nav.Link>
-          <Nav.Link href="/vitora/articles" className={styles.navLink}>Articles</Nav.Link>
-          <Nav.Link href="#" className={styles.navLink}>Resources</Nav.Link>
-          <Nav.Link href="#" className={styles.navLink}>Donations</Nav.Link>
+          <Nav.Link as={Link} to="/dashboard/birthdate" className={styles.navLink}>Timeline</Nav.Link>
+          <Nav.Link as={Link} to="/articles" className={styles.navLink}>Articles</Nav.Link>
+          <Nav.Link as={Link} to="#" className={styles.navLink}>Resources</Nav.Link>
+          <Nav.Link as={Link} to="#" className={styles.navLink}>Donations</Nav.Link>
         </Nav>
         <Nav className="ml-auto">
           <Nav.Link className={styles.navIcon}>
             <BsSearch />
           </Nav.Link>
-          <Nav.Link href="#globe" className={styles.navIcon}><BsGlobeAmericas /></Nav.Link>
+          <Nav.Link as={Link} to="#globe" className={styles.navIcon}><BsGlobeAmericas /></Nav.Link>
           <Dropdown 
             show={dropdownOpen} 
             onMouseEnter={handleMouseEnter} 
@@ -35,7 +36,7 @@ const NavigationBar = ({ stringBirthdate }) => {
               <BsPersonCircle />
             </Dropdown.Toggle>
             <Dropdown.Menu className={styles.dropdownMenu} popperConfig={{ modifiers: [{ name: 'preventOverflow', options: { boundary: 'viewport' } }] }}>
-              <Dropdown.Item href="#/action-1">
+              <Dropdown.Item as={Link} to="#/action-1">
                 <div className="d-flex align-items-center">
                   <BsPersonCircle size={35} className="me-2" />
                   <div>
@@ -45,18 +46,18 @@ const NavigationBar = ({ stringBirthdate }) => {
                 </div>
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/action-3" className={styles.menuIcon}>
+              <Dropdown.Item as={Link} to="#/action-3" className={styles.menuIcon}>
                 <span className="me-2"><BsSend /></span> Share
               </Dropdown.Item>
-              <Dropdown.Item href="#/action-3" className={styles.menuIcon}>
+              <Dropdown.Item as={Link} to="#/action-3" className={styles.menuIcon}>
                 <span className="me-2"><BsFillInboxFill /></span> Updates
               </Dropdown.Item>
-              <Dropdown.Item href="#" className={styles.menuIcon}><span className="me-2"><BsQuestionLg /></span> Help</Dropdown.Item>
-              <Dropdown.Item href="#/action-3" className={styles.menuIcon}>
+              <Dropdown.Item as={Link} to="#" className={styles.menuIcon}><span className="me-2"><BsQuestionLg /></span> Help</Dropdown.Item>
+              <Dropdown.Item as={Link} to="#/action-3" className={styles.menuIcon}>
                 <span className="me-2"><BsGearWideConnected /></span> Settings
               </Dropdown.Item>
               <Dropdown.Divider />
-              <Dropdown.Item href="#/action-3" className={styles.menuIcon}>
+              <Dropdown.Item as={Link} to="#/action-3" className={styles.menuIcon}>
                 <span className="me-2"><BsBoxArrowInLeft /></span> Log out
               </Dropdown.Item>
             </Dropdown.Menu>

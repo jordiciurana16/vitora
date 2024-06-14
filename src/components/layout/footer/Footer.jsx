@@ -12,11 +12,11 @@ function Footer() {
 
   useEffect(() => {
     // La teva lògica aquí per carregar les dades segons la ubicació
-    if (location.pathname === '/vitora/menu') {
+    if (location.pathname === '/menu') {
       if (menuData && menuData.privacitat) {
         setContent(menuData.privacitat);
       }
-    } else if (location.pathname === '/vitora/cookies') {
+    } else if (location.pathname === '/cookies') {
       if (menuData && menuData.cookies) {
         setContent(menuData.cookies);
       }
@@ -33,27 +33,27 @@ function Footer() {
             <Row className={`${styles.footerLinks} justify-content-center`}>
               <Col md={2}>
                 <h6>
-                <Link to="/vitora/privacy">PRIVACY</Link>
+                <Link to="/privacy">PRIVACY</Link>
                 </h6>
               </Col>
               <Col md={2}>
                 <h6>
-                <Link to="/vitora/terms">TERMS</Link>
+                <Link to="/terms">TERMS</Link>
                 </h6>
               </Col>
               <Col md={2}>
                 <h6>
-                <Link to="/vitora/cookies">COOKIES</Link>
+                <Link to="/cookies">COOKIES</Link>
                 </h6>
               </Col>
               <Col md={2}>
                 <h6>
-                <Link to="/vitora/help">HELP</Link>
+                <Link to="/help">HELP</Link>
                 </h6>
               </Col>
               <Col md={2}>
                 <h6>
-                <Link to="/vitora/contact">CONTACT</Link>
+                <Link to="/contact">CONTACT</Link>
                 </h6>
               </Col>
             </Row>

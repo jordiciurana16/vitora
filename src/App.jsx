@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalProvider } from './hooks/GlobalContext';
 import LandingPage from './pages/LandingPage';
 import DashboardPage from './pages/DashboardPage';
@@ -9,7 +9,7 @@ import ResourcesPage from './pages/ResourcesPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/vitora">
       <GlobalProvider>
         <Routes>
           <Route path="/" element={<LandingPage />} />

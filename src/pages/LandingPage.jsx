@@ -37,7 +37,7 @@ function LandingPage() {
   
 
   const handleButtonClick = () => {
-    navigate('/vitora/dashboard/birthdate');
+    navigate('/dashboard/birthdate');
   };
 
   const imageUrlBottom = "https://i.ibb.co/QnL2qyY/test2.png";
