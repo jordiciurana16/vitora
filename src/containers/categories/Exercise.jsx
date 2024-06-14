@@ -4,7 +4,6 @@ import Questionnaire from '../../components/common/Questionnaire';
 
 function Exercise() {
   const factor = 'Exercise'; // Assignem la categoria 'Exercise'
-  
   return (
     <Container fluid>
       <Row>

@@ -4,7 +4,6 @@ import Header from '../components/layout/header/Header';
 import Sidebar from '../components/layout/sidebar/Sidebar';
 import MainRouting from '../components/layout/main/MainRouting';
 import Footer from '../components/layout/footer/Footer';
-import BirthdateModal from '../components/feature/BirthdateModal';
 import { GlobalProvider } from '../hooks/GlobalContext';
 import NavigationBar from '../components/layout/nav/Nav';
 import ScrollProgress from '../components/layout/nav/ScrollProgress';
@@ -39,7 +38,6 @@ function DashboardPage() {
           </Col>
         </Row>
       </Container>
-      <BirthdateModal show={showModal} onHide={handleCloseModal} />
     </GlobalProvider>
   );
 }

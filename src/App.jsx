@@ -9,18 +9,18 @@ import ResourcesPage from './pages/ResourcesPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/vitora">
       <GlobalProvider>
         <Routes>
-          <Route path="/vitora" element={<LandingPage />} />
-          <Route path="/vitora/dashboard/*" element={<DashboardPage />} />
-          <Route path="/vitora/articles" element={<ArticlesPage />} />
-          <Route path="/vitora/resources" element={<ResourcesPage />} />
-          <Route path="/vitora/privacy" element={<MenuPage />} />
-          <Route path="/vitora/terms" element={<MenuPage />} />
-          <Route path="/vitora/cookies" element={<MenuPage />} />
-          <Route path="/vitora/help" element={<MenuPage />} />
-          <Route path="/vitora/contact" element={<MenuPage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/dashboard/*" element={<DashboardPage />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
+          <Route path="/privacy" element={<MenuPage />} />
+          <Route path="/terms" element={<MenuPage />} />
+          <Route path="/cookies" element={<MenuPage />} />
+          <Route path="/help" element={<MenuPage />} />
+          <Route path="/contact" element={<MenuPage />} />
         </Routes>
       </GlobalProvider>
     </Router>

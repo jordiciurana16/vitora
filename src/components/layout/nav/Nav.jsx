@@ -15,7 +15,7 @@ const NavigationBar = ({ stringBirthdate }) => {
       <Container>
         <Navbar.Brand href="/vitora/"><Logo /> Vitora</Navbar.Brand>
         <Nav className="mx-auto">
-          <Nav.Link href="/vitora/dashboard" className={styles.navLink}>Dashboard</Nav.Link>
+          <Nav.Link href="/vitora/dashboard/birthdate" className={styles.navLink}>Timeline</Nav.Link>
           <Nav.Link href="/vitora/articles" className={styles.navLink}>Articles</Nav.Link>
           <Nav.Link href="#" className={styles.navLink}>Resources</Nav.Link>
           <Nav.Link href="#" className={styles.navLink}>Donations</Nav.Link>

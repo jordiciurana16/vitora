@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, ListGroup, Form, InputGroup, Accordion, Card } from 'react-bootstrap';
 import styles from './MenuPages.module.css';
-import { Link } from 'react-router-dom';
 import { BsArrowLeft, BsSearch } from 'react-icons/bs';
 import menuData from './MenuData.json';
 import Nav from '../../components/layout/nav/Nav'
 import ScrollProgress from '../../components/layout/nav/ScrollProgress';
+
+import Footer from '../../components/layout/footer/Footer';
 
 const MenuPage = () => {
   const [menuContent, setMenuContent] = useState(null);
@@ -57,9 +58,6 @@ const MenuPage = () => {
       <Row className={`px-5 `}>
         <Col>
           <header>
-            <Link to="/vitora/">
-              <BsArrowLeft className={`me-2 ${styles.backIcon}`} />
-            </Link>
             <div className={`d-flex align-items-center justify-content-center flex-column ${styles.titleContainer}`}>
               <h1 className={`mb-2 `}>{menuContent && menuContent.titol}</h1>
             </div>
@@ -71,7 +69,7 @@ const MenuPage = () => {
         <Row className='px-5 pt-3'>
           <Col xs={9} className='pe-5'>
             {menuContent.seccions.map((seccio) => (
-              <section id={seccio.id} key={seccio.id}>
+              <section className='pb-4' id={seccio.id} key={seccio.id}>
                 <h3>{seccio.capcalera}</h3>
                 <p>{seccio.text}</p>
                 {seccio.id === 'faq' && (
@@ -114,6 +112,7 @@ const MenuPage = () => {
         </Row>
       )}
     </Container>
+    <Footer />
     </div>
   );
 };

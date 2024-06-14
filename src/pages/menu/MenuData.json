@@ -1,222 +1,220 @@
 {
-    "privacy": {
-      "titol": "Política de Privacitat",
-      "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
-      "seccions": [
-        {
-          "id": "recopilacio",
-          "capcalera": "Recopilació de Dades",
-          "text": "En Vitora, la vostra privacitat és una prioritat. Recopilem dades específiques per millorar l'experiència de l'usuari i proporcionar prediccions precises. Aquestes dades poden incloure informació personal com l'edat, sexe, hàbits de vida, preferències d'ús i interaccions amb la plataforma. Vetllem per la confidencialitat i protecció de les vostres dades. No compartim aquesta informació amb tercers sense el vostre consentiment explícit."
-        },
-        {
-          "id": "dades",
-          "capcalera": "Ús de les Dades",
-          "text": "Les dades recopilades són utilitzades per generar estimacions d'esperança de vida i predir esdeveniments futurs. Això ens permet oferir una visió personalitzada als nostres usuaris i millorar la nostra plataforma. També les utilitzem per a anàlisi intern, millora del producte i optimització del servei."
-        },
-        {
-          "id": "confidencialitat",
-          "capcalera": "Confidencialitat i Seguretat",
-          "text": "Mantenim la confidencialitat de les vostres dades i estem compromesos a protegir-les. Disposem de mesures de seguretat per prevenir accesos no autoritzats i garantir la vostra protecció. Utilitzem tecnologies de xifrat i altres pràctiques de seguretat per salvaguardar la informació de manera adequada."
-        },
-        {
-          "id": "privacitat",
-          "capcalera": "Gestió de Privacitat",
-          "text": "Donem opcions per gestionar les vostres preferències de privacitat. Això inclou revisar, editar o eliminar les dades emmagatzemades. Estem disponibles per respondre preguntes o preocupacions sobre la vostra privacitat i oferir assistència en la gestió de les vostres dades personals."
-        },
-        {
-          "id": "consentiment",
-          "capcalera": "Consentiment i Control",
-          "text": "Al fer servir el nostre lloc web, doneu el vostre consentiment per a la recopilació i ús de les vostres dades. Teniu el control sobre les vostres dades i podeu gestionar les vostres preferències de privacitat a través de les opcions proporcionades a la plataforma."
-        }
-      ]
-    },
-
-    "cookies": {
-      "titol": "Política de Cookies",
-      "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
-      "seccions": [
-        {
-          "id": "usu",
-          "capcalera": "Ús de Cookies",
-          "text": "Les cookies són petits arxius de text que es guarden al vostre dispositiu quan visiteu el nostre lloc web. S'utilitzen principalment perquè el lloc web funcioni correctament i per oferir una millor experiència de navegació. Això pot incloure l'emmagatzematge de les vostres preferències i la recopilació d'informació sobre com feu servir el lloc per optimitzar-ne el rendiment."
-        },
-        {
-          "id": "tipus",
-          "capcalera": "Tipus de Cookies",
-          "text": "Les cookies poden ser de diferents tipus: cookies pròpies que s'estableixen pel lloc web que esteu visitant, i cookies de tercers que provenen de serveis externs integrats al lloc. Poden ser cookies de sessió, que s'esborren quan tanqueu el navegador, o cookies persistents que es mantenen al vostre dispositiu durant un temps determinat."
-        },
-        {
-          "id": "control",
-          "capcalera": "Control de Cookies",
-          "text": "Teniu el control sobre les cookies i podeu gestionar-les a través de la configuració del vostre navegador. Normalment, podeu acceptar, rebutjar o eliminar les cookies des del vostre navegador. Tingueu en compte que la desactivació de les cookies pot afectar la funcionalitat del lloc web i limitar algunes característiques."
-        },
-        {
-          "id": "consentiment",
-          "capcalera": "Consentiment de Cookies",
-          "text": "En fer servir el nostre lloc web, doneu el vostre consentiment per a l'ús de cookies segons la nostra política. Podeu canviar les vostres preferències de cookies en qualsevol moment a través de la configuració del navegador."
-        }
-      ]
-    },
-    "help": {
-        "titol": "Help",
-        "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
-        "seccions": [
-          {
-            "id": "contacte",
-            "capcalera": "Contacte",
-            "text": "Per obtenir ajuda, podeu contactar amb nosaltres a través del correu electrònic help@vitora.com o trucant al número 123-456-789."
-          },
-          {
-            "id": "assistencia",
-            "capcalera": "Assistència Personalitzada",
-            "text": "Oferim assistència personalitzada per als nostres usuaris. Si necessiteu ajuda específica o teniu problemes amb la plataforma, podeu sol·licitar assistència personalitzada al nostre equip d'assistència."
-          },
-          {
-            "id": "faq",
-            "capcalera": "Preguntes Freqüents",
-            "text": "Si teniu preguntes freqüents, podeu consultar la nostra secció de Preguntes Freqüents (FAQ) a la nostra pàgina web per trobar respostes a les qüestions més comunes.",
-            "acordio": [
-              {
-                "pregunta": "Com puc canviar la meva contrasenya?",
-                "resposta": "Per canviar la contrasenya, inicieu sessió al vostre compte i aneu a la secció de configuració de l'usuari. Allà trobareu l'opció per canviar la contrasenya."
-              },
-              {
-                "pregunta": "Quina és la política de privacitat?",
-                "resposta": "La nostra política de privacitat està dissenyada per protegir la vostra informació personal i garantir la vostra privacitat. Podeu llegir-ne tots els detalls a la nostra pàgina de política de privacitat."
-              },
-              {
-                "pregunta": "Com puc contactar amb l'equip d'assistència?",
-                "resposta": "Podeu contactar amb el nostre equip d'assistència a través del correu electrònic help@vitora.com o trucant al número 123-456-789."
-              },
-              {
-                "pregunta": "Quins són els meus drets en relació amb les meves dades personals emmagatzemades?",
-                "resposta": "Com a usuari de Vitora, tens diversos drets en relació amb les teves dades personals, incloent-hi el dret a accedir, rectificar, eliminar i oposar-te al processament de les teves dades. Pots exercir aquests drets en qualsevol moment posant-te en contacte amb el nostre equip de suport."
-              },
-              {
-                "pregunta": "Com puc reportar un problema de seguretat o una vulnerabilitat?",
-                "resposta": "Si trobes alguna vulnerabilitat de seguretat en la plataforma de Vitora o sospites d'un problema de seguretat, t'animem a contactar immediatament amb el nostre equip de seguretat informàtica a security@vitora.com. Estem compromesos a resoldre ràpidament qualsevol problema de seguretat per mantenir la teva informació segura."
-              },
-              {
-                "pregunta": "Què és Vitora i com funciona?",
-                "resposta": "Vitora és una plataforma que calcula l'esperança de vida de l'usuari basant-se en diversos factors com l'estil de vida, la salut i les dades demogràfiques. Utilitza algorismes avançats per proporcionar prediccions personalitzades."
-              },
-              {
-                "pregunta": "Què passa amb les meves dades personals?",
-                "resposta": "Les teves dades personals s'utilitzen únicament per calcular l'esperança de vida i millorar els nostres serveis. Garantim la confidencialitat i la seguretat de les teves dades en tot moment."
-              },
-              {
-                "pregunta": "Puc eliminar les meves dades personals?",
-                "resposta": "Sí, pots sol·licitar la eliminació de les teves dades personals en qualsevol moment. Ens assegurarem de gestionar la teva sol·licitud de manera adequada i respectuosa amb la teva privacitat."
-              },
-              {
-                "pregunta": "Quins són els avantatges d'utilitzar l'aplicació?",
-                "resposta": "Vitora et proporciona una estimació de la teva esperança de vida i consells personalitzats per millorar el teu benestar. Això et permet prendre decisions informades sobre el teu estil de vida i la teva salut."
-              },
-              {
-                "pregunta": "Vitora pot predir malalties o accidents?",
-                "resposta": "Vitora utilitza dades estadístiques per predir l'esperança de vida, però no pot predir específicament malalties o accidents individuals."
-              },
-              {
-                "pregunta": "Quin tipus de dades recopila Vitora?",
-                "resposta": "Vitora recopila dades com l'edat, sexe, hàbits de vida, historial mèdic (si es proporciona) i altres factors relacionats amb la salut i el benestar."
-              },
-              {
-                "pregunta": "Què passa si canvio els meus hàbits de vida després d'utilitzar Vitora?",
-                "resposta": "Si canviïs els teus hàbits de vida, Vitora pot recalcular la teva estimació d'esperança de vida per reflectir aquests canvis."
-              },
-              {
-                "pregunta": "Puc confiar en les prediccions de Vitora?",
-                "resposta": "Les prediccions de Vitora es basen en dades estadístiques i algorismes avançats, però és important recordar que són estimacions i no garanties absolutes."
-              },
-              {
-                "pregunta": "Com puc accedir a les meves dades personals a Vitora?",
-                "resposta": "Pots accedir a les teves dades personals a través de la configuració del teu compte a Vitora."
-              }
-            ]
-          }
-        ]
+  "privacy": {
+    "titol": "Privacy Policy",
+    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "seccions": [
+      {
+        "id": "recopilacio",
+        "capcalera": "Data Collection",
+        "text": "At Vitora, your privacy is a priority. We collect specific data to enhance the user experience and provide accurate predictions. This data may include personal information such as age, gender, lifestyle habits, usage preferences, and interactions with the platform. We ensure the confidentiality and protection of your data. We do not share this information with third parties without your explicit consent."
       },
-      "terms": {
-        "titol": "Terms",
-        "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
-        "seccions": [
-          {
-            "id": "servei",
-            "capcalera": "Ús del Servei",
-            "text": "Vitora ofereix una plataforma interactiva que permet als usuaris accedir a prediccions i consells sobre l'esperança de vida basats en dades personals. En utilitzar aquest servei, l'usuari accepta complir amb els termes i condicions establerts per Vitora."
-          },
-          {
-            "id": "responsabilitats",
-            "capcalera": "Responsabilitats de l'Usuari",
-            "text": "L'usuari assumeix la responsabilitat de la informació que proporciona a la plataforma de Vitora. Això inclou garantir la veracitat, exactitud i legalitat de les dades proporcionades. A més, l'usuari és conscient que les prediccions i consells proporcionats per Vitora són orientatius i no reemplacen la consulta professional amb especialistes de la salut."
-          },
-          {
-            "id": "propietat",
-            "capcalera": "Propietat Intel·lectual",
-            "text": "Tots els drets de propietat intel·lectual associats amb Vitora, incloent-hi el contingut, el disseny i la tecnologia, estan protegits per les lleis de propietat intel·lectual. L'usuari accepta no copiar, reproduir o distribuir cap part del contingut de Vitora sense autorització prèvia."
-          },
-          {
-            "id": "limitació",
-            "capcalera": "Limitació de Responsabilitats",
-            "text": "Vitora es compromet a proporcionar un servei fiable i precís, però no es fa responsable de les decisions preses pels usuaris basades exclusivament en les prediccions o consells proporcionats per la plataforma. A més, no es garanteix la exactitud absoluta de les prediccions, ja que estan basades en models estadístics i dades disponibles."
-          },
-          {
-            "id": "resolució",
-            "capcalera": "Resolució de Disputes",
-            "text": "En cas de conflictes o disputes entre l'usuari i Vitora, s'intenta resoldre de manera amistosa. Si no es pot arribar a un acord, les parts accepten sotmetre la disputa a la jurisdicció competent d'acord amb la legislació aplicable."
-          },
-          {
-            "id": "canvis",
-            "capcalera": "Canvis als Termes i Condicions",
-            "text": "En cas de conflictes o disputes entre l'usuari i Vitora, s'intenta resoldre de manera amistosa. Si no es pot arribar a un acord, les parts accepten sotmetre la disputa a la jurisdicció competent d'acord amb la legislació aplicable."
-          },
-          {
-            "id": "acceptació",
-            "capcalera": "Acceptació dels Termes",
-            "text": "L'ús de la plataforma Vitora implica l'acceptació incondicional dels Termes i Condicions establerts. En cas de no estar d'acord amb aquests termes, es recomana no utilitzar la plataforma."
-          }
-        ]
+      {
+        "id": "dades",
+        "capcalera": "Data Usage",
+        "text": "The collected data is used to generate life expectancy estimates and predict future events. This allows us to offer a personalized view to our users and improve our platform. We also use it for internal analysis, product improvement, and service optimization."
       },
-      "contact": {
-        "titol": "Contacte",
-        "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
-        "seccions": [
-            {
-                "id": "nosaltres",
-                "capcalera": "Qui som?",
-                "text": "Som un equip professional especialitzat en el desenvolupament de programació i disseny web."
-            },
-            {
-                "id": "direccio",
-                "capcalera": "Adreça",
-                "text": "Pots trobar-nos a Carrer de l'Exemple, 123, Barcelona, Catalunya."
-            },
-            {
-                "id": "telefon",
-                "capcalera": "Telèfon",
-                "text": "Per a consultes, truca al +34 123 456 789."
-            },
-            {
-                "id": "correu",
-                "capcalera": "Correu electrònic",
-                "text": "Envia'ns un correu electrònic a info@vitora.com per a més informació."
-            },
-            {
-                "id": "horari",
-                "capcalera": "Horari d'atenció",
-                "text": "Estem disponibles de dilluns a divendres, de 9:00 a 18:00."
-            },
-            {
-              "id": "oportunitats_professionals",
-              "capcalera": "Oportunitats Professionals",
-              "text": "Descobreix les oportunitats de carrera disponibles amb Vitora. Consulta les nostres ofertes de feina i envia'ns el teu currículum per consideració."
+      {
+        "id": "confidencialitat",
+        "capcalera": "Confidentiality and Security",
+        "text": "We maintain the confidentiality of your data and are committed to protecting it. We have security measures in place to prevent unauthorized access and ensure your protection. We use encryption technologies and other security practices to safeguard the information appropriately."
+      },
+      {
+        "id": "privacitat",
+        "capcalera": "Privacy Management",
+        "text": "We provide options to manage your privacy preferences. This includes reviewing, editing, or deleting stored data. We are available to answer questions or concerns about your privacy and provide assistance in managing your personal data."
+      },
+      {
+        "id": "consentiment",
+        "capcalera": "Consent and Control",
+        "text": "By using our website, you give your consent for the collection and use of your data. You have control over your data and can manage your privacy preferences through the options provided on the platform."
+      }
+    ]
+  },
+  "cookies": {
+    "titol": "Cookie Policy",
+    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "seccions": [
+      {
+        "id": "usu",
+        "capcalera": "Use of Cookies",
+        "text": "Cookies are small text files that are stored on your device when you visit our website. They are mainly used to ensure the website functions properly and to provide a better browsing experience. This may include storing your preferences and collecting information about how you use the site to optimize its performance."
+      },
+      {
+        "id": "tipus",
+        "capcalera": "Types of Cookies",
+        "text": "Cookies can be of different types: first-party cookies set by the website you are visiting, and third-party cookies that come from external services integrated into the site. They can be session cookies, which are deleted when you close your browser, or persistent cookies that remain on your device for a set period."
+      },
+      {
+        "id": "control",
+        "capcalera": "Cookie Control",
+        "text": "You have control over cookies and can manage them through your browser settings. Usually, you can accept, reject, or delete cookies from your browser. Note that disabling cookies may affect the website's functionality and limit some features."
+      },
+      {
+        "id": "consentiment",
+        "capcalera": "Cookie Consent",
+        "text": "By using our website, you consent to the use of cookies according to our policy. You can change your cookie preferences at any time through your browser settings."
+      }
+    ]
+  },
+  "help": {
+    "titol": "Help",
+    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "seccions": [
+      {
+        "id": "contacte",
+        "capcalera": "Contact",
+        "text": "For assistance, you can contact us via email at help@vitora.com or call 123-456-789."
+      },
+      {
+        "id": "assistencia",
+        "capcalera": "Personalized Assistance",
+        "text": "We offer personalized assistance to our users. If you need specific help or have issues with the platform, you can request personalized assistance from our support team."
+      },
+      {
+        "id": "faq",
+        "capcalera": "Frequently Asked Questions",
+        "text": "If you have frequent questions, you can check our FAQ section on our website to find answers to common queries.",
+        "acordio": [
+          {
+            "pregunta": "How can I change my password?",
+            "resposta": "To change your password, log into your account and go to the user settings section. There you will find the option to change your password."
           },
           {
-              "id": "contacte_advocat",
-              "capcalera": "Contacte amb un advocat",
-              "text": "En cas que tinguis alguna pregunta legal o hagis tingut problemes amb els nostres serveis, no dubtis a posar-te en contacte amb un dels advocats de l'empresa. Envia'ns un correu electrònic a legal@vitora.com i un dels nostres advocats et respondrà amb la màxima prioritat."
+            "pregunta": "What is the privacy policy?",
+            "resposta": "Our privacy policy is designed to protect your personal information and ensure your privacy. You can read all the details on our privacy policy page."
+          },
+          {
+            "pregunta": "How can I contact the support team?",
+            "resposta": "You can contact our support team via email at help@vitora.com or call 123-456-789."
+          },
+          {
+            "pregunta": "What are my rights regarding my stored personal data?",
+            "resposta": "As a Vitora user, you have various rights regarding your personal data, including the right to access, rectify, delete, and object to the processing of your data. You can exercise these rights at any time by contacting our support team."
+          },
+          {
+            "pregunta": "How can I report a security issue or vulnerability?",
+            "resposta": "If you find any security vulnerability on the Vitora platform or suspect a security issue, we encourage you to contact our cybersecurity team immediately at security@vitora.com. We are committed to quickly resolving any security issues to keep your information safe."
+          },
+          {
+            "pregunta": "What is Vitora and how does it work?",
+            "resposta": "Vitora is a platform that calculates the user's life expectancy based on various factors such as lifestyle, health, and demographic data. It uses advanced algorithms to provide personalized predictions."
+          },
+          {
+            "pregunta": "What happens to my personal data?",
+            "resposta": "Your personal data is only used to calculate life expectancy and improve our services. We guarantee the confidentiality and security of your data at all times."
+          },
+          {
+            "pregunta": "Can I delete my personal data?",
+            "resposta": "Yes, you can request the deletion of your personal data at any time. We will ensure to handle your request appropriately and respectfully with your privacy."
+          },
+          {
+            "pregunta": "What are the benefits of using the app?",
+            "resposta": "Vitora provides you with an estimate of your life expectancy and personalized tips to improve your well-being. This allows you to make informed decisions about your lifestyle and health."
+          },
+          {
+            "pregunta": "Can Vitora predict diseases or accidents?",
+            "resposta": "Vitora uses statistical data to predict life expectancy, but it cannot specifically predict individual diseases or accidents."
+          },
+          {
+            "pregunta": "What kind of data does Vitora collect?",
+            "resposta": "Vitora collects data such as age, gender, lifestyle habits, medical history (if provided), and other health and wellness-related factors."
+          },
+          {
+            "pregunta": "What happens if I change my lifestyle habits after using Vitora?",
+            "resposta": "If you change your lifestyle habits, Vitora can recalculate your life expectancy estimate to reflect those changes."
+          },
+          {
+            "pregunta": "Can I trust Vitora's predictions?",
+            "resposta": "Vitora's predictions are based on statistical data and advanced algorithms, but it is important to remember that they are estimates and not absolute guarantees."
+          },
+          {
+            "pregunta": "How can I access my personal data on Vitora?",
+            "resposta": "You can access your personal data through your account settings on Vitora."
           }
         ]
-    }    
-  }
-  
+      }
+    ]
+  },
+  "terms": {
+    "titol": "Terms",
+    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "seccions": [
+      {
+        "id": "servei",
+        "capcalera": "Service Use",
+        "text": "Vitora offers an interactive platform that allows users to access predictions and advice on life expectancy based on personal data. By using this service, the user agrees to comply with the terms and conditions set by Vitora."
+      },
+      {
+        "id": "responsabilitats",
+        "capcalera": "User Responsibilities",
+        "text": "The user assumes responsibility for the information provided to the Vitora platform. This includes ensuring the truthfulness, accuracy, and legality of the provided data. Additionally, the user is aware that the predictions and advice provided by Vitora are for guidance only and do not replace professional consultation with health specialists."
+      },
+      {
+        "id": "propietat",
+        "capcalera": "Intellectual Property",
+        "text": "All intellectual property rights associated with Vitora, including content, design, and technology, are protected by intellectual property laws. The user agrees not to copy, reproduce, or distribute any part of Vitora's content without prior authorization."
+      },
+      {
+        "id": "limitació",
+        "capcalera": "Liability Limitation",
+        "text": "Vitora is committed to providing a reliable and accurate service, but it is not responsible for decisions made by users based solely on the predictions or advice provided by the platform. Additionally, absolute accuracy of predictions is not guaranteed, as they are based on statistical models and available data."
+      },
+      {
+        "id": "resolució",
+        "capcalera": "Dispute Resolution",
+        "text": "In case of conflicts or disputes between the user and Vitora, we attempt to resolve amicably. If no agreement can be reached, the parties agree to submit the dispute to the competent jurisdiction according to applicable law."
+      },
+      {
+        "id": "canvis",
+        "capcalera": "Changes to Terms and Conditions",
+        "text": "Vitora reserves the right to modify these terms and conditions at any time. Users will be notified of any changes, and continued use of the platform implies acceptance of the new terms."
+      },
+      {
+        "id": "acceptació",
+        "capcalera": "Acceptance of Terms",
+        "text": "Use of the Vitora platform implies unconditional acceptance of the established Terms and Conditions. If you do not agree with these terms, it is recommended not to use the platform."
+      }
+    ]
+  },
+  "contact": {
+    "titol": "Contact",
+    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "seccions": [
+      {
+        "id": "nosaltres",
+        "capcalera": "Who Are We?",
+        "text": "We are a professional team specializing in programming and web design development."
+      },
+      {
+        "id": "direccio",
+        "capcalera": "Address",
+        "text": "You can find us at Carrer de l'Exemple, 123, Barcelona, Catalunya."
+      },
+      {
+        "id": "telefon",
+        "capcalera": "Phone",
+        "text": "For inquiries, call +34 123 456 789."
+      },
+      {
+        "id": "correu",
+        "capcalera": "Email",
+        "text": "Send us an email at info@vitora.com for more information."
+      },
+      {
+        "id": "horari",
+        "capcalera": "Business Hours",
+        "text": "We are available Monday to Friday, from 9:00 to 18:00."
+      },
+      {
+        "id": "oportunitats_professionals",
+        "capcalera": "Career Opportunities",
+        "text": "Discover the career opportunities available with Vitora. Check our job offers and send us your resume for consideration."
+      },
+      {
+        "id": "contacte_advocat",
+        "capcalera": "Contact a Lawyer",
+        "text": "If you have any legal questions or have had problems with our services, do not hesitate to contact one of the company's lawyers. Send us an email at legal@vitora.com, and one of our lawyers will respond with the utmost priority."
+      }
+    ]
+  }    
+}

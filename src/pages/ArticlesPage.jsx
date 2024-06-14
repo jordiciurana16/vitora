@@ -78,7 +78,7 @@ function ArticlesPage() {
       "date": "2024",
       "readers": 2400,
       "citations": 52,
-      "summary": "Analyzes how public health policies can impact life expectancy on a population level.",
+      "summary": "Analyzes how public health policies can impact life expectancy on a mundial population level scale.",
       "imageUrl": "https://via.placeholder.com/150"
     },
   ]
