@@ -1,5 +1,3 @@
-// src/components/routing/MainRouting.js
-
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import styles from './MainRouting.module.css';
@@ -7,7 +5,6 @@ import ResultsContainer from '../../../containers/results/ResultsContainer';
 import Exercise from '../../../containers/categories/Exercise';
 import Genetic from '../../../containers/categories/Genetic';
 import Geography from '../../../containers/categories/Geography';
-import Birthdate from '../../feature/Birthdate';
 
 function MainRouting() {
   return (

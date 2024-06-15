@@ -424,3 +424,11 @@ button:hover {
   opacity: 0;
   transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
+
+.step-progress-container {
+  position: absolute;
+  top: 10%; /* Adjust the value to position it correctly */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Ensure it is above other components */
+}

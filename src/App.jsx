@@ -5,7 +5,6 @@ import LandingPage from './pages/landing/LandingPage';
 import DashboardPage from './pages/DashboardPage';
 import MenuPage from './pages/menu/MenuPage';
 import ArticlesPage from './pages/ArticlesPage';
-import ResourcesPage from './pages/ResourcesPage';
 
 function App() {
   return (
@@ -15,8 +14,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/dashboard/*" element={<DashboardPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
-          <Route path="/resources" element={<ResourcesPage />} />
-          <Route path="/privacy" element={<MenuPage />} />
+¡          <Route path="/privacy" element={<MenuPage />} />
           <Route path="/terms" element={<MenuPage />} />
           <Route path="/cookies" element={<MenuPage />} />
           <Route path="/help" element={<MenuPage />} />

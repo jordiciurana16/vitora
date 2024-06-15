@@ -1,10 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card, Form as BootstrapForm, Button } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useGlobalContext } from '../../hooks/GlobalContext';
-import { userAge } from '../../utils/calculations/UserAge';
+import { useGlobalContext } from '../../../hooks/GlobalContext';
+import { userAge } from '../../../utils/calculations/UserAge';
 import { InfoCircle } from 'react-bootstrap-icons';
-import StepProgress from './StepProgress';
 
 function Birthdate({ onSubmitSuccess }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -23,11 +22,6 @@ function Birthdate({ onSubmitSuccess }) {
 
   return (
     <Container fluid className='d-flex flex-column align-items-center pt-5'>
-      <Row className="mb-4 w-100 justify-content-center">
-        <Col xs={12} md={10} lg={8} xl={6}>
-          <StepProgress currentStep={1} />
-        </Col>
-      </Row>
       <Row className="justify-content-center w-100 mb-5">
         <Col xs={12} md={10} lg={8} xl={6}>
           <Card className="p-4 shadow-sm">
