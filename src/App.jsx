@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { GlobalProvider } from './hooks/GlobalContext';
-import LandingPage from './pages/LandingPage';
+import LandingPage from './pages/landing/LandingPage';
 import DashboardPage from './pages/DashboardPage';
 import MenuPage from './pages/menu/MenuPage';
 import ArticlesPage from './pages/ArticlesPage';

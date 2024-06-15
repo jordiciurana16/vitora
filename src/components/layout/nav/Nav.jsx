@@ -12,7 +12,7 @@ const NavigationBar = ({ stringBirthdate }) => {
   const handleMouseLeave = () => setDropdownOpen(false);
 
   return (
-    <Navbar bg="light" expand="lg" className="sticky-top">
+    <Navbar bg="light" expand="lg" className="sticky-top py-1">
       <Container>
         <Navbar.Brand as={Link} to="/"><Logo /> Vitora</Navbar.Brand>
         <Nav className="mx-auto">

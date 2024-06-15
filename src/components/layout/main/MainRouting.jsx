@@ -16,7 +16,6 @@ function MainRouting() {
         <Route path="exercise" element={<Exercise />} />
         <Route path="genetic" element={<Genetic />} />
         <Route path="geography" element={<Geography />} />
-        <Route path="birthdate" element={<Birthdate />} />
         <Route path="results" element={<ResultsContainer />} />
         <Route path="*" element={<ResultsContainer />} />
       </Routes>

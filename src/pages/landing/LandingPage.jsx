@@ -3,15 +3,15 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import CountUp from 'react-countup';
-import Footer from '../components/layout/footer/Footer';
-import NavigationBar from '../components/layout/nav/Nav';
-import ScrollProgress from '../components/layout/nav/ScrollProgress';
-import LatestArticles from './landing/LatestArticles';
-import WebStats from './landing/WebStats';
-import Foundations from './landing/Foundations';
-import landingSvg from '../assets/landing.svg';
-import groundSvg from '../assets/ground.svg';
-import BrowseData from './landing/BrowseData';
+import Footer from '../../components/layout/footer/Footer';
+import NavigationBar from '../../components/layout/nav/Nav';
+import ScrollProgress from '../../components/layout/nav/ScrollProgress';
+import LatestArticles from './LatestArticles';
+import WebStats from './WebStats';
+import Foundations from './Foundations';
+import landingSvg from '../../assets/landing.svg';
+import groundSvg from '../../assets/ground.svg';
+import BrowseData from './BrowseData';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -37,7 +37,7 @@ function LandingPage() {
   
 
   const handleButtonClick = () => {
-    navigate('/dashboard/birthdate');
+    navigate('/dashboard/');
   };
 
   const imageUrlBottom = "https://i.ibb.co/QnL2qyY/test2.png";
