@@ -103,12 +103,12 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
   };
 
   const handleClose = () => {
-    navigate('/vitora/dashboard/');
+    navigate('/dashboard/');
   };
 
   const handleChevronClick = () => {
     setIsCollapsed(true);
-    setTimeout(() => navigate('/vitora/dashboard'), 500); // Adjust the timeout to match the animation duration
+    setTimeout(() => navigate('/dashboard'), 500); // Adjust the timeout to match the animation duration
   };
 
   return (

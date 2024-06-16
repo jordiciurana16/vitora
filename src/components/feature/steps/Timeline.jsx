@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
-function Timeline({ onSubmitSuccess }) {
+function Timeline({ onSubmitSuccess, onBack }) {
   const handleNextClick = () => {
     onSubmitSuccess();
   };
@@ -14,7 +14,8 @@ function Timeline({ onSubmitSuccess }) {
             <Card.Body>
               <h2 className="mb-4" style={{ fontSize: '2.5rem' }}>Next Step: Your Timeline</h2>
               <p style={{ fontSize: '1.25rem' }}>Here you will find instructions for the next step...</p>
-              <div className="text-center">
+              <div className="d-flex justify-content-between mt-4">
+                <Button variant="secondary" size="lg" onClick={onBack} style={{ fontSize: '1.25rem' }}>Back</Button>
                 <Button variant="primary" size="lg" onClick={handleNextClick} style={{ fontSize: '1.25rem' }}>Next</Button>
               </div>
             </Card.Body>

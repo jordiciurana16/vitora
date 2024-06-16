@@ -11,7 +11,7 @@ function StepProgress({ currentStep }) {
   ];
 
   return (
-    <Container fluid className='mb-5'>
+    <Container fluid >
       <Row className="justify-content-center align-items-center">
         {steps.map((step, index) => (
           <React.Fragment key={index}>

@@ -74,10 +74,20 @@ function DashboardPage() {
           <Col xs={2} className={`px-0 position-fixed ${currentStep > 2 ? 'visible' : 'invisible'}`}>
             <Sidebar />
           </Col>
-          <Col xs={{ span: 10, offset: 2 }} className='px-0'>
-            {renderStepComponent()}
-            {currentStep > 4 && <MainRouting />}
-            {currentStep > 4 && <Footer />}
+          <Col xs={12} className='px-0'>
+            {currentStep <= 4 && (
+              <div className="step-component-container">
+                {renderStepComponent()}
+              </div>
+            )}
+            {currentStep > 4 && (
+              <div>
+                <Col xs={{ span: 10, offset: 2 }} className='px-0'>
+                  <MainRouting />
+                  <Footer />
+                </Col>
+              </div>
+            )}
           </Col>
         </Row>
       </Container>
@@ -85,10 +95,18 @@ function DashboardPage() {
       <style jsx>{`
         .step-progress-container {
           position: absolute;
-          top: 25%; /* Adjust the value to position it correctly */
+          top: 21%; /* Adjust the value to position it correctly */
           left: 50%;
           transform: translateX(-50%);
           z-index: 1; /* Ensure it is above other components */
+        }
+        .step-component-container {
+          position: absolute;
+          top: 30%; /* Adjust this value to place the components below the StepProgress */
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100%;
+          z-index: 0; /* Ensure it is below the StepProgress */
         }
       `}</style>
     </GlobalProvider>
