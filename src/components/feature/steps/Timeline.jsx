@@ -1,25 +1,32 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
-function Timeline({ onSubmitSuccess, onBack }) {
+
+const Timeline = ({ lifespan, percentage, onSubmitSuccess, onBack }) => {
   const handleNextClick = () => {
     onSubmitSuccess();
   };
+  
 
   return (
-    <Container fluid className='d-flex flex-column align-items-center pt-5'>
-      <Row className="justify-content-center w-100 mb-5">
+    <Container fluid className='d-flex flex-column align-items-center ' style={{ minHeight: '50vh', maxHeight:'50vh' }}>
+      <Row className="justify-content-center w-100 mt-5" style={{ minHeight: '40vh' }}>
         <Col xs={12} md={10} lg={8} xl={6}>
-          <Card className="p-4 shadow-sm">
-            <Card.Body>
-              <h2 className="mb-4" style={{ fontSize: '2.5rem' }}>Next Step: Your Timeline</h2>
-              <p style={{ fontSize: '1.25rem' }}>Here you will find instructions for the next step...</p>
-              <div className="d-flex justify-content-between mt-4">
-                <Button variant="secondary" size="lg" onClick={onBack} style={{ fontSize: '1.25rem' }}>Back</Button>
-                <Button variant="primary" size="lg" onClick={handleNextClick} style={{ fontSize: '1.25rem' }}>Next</Button>
-              </div>
+        <Card className="px-2 shadow-sm">
+        <Card.Body>
+              <h2  style={{ fontSize: '2.2rem' }}>The progress bar represents your life timeline</h2>
+              <p style={{ fontSize: '1.1rem' }}>Right now your lifespan is <strong>{lifespan}</strong> years old. But don't rush! Is the mundial life expectancy.  </p>
+              <p style={{ fontSize: '1.1rem' }}>If you were to die at that age, you would have lived <strong>{percentage}</strong> of your life</p>
             </Card.Body>
           </Card>
+        </Col>
+      </Row>
+      <Row className="justify-content-center w-100">
+        <Col xs={12} md={10} lg={8} xl={6}>
+          <div className="d-flex justify-content-between">
+            <Button variant="secondary" size="lg" onClick={onBack} style={{ fontSize: '1.25rem' }}>Back</Button>
+            <Button variant="primary" size="lg" onClick={handleNextClick} style={{ fontSize: '1.25rem' }}>Next</Button>
+          </div>
         </Col>
       </Row>
     </Container>

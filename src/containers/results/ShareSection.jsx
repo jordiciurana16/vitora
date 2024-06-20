@@ -7,7 +7,7 @@ function ShareSection() {
     const exampleUrl = "https://vitora.com/jordiciurana16";
 
     return(
-    <Row className='mx-3 my-4'>
+    <Row className='mx-3 pb-4'>
           <Col  xs={12}>
             <h2>Share your results</h2>
 

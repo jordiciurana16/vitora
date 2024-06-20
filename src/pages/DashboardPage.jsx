@@ -12,9 +12,13 @@ import Timeline from '../components/feature/steps/Timeline';
 import Factor from '../components/feature/steps/Factor';
 import Forms from '../components/feature/steps/Forms';
 import StepProgress from '../components/feature/StepProgress';
+import { useGlobalContext } from '../hooks/GlobalContext';
+
 
 function DashboardPage() {
   const [currentStep, setCurrentStep] = useState(1);
+  const { lifespan, percentage } = useGlobalContext();
+
 
   const handleBirthdateSubmitSuccess = () => {
     setCurrentStep(2);
@@ -41,7 +45,7 @@ function DashboardPage() {
       case 1:
         return <Birthdate onSubmitSuccess={handleBirthdateSubmitSuccess} />;
       case 2:
-        return <Timeline onSubmitSuccess={handleTimelineSubmitSuccess} onBack={handleBack} />;
+        return <Timeline lifespan={lifespan} percentage={percentage} onSubmitSuccess={handleTimelineSubmitSuccess} onBack={handleBack} />;
       case 3:
         return <Factor onSubmitSuccess={handleFactorSubmitSuccess} onBack={handleBack} />;
       case 4:

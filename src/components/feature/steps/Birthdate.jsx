@@ -21,31 +21,34 @@ function Birthdate({ onSubmitSuccess }) {
   };
 
   return (
-    <Container fluid className='d-flex flex-column align-items-center pt-5'>
-      <Row className="justify-content-center w-100 mb-5">
+    <Container fluid className='d-flex flex-column align-items-center' style={{ minHeight: '50vh', maxHeight:'50vh' }}>
+      <Row className="justify-content-center w-100 mt-5" style={{ minHeight: '40vh' }}>
         <Col xs={12} md={10} lg={8} xl={6}>
-          <Card className="p-4 shadow-sm">
-            <Card.Body>
-              <div className="d-flex justify-content-between align-items-center mb-4">
-                <h2 className="my-1" style={{ fontSize: '2.5rem' }}>Know your life timeline</h2>
-                <InfoCircle size={32} className="icon-adjust" />
+        <Card className="px-2 shadow-sm">
+        <Card.Body>
+              <div className="d-flex justify-content-between align-items-center mb-2">
+                <h2 className="my-1" style={{ fontSize: '2.5rem' }}>Calculate your life expectancy</h2>
               </div>
               <BootstrapForm onSubmit={handleSubmit(onSubmit)}>
-                <BootstrapForm.Group controlId="birthdate" className="pb-5">
-                  <BootstrapForm.Label style={{ fontSize: '1.25rem' }}>What's your birthdate?</BootstrapForm.Label>
+                <BootstrapForm.Group controlId="birthdate" className="pb-3">
+                  <BootstrapForm.Label className="pb-1" style={{ fontSize: '1.25rem' }}>What's your birthdate?</BootstrapForm.Label>
                   <BootstrapForm.Control
                     type="date"
-                    style={{ fontSize: '1.25rem' }}
+                    style={{ fontSize: '1.5rem' }}
                     {...register('birthdate', { required: 'Please enter your birthdate' })}
                   />
                   {errors.birthdate && <div className="text-danger" style={{ fontSize: '1.25rem' }}>{errors.birthdate.message}</div>}
                 </BootstrapForm.Group>
-                <div className="text-center">
-                  <Button variant="primary" size="lg" type="submit" style={{ fontSize: '1.25rem' }}>Next</Button>
-                </div>
               </BootstrapForm>
             </Card.Body>
           </Card>
+        </Col>
+      </Row>
+      <Row className="justify-content-center w-100">
+        <Col xs={12} md={10} lg={8} xl={6}>
+          <div className="text-center">
+            <Button variant="primary" size="lg" type="submit" style={{ fontSize: '1.25rem' }} onClick={handleSubmit(onSubmit)}>Submit</Button>
+          </div>
         </Col>
       </Row>
     </Container>

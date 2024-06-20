@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Card, Carousel, Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
-import { BsBoxArrowInUpRight, BsInfoCircle, BsInfoCircleFill } from 'react-icons/bs';
+import { Row, Col, Tooltip } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import ProfileCard from './ProfileCard';
 import EventsCard from './EventsCard';
+import { events } from '../../utils/data/eventsData';
 
 const ResultsReview = () => {
   const { hoveredItem, setHoveredItem } = useGlobalContext();
@@ -34,213 +34,15 @@ const ResultsReview = () => {
     }
   ];
 
-  const progressBarData = [
-    {
-      id: 1,
-      title: "Job",
-      date: "15/06/2025",
-      imageUrl: "https://i.ibb.co/5hT7wqx/jobwork.webp",
-      description: "A new job opportunity arises! It's time to impress with your skills and expertise.",
-      link: "#",
-      subEvents: [
-        {
-          id: 1.1,
-          type: "First Job",
-          percentage: 20,
-        },
-        {
-          id: 1.2,
-          type: "Promotion",
-          percentage: 40,
-        },
-        {
-          id: 1.3,
-          type: "Career Change",
-          percentage: 60,
-        },
-        {
-          id: 1.4,
-          type: "Retirement Party",
-          percentage: 80,
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: "Marriage",
-      date: "20/09/2026",
-      imageUrl: "https://i.ibb.co/XtLqMBC/marriage.webp",
-      description: "Love is in the air! Prepare for a beautiful journey together with your partner.",
-      link: "#",
-      subEvents: [
-        {
-          id: 2.1,
-          type: "First Date",
-          percentage: 10,
-        },
-        {
-          id: 2.2,
-          type: "Engagement",
-          percentage: 20,
-        },
-        {
-          id: 2.3,
-          type: "Wedding",
-          percentage: 35,
-        },
-        {
-          id: 2.4,
-          type: "Anniversary",
-          percentage: 50,
-        }
-      ]
-    },
-    {
-      id: 3,
-      title: "Offspring",
-      date: "25/12/2027",
-      imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
-      description: "Congratulations! You're expecting a new member in the family. Get ready for joyful moments.",
-      link: "#",
-      subEvents: [
-        {
-          id: 3.1,
-          type: "Pregnancy Announcement",
-          percentage: 30,
-        },
-        {
-          id: 3.2,
-          type: "Birth",
-          percentage: 38,
-        },
-        {
-          id: 3.3,
-          type: "First Steps",
-          percentage: 45,
-        },
-        {
-          id: 3.4,
-          type: "First Day of School",
-          percentage: 55,
-        }
-      ]
-    },
-    {
-      id: 4,
-      title: "Housing",
-      date: "10/03/2028",
-      imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
-      description: "It's time to find your dream home. Get ready for house hunting and making important decisions.",
-      link: "#",
-      subEvents: [
-        {
-          id: 4.1,
-          type: "House Hunting",
-          percentage: 20,
-        },
-        {
-          id: 4.2,
-          type: "Purchase",
-          percentage: 42,
-        },
-        {
-          id: 4.3,
-          type: "Renovation",
-          percentage: 50,
-        },
-        {
-          id: 4.4,
-          type: "Moving In",
-          percentage: 60,
-        }
-      ]
-    },
-    {
-      id: 5,
-      title: "Retirement",
-      date: "10/03/2029",
-      imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
-      description: "Congratulations on your retirement! It's time to relax, travel, and enjoy the fruits of your labor.",
-      link: "#",
-      subEvents: [
-        {
-          id: 5.1,
-          type: "Retirement Announcement",
-          percentage: 70,
-        },
-        {
-          id: 5.2,
-          type: "Farewell Party",
-          percentage: 75,
-        },
-        {
-          id: 5.3,
-          type: "First Trip",
-          percentage: 80,
-        },
-        {
-          id: 5.4,
-          type: "Hobby Pursuit",
-          percentage: 85,
-        }
-      ]
-    },
-    {
-      id: 6,
-      title: "Illness",
-      date: "03/08/2030",
-      imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
-      description: "Unfortunately, you've fallen ill. Take care of yourself and focus on recovery.",
-      link: "#",
-      subEvents: [
-        {
-          id: 6.1,
-          type: "Diagnosis",
-          percentage: 60,
-        },
-        {
-          id: 6.2,
-          type: "Treatment Start",
-          percentage: 65,
-        },
-        {
-          id: 6.3,
-          type: "Hospitalization",
-          percentage: 70,
-        },
-        {
-          id: 6.4,
-          type: "Recovery",
-          percentage: 75,
-        }
-      ]
-    },
-    {
-      id: 7,
-      title: "Death",
-      date: "15/05/2040",
-      imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
-      description: "A sad event occurs. Remember to cherish the memories and celebrate the life of your loved one.",
-      link: "#",
-      subEvents: [
-        {
-          id: 7.1,
-          type: "Funeral",
-          percentage: 95,
-        },
-        {
-          id: 7.2,
-          type: "Memorial Service",
-          percentage: 96,
-        },
-        {
-          id: 7.3,
-          type: "Reflection",
-          percentage: 97,
-        }
-      ]
-    }
-  ];
+  const progressBarData = events.map(event => ({
+    id: event.id,
+    title: event.event,
+    date: "Date not provided", // Add actual date if available
+    imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
+    description: `${event.event} event description`, // Add actual description if available
+    link: "#",
+    subEvents: event.subEvents
+  }));
 
   const generateContent = (index) => {
     return progressBarData[index] || {};
