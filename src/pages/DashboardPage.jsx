@@ -17,7 +17,7 @@ import { useGlobalContext } from '../hooks/GlobalContext';
 
 function DashboardPage() {
   const [currentStep, setCurrentStep] = useState(1);
-  const { lifespan, percentage } = useGlobalContext();
+  const { lifespan } = useGlobalContext();
 
 
   const handleBirthdateSubmitSuccess = () => {
@@ -45,7 +45,7 @@ function DashboardPage() {
       case 1:
         return <Birthdate onSubmitSuccess={handleBirthdateSubmitSuccess} />;
       case 2:
-        return <Timeline lifespan={lifespan} percentage={percentage} onSubmitSuccess={handleTimelineSubmitSuccess} onBack={handleBack} />;
+        return <Timeline lifespan={lifespan} onSubmitSuccess={handleTimelineSubmitSuccess} onBack={handleBack} />;
       case 3:
         return <Factor onSubmitSuccess={handleFactorSubmitSuccess} onBack={handleBack} />;
       case 4:
@@ -99,7 +99,7 @@ function DashboardPage() {
       <style jsx>{`
         .step-progress-container {
           position: absolute;
-          top: 21%; /* Adjust the value to position it correctly */
+          top: 22%; /* Adjust the value to position it correctly */
           left: 50%;
           transform: translateX(-50%);
           z-index: 1; /* Ensure it is above other components */

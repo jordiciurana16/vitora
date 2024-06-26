@@ -12,8 +12,8 @@ function Factor({ onSubmitSuccess, onBack }) {
         <Col xs={12} md={10} lg={8} xl={6}>
           <Card className="px-2 shadow-sm">
             <Card.Body>
-              <h2  style={{ fontSize: '2.5rem' }}>Next Step: Consider the Factors</h2>
-              <p style={{ fontSize: '1.25rem' }}>Here you will find instructions for the next step...</p>
+              <h2  style={{ fontSize: '1.5rem' }}>Browse the factor that effect your life</h2>
+              <p style={{ fontSize: '1.25rem' }}>Understand what variables modify your timeline</p>
             </Card.Body>
           </Card>
         </Col>

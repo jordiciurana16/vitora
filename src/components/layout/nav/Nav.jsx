@@ -15,8 +15,8 @@ const NavigationBar = ({ stringBirthdate }) => {
     <Navbar bg="light" expand="lg" className="sticky-top py-1">
       <Container>
         <Navbar.Brand as={Link} to="/"><Logo /> Vitora</Navbar.Brand>
-        <Nav className="mx-auto">
-          <Nav.Link as={Link} to="/dashboard/birthdate" className={styles.navLink}>Timeline</Nav.Link>
+        <Nav>
+          <Nav.Link as={Link} to="/dashboard/" className={styles.navLink}>Timeline</Nav.Link>
           <Nav.Link as={Link} to="/articles" className={styles.navLink}>Articles</Nav.Link>
           <Nav.Link as={Link} to="#" className={styles.navLink}>Resources</Nav.Link>
           <Nav.Link as={Link} to="#" className={styles.navLink}>Donations</Nav.Link>

@@ -5,11 +5,14 @@
 .footerLinks h6 a {
     color: var(--light-color);
     text-decoration: none;
+    transition: font-weight 0.1s ease-in-out; /* Afegim la transició per al canvi de font-weight */
 }
 
 .footerLinks h6 a:hover {
-    text-decoration: underline;
+    font-weight: 700; /* Augmentem una mica el font-weight al fer hover */
+    text-decoration: none; /* Assegurem que no hi ha text-decoration */
 }
+
 
 .customHr {
     border-top: 2px solid var(--light-color);
