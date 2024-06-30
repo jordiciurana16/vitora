@@ -10,11 +10,11 @@ function Forms({ onSubmitSuccess, onBack }) {
     <Container fluid className='d-flex flex-column align-items-center ' style={{ minHeight: '50vh', maxHeight:'50vh' }}>
       <Row className="justify-content-center w-100 mt-5" style={{ minHeight: '40vh' }}>
         <Col xs={12} md={10} lg={8} xl={6}>
-        <Card className="px-2 shadow-sm">
-        <Card.Body>
-              <h2 style={{ fontSize: '1.5rem' }}>Answer the questions</h2>
-              <p style={{ fontSize: '1.25rem' }}>The more data you insert, the more accurate will be.</p>
-
+        <Card className=" shadow-sm">
+              <Card.Header><h2 style={{ fontSize: '1.5rem' }}>Insert your data in the forms </h2></Card.Header>
+              <Card.Body className='px-3'>
+              <p style={{ fontSize: '1.1rem' }}>The more accurate are your responses, the more accurate the timeline will be.</p>
+              <p style={{ fontSize: '1.1rem' }}>The entered data is not commercialized, and after the calculation is done, it si deleted forever</p>
             </Card.Body>
           </Card>
         </Col>

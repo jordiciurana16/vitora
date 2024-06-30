@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../hooks/GlobalContext';
 import styles from './ProgressBar.module.css';
 import Events from '../common/Events';
 
-const ProgressBar = ({ lifespan, hoveredItem, setHoveredItem }) => {
+const ProgressBar = ({ lifespan, hoveredItem, setHoveredItem, currentStep }) => {
   const { percentage } = useGlobalContext();
 
   const tooltip = (
@@ -29,7 +29,7 @@ const ProgressBar = ({ lifespan, hoveredItem, setHoveredItem }) => {
                 <span>{parseFloat(lifespan).toFixed(1)}</span>
               </OverlayTrigger>
             </div>
-            <Events hoveredItem={hoveredItem} />
+            <Events hoveredItem={hoveredItem} className={currentStep > 4 ? 'visible' : 'invisible'} />
           </div>
         </Col>
       </Row>

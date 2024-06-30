@@ -37,9 +37,8 @@ const ResultsReview = () => {
   const progressBarData = events.map(event => ({
     id: event.id,
     title: event.event,
-    date: "Date not provided", // Add actual date if available
     imageUrl: "https://i.ibb.co/h72nzXD/father-work.webp",
-    description: `${event.event} event description`, // Add actual description if available
+    description: event.description,
     link: "#",
     subEvents: event.subEvents
   }));

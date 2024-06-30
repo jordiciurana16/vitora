@@ -10,10 +10,12 @@ function Factor({ onSubmitSuccess, onBack }) {
     <Container fluid className='d-flex flex-column align-items-center' style={{ minHeight: '50vh', maxHeight:'50vh' }}>
       <Row className="justify-content-center w-100 mt-5 "style={{ minHeight: '40vh' }}>
         <Col xs={12} md={10} lg={8} xl={6}>
-          <Card className="px-2 shadow-sm">
-            <Card.Body>
-              <h2  style={{ fontSize: '1.5rem' }}>Browse the factor that effect your life</h2>
-              <p style={{ fontSize: '1.25rem' }}>Understand what variables modify your timeline</p>
+        <Card className=" shadow-sm">
+              <Card.Header><h2 style={{ fontSize: '1.5rem' }}>Browse the factors sidebar to modify the timeline </h2></Card.Header>
+              <Card.Body className='px-3'>
+              <p style={{ fontSize: '1.1rem' }}>Each factor contains a form with variables related to it. </p>
+              <p style={{ fontSize: '1.1rem' }}>The more questions you answer, the more accurate the approximation of your life expectancy will be</p>
+
             </Card.Body>
           </Card>
         </Col>

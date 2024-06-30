@@ -24,13 +24,13 @@ function Birthdate({ onSubmitSuccess }) {
     <Container fluid className='d-flex flex-column align-items-center' style={{ minHeight: '50vh', maxHeight:'50vh' }}>
       <Row className="justify-content-center w-100 mt-5" style={{ minHeight: '40vh' }}>
         <Col xs={12} md={10} lg={8} xl={6}>
-        <Card className="px-2 shadow-sm">
+        <Card className="px-2  pb-2 shadow-sm">
         <Card.Body>
               <div className="d-flex justify-content-between align-items-center mb-2">
-                <h2 className="my-1" style={{ fontSize: '2.5rem' }}>Calculate your life expectancy</h2>
+                <h2 className=" mb-2" style={{ fontSize: '2.5rem' }}>Calculate your life expectancy</h2>
               </div>
               <BootstrapForm onSubmit={handleSubmit(onSubmit)}>
-                <BootstrapForm.Group controlId="birthdate" className="pb-3">
+                <BootstrapForm.Group controlId="birthdate" className="">
                   <BootstrapForm.Label className="pb-1" style={{ fontSize: '1.25rem' }}>What's your birthdate?</BootstrapForm.Label>
                   <BootstrapForm.Control
                     type="date"

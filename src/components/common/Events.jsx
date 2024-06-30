@@ -1,11 +1,11 @@
 import React from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import styles from './Events.module.css';
-import {events} from '../../utils/data/eventsData'
+import {events} from '../../utils/data/eventsData';
 
-const Events = ({ hoveredItem }) => {
+const Events = ({ hoveredItem, className }) => {
   return (
-    <div>
+    <div className={className}>
       {events.map(event => (
         <React.Fragment key={event.id}>
           {event.subEvents.map(subEvent => (

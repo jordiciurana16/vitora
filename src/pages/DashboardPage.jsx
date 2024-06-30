@@ -14,11 +14,9 @@ import Forms from '../components/feature/steps/Forms';
 import StepProgress from '../components/feature/StepProgress';
 import { useGlobalContext } from '../hooks/GlobalContext';
 
-
 function DashboardPage() {
   const [currentStep, setCurrentStep] = useState(1);
-  const { lifespan } = useGlobalContext();
-
+  const { lifespan, percentage } = useGlobalContext();
 
   const handleBirthdateSubmitSuccess = () => {
     setCurrentStep(2);
@@ -45,7 +43,7 @@ function DashboardPage() {
       case 1:
         return <Birthdate onSubmitSuccess={handleBirthdateSubmitSuccess} />;
       case 2:
-        return <Timeline lifespan={lifespan} onSubmitSuccess={handleTimelineSubmitSuccess} onBack={handleBack} />;
+        return <Timeline onSubmitSuccess={handleTimelineSubmitSuccess} onBack={handleBack} />;
       case 3:
         return <Factor onSubmitSuccess={handleFactorSubmitSuccess} onBack={handleBack} />;
       case 4:
@@ -63,7 +61,7 @@ function DashboardPage() {
           <ScrollProgress />
         </div>
         <div className={`${currentStep > 1 ? 'visible' : 'invisible'}`}>
-          <Header />
+          <Header currentStep={currentStep} />
         </div>
       </div>
 
@@ -99,14 +97,14 @@ function DashboardPage() {
       <style jsx>{`
         .step-progress-container {
           position: absolute;
-          top: 22%; /* Adjust the value to position it correctly */
+          top: 25%; /* Adjust the value to position it correctly */
           left: 50%;
           transform: translateX(-50%);
           z-index: 1; /* Ensure it is above other components */
         }
         .step-component-container {
           position: absolute;
-          top: 30%; /* Adjust this value to place the components below the StepProgress */
+          top: 35%; /* Adjust this value to place the components below the StepProgress */
           left: 50%;
           transform: translateX(-50%);
           width: 100%;

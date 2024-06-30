@@ -13,7 +13,7 @@ const ProfileCard = ({ carouselData, infoHoverProfile, setInfoHoverProfile, rend
         </div>
       </OverlayTrigger>
     </Card.Header>
-    <Carousel className='h-100' controls={false} indicators={true}>
+    <Carousel className='h-100 pb-4' controls={false} indicators={true}>
       {carouselData.map(item => (
         <Carousel.Item key={item.id} className='px-2'>
           <div className="d-flex flex-column justify-content-center align-items-center">
