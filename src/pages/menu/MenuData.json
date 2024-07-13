@@ -1,7 +1,7 @@
 {
   "privacy": {
     "titol": "Privacy Policy",
-    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "ilustracio": "https://i.ibb.co/6RfPpGT/undraw-secure-server-re-8wsq.png",
     "seccions": [
       {
         "id": "recopilacio",
@@ -32,7 +32,7 @@
   },
   "cookies": {
     "titol": "Cookie Policy",
-    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "ilustracio": "https://i.ibb.co/khnmN4P/undraw-private-data-re-4eab.png",
     "seccions": [
       {
         "id": "usu",
@@ -58,7 +58,7 @@
   },
   "help": {
     "titol": "Help",
-    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "ilustracio": "https://i.ibb.co/LRvVKdM/undraw-questions-re-1fy7.png",
     "seccions": [
       {
         "id": "contacte",
@@ -137,7 +137,7 @@
   },
   "terms": {
     "titol": "Terms",
-    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "ilustracio": "https://i.ibb.co/3MwtHSy/undraw-terms-re-6ak4.png",
     "seccions": [
       {
         "id": "servei",
@@ -178,7 +178,7 @@
   },
   "contact": {
     "titol": "Contact",
-    "ilustracio": "https://i.ibb.co/h72nzXD/father-work.webp",
+    "ilustracio": "https://i.ibb.co/Ypt11Nt/undraw-team-chat-re-vbq1.png",
     "seccions": [
       {
         "id": "nosaltres",

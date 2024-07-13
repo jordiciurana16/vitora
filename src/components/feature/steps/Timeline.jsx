@@ -25,8 +25,8 @@ const Timeline = ({ onSubmitSuccess, onBack }) => {
       <Row className="justify-content-center w-100">
         <Col xs={12} md={10} lg={8} xl={6}>
           <div className="d-flex justify-content-between">
-            <Button variant="secondary" size="lg" onClick={onBack} style={{ fontSize: '1.25rem' }}>Back</Button>
-            <Button variant="primary" size="lg" onClick={handleNextClick} style={{ fontSize: '1.25rem' }}>Next</Button>
+            <Button variant="secondary" size="lg"  type="submit" onClick={onBack} style={{ fontSize: '1.25rem' }}>Back</Button>
+            <Button variant="primary" size="lg"  type="submit" onClick={handleNextClick} style={{ fontSize: '1.25rem' }}>Next</Button>
           </div>
         </Col>
       </Row>

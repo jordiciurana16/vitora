@@ -6,18 +6,11 @@
     color: var(--dark-color);
 }
 
-.backIcon {
-  font-size: 2.5rem;
-  color: var(--dark-color);
-  transition: all 0.3s ease; /* Afegeix una transició suau a tots els canvis */
-}
-
-.backIcon:hover {
-  color: var(--secondary-color);
-  margin-left: -5px;
-}
-
 .legalPages p {
     text-align: justify;
 }
 
+/* Estil específic per a l'acordió */
+.acordioCustom button{
+  background-color: var(--light-color) !important;  /* vermell per a fons */
+}

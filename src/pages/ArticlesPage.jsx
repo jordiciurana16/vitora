@@ -125,11 +125,6 @@ function ArticlesPage() {
         
         <div className="d-flex justify-content-between align-items-center pt-4 pb-4">
           <div style={{ fontSize: '25px', color: 'var(--dark-color)' }}>Total results: 150</div>
-          <DropdownButton id="dropdown-sort-button" title="Sort by" className="sort-toggle">
-            <Dropdown.Item href="#/sort-time">Time</Dropdown.Item>
-            <Dropdown.Item href="#/sort-popularity">Popularity</Dropdown.Item>
-            <Dropdown.Item href="#/sort-alphabet">Alphabet</Dropdown.Item>
-          </DropdownButton>
         </div>
         <Row>
           {articles.map((article, index) => (

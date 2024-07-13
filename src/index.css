@@ -99,9 +99,7 @@ ol {
   border-radius: 0px 6px 6px 0px;
 }
 
-.carousel-indicators button {
-  background-color: var(--primary-color) !important;
-}
+
 /* FORM */
 
 input[type="checkbox"],
@@ -296,7 +294,7 @@ input[type="date"]:focus,
 
 /*Primary Buttons*/
 
-button{
+button[type="submit"]{
   background-color: var(--opacity-color)!important;
   border: 2px solid var(--opacity-color)!important;
 }
@@ -431,4 +429,8 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1; /* Ensure it is above other components */
+}
+
+.acordio{
+  color: red !important;
 }

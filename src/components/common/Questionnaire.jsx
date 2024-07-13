@@ -1,65 +1,22 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Badge, Form, Button, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { Container, Row, Col, Badge, Form, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
-import { fetchCountriesData } from '../../services/api/countriesData';
 import { useNavigate } from 'react-router-dom';
-import { AiOutlineClose } from 'react-icons/ai';
 import { ChevronDoubleLeft } from 'react-bootstrap-icons';
 
-function Questionnaire({ factor, title, countriesData, setLifespan }) {
+function Questionnaire({ factor, title }) {
   const [questions, setQuestions] = useState([]);
-  const { lifespan, updateLifeAndPercentage } = useGlobalContext();
+  const { updateLifeAndPercentage } = useGlobalContext();
   const [selectedOptions, setSelectedOptions] = useState({});
   const [previousSelectedOptions, setPreviousSelectedOptions] = useState({});
-  const [countriesDataFormatted, setCountriesDataFormatted] = useState([]); 
-  const [userCountry, setUserCountry] = useState(''); 
-  const [isCollapsed, setIsCollapsed] = useState(false); // State for collapsing the component
   const navigate = useNavigate();
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await fetchCountriesData('SP.DYN.LE00.IN'); 
-        setCountriesDataFormatted(data); 
-      } catch (error) {
-        console.error(error);
-      }
-    }
-
-    fetchData(); 
-  }, []);
-
-  const handleCountrySelectChange = (event) => {
-    setUserCountry(event.target.value);
-  };
-
-  const handleQuestionSelection = (index) => {
-    const questionElement = document.getElementById(`question-${index}`);
-    if (questionElement) {
-      const progressBarHeight = 25; 
-      const progressBarOffset = progressBarHeight * window.innerHeight / 100;
-      window.scrollTo({
-        top: questionElement.offsetTop - progressBarOffset,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const questionResponse = await fetch(`http://localhost:3000/table/${factor.toLowerCase()}questions`);
-        const questionJsonData = await questionResponse.json();
-
-        const answerResponse = await fetch(`http://localhost:3000/table/${factor.toLowerCase()}answers`);
-        const answerJsonData = await answerResponse.json();
-
-        const mergedQuestions = questionJsonData.map(question => {
-          const options = answerJsonData.filter(answer => answer.question_id === question.question_id);
-          return { ...question, options };
-        });
-
-        setQuestions(mergedQuestions);
+        const response = await fetch(`/vitora/data/${factor.toLowerCase()}.json`);
+        const data = await response.json();
+        setQuestions(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -68,109 +25,83 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
     fetchData();
   }, [factor]);
 
-  const handleChange = async (event, index) => {
-    const { checked, value, name, type } = event.target;
-    const previousValue = previousSelectedOptions[index] || 0;
+  const handleChange = (event, questionIndex, answerIndex, isCheckbox) => {
+    const { checked, value } = event.target;
+    const effect = parseFloat(value);
 
-    let selectedEffect;
-    let newSelectedOptions = { ...selectedOptions };
+    if (isCheckbox) {
+      let effects = selectedOptions[questionIndex] || {};
+      effects[answerIndex] = checked ? effect : 0;
 
-    switch (type) {
-      case 'checkbox':
-        const previousSelectedEffect = selectedOptions[index] || 0;
-        selectedEffect = checked ? parseFloat(value) : -parseFloat(value);
+      const totalEffect = Object.values(effects).reduce((acc, curr) => acc + curr, 0);
+      setSelectedOptions({ ...selectedOptions, [questionIndex]: effects });
+      setPreviousSelectedOptions({ ...previousSelectedOptions, [questionIndex]: totalEffect });
 
-        newSelectedOptions = { ...selectedOptions, [index]: checked ? previousSelectedEffect + parseFloat(value) : previousSelectedEffect - parseFloat(value) };
-        setSelectedOptions(newSelectedOptions);
-        break;
-      case 'radio':
-        selectedEffect = parseFloat(value) - parseFloat(previousValue);
-        newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
-        setSelectedOptions(newSelectedOptions);
-        break;
-      case 'select':
-        newSelectedOptions = { ...selectedOptions, [index]: selectedEffect };
-        setSelectedOptions(newSelectedOptions);
-        break;
-      default:
-        break;
+      updateLifeAndPercentage(totalEffect - (previousSelectedOptions[questionIndex] || 0));
+    } else {
+      const previousEffect = previousSelectedOptions[questionIndex] || 0;
+      setSelectedOptions({ ...selectedOptions, [questionIndex]: effect });
+      setPreviousSelectedOptions({ ...previousSelectedOptions, [questionIndex]: effect });
+
+      updateLifeAndPercentage(effect - previousEffect);
     }
-
-    updateLifeAndPercentage(selectedEffect);
-    setPreviousSelectedOptions({ ...previousSelectedOptions, [index]: value });
-
-    handleQuestionSelection(index); 
-  };
-
-  const handleClose = () => {
-    navigate('/dashboard/');
   };
 
   const handleChevronClick = () => {
-    setIsCollapsed(true);
-    setTimeout(() => navigate('/dashboard'), 500); // Adjust the timeout to match the animation duration
+    navigate('/dashboard');
+  };
+
+  const renderBadgeValue = (index) => {
+    const value = selectedOptions[index];
+    if (typeof value === 'number') {
+      return value.toFixed(2);
+    } else if (typeof value === 'object') {
+      const totalEffect = Object.values(value).reduce((acc, curr) => acc + curr, 0);
+      return totalEffect.toFixed(2);
+    }
+    return '';
   };
 
   return (
-    <Container >
+    <Container>
       <Row>
         <Col className='pt-4 ps-4' xs={12} style={{ backgroundColor: 'white', boxShadow: '3px 0 5px -2px rgba(0, 0, 0, 0.3)' }}>
           <h2>{title}</h2>
-          <Form>
+          <hr/>
+          <Form className='ms-3 '>
             {questions.map((question, index) => (
-              <Row key={index} id={`question-${index}`}>
-                <Col xs={1}><h6>{index + 1}.</h6></Col>
-                <Col xs={11}>
-                  <Row className='mb-3'>
-                    <Col xs={9}><h6>{question.question_text}</h6></Col>
-                    <Col xs={3}>
-                      {selectedOptions[index] !== undefined && (
-                        <Badge bg={
-                          selectedOptions[index] === 0 ? 'secondary' :
-                          (selectedOptions[index] > 0 ? 'success' : 'danger')
-                        }>
-                          {selectedOptions[index] === 0 ? '= 0%' :
-                            (selectedOptions[index] > 0 ? '+' + selectedOptions[index] + '%' : selectedOptions[index] + '%')
-                          }
-                        </Badge>
-                      )}
-                    </Col>
-                  </Row>
-                  <Row className='mb-4'>
-                    <Col xs={7}>
-                      {question.input_type === 'select' ? (
-                        <Form.Select
-                          name={`question-${index}`}
-                          value={previousSelectedOptions[index] || ''}
-                          onChange={(event) => {
-                            setLifespan(event);
-                            handleCountrySelectChange(event);
-                          }}
-                        >
-                          {countriesData.map((country, index) => (
-                            <option key={index} value={country.name}>{country.name}</option>
-                          ))}
-                        </Form.Select>
-                      ) : (
-                        question.options.map((option, optionIndex) => (
-                          <div key={optionIndex}>
-                            <Form.Check
-                              type={question.input_type}
-                              id={`question-${index}-option-${optionIndex}`}
-                              name={`question-${index}`}
-                              label={option.answer_text}
-                              value={option.effect_on_lifespan.toString()}
-                              onChange={(event) => handleChange(event, index)}
-                            />
-                          </div>
-                        ))
-                      )}
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
+              <React.Fragment key={index}>
+                <Row id={`question-${index}`} className="mb-1">
+                  <Col xs={1}><h6>{index + 1}.</h6></Col>
+                  <Col xs={6}><h6>{question.question_text}</h6></Col>
+                  <Col xs={3}>
+                    {selectedOptions[index] !== undefined && (
+                      <Badge bg={renderBadgeValue(index) >= 0 ? 'success' : 'danger'} className="float-end">
+                        {`${renderBadgeValue(index) > 0 ? '+' : ''}${renderBadgeValue(index)}%`}
+                      </Badge>
+                    )}
+                  </Col>
+                </Row>
+                <Row className="mb-4">
+                  <Col xs={{ span: 10, offset: 1 }}>
+                    {question.answers.map((answer, ansIndex) => (
+                      <Form.Check
+                        key={answer.id}
+                        type={question.input_type}
+                        id={`question-${index}-option-${ansIndex}`}
+                        name={`question-${index}`}
+                        label={answer.text}
+                        value={answer.effect_on_lifespan}
+                        checked={question.input_type === 'radio' ? selectedOptions[index] === answer.effect_on_lifespan : selectedOptions[index] && selectedOptions[index][ansIndex]}
+                        onChange={(e) => handleChange(e, index, ansIndex, question.input_type === 'checkbox')}
+                      />
+                    ))}
+                  </Col>
+                </Row>
+              </React.Fragment>
             ))}
           </Form>
+
           <OverlayTrigger
             placement="bottom"
             overlay={<Tooltip>View results</Tooltip>}
@@ -192,7 +123,6 @@ function Questionnaire({ factor, title, countriesData, setLifespan }) {
               <span style={{ marginLeft: '8px', fontSize: '14px' }}>View results</span>
             </div>
           </OverlayTrigger>
-          
         </Col>
       </Row>
     </Container>

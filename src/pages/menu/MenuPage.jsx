@@ -73,14 +73,14 @@ const MenuPage = () => {
                 <h3>{seccio.capcalera}</h3>
                 <p>{seccio.text}</p>
                 {seccio.id === 'faq' && (
-                  <Accordion defaultActiveKey="0" className='mb-4'>
-                    {seccio.acordio.map((item, index) => (
-                      <Accordion.Item eventKey={index.toString()} key={index}>
-                        <Accordion.Header>{item.pregunta}</Accordion.Header>
-                        <Accordion.Body>{item.resposta}</Accordion.Body>
-                      </Accordion.Item>
-                    ))}
-                  </Accordion>
+                  <Accordion defaultActiveKey="0" className={`mb-4 ${styles.acordioCustom}`}>
+                  {seccio.acordio.map((item, index) => (
+                    <Accordion.Item eventKey={index.toString()} key={index}>
+                      <Accordion.Header>{item.pregunta}</Accordion.Header>
+                      <Accordion.Body>{item.resposta}</Accordion.Body>
+                    </Accordion.Item>
+                  ))}
+                </Accordion>
                 )}
               </section>
             ))}
@@ -104,7 +104,7 @@ const MenuPage = () => {
               </ListGroup>
             </aside>
             {menuContent.ilustracio && (
-              <Row className="pt-3">
+              <Row className="pt-5">
                 <img src={menuContent.ilustracio} alt="Il·lustració" className="img-fluid"/>
               </Row>
             )}
