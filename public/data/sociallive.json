@@ -1,0 +1,240 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "How often do you socialize with friends or family?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q1_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q1_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q1_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q1_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q1_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Do you participate in any community or social groups?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q2_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.30},
+        {"id": "q2_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q2_a3", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q2_a4", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "Do you feel supported by your friends and family?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q3_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q3_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q3_a3", "text": "Sometimes", "effect_on_lifespan": 0.10},
+        {"id": "q3_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q3_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "How often do you feel lonely?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q4_a1", "text": "Never", "effect_on_lifespan": 0.30},
+        {"id": "q4_a2", "text": "Rarely", "effect_on_lifespan": 0.20},
+        {"id": "q4_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q4_a4", "text": "Often", "effect_on_lifespan": -0.20},
+        {"id": "q4_a5", "text": "Always", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "Do you have close friends or family you can confide in?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q5_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q5_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q5_a3", "text": "Sometimes", "effect_on_lifespan": 0.10},
+        {"id": "q5_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q5_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "Do you participate in any recreational activities or hobbies?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q6_a1", "text": "Sports", "effect_on_lifespan": 0.20},
+        {"id": "q6_a2", "text": "Arts and crafts", "effect_on_lifespan": 0.20},
+        {"id": "q6_a3", "text": "Music", "effect_on_lifespan": 0.20},
+        {"id": "q6_a4", "text": "Reading", "effect_on_lifespan": 0.15},
+        {"id": "q6_a5", "text": "Other", "effect_on_lifespan": 0.10},
+        {"id": "q6_a6", "text": "None", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "How often do you engage in social activities outside of work?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q7_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q7_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q7_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q7_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q7_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "Do you volunteer or participate in community service?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q8_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.30},
+        {"id": "q8_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q8_a3", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q8_a4", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "Do you have a supportive relationship with your significant other?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q9_a1", "text": "Yes, very supportive", "effect_on_lifespan": 0.30},
+        {"id": "q9_a2", "text": "Supportive", "effect_on_lifespan": 0.20},
+        {"id": "q9_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q9_a4", "text": "Unsupportive", "effect_on_lifespan": -0.20},
+        {"id": "q9_a5", "text": "Very unsupportive", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "How often do you communicate with your extended family?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q10_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q10_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q10_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q10_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q10_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "Do you attend social events or gatherings?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q11_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.30},
+        {"id": "q11_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q11_a3", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q11_a4", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "Do you feel that you have a strong social support network?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q12_a1", "text": "Yes, very strong", "effect_on_lifespan": 0.30},
+        {"id": "q12_a2", "text": "Strong", "effect_on_lifespan": 0.20},
+        {"id": "q12_a3", "text": "Moderate", "effect_on_lifespan": 0.10},
+        {"id": "q12_a4", "text": "Weak", "effect_on_lifespan": -0.10},
+        {"id": "q12_a5", "text": "Very weak", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "How satisfied are you with your social life?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q13_a1", "text": "Very satisfied", "effect_on_lifespan": 0.30},
+        {"id": "q13_a2", "text": "Satisfied", "effect_on_lifespan": 0.20},
+        {"id": "q13_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q13_a4", "text": "Dissatisfied", "effect_on_lifespan": -0.10},
+        {"id": "q13_a5", "text": "Very dissatisfied", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "Do you have any pets?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q14_a1", "text": "Yes, multiple pets", "effect_on_lifespan": 0.20},
+        {"id": "q14_a2", "text": "Yes, one pet", "effect_on_lifespan": 0.10},
+        {"id": "q14_a3", "text": "No pets", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do you engage in social activities that promote mental well-being?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q15_a1", "text": "Yoga", "effect_on_lifespan": 0.20},
+        {"id": "q15_a2", "text": "Meditation", "effect_on_lifespan": 0.20},
+        {"id": "q15_a3", "text": "Group sports", "effect_on_lifespan": 0.20},
+        {"id": "q15_a4", "text": "Book clubs", "effect_on_lifespan": 0.15},
+        {"id": "q15_a5", "text": "Other", "effect_on_lifespan": 0.10},
+        {"id": "q15_a6", "text": "None", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "How often do you spend quality time with your family?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q16_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q16_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q16_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q16_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q16_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "Do you feel isolated or disconnected from others?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q17_a1", "text": "Never", "effect_on_lifespan": 0.30},
+        {"id": "q17_a2", "text": "Rarely", "effect_on_lifespan": 0.20},
+        {"id": "q17_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q17_a4", "text": "Often", "effect_on_lifespan": -0.20},
+        {"id": "q17_a5", "text": "Always", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "Do you participate in social activities at your workplace?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q18_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.20},
+        {"id": "q18_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q18_a3", "text": "Rarely", "effect_on_lifespan": 0.00},
+        {"id": "q18_a4", "text": "Never", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "Do you feel comfortable sharing your feelings with others?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q19_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q19_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q19_a3", "text": "Sometimes", "effect_on_lifespan": 0.10},
+        {"id": "q19_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q19_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "How often do you participate in cultural or leisure activities?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q20_a1", "text": "Movies", "effect_on_lifespan": 0.10},
+        {"id": "q20_a2", "text": "Concerts", "effect_on_lifespan": 0.10},
+        {"id": "q20_a3", "text": "Theater", "effect_on_lifespan": 0.10},
+        {"id": "q20_a4", "text": "Museums", "effect_on_lifespan": 0.10},
+        {"id": "q20_a5", "text": "Other", "effect_on_lifespan": 0.10},
+        {"id": "q20_a6", "text": "None", "effect_on_lifespan": 0.00}
+      ]
+    }
+  ]
+  

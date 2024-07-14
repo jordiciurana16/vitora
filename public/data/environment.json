@@ -1,0 +1,104 @@
+[
+    {
+        "question_id": 1,
+        "question_text": "How often are you exposed to industrial pollution in your area?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env1_a1", "text": "Frequently", "effect_on_lifespan": -0.22},
+            {"id": "env1_a2", "text": "Occasionally", "effect_on_lifespan": -0.12},
+            {"id": "env1_a3", "text": "Rarely", "effect_on_lifespan": 0.02}
+        ]
+    },
+    {
+        "question_id": 2,
+        "question_text": "Select the types of pollution you are regularly exposed to:",
+        "input_type": "checkbox",
+        "answers": [
+            {"id": "env2_a1", "text": "Air pollution", "effect_on_lifespan": -0.15},
+            {"id": "env2_a2", "text": "Water pollution", "effect_on_lifespan": -0.13},
+            {"id": "env2_a3", "text": "Soil contamination", "effect_on_lifespan": -0.11},
+            {"id": "env2_a4", "text": "Noise pollution", "effect_on_lifespan": -0.06}
+        ]
+    },
+    {
+        "question_id": 3,
+        "question_text": "Do you live near a green space or park?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env3_a1", "text": "Yes, within walking distance", "effect_on_lifespan": 0.18},
+            {"id": "env3_a2", "text": "Yes, but not easily accessible", "effect_on_lifespan": 0.09},
+            {"id": "env3_a3", "text": "No", "effect_on_lifespan": -0.10}
+        ]
+    },
+    {
+        "question_id": 4,
+        "question_text": "How would you rate the overall air quality in your living area?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env4_a1", "text": "Excellent", "effect_on_lifespan": 0.20},
+            {"id": "env4_a2", "text": "Moderate", "effect_on_lifespan": 0.05},
+            {"id": "env4_a3", "text": "Poor", "effect_on_lifespan": -0.25}
+        ]
+    },
+    {
+        "question_id": 5,
+        "question_text": "How often do you experience extreme weather events (e.g., floods, hurricanes)?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env5_a1", "text": "Frequently", "effect_on_lifespan": -0.20},
+            {"id": "env5_a2", "text": "Occasionally", "effect_on_lifespan": -0.10},
+            {"id": "env5_a3", "text": "Rarely", "effect_on_lifespan": 0.00}
+        ]
+    },
+    {
+        "question_id": 6,
+        "question_text": "Select the environmental initiatives you participate in to improve local environmental conditions:",
+        "input_type": "checkbox",
+        "answers": [
+            {"id": "env6_a1", "text": "Recycling programs", "effect_on_lifespan": 0.12},
+            {"id": "env6_a2", "text": "Community clean-up", "effect_on_lifespan": 0.12},
+            {"id": "env6_a3", "text": "Water conservation efforts", "effect_on_lifespan": 0.10},
+            {"id": "env6_a4", "text": "Supporting local green businesses", "effect_on_lifespan": 0.08}
+        ]
+    },
+    {
+        "question_id": 7,
+        "question_text": "How is your household waste managed?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env7_a1", "text": "Properly segregated and recycled", "effect_on_lifespan": 0.15},
+            {"id": "env7_a2", "text": "Mostly disposed of in landfills", "effect_on_lifespan": -0.10},
+            {"id": "env7_a3", "text": "Burned or dumped illegally", "effect_on_lifespan": -0.20}
+        ]
+    },
+    {
+        "question_id": 8,
+        "question_text": "Do you have access to clean drinking water?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env8_a1", "text": "Yes, always", "effect_on_lifespan": 0.20},
+            {"id": "env8_a2", "text": "Sometimes", "effect_on_lifespan": -0.05},
+            {"id": "env8_a3", "text": "No", "effect_on_lifespan": -0.25}
+        ]
+    },
+    {
+        "question_id": 9,
+        "question_text": "Has your health ever been affected by environmental issues?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env9_a1", "text": "Yes, severely (e.g., respiratory or allergic reactions)", "effect_on_lifespan": -0.20},
+            {"id": "env9_a2", "text": "Mildly affected", "effect_on_lifespan": -0.10},
+            {"id": "env9_a3", "text": "No impact", "effect_on_lifespan": 0.00}
+        ]
+    },
+    {
+        "question_id": 10,
+        "question_text": "How often do you engage in outdoor recreational activities?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "env10_a1", "text": "Regularly (enhances mental and physical health)", "effect_on_lifespan": 0.18},
+            {"id": "env10_a2", "text": "Occasionally", "effect_on_lifespan": 0.08},
+            {"id": "env10_a3", "text": "Rarely (due to poor environmental conditions)", "effect_on_lifespan": -0.15}
+        ]
+    }
+]

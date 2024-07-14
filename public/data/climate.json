@@ -1,0 +1,102 @@
+[
+    {
+        "question_id": 1,
+        "question_text": "How often do you experience extreme temperatures that affect your health?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl1_a1", "text": "Regularly", "effect_on_lifespan": -0.20},
+            {"id": "cl1_a2", "text": "Occasionally", "effect_on_lifespan": -0.10},
+            {"id": "cl1_a3", "text": "Rarely", "effect_on_lifespan": 0.00}
+        ]
+    },
+    {
+        "question_id": 2,
+        "question_text": "Do you suffer from conditions exacerbated by climate changes, such as respiratory or cardiovascular diseases?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl2_a1", "text": "Yes, significantly", "effect_on_lifespan": -0.30},
+            {"id": "cl2_a2", "text": "Mildly", "effect_on_lifespan": -0.10},
+            {"id": "cl2_a3", "text": "No effect", "effect_on_lifespan": 0.00}
+        ]
+    },
+    {
+        "question_id": 3,
+        "question_text": "Do you have access to clean air and water in your environment?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl3_a1", "text": "Always", "effect_on_lifespan": 0.20},
+            {"id": "cl3_a2", "text": "Sometimes", "effect_on_lifespan": -0.05},
+            {"id": "cl3_a3", "text": "Rarely", "effect_on_lifespan": -0.25}
+        ]
+    },
+    {
+        "question_id": 4,
+        "question_text": "Have you experienced heatwaves or cold snaps that required medical attention?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl4_a1", "text": "Yes, frequently", "effect_on_lifespan": -0.25},
+            {"id": "cl4_a2", "text": "Once or twice", "effect_on_lifespan": -0.10},
+            {"id": "cl4_a3", "text": "Never", "effect_on_lifespan": 0.00}
+        ]
+    },
+    {
+        "question_id": 5,
+        "question_text": "How often do you adjust your daily activities due to adverse weather conditions?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl5_a1", "text": "Regularly", "effect_on_lifespan": -0.15},
+            {"id": "cl5_a2", "text": "Occasionally", "effect_on_lifespan": -0.05},
+            {"id": "cl5_a3", "text": "Never", "effect_on_lifespan": 0.05}
+        ]
+    },
+    {
+        "question_id": 6,
+        "question_text": "Are you actively involved in preparing for and mitigating the effects of climate change in your community?",
+        "input_type": "checkbox",
+        "answers": [
+            {"id": "cl6_a1", "text": "Community planning meetings", "effect_on_lifespan": 0.10},
+            {"id": "cl6_a2", "text": "Volunteer for environmental cleanup", "effect_on_lifespan": 0.10},
+            {"id": "cl6_a3", "text": "Educational outreach", "effect_on_lifespan": 0.05}
+        ]
+    },
+    {
+        "question_id": 7,
+        "question_text": "Have you been displaced or severely affected by a climate-related disaster (e.g., flood, hurricane)?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl7_a1", "text": "Yes, displaced", "effect_on_lifespan": -0.30},
+            {"id": "cl7_a2", "text": "Severely affected but not displaced", "effect_on_lifespan": -0.20},
+            {"id": "cl7_a3", "text": "No", "effect_on_lifespan": 0.00}
+        ]
+    },
+    {
+        "question_id": 8,
+        "question_text": "How does seasonal variation affect your mental health?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl8_a1", "text": "Significant negative impact", "effect_on_lifespan": -0.20},
+            {"id": "cl8_a2", "text": "Minor impact", "effect_on_lifespan": -0.05},
+            {"id": "cl8_a3", "text": "No impact", "effect_on_lifespan": 0.05}
+        ]
+    },
+    {
+        "question_id": 9,
+        "question_text": "Do you use environmental-friendly products to reduce your impact on climate?",
+        "input_type": "checkbox",
+        "answers": [
+            {"id": "cl9_a1", "text": "Biodegradable products", "effect_on_lifespan": 0.05},
+            {"id": "cl9_a2", "text": "Recycled products", "effect_on_lifespan": 0.05},
+            {"id": "cl9_a3", "text": "Energy-saving appliances", "effect_on_lifespan": 0.10}
+        ]
+    },
+    {
+        "question_id": 10,
+        "question_text": "Are you affected by climate-induced allergies or respiratory issues?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "cl10_a1", "text": "Yes, severely", "effect_on_lifespan": -0.20},
+            {"id": "cl10_a2", "text": "Moderately", "effect_on_lifespan": -0.10},
+            {"id": "cl10_a3", "text": "Not affected", "effect_on_lifespan": 0.00}
+        ]
+    }
+]

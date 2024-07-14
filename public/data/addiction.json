@@ -1,0 +1,103 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "Have you ever used tobacco products?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad1_a1", "text": "Yes, regularly", "effect_on_lifespan": -0.30},
+        {"id": "ad1_a2", "text": "Yes, occasionally", "effect_on_lifespan": -0.15},
+        {"id": "ad1_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Do you consume alcohol?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad2_a1", "text": "Yes, frequently", "effect_on_lifespan": -0.20},
+        {"id": "ad2_a2", "text": "Socially", "effect_on_lifespan": -0.05},
+        {"id": "ad2_a3", "text": "Never", "effect_on_lifespan": 0.05}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "Have you ever engaged in illegal or recreational drug use?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad3_a1", "text": "Yes, regularly", "effect_on_lifespan": -0.40},
+        {"id": "ad3_a2", "text": "Yes, but rarely", "effect_on_lifespan": -0.10},
+        {"id": "ad3_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "Are you currently or have you ever been in recovery for an addiction?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad4_a1", "text": "Yes, currently in recovery", "effect_on_lifespan": 0.30},
+        {"id": "ad4_a2", "text": "Yes, in the past", "effect_on_lifespan": 0.20},
+        {"id": "ad4_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "Do you think you might have an addiction to the internet or social media?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad5_a1", "text": "Yes", "effect_on_lifespan": -0.15},
+        {"id": "ad5_a2", "text": "Possibly", "effect_on_lifespan": -0.05},
+        {"id": "ad5_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "How often do you feel you need to use a substance or engage in a behavior to get through the day?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad6_a1", "text": "Often", "effect_on_lifespan": -0.25},
+        {"id": "ad6_a2", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "ad6_a3", "text": "Never", "effect_on_lifespan": 0.10}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "Have you faced health issues as a result of your addiction(s)?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad7_a1", "text": "Yes, severe issues", "effect_on_lifespan": -0.30},
+        {"id": "ad7_a2", "text": "Yes, minor issues", "effect_on_lifespan": -0.10},
+        {"id": "ad7_a3", "text": "No issues", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "Do you regularly attend support groups or therapy for addiction?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad8_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.25},
+        {"id": "ad8_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "ad8_a3", "text": "No, never", "effect_on_lifespan": -0.15}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "Has your addiction affected your personal or professional relationships?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad9_a1", "text": "Significantly", "effect_on_lifespan": -0.30},
+        {"id": "ad9_a2", "text": "Somewhat", "effect_on_lifespan": -0.15},
+        {"id": "ad9_a3", "text": "Not at all", "effect_on_lifespan": 0.05}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Do you have access to resources and support for addiction treatment?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "ad10_a1", "text": "Yes, adequate resources", "effect_on_lifespan": 0.20},
+        {"id": "ad10_a2", "text": "Limited resources", "effect_on_lifespan": 0.00},
+        {"id": "ad10_a3", "text": "No resources", "effect_on_lifespan": -0.20}
+      ]
+    }
+  ]
+  

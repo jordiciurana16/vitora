@@ -1,0 +1,223 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "How often do you visit a doctor for a regular check-up?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q1_a1", "text": "Every 6 months", "effect_on_lifespan": 0.30},
+        {"id": "q1_a2", "text": "Once a year", "effect_on_lifespan": 0.20},
+        {"id": "q1_a3", "text": "Every 2-3 years", "effect_on_lifespan": 0.10},
+        {"id": "q1_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q1_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Do you have any chronic illnesses?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q2_a1", "text": "Yes", "effect_on_lifespan": -0.30},
+        {"id": "q2_a2", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "How often do you exercise?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q3_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q3_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q3_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q3_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q3_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "Do you smoke?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q4_a1", "text": "Yes, regularly", "effect_on_lifespan": -0.30},
+        {"id": "q4_a2", "text": "Yes, occasionally", "effect_on_lifespan": -0.10},
+        {"id": "q4_a3", "text": "No, I quit", "effect_on_lifespan": 0.10},
+        {"id": "q4_a4", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "How would you rate your mental health?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q5_a1", "text": "Excellent", "effect_on_lifespan": 0.30},
+        {"id": "q5_a2", "text": "Good", "effect_on_lifespan": 0.20},
+        {"id": "q5_a3", "text": "Fair", "effect_on_lifespan": 0.00},
+        {"id": "q5_a4", "text": "Poor", "effect_on_lifespan": -0.10},
+        {"id": "q5_a5", "text": "Very poor", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "Do you have regular dental check-ups?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q6_a1", "text": "Yes, every 6 months", "effect_on_lifespan": 0.30},
+        {"id": "q6_a2", "text": "Yes, once a year", "effect_on_lifespan": 0.20},
+        {"id": "q6_a3", "text": "Every 2-3 years", "effect_on_lifespan": 0.00},
+        {"id": "q6_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q6_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "Do you consume alcohol?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q7_a1", "text": "Yes, regularly", "effect_on_lifespan": -0.20},
+        {"id": "q7_a2", "text": "Yes, occasionally", "effect_on_lifespan": -0.10},
+        {"id": "q7_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "How often do you eat a balanced diet?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q8_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q8_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q8_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q8_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q8_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "Do you have any allergies?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q9_a1", "text": "Yes", "effect_on_lifespan": -0.10},
+        {"id": "q9_a2", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Do you take any prescription medications?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q10_a1", "text": "Yes", "effect_on_lifespan": -0.10},
+        {"id": "q10_a2", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "How would you rate your overall physical health?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q11_a1", "text": "Excellent", "effect_on_lifespan": 0.30},
+        {"id": "q11_a2", "text": "Good", "effect_on_lifespan": 0.20},
+        {"id": "q11_a3", "text": "Fair", "effect_on_lifespan": 0.00},
+        {"id": "q11_a4", "text": "Poor", "effect_on_lifespan": -0.10},
+        {"id": "q11_a5", "text": "Very poor", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "Do you get at least 7-8 hours of sleep each night?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q12_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q12_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q12_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q12_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q12_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "Do you have regular eye exams?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q13_a1", "text": "Yes, every year", "effect_on_lifespan": 0.30},
+        {"id": "q13_a2", "text": "Every 2-3 years", "effect_on_lifespan": 0.10},
+        {"id": "q13_a3", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q13_a4", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "Do you take vitamins or supplements regularly?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q14_a1", "text": "Yes, daily", "effect_on_lifespan": 0.20},
+        {"id": "q14_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q14_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do you feel stressed on a regular basis?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q15_a1", "text": "Yes, very often", "effect_on_lifespan": -0.30},
+        {"id": "q15_a2", "text": "Yes, often", "effect_on_lifespan": -0.20},
+        {"id": "q15_a3", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "q15_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q15_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "Do you have a family history of serious illnesses (e.g., heart disease, cancer)?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q16_a1", "text": "Yes, heart disease", "effect_on_lifespan": -0.20},
+        {"id": "q16_a2", "text": "Yes, cancer", "effect_on_lifespan": -0.20},
+        {"id": "q16_a3", "text": "Yes, diabetes", "effect_on_lifespan": -0.15},
+        {"id": "q16_a4", "text": "Yes, other", "effect_on_lifespan": -0.10},
+        {"id": "q16_a5", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "Do you participate in regular health screenings (e.g., blood pressure, cholesterol)?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q17_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.30},
+        {"id": "q17_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q17_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "Do you follow a specific diet (e.g., vegetarian, vegan, gluten-free)?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q18_a1", "text": "Yes", "effect_on_lifespan": 0.20},
+        {"id": "q18_a2", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "How often do you engage in activities that promote mental well-being (e.g., meditation, hobbies)?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q19_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q19_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q19_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q19_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q19_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "Do you have access to mental health services?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q20_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q20_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q20_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q20_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q20_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    }
+  ]
+  

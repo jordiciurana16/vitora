@@ -4,11 +4,11 @@
     "question_text": "How many days a week do you engage in physical activity?",
     "input_type": "radio",
     "answers": [
-      {"id": "q1_a1", "text": "None", "effect_on_lifespan": -0.5},
-      {"id": "q1_a2", "text": "1-2 days", "effect_on_lifespan": 0.1},
-      {"id": "q1_a3", "text": "3-4 days", "effect_on_lifespan": 0.3},
-      {"id": "q1_a4", "text": "5-6 days", "effect_on_lifespan": 0.4},
-      {"id": "q1_a5", "text": "Every day", "effect_on_lifespan": 0.5}
+      {"id": "q1_a1", "text": "None", "effect_on_lifespan": -0.50},
+      {"id": "q1_a2", "text": "1-2 days", "effect_on_lifespan": 0.10},
+      {"id": "q1_a3", "text": "3-4 days", "effect_on_lifespan": 0.35},
+      {"id": "q1_a4", "text": "5-6 days", "effect_on_lifespan": 0.45},
+      {"id": "q1_a5", "text": "Every day", "effect_on_lifespan": 0.55}
     ]
   },
   {
@@ -16,10 +16,10 @@
     "question_text": "What type of exercises do you usually do?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q2_a1", "text": "Cardiovascular (e.g., running, cycling)", "effect_on_lifespan": 0.3},
-      {"id": "q2_a2", "text": "Strength training (e.g., weightlifting)", "effect_on_lifespan": 0.3},
-      {"id": "q2_a3", "text": "Flexibility exercises (e.g., yoga, stretching)", "effect_on_lifespan": 0.2},
-      {"id": "q2_a4", "text": "Sports (e.g., football, basketball)", "effect_on_lifespan": 0.3}
+      {"id": "q2_a1", "text": "Cardiovascular (e.g., running, cycling)", "effect_on_lifespan": 0.30},
+      {"id": "q2_a2", "text": "Strength training (e.g., weightlifting)", "effect_on_lifespan": 0.25},
+      {"id": "q2_a3", "text": "Flexibility exercises (e.g., yoga, stretching)", "effect_on_lifespan": 0.20},
+      {"id": "q2_a4", "text": "Sports (e.g., football, basketball)", "effect_on_lifespan": 0.28}
     ]
   },
   {
@@ -27,9 +27,9 @@
     "question_text": "How long is your typical exercise session?",
     "input_type": "radio",
     "answers": [
-      {"id": "q3_a1", "text": "Less than 30 minutes", "effect_on_lifespan": -0.3},
-      {"id": "q3_a2", "text": "30-60 minutes", "effect_on_lifespan": 0.3},
-      {"id": "q3_a3", "text": "More than 60 minutes", "effect_on_lifespan": 0.4}
+      {"id": "q3_a1", "text": "Less than 30 minutes", "effect_on_lifespan": -0.30},
+      {"id": "q3_a2", "text": "30-60 minutes", "effect_on_lifespan": 0.35},
+      {"id": "q3_a3", "text": "More than 60 minutes", "effect_on_lifespan": 0.48}
     ]
   },
   {
@@ -37,8 +37,8 @@
     "question_text": "Do you engage in any structured exercise programs?",
     "input_type": "radio",
     "answers": [
-      {"id": "q4_a1", "text": "Yes", "effect_on_lifespan": 0.4},
-      {"id": "q4_a2", "text": "No", "effect_on_lifespan": 0.0}
+      {"id": "q4_a1", "text": "Yes", "effect_on_lifespan": 0.40},
+      {"id": "q4_a2", "text": "No", "effect_on_lifespan": 0.00}
     ]
   },
   {
@@ -46,10 +46,10 @@
     "question_text": "What motivates you to exercise regularly?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q5_a1", "text": "Health benefits", "effect_on_lifespan": 0.3},
-      {"id": "q5_a2", "text": "Weight management", "effect_on_lifespan": 0.3},
-      {"id": "q5_a3", "text": "Stress relief", "effect_on_lifespan": 0.2},
-      {"id": "q5_a4", "text": "Social interaction", "effect_on_lifespan": 0.1}
+      {"id": "q5_a1", "text": "Health benefits", "effect_on_lifespan": 0.32},
+      {"id": "q5_a2", "text": "Weight management", "effect_on_lifespan": 0.27},
+      {"id": "q5_a3", "text": "Stress relief", "effect_on_lifespan": 0.22},
+      {"id": "q5_a4", "text": "Social interaction", "effect_on_lifespan": 0.15}
     ]
   },
   {
@@ -57,9 +57,9 @@
     "question_text": "On average, how intense are your workouts?",
     "input_type": "radio",
     "answers": [
-      {"id": "q6_a1", "text": "Low intensity (e.g., leisurely walking)", "effect_on_lifespan": 0.1},
-      {"id": "q6_a2", "text": "Moderate intensity (e.g., brisk walking, light jogging)", "effect_on_lifespan": 0.3},
-      {"id": "q6_a3", "text": "High intensity (e.g., sprinting, high-intensity interval training)", "effect_on_lifespan": 0.4}
+      {"id": "q6_a1", "text": "Low intensity (e.g., leisurely walking)", "effect_on_lifespan": 0.10},
+      {"id": "q6_a2", "text": "Moderate intensity (e.g., brisk walking, light jogging)", "effect_on_lifespan": 0.30},
+      {"id": "q6_a3", "text": "High intensity (e.g., sprinting, high-intensity interval training)", "effect_on_lifespan": 0.45}
     ]
   },
   {
@@ -67,11 +67,11 @@
     "question_text": "How satisfied are you with your current exercise routine?",
     "input_type": "radio",
     "answers": [
-      {"id": "q7_a1", "text": "Very unsatisfied", "effect_on_lifespan": -0.3},
-      {"id": "q7_a2", "text": "Unsatisfied", "effect_on_lifespan": -0.2},
-      {"id": "q7_a3", "text": "Neutral", "effect_on_lifespan": 0.0},
-      {"id": "q7_a4", "text": "Satisfied", "effect_on_lifespan": 0.2},
-      {"id": "q7_a5", "text": "Very satisfied", "effect_on_lifespan": 0.3}
+      {"id": "q7_a1", "text": "Very unsatisfied", "effect_on_lifespan": -0.35},
+      {"id": "q7_a2", "text": "Unsatisfied", "effect_on_lifespan": -0.20},
+      {"id": "q7_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+      {"id": "q7_a4", "text": "Satisfied", "effect_on_lifespan": 0.25},
+      {"id": "q7_a5", "text": "Very satisfied", "effect_on_lifespan": 0.37}
     ]
   },
   {
@@ -79,10 +79,10 @@
     "question_text": "What time of day do you prefer to exercise?",
     "input_type": "radio",
     "answers": [
-      {"id": "q8_a1", "text": "Morning", "effect_on_lifespan": 0.2},
-      {"id": "q8_a2", "text": "Afternoon", "effect_on_lifespan": 0.1},
-      {"id": "q8_a3", "text": "Evening", "effect_on_lifespan": 0.1},
-      {"id": "q8_a4", "text": "No specific preference", "effect_on_lifespan": 0.0}
+      {"id": "q8_a1", "text": "Morning", "effect_on_lifespan": 0.20},
+      {"id": "q8_a2", "text": "Afternoon", "effect_on_lifespan": 0.12},
+      {"id": "q8_a3", "text": "Evening", "effect_on_lifespan": 0.11},
+      {"id": "q8_a4", "text": "No specific preference", "effect_on_lifespan": 0.00}
     ]
   },
   {
@@ -90,11 +90,11 @@
     "question_text": "How consistent are you with your exercise routine?",
     "input_type": "radio",
     "answers": [
-      {"id": "q9_a1", "text": "Never/rarely exercise", "effect_on_lifespan": -0.4},
-      {"id": "q9_a2", "text": "Inconsistent", "effect_on_lifespan": -0.2},
-      {"id": "q9_a3", "text": "Somewhat inconsistent", "effect_on_lifespan": -0.1},
-      {"id": "q9_a4", "text": "Fairly consistent", "effect_on_lifespan": 0.3},
-      {"id": "q9_a5", "text": "Very consistent", "effect_on_lifespan": 0.4}
+      {"id": "q9_a1", "text": "Never/rarely exercise", "effect_on_lifespan": -0.40},
+      {"id": "q9_a2", "text": "Inconsistent", "effect_on_lifespan": -0.25},
+      {"id": "q9_a3", "text": "Somewhat inconsistent", "effect_on_lifespan": -0.10},
+      {"id": "q9_a4", "text": "Fairly consistent", "effect_on_lifespan": 0.35},
+      {"id": "q9_a5", "text": "Very consistent", "effect_on_lifespan": 0.47}
     ]
   },
   {
@@ -102,10 +102,10 @@
     "question_text": "Are there any barriers that hinder your regular exercise?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q10_a1", "text": "Lack of time", "effect_on_lifespan": -0.2},
-      {"id": "q10_a2", "text": "Lack of motivation", "effect_on_lifespan": -0.2},
-      {"id": "q10_a3", "text": "Physical limitations", "effect_on_lifespan": -0.3},
-      {"id": "q10_a4", "text": "Lack of access to facilities", "effect_on_lifespan": -0.2}
+      {"id": "q10_a1", "text": "Lack of time", "effect_on_lifespan": -0.21},
+      {"id": "q10_a2", "text": "Lack of motivation", "effect_on_lifespan": -0.19},
+      {"id": "q10_a3", "text": "Physical limitations", "effect_on_lifespan": -0.33},
+      {"id": "q10_a4", "text": "Lack of access to facilities", "effect_on_lifespan": -0.22}
     ]
   },
   {
@@ -113,9 +113,9 @@
     "question_text": "Have you recently made any changes to your exercise routine?",
     "input_type": "radio",
     "answers": [
-      {"id": "q11_a1", "text": "Yes", "effect_on_lifespan": 0.3},
-      {"id": "q11_a2", "text": "No", "effect_on_lifespan": 0.0},
-      {"id": "q11_a3", "text": "Planning to make changes soon", "effect_on_lifespan": 0.1}
+      {"id": "q11_a1", "text": "Yes", "effect_on_lifespan": 0.35},
+      {"id": "q11_a2", "text": "No", "effect_on_lifespan": 0.00},
+      {"id": "q11_a3", "text": "Planning to make changes soon", "effect_on_lifespan": 0.12}
     ]
   },
   {
@@ -123,10 +123,10 @@
     "question_text": "Do you incorporate exercise into your daily routine (e.g., walking instead of driving, taking stairs instead of elevator)?",
     "input_type": "radio",
     "answers": [
-      {"id": "q12_a1", "text": "Never", "effect_on_lifespan": -0.3},
-      {"id": "q12_a2", "text": "Rarely", "effect_on_lifespan": -0.1},
-      {"id": "q12_a3", "text": "Occasionally", "effect_on_lifespan": 0.1},
-      {"id": "q12_a4", "text": "Yes, frequently", "effect_on_lifespan": 0.3}
+      {"id": "q12_a1", "text": "Never", "effect_on_lifespan": -0.32},
+      {"id": "q12_a2", "text": "Rarely", "effect_on_lifespan": -0.12},
+      {"id": "q12_a3", "text": "Occasionally", "effect_on_lifespan": 0.15},
+      {"id": "q12_a4", "text": "Yes, frequently", "effect_on_lifespan": 0.34}
     ]
   },
   {
@@ -134,9 +134,9 @@
     "question_text": "Do you track or monitor your physical activity?",
     "input_type": "radio",
     "answers": [
-      {"id": "q13_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.3},
-      {"id": "q13_a2", "text": "Occasionally", "effect_on_lifespan": 0.1},
-      {"id": "q13_a3", "text": "No", "effect_on_lifespan": 0.0}
+      {"id": "q13_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.35},
+      {"id": "q13_a2", "text": "Occasionally", "effect_on_lifespan": 0.12},
+      {"id": "q13_a3", "text": "No", "effect_on_lifespan": 0.00}
     ]
   },
   {
@@ -144,10 +144,10 @@
     "question_text": "Are there specific fitness goals you are trying to achieve?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q14_a1", "text": "Weight loss", "effect_on_lifespan": 0.3},
-      {"id": "q14_a2", "text": "Muscle gain", "effect_on_lifespan": 0.3},
-      {"id": "q14_a3", "text": "Improved endurance", "effect_on_lifespan": 0.3},
-      {"id": "q14_a4", "text": "General health maintenance", "effect_on_lifespan": 0.2}
+      {"id": "q14_a1", "text": "Weight loss", "effect_on_lifespan": 0.28},
+      {"id": "q14_a2", "text": "Muscle gain", "effect_on_lifespan": 0.34},
+      {"id": "q14_a3", "text": "Improved endurance", "effect_on_lifespan": 0.36},
+      {"id": "q14_a4", "text": "General health maintenance", "effect_on_lifespan": 0.25}
     ]
   },
   {
@@ -155,9 +155,9 @@
     "question_text": "What do you do to warm up before exercising?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q15_a1", "text": "Stretching", "effect_on_lifespan": 0.1},
-      {"id": "q15_a2", "text": "Light jogging", "effect_on_lifespan": 0.1},
-      {"id": "q15_a3", "text": "Dynamic exercises", "effect_on_lifespan": 0.1}
+      {"id": "q15_a1", "text": "Stretching", "effect_on_lifespan": 0.11},
+      {"id": "q15_a2", "text": "Light jogging", "effect_on_lifespan": 0.12},
+      {"id": "q15_a3", "text": "Dynamic exercises", "effect_on_lifespan": 0.14}
     ]
   },
   {
@@ -165,9 +165,9 @@
     "question_text": "How often do you practice relaxation exercises after your workout?",
     "input_type": "radio",
     "answers": [
-      {"id": "q16_a1", "text": "Rarely", "effect_on_lifespan": 0.0},
-      {"id": "q16_a2", "text": "Occasionally", "effect_on_lifespan": 0.1},
-      {"id": "q16_a3", "text": "Frequently", "effect_on_lifespan": 0.2}
+      {"id": "q16_a1", "text": "Rarely", "effect_on_lifespan": 0.00},
+      {"id": "q16_a2", "text": "Occasionally", "effect_on_lifespan": 0.11},
+      {"id": "q16_a3", "text": "Frequently", "effect_on_lifespan": 0.23}
     ]
   },
   {
@@ -175,8 +175,8 @@
     "question_text": "Do you alternate between different types of exercises to avoid monotony?",
     "input_type": "radio",
     "answers": [
-      {"id": "q17_a1", "text": "Yes", "effect_on_lifespan": 0.2},
-      {"id": "q17_a2", "text": "No", "effect_on_lifespan": 0.0}
+      {"id": "q17_a1", "text": "Yes", "effect_on_lifespan": 0.24},
+      {"id": "q17_a2", "text": "No", "effect_on_lifespan": 0.00}
     ]
   },
   {
@@ -184,9 +184,9 @@
     "question_text": "How frequently do you take rest days between workout sessions?",
     "input_type": "radio",
     "answers": [
-      {"id": "q18_a1", "text": "Rarely", "effect_on_lifespan": -0.1},
-      {"id": "q18_a2", "text": "Occasionally", "effect_on_lifespan": 0.1},
-      {"id": "q18_a3", "text": "Frequently", "effect_on_lifespan": 0.2}
+      {"id": "q18_a1", "text": "Rarely", "effect_on_lifespan": -0.15},
+      {"id": "q18_a2", "text": "Occasionally", "effect_on_lifespan": 0.12},
+      {"id": "q18_a3", "text": "Frequently", "effect_on_lifespan": 0.22}
     ]
   },
   {
@@ -194,8 +194,8 @@
     "question_text": "Do you follow a specific diet tailored to complement your exercise routine?",
     "input_type": "radio",
     "answers": [
-      {"id": "q19_a1", "text": "Yes", "effect_on_lifespan": 0.3},
-      {"id": "q19_a2", "text": "No", "effect_on_lifespan": 0.0}
+      {"id": "q19_a1", "text": "Yes", "effect_on_lifespan": 0.30},
+      {"id": "q19_a2", "text": "No", "effect_on_lifespan": 0.00}
     ]
   },
   {
@@ -203,9 +203,9 @@
     "question_text": "How often do you consult a fitness professional or trainer for guidance?",
     "input_type": "radio",
     "answers": [
-      {"id": "q20_a1", "text": "Rarely", "effect_on_lifespan": 0.0},
-      {"id": "q20_a2", "text": "Occasionally", "effect_on_lifespan": 0.1},
-      {"id": "q20_a3", "text": "Frequently", "effect_on_lifespan": 0.2}
+      {"id": "q20_a1", "text": "Rarely", "effect_on_lifespan": 0.00},
+      {"id": "q20_a2", "text": "Occasionally", "effect_on_lifespan": 0.13},
+      {"id": "q20_a3", "text": "Frequently", "effect_on_lifespan": 0.25}
     ]
   },
   {
@@ -213,11 +213,11 @@
     "question_text": "What is your primary goal in your exercise routine?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q21_a1", "text": "Improve endurance", "effect_on_lifespan": 0.2},
-      {"id": "q21_a2", "text": "Increase strength", "effect_on_lifespan": 0.2},
-      {"id": "q21_a3", "text": "Enhance flexibility", "effect_on_lifespan": 0.2},
-      {"id": "q21_a4", "text": "Reduce stress", "effect_on_lifespan": 0.2},
-      {"id": "q21_a5", "text": "Maintain overall well-being", "effect_on_lifespan": 0.3}
+      {"id": "q21_a1", "text": "Improve endurance", "effect_on_lifespan": 0.24},
+      {"id": "q21_a2", "text": "Increase strength", "effect_on_lifespan": 0.22},
+      {"id": "q21_a3", "text": "Enhance flexibility", "effect_on_lifespan": 0.21},
+      {"id": "q21_a4", "text": "Reduce stress", "effect_on_lifespan": 0.18},
+      {"id": "q21_a5", "text": "Maintain overall well-being", "effect_on_lifespan": 0.31}
     ]
   },
   {
@@ -225,10 +225,10 @@
     "question_text": "To what extent would you incorporate new exercises or techniques into your current routine?",
     "input_type": "radio",
     "answers": [
-      {"id": "q22_a1", "text": "Never consider it", "effect_on_lifespan": -0.2},
-      {"id": "q22_a2", "text": "Occasionally consider it", "effect_on_lifespan": 0.1},
-      {"id": "q22_a3", "text": "Open to trying new ones", "effect_on_lifespan": 0.3},
-      {"id": "q22_a4", "text": "Actively and regularly experiment with new exercises", "effect_on_lifespan": 0.4}
+      {"id": "q22_a1", "text": "Never consider it", "effect_on_lifespan": -0.21},
+      {"id": "q22_a2", "text": "Occasionally consider it", "effect_on_lifespan": 0.14},
+      {"id": "q22_a3", "text": "Open to trying new ones", "effect_on_lifespan": 0.32},
+      {"id": "q22_a4", "text": "Actively and regularly experiment with new exercises", "effect_on_lifespan": 0.43}
     ]
   },
   {
@@ -236,10 +236,10 @@
     "question_text": "What is your primary source of information for new exercise routines?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q23_a1", "text": "Friends/family", "effect_on_lifespan": 0.1},
-      {"id": "q23_a2", "text": "Internet/online resources", "effect_on_lifespan": 0.1},
-      {"id": "q23_a3", "text": "Personal trainer/fitness professional", "effect_on_lifespan": 0.2},
-      {"id": "q23_a4", "text": "Books/magazines", "effect_on_lifespan": 0.1}
+      {"id": "q23_a1", "text": "Friends/family", "effect_on_lifespan": 0.12},
+      {"id": "q23_a2", "text": "Internet/online resources", "effect_on_lifespan": 0.11},
+      {"id": "q23_a3", "text": "Personal trainer/fitness professional", "effect_on_lifespan": 0.24},
+      {"id": "q23_a4", "text": "Books/magazines", "effect_on_lifespan": 0.09}
     ]
   }
 ]

@@ -1,0 +1,202 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "Do you have any family history of heart disease?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g1_a1", "text": "Yes, many instances", "effect_on_lifespan": -0.30},
+        {"id": "g1_a2", "text": "Yes, a few instances", "effect_on_lifespan": -0.15},
+        {"id": "g1_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Is there a history of cancer in your family?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g2_a1", "text": "Yes, various types", "effect_on_lifespan": -0.35},
+        {"id": "g2_a2", "text": "Yes, one type", "effect_on_lifespan": -0.20},
+        {"id": "g2_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "Is there any known hereditary disease in your family?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g3_a1", "text": "Yes, severe diseases", "effect_on_lifespan": -0.40},
+        {"id": "g3_a2", "text": "Yes, mild diseases", "effect_on_lifespan": -0.20},
+        {"id": "g3_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "Are you aware of carrying any genes linked to a high predisposition to any diseases?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g4_a1", "text": "Yes, several diseases", "effect_on_lifespan": -0.25},
+        {"id": "g4_a2", "text": "Yes, one disease", "effect_on_lifespan": -0.10},
+        {"id": "g4_a3", "text": "No, or not sure", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "Are there cases of exceptional longevity in your family?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g5_a1", "text": "Yes, many cases", "effect_on_lifespan": 0.30},
+        {"id": "g5_a2", "text": "Yes, a few cases", "effect_on_lifespan": 0.15},
+        {"id": "g5_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "Have you been diagnosed with a disease believed to be influenced by genetic factors?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g6_a1", "text": "Yes, a serious disease", "effect_on_lifespan": -0.30},
+        {"id": "g6_a2", "text": "Yes, a minor disease", "effect_on_lifespan": -0.10},
+        {"id": "g6_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "Does your family have a history of rare genetic disorders?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g7_a1", "text": "Yes, several disorders", "effect_on_lifespan": -0.40},
+        {"id": "g7_a2", "text": "Yes, one disorder", "effect_on_lifespan": -0.20},
+        {"id": "g7_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "Have you undergone genetic testing to determine the risk of developing specific diseases?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g8_a1", "text": "Yes, and high risks were identified", "effect_on_lifespan": -0.25},
+        {"id": "g8_a2", "text": "Yes, but no significant risks identified", "effect_on_lifespan": -0.05},
+        {"id": "g8_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "Do you believe your genes have a positive impact on your overall health?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g9_a1", "text": "Yes, definitely", "effect_on_lifespan": 0.20},
+        {"id": "g9_a2", "text": "Maybe, not sure", "effect_on_lifespan": 0.10},
+        {"id": "g9_a3", "text": "No", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Are there mental illnesses in your family that you believe might have a genetic basis?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "g10_a1", "text": "Yes, severe cases", "effect_on_lifespan": -0.30},
+        {"id": "g10_a2", "text": "Yes, mild cases", "effect_on_lifespan": -0.15},
+        {"id": "g10_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+        "question_id": 11,
+        "question_text": "Do you have family history of autoimmune diseases?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g11_a1", "text": "Yes, multiple cases", "effect_on_lifespan": -0.25},
+          {"id": "g11_a2", "text": "Yes, one case", "effect_on_lifespan": -0.10},
+          {"id": "g11_a3", "text": "No", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 12,
+        "question_text": "Is there a family pattern of longevity or short lifespan?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g12_a1", "text": "Mostly long-lived", "effect_on_lifespan": 0.25},
+          {"id": "g12_a2", "text": "Varied", "effect_on_lifespan": 0.00},
+          {"id": "g12_a3", "text": "Mostly short-lived", "effect_on_lifespan": -0.25}
+        ]
+      },
+      {
+        "question_id": 13,
+        "question_text": "Have you received genetic counseling about hereditary risks to your health?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g13_a1", "text": "Yes, and I have taken actions", "effect_on_lifespan": 0.20},
+          {"id": "g13_a2", "text": "Yes, but I have not taken actions", "effect_on_lifespan": -0.10},
+          {"id": "g13_a3", "text": "No", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 14,
+        "question_text": "Is there a known genetic disorder affecting multiple generations in your family?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g14_a1", "text": "Yes, several generations", "effect_on_lifespan": -0.35},
+          {"id": "g14_a2", "text": "Yes, one generation", "effect_on_lifespan": -0.15},
+          {"id": "g14_a3", "text": "No", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 15,
+        "question_text": "How do you believe your genetic inheritance influences your daily lifestyle?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g15_a1", "text": "Significantly, it dictates many of my decisions", "effect_on_lifespan": 0.10},
+          {"id": "g15_a2", "text": "Somewhat, in certain aspects", "effect_on_lifespan": 0.05},
+          {"id": "g15_a3", "text": "Not much at all", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 16,
+        "question_text": "Do you consider yourself at genetic risk for developing age-related diseases?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g16_a1", "text": "Yes, definitely", "effect_on_lifespan": -0.30},
+          {"id": "g16_a2", "text": "Possibly", "effect_on_lifespan": -0.15},
+          {"id": "g16_a3", "text": "No", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 17,
+        "question_text": "Have you been diagnosed with a condition that only affects a small percentage of the population?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g17_a1", "text": "Yes, a rare condition", "effect_on_lifespan": -0.40},
+          {"id": "g17_a2", "text": "No, no rare conditions", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 18,
+        "question_text": "Is there evidence of hereditary metabolic diseases in your family?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g18_a1", "text": "Yes, several", "effect_on_lifespan": -0.35},
+          {"id": "g18_a2", "text": "One metabolic disease", "effect_on_lifespan": -0.20},
+          {"id": "g18_a3", "text": "No", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 19,
+        "question_text": "Do you have family history of degenerative neurological diseases?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g19_a1", "text": "Yes, severe cases", "effect_on_lifespan": -0.50},
+          {"id": "g19_a2", "text": "Yes, but mild or infrequent cases", "effect_on_lifespan": -0.25},
+          {"id": "g19_a3", "text": "No", "effect_on_lifespan": 0.00}
+        ]
+      },
+      {
+        "question_id": 20,
+        "question_text": "How do you rate the impact of genetics on your mental health?",
+        "input_type": "radio",
+        "answers": [
+          {"id": "g20_a1", "text": "Very significant", "effect_on_lifespan": -0.20},
+          {"id": "g20_a2", "text": "Moderate", "effect_on_lifespan": -0.10},
+          {"id": "g20_a3", "text": "Minor or none", "effect_on_lifespan": 0.00}
+        ]
+      }
+  ]
+  

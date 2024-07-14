@@ -1,0 +1,208 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "How often do you experience stress at work?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s1_a1", "text": "Daily", "effect_on_lifespan": -0.20},
+        {"id": "s1_a2", "text": "Several times a week", "effect_on_lifespan": -0.10},
+        {"id": "s1_a3", "text": "Occasionally", "effect_on_lifespan": -0.05},
+        {"id": "s1_a4", "text": "Rarely", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "How do you typically manage stress?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "s2_a1", "text": "Exercise", "effect_on_lifespan": 0.15},
+        {"id": "s2_a2", "text": "Meditation or yoga", "effect_on_lifespan": 0.15},
+        {"id": "s2_a3", "text": "Medication", "effect_on_lifespan": -0.10},
+        {"id": "s2_a4", "text": "Ignoring it", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "Do you feel that your job provides enough time for personal relaxation and recovery?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s3_a1", "text": "Always", "effect_on_lifespan": 0.10},
+        {"id": "s3_a2", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "s3_a3", "text": "Rarely", "effect_on_lifespan": -0.15},
+        {"id": "s3_a4", "text": "Never", "effect_on_lifespan": -0.25}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "How often do stressful situations affect your sleep?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s4_a1", "text": "Regularly", "effect_on_lifespan": -0.30},
+        {"id": "s4_a2", "text": "Sometimes", "effect_on_lifespan": -0.15},
+        {"id": "s4_a3", "text": "Rarely", "effect_on_lifespan": 0.00},
+        {"id": "s4_a4", "text": "Never", "effect_on_lifespan": 0.05}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "Do you have supportive relationships that help you cope with stress?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s5_a1", "text": "Yes, many supportive relationships", "effect_on_lifespan": 0.20},
+        {"id": "s5_a2", "text": "Yes, a few", "effect_on_lifespan": 0.10},
+        {"id": "s5_a3", "text": "No, few or none", "effect_on_lifespan": -0.15}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "How frequently do you feel overwhelmed by responsibilities?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s6_a1", "text": "Very often", "effect_on_lifespan": -0.25},
+        {"id": "s6_a2", "text": "Occasionally", "effect_on_lifespan": -0.10},
+        {"id": "s6_a3", "text": "Rarely", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "Do you utilize professional help for managing stress (e.g., therapist, counselor)?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s7_a1", "text": "Yes", "effect_on_lifespan": 0.20},
+        {"id": "s7_a2", "text": "No, but considering it", "effect_on_lifespan": 0.10},
+        {"id": "s7_a3", "text": "No", "effect_on_lifespan": -0.05}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "Does stress impact your physical health (e.g., headaches, high blood pressure)?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s8_a1", "text": "Significantly", "effect_on_lifespan": -0.35},
+        {"id": "s8_a2", "text": "Moderately", "effect_on_lifespan": -0.15},
+        {"id": "s8_a3", "text": "Not noticeably", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "How do you rate your ability to handle unexpected challenges?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s9_a1", "text": "Excellent", "effect_on_lifespan": 0.20},
+        {"id": "s9_a2", "text": "Good", "effect_on_lifespan": 0.10},
+        {"id": "s9_a3", "text": "Poor", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "How often do you engage in hobbies or activities that reduce your stress?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s10_a1", "text": "Frequently", "effect_on_lifespan": 0.25},
+        {"id": "s10_a2", "text": "Sometimes", "effect_on_lifespan": 0.10},
+        {"id": "s10_a3", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "s10_a4", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "How does your workplace handle employee stress management?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s11_a1", "text": "Provides regular support and resources", "effect_on_lifespan": 0.20},
+        {"id": "s11_a2", "text": "Offers some support", "effect_on_lifespan": 0.10},
+        {"id": "s11_a3", "text": "Does not address stress management", "effect_on_lifespan": -0.15}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "Do financial concerns frequently cause you stress?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s12_a1", "text": "Often", "effect_on_lifespan": -0.25},
+        {"id": "s12_a2", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "s12_a3", "text": "Rarely", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "Do you find it easy to relax and 'switch off' after work?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s13_a1", "text": "Always", "effect_on_lifespan": 0.15},
+        {"id": "s13_a2", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "s13_a3", "text": "Never", "effect_on_lifespan": -0.15}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "How effectively can you manage stress without external help?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s14_a1", "text": "Very effectively", "effect_on_lifespan": 0.20},
+        {"id": "s14_a2", "text": "Moderately effectively", "effect_on_lifespan": 0.10},
+        {"id": "s14_a3", "text": "Ineffectively", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do social situations cause you significant stress?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s15_a1", "text": "Always", "effect_on_lifespan": -0.20},
+        {"id": "s15_a2", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "s15_a3", "text": "Never", "effect_on_lifespan": 0.10}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "How often do you feel burnout from your daily routines?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s16_a1", "text": "Frequently", "effect_on_lifespan": -0.30},
+        {"id": "s16_a2", "text": "Occasionally", "effect_on_lifespan": -0.15},
+        {"id": "s16_a3", "text": "Rarely", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "Do you practice mindfulness or other mental health exercises to cope with stress?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s17_a1", "text": "Regularly", "effect_on_lifespan": 0.25},
+        {"id": "s17_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "s17_a3", "text": "Never", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "How often does stress lead to physical symptoms like headaches or nausea?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s18_a1", "text": "Often", "effect_on_lifespan": -0.25},
+        {"id": "s18_a2", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "s18_a3", "text": "Never", "effect_on_lifespan": 0.05}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "How does stress affect your eating habits?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s19_a1", "text": "Leads to overeating or poor nutrition", "effect_on_lifespan": -0.15},
+        {"id": "s19_a2", "text": "No change", "effect_on_lifespan": 0.00},
+        {"id": "s19_a3", "text": "Leads to healthier choices", "effect_on_lifespan": 0.10}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "How do you perceive your ability to handle long-term stress?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "s20_a1", "text": "I manage well", "effect_on_lifespan": 0.20},
+        {"id": "s20_a2", "text": "I struggle", "effect_on_lifespan": -0.20},
+        {"id": "s20_a3", "text": "I am seeking ways to improve", "effect_on_lifespan": 0.00}
+      ]
+    }
+  ]
+  

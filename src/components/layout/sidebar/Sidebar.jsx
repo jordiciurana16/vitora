@@ -18,22 +18,22 @@ function Sidebar() {
             <BootstrapNav className='flex-column'>
               <div className={styles.navLinks}>
                 <NavItem>
-                  <Link to="/accidents">Accidents</Link>
+                  <Link Link to="accidents" className={isActive('/vitora/profile/accidents')}>Accidents</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/addiction">Addiction</Link>
+                <Link Link to="addiction" className={isActive('/vitora/profile/addiction')}>Addiction</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/climate">Climate</Link>
+                <Link Link to="climate" className={isActive('/vitora/profile/climate')}>Climate</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/economy">Economy</Link>
+                <Link Link to="economy" className={isActive('/vitora/profile/economy')}>Economy</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/education">Education</Link>
+                <Link Link to="education" className={isActive('/vitora/profile/education')}>Education</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/environment">Environment</Link>
+                <Link Link to="environment" className={isActive('/vitora/profile/environment')}>Environemnt</Link>
                 </NavItem>
                 <NavItem>
                   <Link to="exercise" className={isActive('/vitora/profile/exercise')}>Exercise</Link>
@@ -42,25 +42,28 @@ function Sidebar() {
                   <Link to="genetic" className={isActive('/vitora/profile/genetic')}>Genetic</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="geography">Geography</Link>
+                <Link to="geography" className={isActive('/vitora/profile/geography')}>Geography</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/lawsandpolicies">Laws and Policies</Link>
+                <Link to="lawsandpolicies" className={isActive('/vitora/profile/lawsandpolicies')}>Laws and Policies</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/health">Health</Link>
+                <Link to="health" className={isActive('/vitora/profile/health')}>Health</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/nutrition">Nutrition</Link>
+                <Link to="nutrition" className={isActive('/vitora/profile/nutririon')}>Nutrition</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/occupation">Occupation</Link>
+                <Link to="occupation" className={isActive('/vitora/profile/occupation')}>Occupation</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/sociallive">Social Live</Link>
+                  <Link to="stress" className={isActive('/vitora/profile/stress')}>Stress</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="/warandconflict">War and Conflict</Link>
+                <Link to="sociallive" className={isActive('/vitora/profile/sociallive')}>Social live</Link>
+                </NavItem>
+                <NavItem>
+                <Link to="warandconflict" className={isActive('/vitora/profile/warandconflict')}>War and Conflict</Link>
                 </NavItem>
               </div>
             </BootstrapNav>

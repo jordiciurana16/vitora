@@ -1,0 +1,102 @@
+[
+    {
+        "question_id": 1,
+        "question_text": "How stable is your current financial situation?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec1_a1", "text": "Very stable", "effect_on_lifespan": 0.22},
+            {"id": "ec1_a2", "text": "Somewhat stable", "effect_on_lifespan": 0.12},
+            {"id": "ec1_a3", "text": "Unstable", "effect_on_lifespan": -0.23}
+        ]
+    },
+    {
+        "question_id": 2,
+        "question_text": "How often do economic worries affect your mental health?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec2_a1", "text": "Frequently", "effect_on_lifespan": -0.27},
+            {"id": "ec2_a2", "text": "Occasionally", "effect_on_lifespan": -0.13},
+            {"id": "ec2_a3", "text": "Rarely", "effect_on_lifespan": 0.03}
+        ]
+    },
+    {
+        "question_id": 3,
+        "question_text": "Do you have access to adequate health care services?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec3_a1", "text": "Always", "effect_on_lifespan": 0.28},
+            {"id": "ec3_a2", "text": "Sometimes", "effect_on_lifespan": 0.01},
+            {"id": "ec3_a3", "text": "Never", "effect_on_lifespan": -0.32}
+        ]
+    },
+    {
+        "question_id": 4,
+        "question_text": "Does your income allow you to live comfortably?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec4_a1", "text": "Yes", "effect_on_lifespan": 0.25},
+            {"id": "ec4_a2", "text": "Barely", "effect_on_lifespan": -0.17},
+            {"id": "ec4_a3", "text": "No", "effect_on_lifespan": -0.29}
+        ]
+    },
+    {
+        "question_id": 5,
+        "question_text": "Are you employed in a job that meets your economic needs?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec5_a1", "text": "Yes", "effect_on_lifespan": 0.18},
+            {"id": "ec5_a2", "text": "Partially", "effect_on_lifespan": -0.08},
+            {"id": "ec5_a3", "text": "No", "effect_on_lifespan": -0.22}
+        ]
+    },
+    {
+        "question_id": 6,
+        "question_text": "How does your economic status affect your diet and nutrition?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec6_a1", "text": "I eat very healthily", "effect_on_lifespan": 0.24},
+            {"id": "ec6_a2", "text": "I sometimes have to compromise on food quality", "effect_on_lifespan": -0.11},
+            {"id": "ec6_a3", "text": "I often eat poorly due to cost", "effect_on_lifespan": -0.27}
+        ]
+    },
+    {
+        "question_id": 7,
+        "question_text": "Are you saving regularly for retirement?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec7_a1", "text": "Yes, consistently", "effect_on_lifespan": 0.23},
+            {"id": "ec7_a2", "text": "Sometimes", "effect_on_lifespan": 0.02},
+            {"id": "ec7_a3", "text": "No", "effect_on_lifespan": -0.21}
+        ]
+    },
+    {
+        "question_id": 8,
+        "question_text": "Do you have debts that affect your ability to meet daily needs?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec8_a1", "text": "Yes, significantly", "effect_on_lifespan": -0.31},
+            {"id": "ec8_a2", "text": "Manageable debts", "effect_on_lifespan": -0.12},
+            {"id": "ec8_a3", "text": "No debts", "effect_on_lifespan": 0.15}
+        ]
+    },
+    {
+        "question_id": 9,
+        "question_text": "Do economic conditions influence your stress levels?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec9_a1", "text": "Greatly", "effect_on_lifespan": -0.24},
+            {"id": "ec9_a2", "text": "Somewhat", "effect_on_lifespan": -0.09},
+            {"id": "ec9_a3", "text": "Not at all", "effect_on_lifespan": 0.07}
+        ]
+    },
+    {
+        "question_id": 10,
+        "question_text": "How often do you feel financially secure?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ec10_a1", "text": "Always", "effect_on_lifespan": 0.26},
+            {"id": "ec10_a2", "text": "Sometimes", "effect_on_lifespan": 0.01},
+            {"id": "ec10_a3", "text": "Never", "effect_on_lifespan": -0.28}
+        ]
+    }
+]
