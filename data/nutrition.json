@@ -1,0 +1,242 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "How often do you consume fruits and vegetables?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q1_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q1_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q1_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q1_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q1_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Do you take any dietary supplements?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q2_a1", "text": "Vitamins", "effect_on_lifespan": 0.10},
+        {"id": "q2_a2", "text": "Minerals", "effect_on_lifespan": 0.10},
+        {"id": "q2_a3", "text": "Herbal supplements", "effect_on_lifespan": 0.05},
+        {"id": "q2_a4", "text": "Protein supplements", "effect_on_lifespan": 0.10},
+        {"id": "q2_a5", "text": "No supplements", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "How often do you eat processed foods?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q3_a1", "text": "Daily", "effect_on_lifespan": -0.30},
+        {"id": "q3_a2", "text": "Several times a week", "effect_on_lifespan": -0.20},
+        {"id": "q3_a3", "text": "Once a week", "effect_on_lifespan": -0.10},
+        {"id": "q3_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q3_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "Do you follow a specific diet?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q4_a1", "text": "Vegetarian", "effect_on_lifespan": 0.10},
+        {"id": "q4_a2", "text": "Vegan", "effect_on_lifespan": 0.10},
+        {"id": "q4_a3", "text": "Gluten-free", "effect_on_lifespan": 0.05},
+        {"id": "q4_a4", "text": "Paleo", "effect_on_lifespan": 0.05},
+        {"id": "q4_a5", "text": "No specific diet", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "How often do you consume fast food?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q5_a1", "text": "Daily", "effect_on_lifespan": -0.30},
+        {"id": "q5_a2", "text": "Several times a week", "effect_on_lifespan": -0.20},
+        {"id": "q5_a3", "text": "Once a week", "effect_on_lifespan": -0.10},
+        {"id": "q5_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q5_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "What types of beverages do you usually consume?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q6_a1", "text": "Water", "effect_on_lifespan": 0.20},
+        {"id": "q6_a2", "text": "Soda", "effect_on_lifespan": -0.20},
+        {"id": "q6_a3", "text": "Juice", "effect_on_lifespan": 0.10},
+        {"id": "q6_a4", "text": "Tea/Coffee", "effect_on_lifespan": 0.05},
+        {"id": "q6_a5", "text": "Alcohol", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "How often do you cook meals at home?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q7_a1", "text": "Daily", "effect_on_lifespan": 0.30},
+        {"id": "q7_a2", "text": "Several times a week", "effect_on_lifespan": 0.20},
+        {"id": "q7_a3", "text": "Once a week", "effect_on_lifespan": 0.10},
+        {"id": "q7_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q7_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "What types of snacks do you usually consume?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q8_a1", "text": "Fruits", "effect_on_lifespan": 0.20},
+        {"id": "q8_a2", "text": "Vegetables", "effect_on_lifespan": 0.20},
+        {"id": "q8_a3", "text": "Nuts/Seeds", "effect_on_lifespan": 0.15},
+        {"id": "q8_a4", "text": "Chips/Crisps", "effect_on_lifespan": -0.20},
+        {"id": "q8_a5", "text": "Sweets/Candies", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "How often do you read nutritional labels when grocery shopping?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q9_a1", "text": "Always", "effect_on_lifespan": 0.30},
+        {"id": "q9_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q9_a3", "text": "Sometimes", "effect_on_lifespan": 0.10},
+        {"id": "q9_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q9_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Do you have any food allergies or intolerances?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q10_a1", "text": "Yes, gluten", "effect_on_lifespan": -0.10},
+        {"id": "q10_a2", "text": "Yes, dairy", "effect_on_lifespan": -0.10},
+        {"id": "q10_a3", "text": "Yes, nuts", "effect_on_lifespan": -0.10},
+        {"id": "q10_a4", "text": "Yes, other", "effect_on_lifespan": -0.10},
+        {"id": "q10_a5", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "How often do you consume sugary drinks?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q11_a1", "text": "Daily", "effect_on_lifespan": -0.30},
+        {"id": "q11_a2", "text": "Several times a week", "effect_on_lifespan": -0.20},
+        {"id": "q11_a3", "text": "Once a week", "effect_on_lifespan": -0.10},
+        {"id": "q11_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q11_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "Do you follow any specific dietary restrictions?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q12_a1", "text": "Low carb", "effect_on_lifespan": 0.10},
+        {"id": "q12_a2", "text": "Low fat", "effect_on_lifespan": 0.10},
+        {"id": "q12_a3", "text": "Low sugar", "effect_on_lifespan": 0.10},
+        {"id": "q12_a4", "text": "High protein", "effect_on_lifespan": 0.10},
+        {"id": "q12_a5", "text": "No restrictions", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "Do you meal prep for the week?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q13_a1", "text": "Yes, every week", "effect_on_lifespan": 0.20},
+        {"id": "q13_a2", "text": "Most weeks", "effect_on_lifespan": 0.10},
+        {"id": "q13_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q13_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q13_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "How often do you consume dairy products?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q14_a1", "text": "Daily", "effect_on_lifespan": 0.20},
+        {"id": "q14_a2", "text": "Several times a week", "effect_on_lifespan": 0.10},
+        {"id": "q14_a3", "text": "Once a week", "effect_on_lifespan": 0.00},
+        {"id": "q14_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q14_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do you avoid certain foods due to religious or ethical reasons?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q15_a1", "text": "Yes, pork", "effect_on_lifespan": 0.05},
+        {"id": "q15_a2", "text": "Yes, beef", "effect_on_lifespan": 0.05},
+        {"id": "q15_a3", "text": "Yes, all animal products", "effect_on_lifespan": 0.10},
+        {"id": "q15_a4", "text": "Yes, other", "effect_on_lifespan": 0.05},
+        {"id": "q15_a5", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "Do you eat breakfast daily?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q16_a1", "text": "Yes, every day", "effect_on_lifespan": 0.20},
+        {"id": "q16_a2", "text": "Most days", "effect_on_lifespan": 0.10},
+        {"id": "q16_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q16_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q16_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "How often do you consume red meat?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q17_a1", "text": "Daily", "effect_on_lifespan": -0.20},
+        {"id": "q17_a2", "text": "Several times a week", "effect_on_lifespan": -0.10},
+        {"id": "q17_a3", "text": "Once a week", "effect_on_lifespan": 0.00},
+        {"id": "q17_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q17_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "Do you consider your diet to be balanced?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q18_a1", "text": "Yes, very balanced", "effect_on_lifespan": 0.30},
+        {"id": "q18_a2", "text": "Balanced", "effect_on_lifespan": 0.20},
+        {"id": "q18_a3", "text": "Somewhat balanced", "effect_on_lifespan": 0.10},
+        {"id": "q18_a4", "text": "Not balanced", "effect_on_lifespan": -0.10},
+        {"id": "q18_a5", "text": "Very unbalanced", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "Do you track your daily calorie intake?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q19_a1", "text": "Yes, always", "effect_on_lifespan": 0.20},
+        {"id": "q19_a2", "text": "Most of the time", "effect_on_lifespan": 0.10},
+        {"id": "q19_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q19_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q19_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "Do you follow any specific eating patterns (e.g., intermittent fasting)?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q20_a1", "text": "Yes, intermittent fasting", "effect_on_lifespan": 0.10},
+        {"id": "q20_a2", "text": "Yes, ketogenic diet", "effect_on_lifespan": 0.10},
+        {"id": "q20_a3", "text": "Yes, other", "effect_on_lifespan": 0.05},
+        {"id": "q20_a4", "text": "No specific pattern", "effect_on_lifespan": 0.00}
+      ]
+    }
+  ]
+  

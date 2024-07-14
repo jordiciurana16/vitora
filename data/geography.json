@@ -1,0 +1,235 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "Do you live in an urban, suburban, or rural area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q1_a1", "text": "Urban", "effect_on_lifespan": 0.10},
+        {"id": "q1_a2", "text": "Suburban", "effect_on_lifespan": 0.20},
+        {"id": "q1_a3", "text": "Rural", "effect_on_lifespan": 0.15}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "How far is the nearest healthcare facility from your home?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q2_a1", "text": "Less than 5 km", "effect_on_lifespan": 0.20},
+        {"id": "q2_a2", "text": "5-10 km", "effect_on_lifespan": 0.10},
+        {"id": "q2_a3", "text": "More than 10 km", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "What type of climate do you live in?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q3_a1", "text": "Tropical", "effect_on_lifespan": 0.10},
+        {"id": "q3_a2", "text": "Dry", "effect_on_lifespan": -0.10},
+        {"id": "q3_a3", "text": "Temperate", "effect_on_lifespan": 0.20},
+        {"id": "q3_a4", "text": "Continental", "effect_on_lifespan": 0.15},
+        {"id": "q3_a5", "text": "Polar", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "How would you rate the air quality in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q4_a1", "text": "Excellent", "effect_on_lifespan": 0.20},
+        {"id": "q4_a2", "text": "Good", "effect_on_lifespan": 0.10},
+        {"id": "q4_a3", "text": "Fair", "effect_on_lifespan": 0.00},
+        {"id": "q4_a4", "text": "Poor", "effect_on_lifespan": -0.10},
+        {"id": "q4_a5", "text": "Very poor", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "How accessible are parks and recreational areas from your home?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q5_a1", "text": "Very accessible", "effect_on_lifespan": 0.20},
+        {"id": "q5_a2", "text": "Somewhat accessible", "effect_on_lifespan": 0.10},
+        {"id": "q5_a3", "text": "Not very accessible", "effect_on_lifespan": -0.10},
+        {"id": "q5_a4", "text": "Not accessible at all", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "Do you have access to clean drinking water?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q6_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q6_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q6_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q6_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q6_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "How often do you experience natural disasters (earthquakes, floods, etc.) in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q7_a1", "text": "Never", "effect_on_lifespan": 0.20},
+        {"id": "q7_a2", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q7_a3", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "q7_a4", "text": "Often", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "Do you have access to public transportation?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q8_a1", "text": "Yes, always", "effect_on_lifespan": 0.20},
+        {"id": "q8_a2", "text": "Most of the time", "effect_on_lifespan": 0.10},
+        {"id": "q8_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q8_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q8_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "How would you rate the quality of healthcare in your region?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q9_a1", "text": "Excellent", "effect_on_lifespan": 0.30},
+        {"id": "q9_a2", "text": "Good", "effect_on_lifespan": 0.20},
+        {"id": "q9_a3", "text": "Fair", "effect_on_lifespan": 0.00},
+        {"id": "q9_a4", "text": "Poor", "effect_on_lifespan": -0.20},
+        {"id": "q9_a5", "text": "Very poor", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Do you have easy access to fresh food and groceries?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q10_a1", "text": "Yes, always", "effect_on_lifespan": 0.20},
+        {"id": "q10_a2", "text": "Most of the time", "effect_on_lifespan": 0.10},
+        {"id": "q10_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q10_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q10_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "How would you describe the noise level in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q11_a1", "text": "Very quiet", "effect_on_lifespan": 0.20},
+        {"id": "q11_a2", "text": "Quiet", "effect_on_lifespan": 0.10},
+        {"id": "q11_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q11_a4", "text": "Noisy", "effect_on_lifespan": -0.10},
+        {"id": "q11_a5", "text": "Very noisy", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "How satisfied are you with your current living environment?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q12_a1", "text": "Very satisfied", "effect_on_lifespan": 0.30},
+        {"id": "q12_a2", "text": "Satisfied", "effect_on_lifespan": 0.20},
+        {"id": "q12_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q12_a4", "text": "Dissatisfied", "effect_on_lifespan": -0.20},
+        {"id": "q12_a5", "text": "Very dissatisfied", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "How would you rate the level of crime in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q13_a1", "text": "Very low", "effect_on_lifespan": 0.30},
+        {"id": "q13_a2", "text": "Low", "effect_on_lifespan": 0.20},
+        {"id": "q13_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q13_a4", "text": "High", "effect_on_lifespan": -0.20},
+        {"id": "q13_a5", "text": "Very high", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "Do you have access to emergency services (police, fire department, etc.)?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q14_a1", "text": "Yes, always", "effect_on_lifespan": 0.20},
+        {"id": "q14_a2", "text": "Most of the time", "effect_on_lifespan": 0.10},
+        {"id": "q14_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q14_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q14_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do you live in an area prone to pollution?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q15_a1", "text": "Never", "effect_on_lifespan": 0.20},
+        {"id": "q15_a2", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q15_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q15_a4", "text": "Often", "effect_on_lifespan": -0.20},
+        {"id": "q15_a5", "text": "Always", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "Do you have access to good educational institutions in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q16_a1", "text": "Yes, many", "effect_on_lifespan": 0.20},
+        {"id": "q16_a2", "text": "Some", "effect_on_lifespan": 0.10},
+        {"id": "q16_a3", "text": "Few", "effect_on_lifespan": -0.10},
+        {"id": "q16_a4", "text": "None", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "Do you live in an area with high levels of traffic congestion?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q17_a1", "text": "Never", "effect_on_lifespan": 0.20},
+        {"id": "q17_a2", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q17_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q17_a4", "text": "Often", "effect_on_lifespan": -0.20},
+        {"id": "q17_a5", "text": "Always", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "Do you live in an area with high levels of social inequality?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q18_a1", "text": "Never", "effect_on_lifespan": 0.20},
+        {"id": "q18_a2", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q18_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q18_a4", "text": "Often", "effect_on_lifespan": -0.20},
+        {"id": "q18_a5", "text": "Always", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "Do you have access to cultural and leisure activities in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q19_a1", "text": "Yes, many", "effect_on_lifespan": 0.20},
+        {"id": "q19_a2", "text": "Some", "effect_on_lifespan": 0.10},
+        {"id": "q19_a3", "text": "Few", "effect_on_lifespan": -0.10},
+        {"id": "q19_a4", "text": "None", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "Do you feel that your geographic location positively impacts your quality of life?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q20_a1", "text": "Yes, definitely", "effect_on_lifespan": 0.30},
+        {"id": "q20_a2", "text": "Yes, somewhat", "effect_on_lifespan": 0.20},
+        {"id": "q20_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q20_a4", "text": "No, somewhat", "effect_on_lifespan": -0.20},
+        {"id": "q20_a5", "text": "No, definitely", "effect_on_lifespan": -0.30}
+      ]
+    }
+
+  ]

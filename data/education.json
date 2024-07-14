@@ -1,0 +1,205 @@
+[
+    {
+        "question_id": 1,
+        "question_text": "What is the highest level of education you have completed?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed1_a1", "text": "Postgraduate degree", "effect_on_lifespan": 0.23},
+            {"id": "ed1_a2", "text": "Bachelor's degree", "effect_on_lifespan": 0.18},
+            {"id": "ed1_a3", "text": "High school diploma", "effect_on_lifespan": 0.10},
+            {"id": "ed1_a4", "text": "Less than high school", "effect_on_lifespan": -0.22}
+        ]
+    },
+    {
+        "question_id": 2,
+        "question_text": "Which educational activities do you regularly engage in?",
+        "input_type": "checkbox",
+        "answers": [
+            {"id": "ed2_a1", "text": "Professional workshops", "effect_on_lifespan": 0.11},
+            {"id": "ed2_a2", "text": "Online courses", "effect_on_lifespan": 0.10},
+            {"id": "ed2_a3", "text": "Public lectures", "effect_on_lifespan": 0.07},
+            {"id": "ed2_a4", "text": "Reading books", "effect_on_lifespan": 0.09}
+        ]
+    },
+    {
+        "question_id": 3,
+        "question_text": "Does your education level influence your ability to access and understand health information?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed3_a1", "text": "Significantly", "effect_on_lifespan": 0.24},
+            {"id": "ed3_a2", "text": "Somewhat", "effect_on_lifespan": 0.14},
+            {"id": "ed3_a3", "text": "Not at all", "effect_on_lifespan": -0.16}
+        ]
+    },
+    {
+        "question_id": 4,
+        "question_text": "How has your education impacted your employment opportunities?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed4_a1", "text": "Positively, with good job stability", "effect_on_lifespan": 0.20},
+            {"id": "ed4_a2", "text": "Moderately, but job stability is uncertain", "effect_on_lifespan": 0.05},
+            {"id": "ed4_a3", "text": "Negatively, with few opportunities", "effect_on_lifespan": -0.23}
+        ]
+    },
+    {
+        "question_id": 5,
+        "question_text": "Select the skills you've acquired through your education that enhance your daily life:",
+        "input_type": "checkbox",
+        "answers": [
+            {"id": "ed5_a1", "text": "Critical thinking", "effect_on_lifespan": 0.13},
+            {"id": "ed5_a2", "text": "Financial literacy", "effect_on_lifespan": 0.12},
+            {"id": "ed5_a3", "text": "Health literacy", "effect_on_lifespan": 0.15},
+            {"id": "ed5_a4", "text": "Communication skills", "effect_on_lifespan": 0.11}
+        ]
+    },
+    {
+        "question_id": 6,
+        "question_text": "How does your level of education influence your social interactions and networks?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed6_a1", "text": "Broad and diverse social networks", "effect_on_lifespan": 0.22},
+            {"id": "ed6_a2", "text": "Moderate social networks", "effect_on_lifespan": 0.12},
+            {"id": "ed6_a3", "text": "Limited social interactions", "effect_on_lifespan": -0.18}
+        ]
+    },
+    {
+        "question_id": 7,
+        "question_text": "Do you participate in lifelong learning or continuing education programs?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed7_a1", "text": "Regularly", "effect_on_lifespan": 0.19},
+            {"id": "ed7_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+            {"id": "ed7_a3", "text": "Never", "effect_on_lifespan": -0.17}
+        ]
+    },
+    {
+        "question_id": 8,
+        "question_text": "How confident are you in your ability to make informed health decisions based on your education?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed8_a1", "text": "Very confident", "effect_on_lifespan": 0.25},
+            {"id": "ed8_a2", "text": "Somewhat confident", "effect_on_lifespan": 0.12},
+            {"id": "ed8_a3", "text": "Not confident", "effect_on_lifespan": -0.21}
+        ]
+    },
+    {
+        "question_id": 9,
+        "question_text": "Has your education level affected your lifestyle choices (e.g., smoking, diet, exercise)?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed9_a1", "text": "Significantly better choices", "effect_on_lifespan": 0.23},
+            {"id": "ed9_a2", "text": "Slightly better choices", "effect_on_lifespan": 0.13},
+            {"id": "ed9_a3", "text": "No impact on choices", "effect_on_lifespan": -0.08}
+        ]
+    },
+    {
+        "question_id": 10,
+        "question_text": "Does your educational background provide you with sufficient knowledge to manage financial resources effectively?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed10_a1", "text": "Yes, very effectively", "effect_on_lifespan": 0.21},
+            {"id": "ed10_a2", "text": "Adequately", "effect_on_lifespan": 0.11},
+            {"id": "ed10_a3", "text": "Poorly", "effect_on_lifespan": -0.19}
+        ]
+    },
+    {
+        "question_id": 11,
+        "question_text": "How often do you access educational resources to improve your health literacy?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed11_a1", "text": "Regularly", "effect_on_lifespan": 0.21},
+            {"id": "ed11_a2", "text": "Occasionally", "effect_on_lifespan": 0.11},
+            {"id": "ed11_a3", "text": "Never", "effect_on_lifespan": -0.20}
+        ]
+    },
+    {
+        "question_id": 12,
+        "question_text": "Has your education contributed to a better understanding of public health measures?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed12_a1", "text": "Yes, greatly", "effect_on_lifespan": 0.24},
+            {"id": "ed12_a2", "text": "Somewhat", "effect_on_lifespan": 0.13},
+            {"id": "ed12_a3", "text": "Not at all", "effect_on_lifespan": -0.15}
+        ]
+    },
+    {
+        "question_id": 13,
+        "question_text": "How effectively can you communicate and interpret health information?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed13_a1", "text": "Very effectively", "effect_on_lifespan": 0.24},
+            {"id": "ed13_a2", "text": "With some difficulty", "effect_on_lifespan": 0.10},
+            {"id": "ed13_a3", "text": "I struggle to understand", "effect_on_lifespan": -0.20}
+        ]
+    },
+    {
+        "question_id": 14,
+        "question_text": "Do you feel that your education has equipped you to deal with stress effectively?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed14_a1", "text": "Yes, very well", "effect_on_lifespan": 0.23},
+            {"id": "ed14_a2", "text": "To some extent", "effect_on_lifespan": 0.12},
+            {"id": "ed14_a3", "text": "No, not at all", "effect_on_lifespan": -0.21}
+        ]
+    },
+    {
+        "question_id": 15,
+        "question_text": "How often does your educational level influence your professional and personal growth?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed15_a1", "text": "Significantly", "effect_on_lifespan": 0.22},
+            {"id": "ed15_a2", "text": "Moderately", "effect_on_lifespan": 0.12},
+            {"id": "ed15_a3", "text": "Minimally", "effect_on_lifespan": -0.11}
+        ]
+    },
+    {
+        "question_id": 16,
+        "question_text": "Do you have access to ongoing educational opportunities that enhance your career?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed16_a1", "text": "Extensive access", "effect_on_lifespan": 0.23},
+            {"id": "ed16_a2", "text": "Limited access", "effect_on_lifespan": 0.12},
+            {"id": "ed16_a3", "text": "No access", "effect_on_lifespan": -0.22}
+        ]
+    },
+    {
+        "question_id": 17,
+        "question_text": "Has your education influenced your understanding of nutritional information?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed17_a1", "text": "Greatly enhanced", "effect_on_lifespan": 0.20},
+            {"id": "ed17_a2", "text": "Somewhat enhanced", "effect_on_lifespan": 0.10},
+            {"id": "ed17_a3", "text": "No influence", "effect_on_lifespan": -0.18}
+        ]
+    },
+    {
+        "question_id": 18,
+        "question_text": "How does your level of education affect your ability to navigate healthcare systems?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed18_a1", "text": "Easily navigate", "effect_on_lifespan": 0.25},
+            {"id": "ed18_a2", "text": "With some difficulty", "effect_on_lifespan": 0.12},
+            {"id": "ed18_a3", "text": "Find it challenging", "effect_on_lifespan": -0.21}
+        ]
+    },
+    {
+        "question_id": 19,
+        "question_text": "How often do you utilize critical thinking skills learned through your education to make health-related decisions?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed19_a1", "text": "Regularly", "effect_on_lifespan": 0.21},
+            {"id": "ed19_a2", "text": "Occasionally", "effect_on_lifespan": 0.13},
+            {"id": "ed19_a3", "text": "Rarely", "effect_on_lifespan": -0.19}
+        ]
+    },
+    {
+        "question_id": 20,
+        "question_text": "Does your education provide you with opportunities to participate in health-promoting activities?",
+        "input_type": "radio",
+        "answers": [
+            {"id": "ed20_a1", "text": "Frequently", "effect_on_lifespan": 0.22},
+            {"id": "ed20_a2", "text": "Sometimes", "effect_on_lifespan": 0.11},
+            {"id": "ed20_a3", "text": "Never", "effect_on_lifespan": -0.20}
+        ]
+    }
+]

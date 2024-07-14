@@ -1,0 +1,243 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "How strict are the traffic laws in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q1_a1", "text": "Very strict", "effect_on_lifespan": 0.20},
+        {"id": "q1_a2", "text": "Strict", "effect_on_lifespan": 0.10},
+        {"id": "q1_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q1_a4", "text": "Lenient", "effect_on_lifespan": -0.10},
+        {"id": "q1_a5", "text": "Very lenient", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Do you feel that your government enforces health and safety regulations effectively?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q2_a1", "text": "Very effectively", "effect_on_lifespan": 0.20},
+        {"id": "q2_a2", "text": "Effectively", "effect_on_lifespan": 0.10},
+        {"id": "q2_a3", "text": "Moderately", "effect_on_lifespan": 0.00},
+        {"id": "q2_a4", "text": "Ineffectively", "effect_on_lifespan": -0.10},
+        {"id": "q2_a5", "text": "Very ineffectively", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "Are there strict anti-smoking laws in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q3_a1", "text": "Yes, very strict", "effect_on_lifespan": 0.20},
+        {"id": "q3_a2", "text": "Yes, strict", "effect_on_lifespan": 0.10},
+        {"id": "q3_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q3_a4", "text": "Lenient", "effect_on_lifespan": -0.10},
+        {"id": "q3_a5", "text": "No laws", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "How accessible is healthcare in your area due to government policies?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q4_a1", "text": "Very accessible", "effect_on_lifespan": 0.30},
+        {"id": "q4_a2", "text": "Accessible", "effect_on_lifespan": 0.20},
+        {"id": "q4_a3", "text": "Moderately accessible", "effect_on_lifespan": 0.10},
+        {"id": "q4_a4", "text": "Not very accessible", "effect_on_lifespan": -0.10},
+        {"id": "q4_a5", "text": "Not accessible at all", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "Are there effective policies for controlling pollution in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q5_a1", "text": "Very effective", "effect_on_lifespan": 0.20},
+        {"id": "q5_a2", "text": "Effective", "effect_on_lifespan": 0.10},
+        {"id": "q5_a3", "text": "Moderately effective", "effect_on_lifespan": 0.00},
+        {"id": "q5_a4", "text": "Ineffective", "effect_on_lifespan": -0.10},
+        {"id": "q5_a5", "text": "Very ineffective", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "Does your area have strict regulations on food safety?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q6_a1", "text": "Very strict", "effect_on_lifespan": 0.20},
+        {"id": "q6_a2", "text": "Strict", "effect_on_lifespan": 0.10},
+        {"id": "q6_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q6_a4", "text": "Lenient", "effect_on_lifespan": -0.10},
+        {"id": "q6_a5", "text": "Very lenient", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "Are there effective anti-corruption laws in your country?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q7_a1", "text": "Yes, very effective", "effect_on_lifespan": 0.20},
+        {"id": "q7_a2", "text": "Yes, effective", "effect_on_lifespan": 0.10},
+        {"id": "q7_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q7_a4", "text": "Ineffective", "effect_on_lifespan": -0.10},
+        {"id": "q7_a5", "text": "Very ineffective", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "Do you have access to clean drinking water due to government regulations?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q8_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q8_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q8_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q8_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q8_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "How would you rate the effectiveness of public health campaigns in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q9_a1", "text": "Very effective", "effect_on_lifespan": 0.20},
+        {"id": "q9_a2", "text": "Effective", "effect_on_lifespan": 0.10},
+        {"id": "q9_a3", "text": "Moderately effective", "effect_on_lifespan": 0.00},
+        {"id": "q9_a4", "text": "Ineffective", "effect_on_lifespan": -0.10},
+        {"id": "q9_a5", "text": "Very ineffective", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Are there strong labor laws protecting workers' rights in your country?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q10_a1", "text": "Yes, very strong", "effect_on_lifespan": 0.20},
+        {"id": "q10_a2", "text": "Strong", "effect_on_lifespan": 0.10},
+        {"id": "q10_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q10_a4", "text": "Weak", "effect_on_lifespan": -0.10},
+        {"id": "q10_a5", "text": "Very weak", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "How would you rate the availability of social welfare programs in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q11_a1", "text": "Very high", "effect_on_lifespan": 0.30},
+        {"id": "q11_a2", "text": "High", "effect_on_lifespan": 0.20},
+        {"id": "q11_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q11_a4", "text": "Low", "effect_on_lifespan": -0.20},
+        {"id": "q11_a5", "text": "Very low", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "How stringent are the laws on drug abuse in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q12_a1", "text": "Very stringent", "effect_on_lifespan": 0.20},
+        {"id": "q12_a2", "text": "Stringent", "effect_on_lifespan": 0.10},
+        {"id": "q12_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q12_a4", "text": "Lenient", "effect_on_lifespan": -0.10},
+        {"id": "q12_a5", "text": "Very lenient", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "Do you feel safe in your community due to law enforcement presence?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q13_a1", "text": "Very safe", "effect_on_lifespan": 0.30},
+        {"id": "q13_a2", "text": "Safe", "effect_on_lifespan": 0.20},
+        {"id": "q13_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q13_a4", "text": "Unsafe", "effect_on_lifespan": -0.20},
+        {"id": "q13_a5", "text": "Very unsafe", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "Are there strong anti-discrimination laws in your country?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q14_a1", "text": "Yes, very strong", "effect_on_lifespan": 0.20},
+        {"id": "q14_a2", "text": "Strong", "effect_on_lifespan": 0.10},
+        {"id": "q14_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q14_a4", "text": "Weak", "effect_on_lifespan": -0.10},
+        {"id": "q14_a5", "text": "Very weak", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do you have access to affordable healthcare due to government policies?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q15_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q15_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q15_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q15_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q15_a5", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "How effective are the laws regarding workplace safety in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q16_a1", "text": "Very effective", "effect_on_lifespan": 0.20},
+        {"id": "q16_a2", "text": "Effective", "effect_on_lifespan": 0.10},
+        {"id": "q16_a3", "text": "Moderately effective", "effect_on_lifespan": 0.00},
+        {"id": "q16_a4", "text": "Ineffective", "effect_on_lifespan": -0.10},
+        {"id": "q16_a5", "text": "Very ineffective", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "Are there effective laws regulating the sale of alcohol in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q17_a1", "text": "Yes, very effective", "effect_on_lifespan": 0.20},
+        {"id": "q17_a2", "text": "Yes, effective", "effect_on_lifespan": 0.10},
+        {"id": "q17_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q17_a4", "text": "Ineffective", "effect_on_lifespan": -0.10},
+        {"id": "q17_a5", "text": "Very ineffective", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "How would you rate the effectiveness of child protection laws in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q18_a1", "text": "Very effective", "effect_on_lifespan": 0.30},
+        {"id": "q18_a2", "text": "Effective", "effect_on_lifespan": 0.20},
+        {"id": "q18_a3", "text": "Moderately effective", "effect_on_lifespan": 0.00},
+        {"id": "q18_a4", "text": "Ineffective", "effect_on_lifespan": -0.20},
+        {"id": "q18_a5", "text": "Very ineffective", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "Do you feel that the laws in your country promote equality?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q19_a1", "text": "Yes, very much", "effect_on_lifespan": 0.20},
+        {"id": "q19_a2", "text": "Yes", "effect_on_lifespan": 0.10},
+        {"id": "q19_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q19_a4", "text": "No", "effect_on_lifespan": -0.10},
+        {"id": "q19_a5", "text": "Not at all", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "Are there strict gun control laws in your country?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q20_a1", "text": "Yes, very strict", "effect_on_lifespan": 0.20},
+        {"id": "q20_a2", "text": "Yes, strict", "effect_on_lifespan": 0.10},
+        {"id": "q20_a3", "text": "Moderate", "effect_on_lifespan": 0.00},
+        {"id": "q20_a4", "text": "Lenient", "effect_on_lifespan": -0.10},
+        {"id": "q20_a5", "text": "Very lenient", "effect_on_lifespan": -0.20}
+      ]
+    }
+  ]
+  

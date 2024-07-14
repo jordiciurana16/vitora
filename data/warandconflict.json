@@ -1,0 +1,225 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "Have you or your family been directly affected by war or armed conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q1_a1", "text": "Yes", "effect_on_lifespan": -0.30},
+        {"id": "q1_a2", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Do you live in a region currently experiencing armed conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q2_a1", "text": "Yes", "effect_on_lifespan": -0.50},
+        {"id": "q2_a2", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "How often do you hear about acts of violence in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q3_a1", "text": "Daily", "effect_on_lifespan": -0.40},
+        {"id": "q3_a2", "text": "Weekly", "effect_on_lifespan": -0.20},
+        {"id": "q3_a3", "text": "Monthly", "effect_on_lifespan": -0.10},
+        {"id": "q3_a4", "text": "Rarely", "effect_on_lifespan": 0.00},
+        {"id": "q3_a5", "text": "Never", "effect_on_lifespan": 0.10}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "Do you feel safe in your current place of residence?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q4_a1", "text": "Yes, very safe", "effect_on_lifespan": 0.30},
+        {"id": "q4_a2", "text": "Safe", "effect_on_lifespan": 0.20},
+        {"id": "q4_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q4_a4", "text": "Unsafe", "effect_on_lifespan": -0.20},
+        {"id": "q4_a5", "text": "Very unsafe", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "Have you experienced displacement due to conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q5_a1", "text": "Yes, multiple times", "effect_on_lifespan": -0.50},
+        {"id": "q5_a2", "text": "Yes, once", "effect_on_lifespan": -0.30},
+        {"id": "q5_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "Do you have access to basic needs (food, water, shelter) despite conflicts?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q6_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q6_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q6_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q6_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q6_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "Do you have access to healthcare during times of conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q7_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q7_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q7_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q7_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q7_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "Do you have family members who are involved in armed conflicts?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q8_a1", "text": "Yes", "effect_on_lifespan": -0.30},
+        {"id": "q8_a2", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "How often do you feel anxious or stressed due to conflict in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q9_a1", "text": "Always", "effect_on_lifespan": -0.40},
+        {"id": "q9_a2", "text": "Often", "effect_on_lifespan": -0.30},
+        {"id": "q9_a3", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "q9_a4", "text": "Rarely", "effect_on_lifespan": 0.00},
+        {"id": "q9_a5", "text": "Never", "effect_on_lifespan": 0.10}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Do you have access to education despite the conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q10_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q10_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q10_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q10_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q10_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "Do you have access to mental health support services during conflicts?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q11_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q11_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q11_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q11_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q11_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "Have you witnessed violence or conflict first-hand?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q12_a1", "text": "Yes, many times", "effect_on_lifespan": -0.40},
+        {"id": "q12_a2", "text": "Yes, a few times", "effect_on_lifespan": -0.20},
+        {"id": "q12_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "Do you feel that there are adequate measures in place for your safety during conflicts?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q13_a1", "text": "Yes, very adequate", "effect_on_lifespan": 0.30},
+        {"id": "q13_a2", "text": "Adequate", "effect_on_lifespan": 0.20},
+        {"id": "q13_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q13_a4", "text": "Inadequate", "effect_on_lifespan": -0.20},
+        {"id": "q13_a5", "text": "Very inadequate", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "Have you lost family or friends due to conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q14_a1", "text": "Yes, many", "effect_on_lifespan": -0.50},
+        {"id": "q14_a2", "text": "Yes, a few", "effect_on_lifespan": -0.30},
+        {"id": "q14_a3", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do you have access to reliable information and news about the conflict in your area?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q15_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q15_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q15_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q15_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q15_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "Do you have any injuries or health issues resulting from conflicts?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q16_a1", "text": "Yes, severe", "effect_on_lifespan": -0.50},
+        {"id": "q16_a2", "text": "Yes, moderate", "effect_on_lifespan": -0.30},
+        {"id": "q16_a3", "text": "Yes, minor", "effect_on_lifespan": -0.10},
+        {"id": "q16_a4", "text": "No", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "Do you have access to clean drinking water during times of conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q17_a1", "text": "Yes, always", "effect_on_lifespan": 0.30},
+        {"id": "q17_a2", "text": "Most of the time", "effect_on_lifespan": 0.20},
+        {"id": "q17_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q17_a4", "text": "Rarely", "effect_on_lifespan": -0.20},
+        {"id": "q17_a5", "text": "Never", "effect_on_lifespan": -0.40}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "Do you receive any support from humanitarian organizations?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q18_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.30},
+        {"id": "q18_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q18_a3", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q18_a4", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "Have you or your family received psychological support due to the impact of conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q19_a1", "text": "Yes, regularly", "effect_on_lifespan": 0.30},
+        {"id": "q19_a2", "text": "Occasionally", "effect_on_lifespan": 0.10},
+        {"id": "q19_a3", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q19_a4", "text": "Never", "effect_on_lifespan": -0.30}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "Do you have a plan for evacuation or safety in case of an emergency due to conflict?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q20_a1", "text": "Yes, well-prepared", "effect_on_lifespan": 0.30},
+        {"id": "q20_a2", "text": "Somewhat prepared", "effect_on_lifespan": 0.10},
+        {"id": "q20_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q20_a4", "text": "Not very prepared", "effect_on_lifespan": -0.10},
+        {"id": "q20_a5", "text": "Not prepared at all", "effect_on_lifespan": -0.30}
+      ]
+    }
+  ]
+  

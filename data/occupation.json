@@ -1,0 +1,237 @@
+[
+    {
+      "question_id": 1,
+      "question_text": "How many hours do you work per week?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q1_a1", "text": "Less than 20 hours", "effect_on_lifespan": 0.20},
+        {"id": "q1_a2", "text": "20-40 hours", "effect_on_lifespan": 0.10},
+        {"id": "q1_a3", "text": "41-60 hours", "effect_on_lifespan": 0.00},
+        {"id": "q1_a4", "text": "More than 60 hours", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 2,
+      "question_text": "Do you have a physically demanding job?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q2_a1", "text": "Yes, very demanding", "effect_on_lifespan": -0.20},
+        {"id": "q2_a2", "text": "Moderately demanding", "effect_on_lifespan": -0.10},
+        {"id": "q2_a3", "text": "Slightly demanding", "effect_on_lifespan": 0.00},
+        {"id": "q2_a4", "text": "Not demanding at all", "effect_on_lifespan": 0.10}
+      ]
+    },
+    {
+      "question_id": 3,
+      "question_text": "Do you experience high levels of stress at work?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q3_a1", "text": "Yes, very often", "effect_on_lifespan": -0.30},
+        {"id": "q3_a2", "text": "Often", "effect_on_lifespan": -0.20},
+        {"id": "q3_a3", "text": "Sometimes", "effect_on_lifespan": -0.10},
+        {"id": "q3_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q3_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 4,
+      "question_text": "Do you have access to health benefits through your employer?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q4_a1", "text": "Yes, comprehensive coverage", "effect_on_lifespan": 0.30},
+        {"id": "q4_a2", "text": "Yes, partial coverage", "effect_on_lifespan": 0.20},
+        {"id": "q4_a3", "text": "No", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 5,
+      "question_text": "Do you have a flexible work schedule?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q5_a1", "text": "Yes, very flexible", "effect_on_lifespan": 0.20},
+        {"id": "q5_a2", "text": "Somewhat flexible", "effect_on_lifespan": 0.10},
+        {"id": "q5_a3", "text": "Not very flexible", "effect_on_lifespan": 0.00},
+        {"id": "q5_a4", "text": "Not flexible at all", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 6,
+      "question_text": "Do you have opportunities for career advancement?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q6_a1", "text": "Yes, many opportunities", "effect_on_lifespan": 0.20},
+        {"id": "q6_a2", "text": "Some opportunities", "effect_on_lifespan": 0.10},
+        {"id": "q6_a3", "text": "Few opportunities", "effect_on_lifespan": 0.00},
+        {"id": "q6_a4", "text": "No opportunities", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 7,
+      "question_text": "Do you have a good work-life balance?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q7_a1", "text": "Yes, excellent", "effect_on_lifespan": 0.30},
+        {"id": "q7_a2", "text": "Good", "effect_on_lifespan": 0.20},
+        {"id": "q7_a3", "text": "Fair", "effect_on_lifespan": 0.00},
+        {"id": "q7_a4", "text": "Poor", "effect_on_lifespan": -0.10},
+        {"id": "q7_a5", "text": "Very poor", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 8,
+      "question_text": "What industry do you work in?",
+      "input_type": "checkbox",
+      "answers": [
+        {"id": "q8_a1", "text": "Healthcare", "effect_on_lifespan": 0.10},
+        {"id": "q8_a2", "text": "Education", "effect_on_lifespan": 0.10},
+        {"id": "q8_a3", "text": "Finance", "effect_on_lifespan": 0.00},
+        {"id": "q8_a4", "text": "Technology", "effect_on_lifespan": 0.10},
+        {"id": "q8_a5", "text": "Construction", "effect_on_lifespan": -0.10},
+        {"id": "q8_a6", "text": "Retail", "effect_on_lifespan": 0.00},
+        {"id": "q8_a7", "text": "Other", "effect_on_lifespan": 0.00}
+      ]
+    },
+    {
+      "question_id": 9,
+      "question_text": "Do you feel your job is secure?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q9_a1", "text": "Yes, very secure", "effect_on_lifespan": 0.20},
+        {"id": "q9_a2", "text": "Fairly secure", "effect_on_lifespan": 0.10},
+        {"id": "q9_a3", "text": "Somewhat secure", "effect_on_lifespan": 0.00},
+        {"id": "q9_a4", "text": "Not very secure", "effect_on_lifespan": -0.10},
+        {"id": "q9_a5", "text": "Not secure at all", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 10,
+      "question_text": "Do you have supportive colleagues?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q10_a1", "text": "Yes, very supportive", "effect_on_lifespan": 0.20},
+        {"id": "q10_a2", "text": "Supportive", "effect_on_lifespan": 0.10},
+        {"id": "q10_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q10_a4", "text": "Not supportive", "effect_on_lifespan": -0.10},
+        {"id": "q10_a5", "text": "Very unsupportive", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 11,
+      "question_text": "Do you have access to professional development opportunities?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q11_a1", "text": "Yes, many opportunities", "effect_on_lifespan": 0.20},
+        {"id": "q11_a2", "text": "Some opportunities", "effect_on_lifespan": 0.10},
+        {"id": "q11_a3", "text": "Few opportunities", "effect_on_lifespan": 0.00},
+        {"id": "q11_a4", "text": "No opportunities", "effect_on_lifespan": -0.10}
+      ]
+    },
+    {
+      "question_id": 12,
+      "question_text": "Does your job require you to work irregular hours or shifts?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q12_a1", "text": "Yes, always", "effect_on_lifespan": -0.20},
+        {"id": "q12_a2", "text": "Often", "effect_on_lifespan": -0.10},
+        {"id": "q12_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q12_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q12_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 13,
+      "question_text": "Do you feel your work is meaningful?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q13_a1", "text": "Yes, very meaningful", "effect_on_lifespan": 0.30},
+        {"id": "q13_a2", "text": "Meaningful", "effect_on_lifespan": 0.20},
+        {"id": "q13_a3", "text": "Somewhat meaningful", "effect_on_lifespan": 0.10},
+        {"id": "q13_a4", "text": "Not meaningful", "effect_on_lifespan": -0.10},
+        {"id": "q13_a5", "text": "Not at all meaningful", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 14,
+      "question_text": "How often do you experience job-related fatigue?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q14_a1", "text": "Daily", "effect_on_lifespan": -0.30},
+        {"id": "q14_a2", "text": "Several times a week", "effect_on_lifespan": -0.20},
+        {"id": "q14_a3", "text": "Once a week", "effect_on_lifespan": -0.10},
+        {"id": "q14_a4", "text": "Rarely", "effect_on_lifespan": 0.10},
+        {"id": "q14_a5", "text": "Never", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 15,
+      "question_text": "Do you have a long commute to work?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q15_a1", "text": "Yes, more than 1 hour", "effect_on_lifespan": -0.20},
+        {"id": "q15_a2", "text": "30 minutes to 1 hour", "effect_on_lifespan": -0.10},
+        {"id": "q15_a3", "text": "Less than 30 minutes", "effect_on_lifespan": 0.10},
+        {"id": "q15_a4", "text": "No commute (work from home)", "effect_on_lifespan": 0.20}
+      ]
+    },
+    {
+      "question_id": 16,
+      "question_text": "How satisfied are you with your current job?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q16_a1", "text": "Very satisfied", "effect_on_lifespan": 0.30},
+        {"id": "q16_a2", "text": "Satisfied", "effect_on_lifespan": 0.20},
+        {"id": "q16_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q16_a4", "text": "Dissatisfied", "effect_on_lifespan": -0.10},
+        {"id": "q16_a5", "text": "Very dissatisfied", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 17,
+      "question_text": "Do you have ergonomic support at your workplace?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q17_a1", "text": "Yes, excellent support", "effect_on_lifespan": 0.30},
+        {"id": "q17_a2", "text": "Good support", "effect_on_lifespan": 0.20},
+        {"id": "q17_a3", "text": "Average support", "effect_on_lifespan": 0.00},
+        {"id": "q17_a4", "text": "Poor support", "effect_on_lifespan": -0.10},
+        {"id": "q17_a5", "text": "No support", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 18,
+      "question_text": "Do you have opportunities for social interaction at work?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q18_a1", "text": "Yes, very often", "effect_on_lifespan": 0.20},
+        {"id": "q18_a2", "text": "Often", "effect_on_lifespan": 0.10},
+        {"id": "q18_a3", "text": "Sometimes", "effect_on_lifespan": 0.00},
+        {"id": "q18_a4", "text": "Rarely", "effect_on_lifespan": -0.10},
+        {"id": "q18_a5", "text": "Never", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 19,
+      "question_text": "Do you feel valued at your workplace?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q19_a1", "text": "Yes, very valued", "effect_on_lifespan": 0.30},
+        {"id": "q19_a2", "text": "Valued", "effect_on_lifespan": 0.20},
+        {"id": "q19_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q19_a4", "text": "Undervalued", "effect_on_lifespan": -0.10},
+        {"id": "q19_a5", "text": "Very undervalued", "effect_on_lifespan": -0.20}
+      ]
+    },
+    {
+      "question_id": 20,
+      "question_text": "Do you receive adequate compensation for your work?",
+      "input_type": "radio",
+      "answers": [
+        {"id": "q20_a1", "text": "Yes, more than adequate", "effect_on_lifespan": 0.30},
+        {"id": "q20_a2", "text": "Adequate", "effect_on_lifespan": 0.20},
+        {"id": "q20_a3", "text": "Neutral", "effect_on_lifespan": 0.00},
+        {"id": "q20_a4", "text": "Inadequate", "effect_on_lifespan": -0.10},
+        {"id": "q20_a5", "text": "Very inadequate", "effect_on_lifespan": -0.20}
+      ]
+    }
+  ]
+  
