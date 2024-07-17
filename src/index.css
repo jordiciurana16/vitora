@@ -149,16 +149,10 @@ input[type="date"]:focus,
 
 }
 
-
-.card {
-  border-color: red;
-}
-
 /* Estils CSS per als cards que contenen els gràfics */
 
 .card-body-chart {
     height: 275px;
-    width: 400px; /* Fer que el cos del card ocupi tot l'espai disponible */
     display: flex;
     flex-direction: column;
     justify-content: center;

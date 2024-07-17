@@ -7,7 +7,7 @@ function Factor({ onSubmitSuccess, onBack }) {
   };
 
   return (
-    <Container fluid className='d-flex flex-column align-items-center' style={{ minHeight: '50vh', maxHeight:'50vh' }}>
+    <Container fluid className='d-flex flex-column align-items-center' style={{  marginTop: '13vh', minHeight: '50vh', maxHeight:'50vh' }}>
       <Row className="justify-content-center w-100 mt-5 "style={{ minHeight: '40vh' }}>
         <Col xs={12} md={10} lg={8} xl={6}>
         <Card className=" shadow-sm">

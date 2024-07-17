@@ -2,68 +2,67 @@ import React from 'react';
 import styles from './Sidebar.module.css';
 import { Container, Row, Col, Nav as BootstrapNav, NavItem } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../../common/Logo'; // Importa el component del logotip aquí
 
-function Sidebar() {
+function Sidebar({ isVisible }) {
   const location = useLocation();
   const isActive = (link) => {
     return location.pathname === link ? styles.activeLink : '';
   };
 
   return (
-    <Container fluid>
+    <Container fluid className={`${styles.sidebarContainer} ${isVisible ? styles.visible : styles.hidden}`}>
       <Row>
         <Col className='p-0'>
           <nav className={`${styles.navContainer} position-sticky pt-3`}>
             <BootstrapNav className='flex-column'>
               <div className={styles.navLinks}>
                 <NavItem>
-                  <Link Link to="accidents" className={isActive('/vitora/profile/accidents')}>Accidents</Link>
+                  <Link to="/dashboard/accidents" className={isActive('/dashboard/accidents')}>Accidents</Link>
                 </NavItem>
                 <NavItem>
-                <Link Link to="addiction" className={isActive('/vitora/profile/addiction')}>Addiction</Link>
+                  <Link to="/dashboard/addiction" className={isActive('/dashboard/addiction')}>Addiction</Link>
                 </NavItem>
                 <NavItem>
-                <Link Link to="climate" className={isActive('/vitora/profile/climate')}>Climate</Link>
+                  <Link to="/dashboard/climate" className={isActive('/dashboard/climate')}>Climate</Link>
                 </NavItem>
                 <NavItem>
-                <Link Link to="economy" className={isActive('/vitora/profile/economy')}>Economy</Link>
+                  <Link to="/dashboard/economy" className={isActive('/dashboard/economy')}>Economy</Link>
                 </NavItem>
                 <NavItem>
-                <Link Link to="education" className={isActive('/vitora/profile/education')}>Education</Link>
+                  <Link to="/dashboard/education" className={isActive('/dashboard/education')}>Education</Link>
                 </NavItem>
                 <NavItem>
-                <Link Link to="environment" className={isActive('/vitora/profile/environment')}>Environemnt</Link>
+                  <Link to="/dashboard/environment" className={isActive('/dashboard/environment')}>Environment</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="exercise" className={isActive('/vitora/profile/exercise')}>Exercise</Link>
+                  <Link to="/dashboard/exercise" className={isActive('/dashboard/exercise')}>Exercise</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="genetic" className={isActive('/vitora/profile/genetic')}>Genetic</Link>
+                  <Link to="/dashboard/genetic" className={isActive('/dashboard/genetic')}>Genetic</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="geography" className={isActive('/vitora/profile/geography')}>Geography</Link>
+                  <Link to="/dashboard/geography" className={isActive('/dashboard/geography')}>Geography</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="lawsandpolicies" className={isActive('/vitora/profile/lawsandpolicies')}>Laws and Policies</Link>
+                  <Link to="/dashboard/lawsandpolicies" className={isActive('/dashboard/lawsandpolicies')}>Laws and Policies</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="health" className={isActive('/vitora/profile/health')}>Health</Link>
+                  <Link to="/dashboard/health" className={isActive('/dashboard/health')}>Health</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="nutrition" className={isActive('/vitora/profile/nutririon')}>Nutrition</Link>
+                  <Link to="/dashboard/nutrition" className={isActive('/dashboard/nutrition')}>Nutrition</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="occupation" className={isActive('/vitora/profile/occupation')}>Occupation</Link>
+                  <Link to="/dashboard/occupation" className={isActive('/dashboard/occupation')}>Occupation</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="stress" className={isActive('/vitora/profile/stress')}>Stress</Link>
+                  <Link to="/dashboard/stress" className={isActive('/dashboard/stress')}>Stress</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="sociallive" className={isActive('/vitora/profile/sociallive')}>Social live</Link>
+                  <Link to="/dashboard/sociallive" className={isActive('/dashboard/sociallive')}>Social live</Link>
                 </NavItem>
                 <NavItem>
-                <Link to="warandconflict" className={isActive('/vitora/profile/warandconflict')}>War and Conflict</Link>
+                  <Link to="/dashboard/warandconflict" className={isActive('/dashboard/warandconflict')}>War and Conflict</Link>
                 </NavItem>
               </div>
             </BootstrapNav>

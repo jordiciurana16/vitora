@@ -1,3 +1,5 @@
+/* styles/Footer.module.css */
+
 .footerContainer {
     background-color: var(--dark-color);
 }
@@ -13,27 +15,26 @@
     text-decoration: none; /* Assegurem que no hi ha text-decoration */
 }
 
-
 .customHr {
     border-top: 2px solid var(--light-color);
 }
 
 .copyrightRow {
-    height: 70px;
+    height: auto; /* Ajusta l'alçada automàticament */
     background-color: var(--dark-color);
 }
 
 .socialIcons a {
     color: var(--light-color);
     margin-right: 20px; /* Espai entre les icones */
-    transition: all .2s ease-in-out
+    transition: all .2s ease-in-out;
 }
 
 .socialIcons a:hover {
     color: var(--secondary-color);
 }
 
-footer span  {
+footer span {
     color: var(--light-color) !important;
 }
 

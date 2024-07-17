@@ -16,7 +16,7 @@ const DataSection = () => (
     </div>
     <div className='d-flex dataSection'>
       {chartData.map(chart => (
-        <Col key={chart.id} xs={5} className="px-3 my-3">
+        <Col key={chart.id} xs={6} className="px-4 my-3">
           <Card>
             <Card.Body className='card-body-chart'>
               {chart.type === 'bar' && <BarChart chartData={chart} />}

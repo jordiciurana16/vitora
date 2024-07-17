@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Badge, Form, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import React, { useState, useEffect, useRef } from 'react';
+import { Container, Row, Col, Badge, Form, Tooltip, OverlayTrigger, Button } from 'react-bootstrap';
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useNavigate } from 'react-router-dom';
 import { ChevronDoubleLeft } from 'react-bootstrap-icons';
@@ -9,6 +9,9 @@ function Questionnaire({ factor, title }) {
   const { updateLifeAndPercentage } = useGlobalContext();
   const [selectedOptions, setSelectedOptions] = useState({});
   const [previousSelectedOptions, setPreviousSelectedOptions] = useState({});
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answeredCount, setAnsweredCount] = useState(0);
+  const questionRefs = useRef([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,6 +27,18 @@ function Questionnaire({ factor, title }) {
 
     fetchData();
   }, [factor]);
+
+  useEffect(() => {
+    if (questionRefs.current[currentQuestion]) {
+      const yOffset = -300; // Ajustament de desplaçament
+      const y = questionRefs.current[currentQuestion].getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [currentQuestion]);
+
+  useEffect(() => {
+    setAnsweredCount(Object.keys(selectedOptions).length);
+  }, [selectedOptions]);
 
   const handleChange = (event, questionIndex, answerIndex, isCheckbox) => {
     const { checked, value } = event.target;
@@ -45,6 +60,10 @@ function Questionnaire({ factor, title }) {
 
       updateLifeAndPercentage(effect - previousEffect);
     }
+
+    if (questionIndex + 1 < questions.length) {
+      setCurrentQuestion(questionIndex + 1);
+    }
   };
 
   const handleChevronClick = () => {
@@ -59,7 +78,25 @@ function Questionnaire({ factor, title }) {
       const totalEffect = Object.values(value).reduce((acc, curr) => acc + curr, 0);
       return totalEffect.toFixed(2);
     }
-    return '';
+    return '0.00';
+  };
+
+  const renderBadgeColor = (index) => {
+    const value = selectedOptions[index];
+    let totalEffect = 0;
+    if (typeof value === 'number') {
+      totalEffect = value;
+    } else if (typeof value === 'object') {
+      totalEffect = Object.values(value).reduce((acc, curr) => acc + curr, 0);
+    }
+    
+    if (totalEffect > 0) {
+      return 'success';
+    } else if (totalEffect < 0) {
+      return 'danger';
+    } else {
+      return 'secondary';
+    }
   };
 
   return (
@@ -71,13 +108,13 @@ function Questionnaire({ factor, title }) {
           <Form className='ms-3 '>
             {questions.map((question, index) => (
               <React.Fragment key={index}>
-                <Row id={`question-${index}`} className="mb-1">
+                <Row id={`question-${index}`} className="mb-1" ref={el => questionRefs.current[index] = el}>
                   <Col xs={1}><h6>{index + 1}.</h6></Col>
                   <Col xs={6}><h6>{question.question_text}</h6></Col>
                   <Col xs={3}>
                     {selectedOptions[index] !== undefined && (
-                      <Badge bg={renderBadgeValue(index) >= 0 ? 'success' : 'danger'} className="float-end">
-                        {`${renderBadgeValue(index) > 0 ? '+' : ''}${renderBadgeValue(index)}%`}
+                      <Badge bg={renderBadgeColor(index)} className="float-end">
+                        {`${renderBadgeValue(index) >= 0 ? '+' : ''}${renderBadgeValue(index)}%`}
                       </Badge>
                     )}
                   </Col>
@@ -92,7 +129,7 @@ function Questionnaire({ factor, title }) {
                         name={`question-${index}`}
                         label={answer.text}
                         value={answer.effect_on_lifespan}
-                        checked={question.input_type === 'radio' ? selectedOptions[index] === answer.effect_on_lifespan : selectedOptions[index] && selectedOptions[index][ansIndex]}
+                        checked={question.input_type === 'radio' ? selectedOptions[index] === answer.effect_on_lifespan : selectedOptions[index] && selectedOptions[index][ansIndex] !== undefined && selectedOptions[index][ansIndex] !== 0}
                         onChange={(e) => handleChange(e, index, ansIndex, question.input_type === 'checkbox')}
                       />
                     ))}
@@ -100,6 +137,14 @@ function Questionnaire({ factor, title }) {
                 </Row>
               </React.Fragment>
             ))}
+            <div className='pb-4' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
+              <Button               onClick={handleChevronClick} 
+ type='submit'>View results</Button>
+              <p className='pt-4'>
+                You have answered {answeredCount} of {questions.length} questions
+              </p>
+              <p className='text-muted'>The more questions you answer, the more accurate your prediction will be.</p>
+            </div>
           </Form>
 
           <OverlayTrigger

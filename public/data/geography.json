@@ -5,7 +5,7 @@
       "input_type": "radio",
       "answers": [
         {"id": "q1_a1", "text": "Urban", "effect_on_lifespan": 0.10},
-        {"id": "q1_a2", "text": "Suburban", "effect_on_lifespan": 0.20},
+        {"id": "q1_a2", "text": "Suburban", "effect_on_lifespan": 0.00},
         {"id": "q1_a3", "text": "Rural", "effect_on_lifespan": 0.15}
       ]
     },
@@ -22,11 +22,11 @@
     {
       "question_id": 3,
       "question_text": "What type of climate do you live in?",
-      "input_type": "radio",
+      "input_type": "checkbox",
       "answers": [
         {"id": "q3_a1", "text": "Tropical", "effect_on_lifespan": 0.10},
         {"id": "q3_a2", "text": "Dry", "effect_on_lifespan": -0.10},
-        {"id": "q3_a3", "text": "Temperate", "effect_on_lifespan": 0.20},
+        {"id": "q3_a3", "text": "Temperate", "effect_on_lifespan": 0.00},
         {"id": "q3_a4", "text": "Continental", "effect_on_lifespan": 0.15},
         {"id": "q3_a5", "text": "Polar", "effect_on_lifespan": -0.20}
       ]

@@ -1,5 +1,8 @@
-nav {
-  box-shadow: 0 0 10px #00000033 !important;
+/* styles/Nav.module.css */
+
+.navbar {
+  box-shadow: 0 0 5px #00000033 !important; /* Efecte de shadow */
+  background-color: white; /* Color de fons blanc */
 }
 
 .navIcon svg {
@@ -42,4 +45,20 @@ span {
 .dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0; /* Override any margin settings */
+}
+
+/* Adjust logo and brand text size on small screens */
+@media (max-width: 576px) {
+  .navbar-brand svg {
+    width: 30px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .navbar-brand span {
+    font-size: 1.2rem; /* Adjust the font size of the brand text */
+  }
+
+  .navIcon svg {
+    font-size: 1.2rem; /* Adjust the font size of the icons */
+  }
 }

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { BsLayoutSidebar } from 'react-icons/bs';
 import Header from '../components/layout/header/Header';
 import Sidebar from '../components/layout/sidebar/Sidebar';
 import MainRouting from '../components/layout/main/MainRouting';
@@ -16,7 +17,18 @@ import { useGlobalContext } from '../hooks/GlobalContext';
 
 function DashboardPage() {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const { lifespan, percentage } = useGlobalContext();
+
+  useEffect(() => {
+    if (currentStep >= 3) {
+      setIsSidebarVisible(true);
+    }
+  }, [currentStep]);
+
+  const toggleSidebar = () => {
+    setIsSidebarVisible(!isSidebarVisible);
+  };
 
   const handleBirthdateSubmitSuccess = () => {
     setCurrentStep(2);
@@ -49,7 +61,7 @@ function DashboardPage() {
       case 4:
         return <Forms onSubmitSuccess={handleFormsSubmitSuccess} onBack={handleBack} />;
       default:
-        return null; // No renderitzem cap component aquí si currentStep > 4
+        return null;
     }
   };
 
@@ -73,42 +85,84 @@ function DashboardPage() {
 
       <Container fluid>
         <Row className='px-0'>
-          <Col xs={2} className={`px-0 position-fixed ${currentStep > 2 ? 'visible' : 'invisible'}`}>
-            <Sidebar />
-          </Col>
-          <Col xs={12} className='px-0'>
-            {currentStep <= 4 && (
-              <div className="step-component-container">
-                {renderStepComponent()}
-              </div>
-            )}
-            {currentStep > 4 && (
-              <div>
-                <Col xs={{ span: 10, offset: 2 }} className='px-0'>
-                  <MainRouting />
-                  <Footer />
-                </Col>
+          <Col xs={12} className="position-relative">
+            {currentStep >= 3 && (
+              <div className="sidebar-toggle" onClick={toggleSidebar}>
+                <BsLayoutSidebar />
               </div>
             )}
           </Col>
+        </Row>
+        <Row className='px-0'>
+          {currentStep >= 3 && (
+            <>
+              <Col xs={2} className={`px-0 position-fixed sidebar-container ${isSidebarVisible ? 'expanded' : 'collapsed'}`}>
+                <Sidebar isVisible={isSidebarVisible} />
+              </Col>
+              <Col xs={isSidebarVisible ? 10 : 12} className={`px-0 ${isSidebarVisible ? 'offset-2' : ''}`}>
+                <div className="main-content">
+                  {currentStep <= 4 && (
+                    <div className="step-component-container">
+                      {renderStepComponent()}
+                    </div>
+                  )}
+                  {currentStep > 4 && (
+                    <div>
+                      <MainRouting />
+                      <Footer />
+                    </div>
+                  )}
+                </div>
+              </Col>
+            </>
+          )}
+          {currentStep < 3 && (
+            <Col xs={12} className="px-0">
+              <div className="main-content">
+                <div className="step-component-container">
+                  {renderStepComponent()}
+                </div>
+              </div>
+            </Col>
+          )}
         </Row>
       </Container>
 
       <style jsx>{`
         .step-progress-container {
           position: absolute;
-          top: 25%; /* Adjust the value to position it correctly */
+          top: 23%;
           left: 50%;
           transform: translateX(-50%);
-          z-index: 1; /* Ensure it is above other components */
+          z-index: 1;
         }
         .step-component-container {
           position: absolute;
-          top: 35%; /* Adjust this value to place the components below the StepProgress */
+          top: 35%;
           left: 50%;
           transform: translateX(-50%);
           width: 100%;
-          z-index: 0; /* Ensure it is below the StepProgress */
+          z-index: 0;
+        }
+        .sidebar-toggle {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          z-index: 2;
+          font-size: 24px;
+          color: black;
+          cursor: pointer;
+        }
+        .sidebar-container {
+          transition: transform 0.5s ease;
+          transform: translateX(0);
+        }
+        .sidebar-container.collapsed {
+          transform: translateX(-100%);
+        }
+        .main-content {
+          position: relative;
+          margin-top: 0;
         }
       `}</style>
     </GlobalProvider>

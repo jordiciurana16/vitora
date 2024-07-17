@@ -2,22 +2,22 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import styles from './MainRouting.module.css';
 import ResultsContainer from '../../../containers/results/ResultsContainer';
-import Exercise from '../../../containers/categories/Exercise';
-import Genetic from '../../../containers/categories/Genetic';
-import Geography from '../../../containers/categories/Geography';
-import Stress from '../../../containers/categories/Stress';
-import Accidents from '../../../containers/categories/Accidents';
-import Addiction from '../../../containers/categories/Addiction';
-import Climate from '../../../containers/categories/Climate';
-import Economy from '../../../containers/categories/Economy';
-import Education from '../../../containers/categories/Education';
-import Environment from '../../../containers/categories/Environment';
-import LawsAndPolicies from '../../../containers/categories/LawsAndPolicies';
-import Health from '../../../containers/categories/Health';
-import Nutrition from '../../../containers/categories/Nutrition';
-import Occupation from '../../../containers/categories/Occupation';
-import SocialLive from '../../../containers/categories/SocialLive';
-import WarAndConflict from '../../../containers/categories/WarAndConflict';
+import Exercise from '../../../containers/factors/Exercise';
+import Genetic from '../../../containers/factors/Genetic';
+import Geography from '../../../containers/factors/Geography';
+import Stress from '../../../containers/factors/Stress';
+import Accidents from '../../../containers/factors/Accidents';
+import Addiction from '../../../containers/factors/Addiction';
+import Climate from '../../../containers/factors/Climate';
+import Economy from '../../../containers/factors/Economy';
+import Education from '../../../containers/factors/Education';
+import Environment from '../../../containers/factors/Environment';
+import LawsAndPolicies from '../../../containers/factors/LawsAndPolicies';
+import Health from '../../../containers/factors/Health';
+import Nutrition from '../../../containers/factors/Nutrition';
+import Occupation from '../../../containers/factors/Occupation';
+import SocialLive from '../../../containers/factors/SocialLive';
+import WarAndConflict from '../../../containers/factors/WarAndConflict';
 
 
 
