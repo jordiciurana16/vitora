@@ -84,7 +84,7 @@ function DashboardPage() {
       )}
 
       <Container fluid>
-        <Row className='px-0'>
+        <Row >
           <Col xs={12} className="position-relative">
             {currentStep >= 3 && (
               <div className="sidebar-toggle" onClick={toggleSidebar}>
@@ -93,39 +93,39 @@ function DashboardPage() {
             )}
           </Col>
         </Row>
-        <Row className='px-0'>
-          {currentStep >= 3 && (
-            <>
-              <Col xs={2} className={`px-0 position-fixed sidebar-container ${isSidebarVisible ? 'expanded' : 'collapsed'}`}>
-                <Sidebar isVisible={isSidebarVisible} />
-              </Col>
-              <Col xs={isSidebarVisible ? 10 : 12} className={`px-0 ${isSidebarVisible ? 'offset-2' : ''}`}>
-                <div className="main-content">
-                  {currentStep <= 4 && (
-                    <div className="step-component-container">
-                      {renderStepComponent()}
-                    </div>
-                  )}
-                  {currentStep > 4 && (
-                    <div>
-                      <MainRouting />
-                      <Footer />
-                    </div>
-                  )}
-                </div>
-              </Col>
-            </>
-          )}
-          {currentStep < 3 && (
-            <Col xs={12} className="px-0">
-              <div className="main-content">
-                <div className="step-component-container">
-                  {renderStepComponent()}
-                </div>
-              </div>
-            </Col>
-          )}
-        </Row>
+        <Row>
+  {currentStep >= 3 && (
+    <>
+      <Col xs={2} className={`position-fixed sidebar-container ${isSidebarVisible ? 'expanded' : 'collapsed'}`}>
+        <Sidebar isVisible={isSidebarVisible} />
+      </Col>
+      <Col xs={isSidebarVisible ? 10 : 12} className={`main-content ${isSidebarVisible ? 'offset-2' : ''}`}>
+        {currentStep <= 4 ? (
+          <div className="step-component-container">
+            {renderStepComponent()}
+          </div>
+        ) : (
+          <div>
+            <div className="ps-1">
+              <MainRouting />
+            </div>
+            <Footer />
+          </div>
+        )}
+      </Col>
+    </>
+  )}
+  {currentStep < 3 && (
+    <Col xs={12} className="px-0">
+      <div className="main-content">
+        <div className="step-component-container">
+          {renderStepComponent()}
+        </div>
+      </div>
+    </Col>
+  )}
+</Row>
+
       </Container>
 
       <style jsx>{`
@@ -145,8 +145,8 @@ function DashboardPage() {
           z-index: 0;
         }
         .sidebar-toggle {
-          position: absolute;
-          top: 10px;
+          position: fixed;
+          top: 17vh;
           left: 10px;
           z-index: 2;
           font-size: 24px;
@@ -163,6 +163,8 @@ function DashboardPage() {
         .main-content {
           position: relative;
           margin-top: 0;
+            padding: 0;
+
         }
       `}</style>
     </GlobalProvider>

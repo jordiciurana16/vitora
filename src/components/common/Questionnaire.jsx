@@ -139,7 +139,7 @@ function Questionnaire({ factor, title }) {
             ))}
             <div className='pb-4' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
               <Button               onClick={handleChevronClick} 
- type='submit'>View results</Button>
+                type='submit'>View results</Button>
               <p className='pt-4'>
                 You have answered {answeredCount} of {questions.length} questions
               </p>
