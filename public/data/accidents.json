@@ -1,10 +1,22 @@
 [
   {
+    "question_id": 10,
+    "question_text": "What type of transportation do you usually use?",
+    "input_type": "checkbox",
+    "answers": [
+      {"id": "q10_a1", "text": "Car", "effect_on_lifespan": -0.15},
+      {"id": "q10_a2", "text": "Motorcycle", "effect_on_lifespan": -0.23},
+      {"id": "q10_a3", "text": "Bicycle", "effect_on_lifespan": 0.05},
+      {"id": "q10_a4", "text": "Public transport", "effect_on_lifespan": 0.11},
+      {"id": "q10_a5", "text": "Walking", "effect_on_lifespan": 0.75}
+    ]
+  },
+  {
     "question_id": 1,
     "question_text": "Have you had any serious accidents in the past 5 years?",
     "input_type": "radio",
     "answers": [
-      {"id": "q1_a1", "text": "Yes", "effect_on_lifespan": -0.40},
+      {"id": "q1_a1", "text": "Yes", "effect_on_lifespan": -0.20},
       {"id": "q1_a2", "text": "No", "effect_on_lifespan": 0.00}
     ]
   },
@@ -14,8 +26,8 @@
     "input_type": "radio",
     "answers": [
       {"id": "q2_a1", "text": "None", "effect_on_lifespan": 0.00},
-      {"id": "q2_a2", "text": "1-2 times", "effect_on_lifespan": -0.10},
-      {"id": "q2_a3", "text": "3-5 times", "effect_on_lifespan": -0.20},
+      {"id": "q2_a2", "text": "1-2 times", "effect_on_lifespan": -0.17},
+      {"id": "q2_a3", "text": "3-5 times", "effect_on_lifespan": -0.22},
       {"id": "q2_a4", "text": "More than 5 times", "effect_on_lifespan": -0.35}
     ]
   },
@@ -24,10 +36,10 @@
     "question_text": "Do you regularly use protective equipment (helmet, seatbelt, etc.)?",
     "input_type": "radio",
     "answers": [
-      {"id": "q3_a1", "text": "Always", "effect_on_lifespan": 0.20},
-      {"id": "q3_a2", "text": "Most of the time", "effect_on_lifespan": 0.10},
-      {"id": "q3_a3", "text": "Sometimes", "effect_on_lifespan": -0.10},
-      {"id": "q3_a4", "text": "Never", "effect_on_lifespan": -0.30}
+      {"id": "q3_a1", "text": "Always", "effect_on_lifespan": 0.22},
+      {"id": "q3_a2", "text": "Most of the time", "effect_on_lifespan": 0.17},
+      {"id": "q3_a3", "text": "Sometimes", "effect_on_lifespan": -0.14},
+      {"id": "q3_a4", "text": "Never", "effect_on_lifespan": -0.31}
     ]
   },
   {
@@ -44,9 +56,9 @@
     "question_text": "What types of accidents have you experienced in the past?",
     "input_type": "checkbox",
     "answers": [
-      {"id": "q5_a1", "text": "Falls", "effect_on_lifespan": -0.10},
+      {"id": "q5_a1", "text": "Falls", "effect_on_lifespan": -0.12},
       {"id": "q5_a2", "text": "Traffic accidents", "effect_on_lifespan": -0.25},
-      {"id": "q5_a3", "text": "Work-related accidents", "effect_on_lifespan": -0.20},
+      {"id": "q5_a3", "text": "Work-related accidents", "effect_on_lifespan": -0.23},
       {"id": "q5_a4", "text": "Sports injuries", "effect_on_lifespan": -0.15},
       {"id": "q5_a5", "text": "None of the above", "effect_on_lifespan": 0.00}
     ]
@@ -56,9 +68,9 @@
     "question_text": "Do you feel safe in your daily environment?",
     "input_type": "radio",
     "answers": [
-      {"id": "q6_a1", "text": "Very safe", "effect_on_lifespan": 0.20},
-      {"id": "q6_a2", "text": "Safe", "effect_on_lifespan": 0.10},
-      {"id": "q6_a3", "text": "Somewhat unsafe", "effect_on_lifespan": -0.10},
+      {"id": "q6_a1", "text": "Very safe", "effect_on_lifespan": 0.25},
+      {"id": "q6_a2", "text": "Safe", "effect_on_lifespan": 0.12},
+      {"id": "q6_a3", "text": "Somewhat unsafe", "effect_on_lifespan": -0.12},
       {"id": "q6_a4", "text": "Very unsafe", "effect_on_lifespan": -0.25}
     ]
   },
@@ -67,143 +79,92 @@
     "question_text": "How often do you take preventive measures to avoid accidents?",
     "input_type": "radio",
     "answers": [
-      {"id": "q7_a1", "text": "Always", "effect_on_lifespan": 0.20},
-      {"id": "q7_a2", "text": "Most of the time", "effect_on_lifespan": 0.10},
-      {"id": "q7_a3", "text": "Sometimes", "effect_on_lifespan": -0.10},
-      {"id": "q7_a4", "text": "Never", "effect_on_lifespan": -0.30}
+      {"id": "q7_a1", "text": "Always", "effect_on_lifespan": 0.21},
+      {"id": "q7_a2", "text": "Most of the time", "effect_on_lifespan": 0.12},
+      {"id": "q7_a3", "text": "Sometimes", "effect_on_lifespan": -0.11},
+      {"id": "q7_a4", "text": "Never", "effect_on_lifespan": -0.33}
     ]
   },
   {
     "question_id": 8,
-    "question_text": "Have you participated in a first aid course?",
+    "question_text": "How often do you consume alcohol before driving?",
     "input_type": "radio",
     "answers": [
-      {"id": "q8_a1", "text": "Yes", "effect_on_lifespan": 0.15},
-      {"id": "q8_a2", "text": "No", "effect_on_lifespan": 0.00}
+      {"id": "q8_a1", "text": "Never", "effect_on_lifespan": 0.20},
+      {"id": "q8_a2", "text": "Rarely", "effect_on_lifespan": -0.05},
+      {"id": "q8_a3", "text": "Sometimes", "effect_on_lifespan": -0.33},
+      {"id": "q8_a4", "text": "Frequently", "effect_on_lifespan": -0.59}
     ]
   },
   {
     "question_id": 9,
-    "question_text": "What type of transportation do you usually use?",
-    "input_type": "checkbox",
-    "answers": [
-      {"id": "q9_a1", "text": "Car", "effect_on_lifespan": -0.10},
-      {"id": "q9_a2", "text": "Motorcycle", "effect_on_lifespan": -0.20},
-      {"id": "q9_a3", "text": "Bicycle", "effect_on_lifespan": 0.05},
-      {"id": "q9_a4", "text": "Public transport", "effect_on_lifespan": 0.10},
-      {"id": "q9_a5", "text": "Walking", "effect_on_lifespan": 0.15}
-    ]
-  },
-  {
-    "question_id": 10,
-    "question_text": "How often do you consume alcohol before driving?",
+    "question_text": "How many times have you had fall incidents in the past year?",
     "input_type": "radio",
     "answers": [
-      {"id": "q10_a1", "text": "Never", "effect_on_lifespan": 0.20},
-      {"id": "q10_a2", "text": "Rarely", "effect_on_lifespan": -0.10},
-      {"id": "q10_a3", "text": "Sometimes", "effect_on_lifespan": -0.30},
-      {"id": "q10_a4", "text": "Frequently", "effect_on_lifespan": -0.50}
+      {"id": "q9_a1", "text": "None", "effect_on_lifespan": 0.00},
+      {"id": "q9_a2", "text": "1-2 times", "effect_on_lifespan": -0.12},
+      {"id": "q9_a3", "text": "3-5 times", "effect_on_lifespan": -0.24},
+      {"id": "q9_a4", "text": "More than 5 times", "effect_on_lifespan": -0.35}
     ]
   },
   {
     "question_id": 11,
-    "question_text": "Do you use home safety devices (alarm, smoke detectors, etc.)?",
+    "question_text": "Do you participate in high-risk activities (extreme sports, etc.)?",
     "input_type": "radio",
     "answers": [
-      {"id": "q11_a1", "text": "Yes, all of them", "effect_on_lifespan": 0.20},
-      {"id": "q11_a2", "text": "Some of them", "effect_on_lifespan": 0.10},
-      {"id": "q11_a3", "text": "None", "effect_on_lifespan": -0.20}
+      {"id": "q11_a1", "text": "Yes, frequently", "effect_on_lifespan": -0.30},
+      {"id": "q11_a2", "text": "Sometimes", "effect_on_lifespan": -0.15},
+      {"id": "q11_a3", "text": "Rarely", "effect_on_lifespan": -0.05},
+      {"id": "q11_a4", "text": "Never", "effect_on_lifespan": 0.00}
     ]
   },
   {
     "question_id": 12,
-    "question_text": "Have you had any fire-related accidents in the past?",
+    "question_text": "Do you feel capable of handling emergency situations?",
     "input_type": "radio",
     "answers": [
-      {"id": "q12_a1", "text": "Yes", "effect_on_lifespan": -0.25},
-      {"id": "q12_a2", "text": "No", "effect_on_lifespan": 0.00}
+      {"id": "q12_a1", "text": "Very capable", "effect_on_lifespan": 0.23},
+      {"id": "q12_a2", "text": "Capable", "effect_on_lifespan": 0.16},
+      {"id": "q12_a3", "text": "Somewhat incapable", "effect_on_lifespan": -0.12},
+      {"id": "q12_a4", "text": "Very incapable", "effect_on_lifespan": -0.25}
     ]
   },
   {
     "question_id": 13,
-    "question_text": "Do you participate in high-risk activities (extreme sports, etc.)?",
-    "input_type": "radio",
+    "question_text": "What measures do you take to prevent accidents at home?",
+    "input_type": "checkbox",
     "answers": [
-      {"id": "q13_a1", "text": "Yes, frequently", "effect_on_lifespan": -0.30},
-      {"id": "q13_a2", "text": "Sometimes", "effect_on_lifespan": -0.15},
-      {"id": "q13_a3", "text": "Rarely", "effect_on_lifespan": -0.05},
-      {"id": "q13_a4", "text": "Never", "effect_on_lifespan": 0.00}
+      {"id": "q13_a1", "text": "Installation of handrails", "effect_on_lifespan": 0.14},
+      {"id": "q13_a2", "text": "Use of non-slip mats", "effect_on_lifespan": 0.05},
+      {"id": "q13_a3", "text": "Smoke alarm", "effect_on_lifespan": 0.12},
+      {"id": "q13_a4", "text": "None of the above", "effect_on_lifespan": -0.17}
     ]
   },
   {
     "question_id": 14,
-    "question_text": "Do you feel capable of handling emergency situations?",
+    "question_text": "Are you aware of the dangers in your home?",
     "input_type": "radio",
     "answers": [
-      {"id": "q14_a1", "text": "Very capable", "effect_on_lifespan": 0.20},
-      {"id": "q14_a2", "text": "Capable", "effect_on_lifespan": 0.10},
-      {"id": "q14_a3", "text": "Somewhat incapable", "effect_on_lifespan": -0.10},
-      {"id": "q14_a4", "text": "Very incapable", "effect_on_lifespan": -0.25}
+      {"id": "q14_a1", "text": "Yes", "effect_on_lifespan": 0.15},
+      {"id": "q14_a2", "text": "No", "effect_on_lifespan": 0.00}
     ]
   },
   {
     "question_id": 15,
-    "question_text": "Have you experienced minor household accidents (cuts, burns) in the past six months?",
+    "question_text": "Do you frequently engage in activities that involve a high risk of physical injury?",
     "input_type": "radio",
     "answers": [
-      {"id": "q15_a1", "text": "Yes", "effect_on_lifespan": -0.10},
-      {"id": "q15_a2", "text": "No", "effect_on_lifespan": 0.00}
+      {"id": "q15_a1", "text": "Yes", "effect_on_lifespan": -0.25},
+      {"id": "q15_a2", "text": "No", "effect_on_lifespan": 0.07}
     ]
   },
   {
     "question_id": 16,
-    "question_text": "Have you been hospitalized due to an accident in the past five years?",
+    "question_text": "Do you live alone?",
     "input_type": "radio",
     "answers": [
-      {"id": "q16_a1", "text": "Yes", "effect_on_lifespan": -0.35},
+      {"id": "q16_a1", "text": "Yes", "effect_on_lifespan": -0.65},
       {"id": "q16_a2", "text": "No", "effect_on_lifespan": 0.00}
-    ]
-  },
-  {
-    "question_id": 17,
-    "question_text": "What measures do you take to prevent accidents at home?",
-    "input_type": "checkbox",
-    "answers": [
-      {"id": "q17_a1", "text": "Installation of handrails", "effect_on_lifespan": 0.10},
-      {"id": "q17_a2", "text": "Use of non-slip mats", "effect_on_lifespan": 0.05},
-      {"id": "q17_a3", "text": "Smoke alarm", "effect_on_lifespan": 0.10},
-      {"id": "q17_a4", "text": "None of the above", "effect_on_lifespan": -0.10}
-    ]
-  },
-  {
-    "question_id": 18,
-    "question_text": "Are you aware of the dangers in your home?",
-    "input_type": "radio",
-    "answers": [
-      {"id": "q18_a1", "text": "Yes", "effect_on_lifespan": 0.15},
-      {"id": "q18_a2", "text": "No", "effect_on_lifespan": 0.00}
-    ]
-  },
-  {
-    "question_id": 19,
-    "question_text": "How many times have you had fall incidents in the past year?",
-    "input_type": "radio",
-    "answers": [
-      {"id": "q19_a1", "text": "None", "effect_on_lifespan": 0.00},
-      {"id": "q19_a2", "text": "1-2 times", "effect_on_lifespan": -0.10},
-      {"id": "q19_a3", "text": "3-5 times", "effect_on_lifespan": -0.20},
-      {"id": "q19_a4", "text": "More than 5 times", "effect_on_lifespan": -0.35}
-    ]
-  },
-  {
-    "question_id": 20,
-    "question_text": "How prepared do you feel to handle an accident?",
-    "input_type": "radio",
-    "answers": [
-      {"id": "q20_a1", "text": "Very prepared", "effect_on_lifespan": 0.20},
-      {"id": "q20_a2", "text": "Prepared", "effect_on_lifespan": 0.10},
-      {"id": "q20_a3", "text": "Somewhat unprepared", "effect_on_lifespan": -0.10},
-      {"id": "q20_a4", "text": "Very unprepared", "effect_on_lifespan": -0.25}
     ]
   }
 ]

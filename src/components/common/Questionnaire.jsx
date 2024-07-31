@@ -3,6 +3,7 @@ import { Container, Row, Col, Badge, Form, Tooltip, OverlayTrigger, Button } fro
 import { useGlobalContext } from '../../hooks/GlobalContext';
 import { useNavigate } from 'react-router-dom';
 import { ChevronDoubleLeft } from 'react-bootstrap-icons';
+import { fetchCountriesData } from '../../services/api/countriesData';
 
 function Questionnaire({ factor, title }) {
   const [questions, setQuestions] = useState([]);
@@ -11,6 +12,7 @@ function Questionnaire({ factor, title }) {
   const [previousSelectedOptions, setPreviousSelectedOptions] = useState({});
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answeredCount, setAnsweredCount] = useState(0);
+  const [countries, setCountries] = useState([]);
   const questionRefs = useRef([]);
   const navigate = useNavigate();
 
@@ -20,6 +22,11 @@ function Questionnaire({ factor, title }) {
         const response = await fetch(`/vitora/data/${factor.toLowerCase()}.json`);
         const data = await response.json();
         setQuestions(data);
+
+        if (factor === 'Geography') {
+          const countriesData = await fetchCountriesData('SP.DYN.LE00.IN');
+          setCountries(countriesData);
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -40,25 +47,50 @@ function Questionnaire({ factor, title }) {
     setAnsweredCount(Object.keys(selectedOptions).length);
   }, [selectedOptions]);
 
-  const handleChange = (event, questionIndex, answerIndex, isCheckbox) => {
+  const handleCheckboxChange = (event, questionIndex, answerIndex) => {
     const { checked, value } = event.target;
     const effect = parseFloat(value);
 
+    let effects = selectedOptions[questionIndex] || {};
+    effects[answerIndex] = checked ? effect : 0;
+
+    const totalEffect = Object.values(effects).reduce((acc, curr) => acc + curr, 0);
+    setSelectedOptions({ ...selectedOptions, [questionIndex]: effects });
+    setPreviousSelectedOptions({ ...previousSelectedOptions, [questionIndex]: totalEffect });
+
+    updateLifeAndPercentage(totalEffect - (previousSelectedOptions[questionIndex] || 0));
+  };
+
+  const handleRadioChange = (event, questionIndex) => {
+    const { value } = event.target;
+    const effect = parseFloat(value);
+
+    const previousEffect = previousSelectedOptions[questionIndex] || 0;
+    setSelectedOptions({ ...selectedOptions, [questionIndex]: effect });
+    setPreviousSelectedOptions({ ...previousSelectedOptions, [questionIndex]: effect });
+
+    updateLifeAndPercentage(effect - previousEffect);
+  };
+
+  const handleSelectChange = (event, questionIndex) => {
+    const { value } = event.target;
+    const selectedCountry = countries.find(country => country.id === value);
+    const effect = selectedCountry ? selectedCountry.lifeExpectancy - 72.4 : 0; // Suposant que 72.4 és l'esperança de vida base
+
+    const previousEffect = previousSelectedOptions[questionIndex] || 0;
+    setSelectedOptions({ ...selectedOptions, [questionIndex]: effect });
+    setPreviousSelectedOptions({ ...previousSelectedOptions, [questionIndex]: effect });
+
+    updateLifeAndPercentage(effect - previousEffect);
+  };
+
+  const handleChange = (event, questionIndex, answerIndex, isCheckbox) => {
     if (isCheckbox) {
-      let effects = selectedOptions[questionIndex] || {};
-      effects[answerIndex] = checked ? effect : 0;
-
-      const totalEffect = Object.values(effects).reduce((acc, curr) => acc + curr, 0);
-      setSelectedOptions({ ...selectedOptions, [questionIndex]: effects });
-      setPreviousSelectedOptions({ ...previousSelectedOptions, [questionIndex]: totalEffect });
-
-      updateLifeAndPercentage(totalEffect - (previousSelectedOptions[questionIndex] || 0));
+      handleCheckboxChange(event, questionIndex, answerIndex);
+    } else if (event.target.type === 'select-one') {
+      handleSelectChange(event, questionIndex);
     } else {
-      const previousEffect = previousSelectedOptions[questionIndex] || 0;
-      setSelectedOptions({ ...selectedOptions, [questionIndex]: effect });
-      setPreviousSelectedOptions({ ...previousSelectedOptions, [questionIndex]: effect });
-
-      updateLifeAndPercentage(effect - previousEffect);
+      handleRadioChange(event, questionIndex);
     }
 
     if (questionIndex + 1 < questions.length) {
@@ -121,25 +153,35 @@ function Questionnaire({ factor, title }) {
                 </Row>
                 <Row className="mb-4">
                   <Col xs={{ span: 10, offset: 1 }}>
-                    {question.answers.map((answer, ansIndex) => (
-                      <Form.Check
-                        key={answer.id}
-                        type={question.input_type}
-                        id={`question-${index}-option-${ansIndex}`}
-                        name={`question-${index}`}
-                        label={answer.text}
-                        value={answer.effect_on_lifespan}
-                        checked={question.input_type === 'radio' ? selectedOptions[index] === answer.effect_on_lifespan : selectedOptions[index] && selectedOptions[index][ansIndex] !== undefined && selectedOptions[index][ansIndex] !== 0}
-                        onChange={(e) => handleChange(e, index, ansIndex, question.input_type === 'checkbox')}
-                      />
-                    ))}
+                    {question.input_type === 'select' ? (
+                      <Form.Select className="custom-select-width" onChange={(e) => handleChange(e, index)}>
+                        <option value="">Select a country</option>
+                        {countries.map(country => (
+                          <option key={country.id} value={country.id}>
+                            {country.name}
+                          </option>
+                        ))}
+                      </Form.Select>
+                    ) : (
+                      question.answers.map((answer, ansIndex) => (
+                        <Form.Check
+                          key={answer.id}
+                          type={question.input_type}
+                          id={`question-${index}-option-${ansIndex}`}
+                          name={`question-${index}`}
+                          label={answer.text}
+                          value={answer.effect_on_lifespan}
+                          checked={question.input_type === 'radio' ? selectedOptions[index] === answer.effect_on_lifespan : selectedOptions[index] && selectedOptions[index][ansIndex] !== undefined && selectedOptions[index][ansIndex] !== 0}
+                          onChange={(e) => handleChange(e, index, ansIndex, question.input_type === 'checkbox')}
+                        />
+                      ))
+                    )}
                   </Col>
                 </Row>
               </React.Fragment>
             ))}
             <div className='pb-4' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',}}>
-              <Button               onClick={handleChevronClick} 
-                type='submit'>View results</Button>
+              <Button onClick={handleChevronClick} type='submit'>View results</Button>
               <p className='pt-4'>
                 You have answered {answeredCount} of {questions.length} questions
               </p>

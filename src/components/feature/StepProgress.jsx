@@ -37,8 +37,8 @@ function StepProgress({ currentStep }) {
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 40px;
-          height: 40px;
+          width: 30px; /* Adjusted size */
+          height: 30px; /* Adjusted size */
           background-color: white;
           border-radius: 50%;
           border: 2px solid var(--primary-color);
@@ -52,37 +52,37 @@ function StepProgress({ currentStep }) {
         .step-number {
           position: absolute;
           color: var(--primary-color);
-          font-size: 1.25rem;
+          font-size: 1rem; /* Adjusted size */
         }
         .circle.active .step-number {
           color: white;
         }
         .arrow {
-          width: 30px;
-          height: 30px;
+          width: 20px; /* Adjusted size */
+          height: 20px; /* Adjusted size */
           color: var(--primary-color);
         }
         .step-label {
           position: absolute;
-          top: 50px; /* Adjust this value to place the label correctly */
-          font-size: 1rem;
+          top: 40px; /* Adjusted position */
+          font-size: 0.875rem; /* Adjusted size */
           text-align: center;
           white-space: nowrap;
         }
         @media (max-width: 576px) {
           .circle {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
           }
           .step-number {
-            font-size: 0.875rem;
+            font-size: 0.75rem;
           }
           .arrow {
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
           }
           .step-label {
-            top: 40px;
+            top: 35px;
             font-size: 0.75rem;
           }
           .no-gutters {

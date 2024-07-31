@@ -428,3 +428,7 @@ button:hover {
 .acordio{
   color: red !important;
 }
+
+.custom-select-width {
+  width: 50% !important; /* Ajusta aquest valor segons les teves necessitats */
+}

@@ -8,11 +8,8 @@ import Footer from '../components/layout/footer/Footer';
 import { GlobalProvider } from '../hooks/GlobalContext';
 import NavigationBar from '../components/layout/nav/Nav';
 import ScrollProgress from '../components/layout/nav/ScrollProgress';
-import Birthdate from '../components/feature/steps/Birthdate';
-import Timeline from '../components/feature/steps/Timeline';
-import Factor from '../components/feature/steps/Factor';
-import Forms from '../components/feature/steps/Forms';
 import StepProgress from '../components/feature/StepProgress';
+import StepComponent from '../components/feature/StepComponent';
 import { useGlobalContext } from '../hooks/GlobalContext';
 
 function DashboardPage() {
@@ -23,6 +20,8 @@ function DashboardPage() {
   useEffect(() => {
     if (currentStep >= 3) {
       setIsSidebarVisible(true);
+    } else {
+      setIsSidebarVisible(false);
     }
   }, [currentStep]);
 
@@ -50,20 +49,14 @@ function DashboardPage() {
     setCurrentStep((prevStep) => prevStep - 1);
   };
 
-  const renderStepComponent = () => {
-    switch (currentStep) {
-      case 1:
-        return <Birthdate onSubmitSuccess={handleBirthdateSubmitSuccess} />;
-      case 2:
-        return <Timeline onSubmitSuccess={handleTimelineSubmitSuccess} onBack={handleBack} />;
-      case 3:
-        return <Factor onSubmitSuccess={handleFactorSubmitSuccess} onBack={handleBack} />;
-      case 4:
-        return <Forms onSubmitSuccess={handleFormsSubmitSuccess} onBack={handleBack} />;
-      default:
-        return null;
-    }
-  };
+  const stepDetails = [
+    { step: 'birthdate', onSubmitSuccess: handleBirthdateSubmitSuccess },
+    { step: 'timeline', onSubmitSuccess: handleTimelineSubmitSuccess },
+    { step: 'factor', onSubmitSuccess: handleFactorSubmitSuccess },
+    { step: 'forms', onSubmitSuccess: handleFormsSubmitSuccess }
+  ];
+
+  const currentStepDetail = stepDetails[currentStep - 1];
 
   return (
     <GlobalProvider>
@@ -84,7 +77,7 @@ function DashboardPage() {
       )}
 
       <Container fluid>
-        <Row >
+        <Row>
           <Col xs={12} className="position-relative">
             {currentStep >= 3 && (
               <div className="sidebar-toggle" onClick={toggleSidebar}>
@@ -94,55 +87,62 @@ function DashboardPage() {
           </Col>
         </Row>
         <Row>
-  {currentStep >= 3 && (
-    <>
-      <Col xs={2} className={`position-fixed sidebar-container ${isSidebarVisible ? 'expanded' : 'collapsed'}`}>
-        <Sidebar isVisible={isSidebarVisible} />
-      </Col>
-      <Col xs={isSidebarVisible ? 10 : 12} className={`main-content ${isSidebarVisible ? 'offset-2' : ''}`}>
-        {currentStep <= 4 ? (
-          <div className="step-component-container">
-            {renderStepComponent()}
-          </div>
-        ) : (
-          <div>
-            <div className="ps-1">
-              <MainRouting />
-            </div>
-            <Footer />
-          </div>
-        )}
-      </Col>
-    </>
-  )}
-  {currentStep < 3 && (
-    <Col xs={12} className="px-0">
-      <div className="main-content">
-        <div className="step-component-container">
-          {renderStepComponent()}
-        </div>
-      </div>
-    </Col>
-  )}
-</Row>
-
+          {currentStep >= 3 && (
+            <>
+              <Col
+                xs={2}
+                className={`position-fixed sidebar-container ${isSidebarVisible ? 'expanded' : 'collapsed'}`}
+              >
+                <Sidebar isVisible={isSidebarVisible} />
+              </Col>
+              <Col
+                xs={currentStep >= 3 && currentStep <= 4 ? 12 : isSidebarVisible ? 10 : 12}
+                className={`main-content ${currentStep >= 3 && currentStep <= 4 ? '' : isSidebarVisible ? 'offset-2' : ''}`}
+              >
+                {currentStep <= 4 ? (
+                  <div className="step-component-container">
+                    <StepComponent
+                      step={currentStepDetail.step}
+                      onSubmitSuccess={currentStepDetail.onSubmitSuccess}
+                      onBack={handleBack}
+                      isCentered={true} // Afegim una prop per indicar que ha d'estar centrat
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <div className="ps-1">
+                      <MainRouting />
+                    </div>
+                    <Footer />
+                  </div>
+                )}
+              </Col>
+            </>
+          )}
+          {currentStep < 3 && (
+            <Col xs={12} className="px-0">
+              <div className="main-content">
+                <div className="step-component-container">
+                  <StepComponent
+                    step={currentStepDetail.step}
+                    onSubmitSuccess={currentStepDetail.onSubmitSuccess}
+                    onBack={handleBack}
+                    isCentered={true} // Afegim una prop per indicar que ha d'estar centrat
+                  />
+                </div>
+              </div>
+            </Col>
+          )}
+        </Row>
       </Container>
 
       <style jsx>{`
         .step-progress-container {
           position: absolute;
-          top: 23%;
+          top: 22%;
           left: 50%;
           transform: translateX(-50%);
           z-index: 1;
-        }
-        .step-component-container {
-          position: absolute;
-          top: 35%;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100%;
-          z-index: 0;
         }
         .sidebar-toggle {
           position: fixed;
@@ -154,7 +154,7 @@ function DashboardPage() {
           cursor: pointer;
         }
         .sidebar-container {
-          transition: transform 0.5s ease;
+          transition: transform 0.5s ease, width 0.5s ease;
           transform: translateX(0);
         }
         .sidebar-container.collapsed {
@@ -163,8 +163,11 @@ function DashboardPage() {
         .main-content {
           position: relative;
           margin-top: 0;
-            padding: 0;
-
+          padding: 0;
+          transition: all 0.5s ease;
+        }
+        .main-content.offset-2 {
+          margin-left: 16.6667%;
         }
       `}</style>
     </GlobalProvider>

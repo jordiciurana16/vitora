@@ -1,5 +1,11 @@
 [
     {
+      "question_id": 0,
+      "question_text": "In which country do you live?",
+      "input_type": "select",
+      "answers": []
+    },
+    {
       "question_id": 1,
       "question_text": "Do you live in an urban, suburban, or rural area?",
       "input_type": "radio",
