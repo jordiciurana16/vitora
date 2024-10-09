@@ -1,7 +1,7 @@
 import React from 'react';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import styles from './Events.module.css';
-import {events} from '../../utils/data/eventsData';
+import { events } from '../../utils/data/eventsData';
 
 const Events = ({ hoveredItem, className }) => {
   return (

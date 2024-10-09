@@ -432,3 +432,20 @@ button:hover {
 .custom-select-width {
   width: 50% !important; /* Ajusta aquest valor segons les teves necessitats */
 }
+
+.article-header {
+  margin-bottom: 1rem;
+}
+
+.article-author {
+  margin-bottom: 1rem;
+}
+
+.article-body {
+  margin-bottom: 2rem;
+}
+
+.article-body p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
