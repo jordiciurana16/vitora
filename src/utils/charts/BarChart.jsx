@@ -53,7 +53,7 @@ function BarChart({ chartData }) {
         }
     }, [chartData]);
 
-    return <canvas ref={chartRef} id={`chart-${chartData.id}`} style={{ width: '100%', height: '400px' }}></canvas>;
+    return <canvas ref={chartRef} id={`chart-${chartData.id}`} style={{ width: '100%', height: '300px' }}></canvas>;
 }
 
 export default BarChart;
